@@ -10,7 +10,9 @@ import java.util.Scanner;
  * 2) Calculate the length of the Longest Increasing Subsequence
  * at any ending position for a given array
  * 
- * @author Guru
+ * 3) Need to fix a bug: Feb 23, 2015
+ * 
+ * @author Benjamin Lin
  *
  */
 
@@ -32,9 +34,10 @@ public class LIS_EndingPosition {
 			b[i] = 0;
 		}
 		
-		LISdynamic(a, b, n);
+		/*LISdynamic(a, b, n);
 		int maxLength = maxL(n, b);
 		System.out.println("The Longest Increasing Subsequence has length: " + maxLength);
+		*/
 		
 		// Case: position must be the ending position in LIS
 		System.out.print("Enter the ending position that you wanna check its LIS: ");
