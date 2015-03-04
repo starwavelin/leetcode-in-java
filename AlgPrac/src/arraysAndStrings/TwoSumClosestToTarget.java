@@ -26,12 +26,40 @@ public class TwoSumClosestToTarget {
 			return null;
 		}
 		
+		if (input.length == 2) {
+			return new int[]{0, 1};
+		}
+		
 		int[] ret = new int[2];
 		int start = 0;
-		int end = input.length -1;
-		int diff = Integer.MAX_VALUE; 
-			
-		while (start + 1 < end) { // writing this way you can always avoid infinity loop
+		int end = input.length - 1;
+		
+		int diff = Integer.MAX_VALUE;
+		
+		int i, j, extra;
+		for (i = 0; i < input.length - 1; i++) {
+			for (j = i + 1; j < input.length; j++) {
+				extra = target - input[i];
+				if (Math.abs(extra - input[j]) == 0) { 
+					// found two indices exactly sum up to target
+					return new int[]{i, j};
+				}
+				if (Math.abs(extra - input[j]) < diff) {
+					diff = Math.abs(extra - input[j]);
+					ret[0] = i;
+					ret[1] = j;
+				}
+			}
+		}
+		// The solution above is O(n^2), seems not taking the 
+		// advantage of the given condition -- a SORTED integer array.
+		// But at least, better than the program below
+		// which has bug when input is {2, 7, 8, 10}
+		// and target number is 14
+		// lol~
+		
+		 			
+		/*while (start + 1 < end) { // writing this way you can always avoid infinity loop
 			if (input[start] + input[end] < target) {
 				if (Math.abs(input[start] + input[end] - target) < diff) {
 					diff = Math.abs(input[start] + input[end] - target);
@@ -62,6 +90,8 @@ public class TwoSumClosestToTarget {
 			ret[0] = start; 
 			ret[1] = end;			
 		}
+		*/
+		
 		return ret;
 	}
 	
