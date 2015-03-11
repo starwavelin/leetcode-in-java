@@ -8,7 +8,7 @@ import java.util.Scanner;
  * to the target integer. If there are multiple solutions, 
  * just returning the first pair of indices you found is fine.
  * 
- * O(nlogn) solution
+ * O(n) solution
  * 
  * @author Benjamin Lin
  *
