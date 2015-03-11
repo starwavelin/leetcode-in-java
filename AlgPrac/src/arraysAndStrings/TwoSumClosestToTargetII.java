@@ -18,11 +18,11 @@ public class TwoSumClosestToTargetII {
 	
 	// input array: 2, 4, 8, 10, 12
 	// target value: 17
-	// result: indices of number 4, 12 or 8, 10; return one of them is sufficient.
+	// result: indices 1, 4 or 2, 3; return one of them is sufficient.
 	
 	// input array: 2, 4, 8, 10, 12, 20
 	// target value: 17
-	// result: indices of number 4, 12 or 8, 10; return one of them is sufficient.
+	// result: indices 1, 4 or 2, 3; return one of them is sufficient.
 
 	public static int[] twoSumClosest(int[] input, int target) {
 		if (input.length < 2 || input == null) {
@@ -33,45 +33,34 @@ public class TwoSumClosestToTargetII {
 			return new int[]{0, 1};
 		}
 		
-		int[] ret = new int[2];
 		int start = 0;
 		int end = input.length - 1;
 		
 		int diff = Integer.MAX_VALUE;
+		int[] ret = new int[2];
 		
 		 			
-		while (start + 1 < end) { // writing this way you can always avoid infinity loop
+		while (start + 1 <= end) {
 			if (input[start] + input[end] < target) {
 				if (Math.abs(input[start] + input[end] - target) < diff) {
 					diff = Math.abs(input[start] + input[end] - target);
-					start++;
-				} else {
 					ret[0] = start;
-					ret[1] = end + 1;
-					return ret;
+					ret[1] = end;					
 				} 
+				start++;
 			}	else if (input[start] + input[end] > target) {
 				if (Math.abs(input[start] + input[end] - target) < diff) {
 					diff = Math.abs(input[start] + input[end] - target);
-					end--;
-				} else {
-					ret[0] = start - 1;
-					ret[1] = end;
-					return ret;
-				}
+					ret[0] = start;
+					ret[1] = end;					
+				} 
+				end--;
 			}	else { // when input[start] + input[end] == target
 				ret[0] = start; 
 				ret[1] = end;
 				return ret;
 			}
 		}
-		
-		// when start and end are next to each other, evaluate the diff again
-		if (Math.abs(input[start] + input[end] - target) < diff) {
-			ret[0] = start; 
-			ret[1] = end;			
-		}
-		
 		
 		return ret;
 	}
