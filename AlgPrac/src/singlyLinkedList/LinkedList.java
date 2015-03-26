@@ -97,4 +97,24 @@ public class LinkedList {
 		}
 		System.out.println();
 	}
+	
+	
+	// For coding exam purpose
+	public void displayLinkedList(Node head) {
+		if (head == null) {
+			System.out.println("List is empty.");
+			return;
+		}
+		Node p1 = head;
+		while (p1 != null) {
+			p1.displayNode();
+			p1 = p1.next;
+		}
+		System.out.println();
+	}
+	
+	public Node getHead() {
+		return head;
+	}
+	
 }

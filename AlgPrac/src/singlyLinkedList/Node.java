@@ -6,6 +6,7 @@ public class Node {
 	
 	public Node(int data) {
 		this.data = data;
+		next = null;
 	}
 	
 	public void displayNode() {
