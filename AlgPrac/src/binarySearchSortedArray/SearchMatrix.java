@@ -72,8 +72,85 @@ public class SearchMatrix {
     
     
     public static boolean searchMatrixII(int[][] matrix, int target) {
-    	boolean flag = false; 
-    	return flag;
+    	// idea: Consider this matrix as a 1-dim array and 
+    	// use one-time binary search to see if the target is in it.
+    	if (matrix == null || matrix.length == 0 || matrix[0][0] > target) {
+    		return false;
+    	}
+    	int numRows = matrix.length;
+    	int numCols = matrix[0].length;
+    	int n = numRows * numCols;
+    	int start, end, mid, row, col;
+    	start = row = col = 0;
+    	end = n - 1;
+    	while (start + 1 < end) {
+    		mid = start + (end - start) / 2;
+    		row = mid / numCols;
+    		col = mid % numCols;
+    		if (matrix[row][col] == target) {
+    			return true;
+    		} else if (matrix[row][col] < target) {
+    			start = mid;
+    		} else {
+    			end = mid;
+    		}
+    	}
+    	row = start / numCols;
+    	col = start % numCols;
+    	if (matrix[row][col] == target) {
+    		return true;
+    	}
+    	row = end / numCols;
+    	col = end % numCols;
+    	if (matrix[row][col] == target) {
+    		return true;
+    	}
+    	return false;
+    }
+    
+    
+    public static int[] searchMatrixIII(int[][] matrix, int target) {
+    	int[] ret = new int[2];
+    	if (matrix == null || matrix.length == 0 || matrix[0][0] > target) {
+    		ret[0] = ret[1] = -1;
+    		return ret;
+    	}
+    	
+    	int numRows = matrix.length;
+    	int numCols = matrix[0].length;
+    	int n = numRows * numCols;
+    	int start, end, mid, row, col;
+    	start = mid = row = col = 0;
+    	end = n - 1;
+    	while (start + 1 < end) {
+    		mid = start + (end - start) / 2;
+    		row = mid / numCols;
+    		col = mid % numCols;
+    		if (matrix[row][col] == target) {
+    			ret[0] = row;
+    			ret[1] = col;
+    			return ret;
+    		} else if (matrix[row][col] < target) {
+    			start = mid;
+    		} else {
+    			end = mid;
+    		}
+    	}
+    	row = start / numCols;
+    	col = start % numCols;
+    	if (matrix[row][col] == target) {
+    		ret[0] = row;
+			ret[1] = col;
+			return ret;
+    	}
+    	row = end / numCols;
+    	col = end % numCols;
+    	if (matrix[row][col] == target) {
+    		ret[0] = row;
+			ret[1] = col;
+			return ret;
+    	}
+    	return ret;
     }
 	
 	public static void main(String[] args) {
@@ -89,9 +166,17 @@ public class SearchMatrix {
 		System.out.print("Give your target number: ");
 		int target = sc.nextInt();
 		
-		boolean ret = searchMatrix(matrix, target);
-		if (ret) {
-			System.out.println("The target number " + target + " is in the input matrix." );
+//		boolean ret = searchMatrixII(matrix, target);
+//		if (ret) {
+//			System.out.println("The target number " + target + " is in the input matrix." );
+//		} else {
+//			System.out.println("The target number " + target + " is NOT in the input matrix." );
+//		}
+		
+		int[] res = searchMatrixIII(matrix, target);
+		if (res[0] != -1) {
+			System.out.println("The target number " + target + 
+					" is in Row " + res[0] + " Column " + res[1]);
 		} else {
 			System.out.println("The target number " + target + " is NOT in the input matrix." );
 		}
