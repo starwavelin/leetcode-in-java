@@ -30,12 +30,10 @@ public class BinarySearchII {
 			}
 		}
 		
-		if (nums[start] == target) {
-			return start;
-		}
-		
 		if (nums[end] == target) {
 			return end;
+		} else if (nums[start] == target) {
+			return start;
 		}
 		
 		return -1;

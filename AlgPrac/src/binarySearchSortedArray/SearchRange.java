@@ -17,10 +17,11 @@ public class SearchRange {
         	return ret;
         }
         
-        int start = 0; 
-        int end = nums.length - 1;
-        int mid;
+        int start, end, mid;
         
+        // Find the left bound
+        start = 0; 
+        end = nums.length - 1;
         while (start + 1 < end) {
         	mid = start + (end - start) / 2;
         	if (nums[mid] == target) {
@@ -31,13 +32,13 @@ public class SearchRange {
         		end = mid;
         	}
         }
-    	if (nums[start] == target) {
+    	if (nums[start] == target) { // when searching the left bound, check start first.
     		ret[0] = start;
-    	}
-    	if (nums[end] == target) {
+    	} else if (nums[end] == target) {
     		ret[0] = end;
     	}
-    	    	
+    	
+    	// Find the right bound
     	start = 0; 
         end = nums.length - 1;
     	while (start + 1 < end) {
@@ -50,11 +51,10 @@ public class SearchRange {
         		end = mid;
         	}
         }
-    	if (nums[start] == target) {
-    		ret[1] = start;
-    	}
-    	if (nums[end] == target) {
+    	if (nums[end] == target) {	// when searching the right bound, check end first.
     		ret[1] = end;
+    	} else 	if (nums[start] == target) {
+    		ret[1] = start;
     	}
     	
     	return ret;

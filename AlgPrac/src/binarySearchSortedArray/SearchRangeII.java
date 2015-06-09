@@ -39,8 +39,7 @@ public class SearchRangeII {
 		}
 		if (A.get(start) == target) {
 			ret.set(0, start);
-		}
-		if (A.get(end) == target) {
+		} else if (A.get(end) == target) {
 			ret.set(0, end);
 		}
 		
@@ -58,11 +57,10 @@ public class SearchRangeII {
 				end = mid;
 			}
 		}
-		if (A.get(start) == target) {
-			ret.set(1, start);
-		}
 		if (A.get(end) == target) {
 			ret.set(1, end);
+		} else if (A.get(start) == target) {
+			ret.set(1, start);
 		}
 		
 		return ret;
