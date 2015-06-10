@@ -2,27 +2,38 @@ package binarySearchSortedArray;
 
 import java.util.Scanner;
 /**
- * Remove duplicates in a sorted array such that each element 
- * appear only once and return the new length.
- * Do not allocate extra space for another array, 
- * you must do this in place with constant memory.
- * http://www.lintcode.com/en/problem/remove-duplicates-from-sorted-array/
+ * 
+ * Like RemoveDupSortedArray but this time we allow an element
+ * to be duplicated at most twice
+ * http://www.lintcode.com/en/problem/remove-duplicates-from-sorted-array-ii/
+ *
  */
-public class RemoveDupSortedArray {
-	
+
+public class RemoveDupSortedArrayII {
+	/**
+     * @param nums: a array of integers
+     * @return : return an integer
+     */
 	public static int removeDup(int[] nums) {
 		if (nums.length <= 1) {
 			return nums.length;
 		}
-		
-		int size = 0; 
-		for (int i = 0; i < nums.length; i++) {
-			if (nums[i] != nums[size]) {
-				size++;
-				nums[size] = nums[i];
+		int size, i, j;
+		size = i = j = 0;		
+		for (i = 0; i < nums.length;) {
+			int cur = nums[i];
+			for (j = i; j < nums.length; j++) {
+				if (nums[j] != cur) {
+					break;
+				}
+				if (j - i < 2) {
+					nums[size] = cur;
+					size++;
+				}
 			}
+			i = j;
 		}
-		return (size + 1);
+		return size;
 	}
 	
 	public static void displayArray(int[] arr, int size) {
@@ -33,7 +44,7 @@ public class RemoveDupSortedArray {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Remove Duplicates in Sorted Array Test ***");
+		System.out.println("*** Welcome to Ben's Remove Duplicates in Sorted Array II Test ***");
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Input your integer sorted array (with duplicates), \n" +
