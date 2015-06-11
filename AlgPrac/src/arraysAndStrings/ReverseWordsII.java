@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 /**
  * ReverseWords version I,
+ * words may have leading or trailing space
  * using String array and inversely loop the array
  * 
  * O(n) time O(n) space:

@@ -3,7 +3,7 @@ package arraysAndStrings;
 import java.util.Scanner;
 
 /**
- * If the words don't have leaing or trailing spaces and 
+ * If the words don't have leading or trailing spaces and 
  * words are separated by a single space,
  * we can do reverse words in-place without
  * allocating extra space.
