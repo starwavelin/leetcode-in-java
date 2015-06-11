@@ -20,11 +20,11 @@ public class ReverseWordsIII {
 	 * @return
 	 */
 	public static String reverseWords(char[] s) {
-		s = reverse(s, 0, s.length);
+		reverse(s, 0, s.length);
 		//System.out.println(s);
 		for (int i = 0, j = 0; j <= s.length; j++) {
 			if (j == s.length || s[j] == ' ') {
-				s = reverse(s, i, j);
+				reverse(s, i, j);
 				i = j + 1;
 			}
 		}
@@ -44,13 +44,12 @@ public class ReverseWordsIII {
 	 * @param end the end position of the source char[] to be reversed
 	 * @return
 	 */
-	private static char[] reverse(char[] src, int start, int end) {
+	private static void reverse(char[] src, int start, int end) {
 		for (int i = 0; i < (end - start) / 2; i++) {
 			char tmp = src[start + i];
 			src[start + i] = src[end - i - 1];
 			src[end - i - 1] = tmp;
 		}
-		return src;
 	}
 	
 	public static void main(String[] args) {
