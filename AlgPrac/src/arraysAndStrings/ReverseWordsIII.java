@@ -8,6 +8,10 @@ import java.util.Scanner;
  * we can do reverse words in-place without
  * allocating extra space.
  * 
+ * If the input word has leading or trailing spaces,
+ * the result would also contain leading/trailing spaces.
+ * For the result version of result still not containing l/t spaces even the input has,
+ * see ReverseWordsIV.
  * @author Benjamin Lin
  *
  */
@@ -20,6 +24,7 @@ public class ReverseWordsIII {
 	 * @return
 	 */
 	public static String reverseWords(char[] s) {
+		
 		reverse(s, 0, s.length);
 		//System.out.println(s);
 		for (int i = 0, j = 0; j <= s.length; j++) {

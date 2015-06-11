@@ -14,7 +14,8 @@ import java.util.Scanner;
  * when we are at the beginning of a word, 
  * we append it.
  * 
- * This solution requires String.substring(i, j)
+ * This solution requires String.substring(i, j); 
+ * the result doesn't contain leading/trailing spaces
  * @author Benjamin Lin
  *
  */

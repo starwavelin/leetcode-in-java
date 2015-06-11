@@ -14,6 +14,7 @@ public class ReverseWordsIV {
 		if (s == null || !s.contains(" ")) {
             return s;
         }
+		s = s.trim(); // ensure the input has no leading/trailing spaces
         char[] ret = s.toCharArray();
         reverse(ret, 0, ret.length);
         for (int i = 0, j = 0; j <= ret.length; j++) {
