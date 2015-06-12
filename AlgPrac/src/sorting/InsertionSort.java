@@ -3,7 +3,7 @@ package sorting;
 import java.util.Scanner;
 
 /**
- * This is a Selection sort example;
+ * This is a Insertion sort example;
  * 
  * input:[9, 8, 10, 5], then
  * [8, 9, 10, 5]
@@ -33,7 +33,7 @@ public class InsertionSort {
 		System.out.println("*** Welcome to Ben's Insertion Sort Test ***");
 
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Input your integer sorted array, \n"
+		System.out.print("Input your integer array, \n"
 				+ "leave each number by space: ");
 		String[] strs = sc.nextLine().split(" ");
 		int[] testArray = new int[strs.length];

@@ -39,7 +39,7 @@ public class SelectionSort {
 		System.out.println("*** Welcome to Ben's Selection Sort Test ***");
 
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Input your integer sorted array, \n"
+		System.out.print("Input your integer array, \n"
 				+ "leave each number by space: ");
 		String[] strs = sc.nextLine().split(" ");
 		int[] testArray = new int[strs.length];
