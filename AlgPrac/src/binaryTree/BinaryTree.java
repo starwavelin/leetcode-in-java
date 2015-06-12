@@ -1,5 +1,7 @@
 package binaryTree;
 
+import java.util.ArrayList;
+
 /**
  * This is the main class of the logic of the BinaryTree app.
  * The methods implemented in this class are as follows:
@@ -97,5 +99,31 @@ public class BinaryTree {
 			System.out.print(" " + root.val + " ");
 		}
 	}
+	
+	/**
+	 * Use Divide and Conquer to solve preorder traversal
+	 * @param root
+	 */
+	public void preorderTraverseDC(Node root) {
+		ArrayList<Integer> ret = traverseDC(root);
+		for (int element : ret) {
+			System.out.print(" " + element + " ");
+		}
+	}
+	private ArrayList<Integer> traverseDC(Node root) {
+		ArrayList<Integer> ret = new ArrayList<Integer>();
+		if (root != null) {
+			// Divide
+			ArrayList<Integer> left = traverseDC(root.left);
+			ArrayList<Integer> right = traverseDC(root.right);
+			// Conquer
+			ret.add(root.val);
+			ret.addAll(left);
+			ret.addAll(right);
+		}
+		return ret;
+	}
+	
+	
 	
 }
