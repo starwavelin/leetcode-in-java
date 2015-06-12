@@ -5,13 +5,15 @@ package binaryTree;
  * The methods implemented in this class are as follows:
  * 1. insert(Node node, int val)
  * 2. insertNoRec(Node node, int val)
- * 3. 
+ * 3. preorderTraverse(Node root)
+ * 4. inorderTraverse(Node root)
+ * 5. postorderTraverse(Node root)
  * 
  * @author Guru
  */
 public class BinaryTree {
 	
-	private Node root;
+	Node root;
 	
 	public BinaryTree() {
 		root = null;
@@ -72,7 +74,28 @@ public class BinaryTree {
 		}//else root != null
 	}
 	
+	public void preorderTraverse(Node root) {
+		if (root != null) {
+			System.out.print(" " + root.val + " ");
+			preorderTraverse(root.left);
+			preorderTraverse(root.right);
+		}
+	}
 	
+	public void inorderTraverse(Node root) {
+		if (root != null) {
+			inorderTraverse(root.left);
+			System.out.print(" " + root.val + " ");
+			inorderTraverse(root.right);
+		}
+	}
 	
+	public void postorderTraverse(Node root) {
+		if (root != null) {
+			postorderTraverse(root.left);
+			postorderTraverse(root.right);
+			System.out.print(" " + root.val + " ");
+		}
+	}
 	
 }
