@@ -14,7 +14,7 @@ public class BinaryTreeApp {
 		
 		// Test insert, preorder, inorder, postorder
 		System.out.print("The preorder traversal of the given tree is: ");
-		tree.preorderTraverseDC(tree.root);
+		tree.preorderTraverseNoRec(tree.root);
 		System.out.println();		
 //		System.out.print("The inorder traversal of the given tree is: ");
 //		tree.inorderTraverse(tree.root);

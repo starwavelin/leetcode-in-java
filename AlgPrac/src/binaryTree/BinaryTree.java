@@ -1,6 +1,7 @@
 package binaryTree;
 
 import java.util.ArrayList;
+import java.util.Stack;
 
 /**
  * This is the main class of the logic of the BinaryTree app.
@@ -10,6 +11,8 @@ import java.util.ArrayList;
  * 3. preorderTraverse(Node root)
  * 4. inorderTraverse(Node root)
  * 5. postorderTraverse(Node root)
+ * 6. preorderTraverseDC(Node root)
+ * 7. preorderTraverseNoRec(Node root)
  * 
  * @author Guru
  */
@@ -124,6 +127,25 @@ public class BinaryTree {
 		return ret;
 	}
 	
+	/**
+	 * The non-recursive version of preorderTraverse
+	 */
+	public void preorderTraverseNoRec(Node root) {
+		Stack<Node> stack = new Stack<Node>();
+		if (root != null) {
+			stack.push(root);
+			while (!stack.isEmpty()) {
+				root = stack.pop();
+				System.out.print(" " + root.val + " ");
+				if (root.right != null) {
+					stack.push(root.right);
+				} 
+				if (root.left != null) {
+					stack.push(root.left);
+				}
+			}
+		}
+	}	
 	
 	
 }
