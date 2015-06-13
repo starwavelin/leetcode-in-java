@@ -169,6 +169,22 @@ public class BinaryTree {
     	if (root.right != null) {
     		rightDepth = findMaxDepth(root.right, curDepth + 1);
     	}
-    	return (leftDepth > rightDepth) ? leftDepth : rightDepth;
+    	//return (leftDepth > rightDepth) ? leftDepth : rightDepth;
+    	return Math.max(leftDepth, rightDepth);
+    }
+    
+    
+    /**
+	 * Use D&C to find the maxDepth
+     * @param root: The root of binary tree.
+     * @return: An integer.
+     */
+    public int maxDepthDC(Node root) {
+    	if (root == null) {
+    		return 0;
+    	}
+    	int left = maxDepthDC(root.left);
+    	int right = maxDepthDC(root.right);
+    	return Math.max(left, right) + 1;
     }
 }
