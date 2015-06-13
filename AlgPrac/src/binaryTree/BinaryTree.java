@@ -15,6 +15,9 @@ import java.util.Stack;
  * 7. preorderTraverseNoRec(Node root)
  * 8. maxDepth(Node root)
  * 9. maxDepthDC(Node root)
+ * 10. isHeightBalanced(Node root)
+ * 11: isHeightBalanced2(Node root)
+ * 12. maxPathSum(Node root)
  * 
  * @author Guru
  */
@@ -27,7 +30,7 @@ public class BinaryTree {
 	}
 	
 	/**
-	 * insert method can be used to build a binary tree
+	 * 1. insert method can be used to build a binary tree
 	 * @param node: a node to be inserted into the binary tree
 	 * @param val: the value of the node to be inserted
 	 */
@@ -52,7 +55,7 @@ public class BinaryTree {
 	}
 	
 	/**
-	 * insert method's non-recursive version
+	 * 2. insert method's non-recursive version
 	 * two pointers
 	 */
 	public void insertNoRec(Node node, int val) {
@@ -81,6 +84,9 @@ public class BinaryTree {
 		}//else root != null
 	}
 	
+	/**
+	 * 3. 
+	 */
 	public void preorderTraverse(Node root) {
 		if (root != null) {
 			System.out.print(" " + root.val + " ");
@@ -89,6 +95,9 @@ public class BinaryTree {
 		}
 	}
 	
+	/**
+	 * 4. 
+	 */
 	public void inorderTraverse(Node root) {
 		if (root != null) {
 			inorderTraverse(root.left);
@@ -97,6 +106,9 @@ public class BinaryTree {
 		}
 	}
 	
+	/**
+	 * 5. 
+	 */
 	public void postorderTraverse(Node root) {
 		if (root != null) {
 			postorderTraverse(root.left);
@@ -106,7 +118,7 @@ public class BinaryTree {
 	}
 	
 	/**
-	 * Use Divide and Conquer to solve preorder traversal
+	 * 6. Use Divide and Conquer to solve preorder traversal
 	 * @param root
 	 */
 	public void preorderTraverseDC(Node root) {
@@ -130,7 +142,7 @@ public class BinaryTree {
 	}
 	
 	/**
-	 * The non-recursive version of preorderTraverse
+	 * 7. The non-recursive version of preorderTraverse
 	 */
 	public void preorderTraverseNoRec(Node root) {
 		Stack<Node> stack = new Stack<Node>();
@@ -150,7 +162,7 @@ public class BinaryTree {
 	}	
 	
 	/**
-	 * Traverse to find the maxDepth
+	 * 8. Traverse to find the maxDepth
      * @param root: The root of binary tree.
      * @return: An integer.
      */
@@ -175,7 +187,7 @@ public class BinaryTree {
     
     
     /**
-	 * Use D&C to find the maxDepth
+	 * 9. Use D&C to find the maxDepth
      * @param root: The root of binary tree.
      * @return: An integer.
      */
@@ -189,7 +201,7 @@ public class BinaryTree {
     }
     
     /**
-     * http://www.lintcode.com/en/problem/balanced-binary-tree/
+     * 10. http://www.lintcode.com/en/problem/balanced-binary-tree/
      * @param root
      * @return
      */
@@ -207,5 +219,42 @@ public class BinaryTree {
     	}
     	return Math.max(left, right) + 1;
     }
+    
+    /**
+     * 11. isHeightBalanced(Node root)
+     * engineering coding style 
+     */
+    public boolean isHeightBalanced2(Node root) {
+    	return heightBal(root).isBal;
+    }
+    private ResultType heightBal(Node root) {
+    	if (root == null) {
+    		return new ResultType(true, 0);
+    	}
+    	ResultType left = heightBal(root.left);
+    	ResultType right = heightBal(root.right);
+    	if (!left.isBal || !right.isBal || Math.abs(left.maxDepth - right.maxDepth) > 1) {
+    		return new ResultType(false, Math.max(left.maxDepth, right.maxDepth) + 1);
+    	}
+    	return new ResultType(true, Math.max(left.maxDepth, right.maxDepth) + 1);
+    }
+    private class ResultType {
+    	boolean isBal;
+    	int maxDepth;
+    	ResultType(boolean isBal, int maxDepth) {
+    		this.isBal = isBal;
+    		this.maxDepth = maxDepth;
+    	}
+    }
+    
+    /**
+     * http://www.lintcode.com/en/problem/binary-tree-maximum-path-sum/
+     * Assume the input binary tree may contain negative nodes. 
+     * @param root: The root of binary tree.
+     * @return: An integer.
+     */
+//    public int maxPathSum(Node root) {
+//        
+//    }
     
 }
