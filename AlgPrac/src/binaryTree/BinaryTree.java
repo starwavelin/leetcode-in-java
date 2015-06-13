@@ -194,12 +194,18 @@ public class BinaryTree {
      * @return
      */
     public boolean isHeightBalanced(Node root) {
+    	return maxDepthWithBalanceDetermine(root) != -1;
+    }
+    private int maxDepthWithBalanceDetermine(Node root) {
     	if (root == null) {
-    		return true;
+    		return 0;
     	}
-    	int leftDepth = maxDepthDC(root.left);
-    	int rightDepth = maxDepthDC(root.right);
-    	return (Math.abs(leftDepth - rightDepth) <= 1) ? true : false;
+    	int left = maxDepthWithBalanceDetermine(root.left);
+    	int right = maxDepthWithBalanceDetermine(root.right);
+    	if (left == -1 || right == -1 || Math.abs(left - right) > 1) {
+    		return -1;
+    	}
+    	return Math.max(left, right) + 1;
     }
     
 }
