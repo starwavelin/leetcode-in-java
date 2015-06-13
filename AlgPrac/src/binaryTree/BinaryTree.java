@@ -187,4 +187,19 @@ public class BinaryTree {
     	int right = maxDepthDC(root.right);
     	return Math.max(left, right) + 1;
     }
+    
+    /**
+     * http://www.lintcode.com/en/problem/balanced-binary-tree/
+     * @param root
+     * @return
+     */
+    public boolean isHeightBalanced(Node root) {
+    	if (root == null) {
+    		return true;
+    	}
+    	int leftDepth = maxDepthDC(root.left);
+    	int rightDepth = maxDepthDC(root.right);
+    	return (Math.abs(leftDepth - rightDepth) <= 1) ? true : false;
+    }
+    
 }
