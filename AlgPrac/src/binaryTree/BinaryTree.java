@@ -13,6 +13,8 @@ import java.util.Stack;
  * 5. postorderTraverse(Node root)
  * 6. preorderTraverseDC(Node root)
  * 7. preorderTraverseNoRec(Node root)
+ * 8. maxDepth(Node root)
+ * 9. maxDepthDC(Node root)
  * 
  * @author Guru
  */
@@ -147,5 +149,26 @@ public class BinaryTree {
 		}
 	}	
 	
-	
+	/**
+	 * Traverse to find the maxDepth
+     * @param root: The root of binary tree.
+     * @return: An integer.
+     */
+    public int maxDepth(Node root) {
+        if (root == null) {
+        	return 0;
+        }
+        int maxDep = findMaxDepth(root, 1);
+        return maxDep;
+    }
+    private int findMaxDepth(Node root, int curDepth) {
+    	int leftDepth = curDepth, rightDepth = curDepth;
+    	if (root.left != null) {
+    		leftDepth = findMaxDepth(root.left, curDepth + 1) ;
+    	}
+    	if (root.right != null) {
+    		rightDepth = findMaxDepth(root.right, curDepth + 1);
+    	}
+    	return (leftDepth > rightDepth) ? leftDepth : rightDepth;
+    }
 }
