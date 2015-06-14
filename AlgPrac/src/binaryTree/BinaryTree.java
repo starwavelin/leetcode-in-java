@@ -91,17 +91,25 @@ public class BinaryTree {
 	 * @param key
 	 * @return
 	 */
-	public boolean search(Node root, int key) {
+	public RT search(Node root, int key) {
 		while(true) {
 			if (root == null) {
-				return false;
+				return new RT(false, null);
 			} else if (root.val == key) {
-				return true;
+				return new RT(true, root);
 			} else if (root.val > key) {
 				root = root.left;
 			} else {
 				root = root.right;
 			}
+		}
+	}
+	class RT {
+		boolean flag;
+		Node node;
+		RT(boolean flag, Node node) {
+			this.flag = flag;
+			this.node = node;
 		}
 	}
 	
@@ -309,8 +317,26 @@ public class BinaryTree {
      * @param node2
      * @return
      */
-//    public Node lowestCommonAncestor(Node root, Node node1, Node node2) {
-//    	
-//    }
+    public Node lowestCommonAncestor(Node root, Node node1, Node node2) {
+    	if (root == null || root == node1 || root == node2) {
+    		return root;
+    	}
+    	
+    	// Divide
+    	Node left = lowestCommonAncestor(root.left, node1, node2);
+    	Node right = lowestCommonAncestor(root.right, node1, node2);
+    	
+    	// Conquer
+    	if (left != null & right != null) {
+    		return root;
+    	} else if (left != null) {
+    		return left;
+    	} else if (right != null) {
+    		return right;
+    	} else {
+    		return null;
+    	}
+    } 
+    
     
 }
