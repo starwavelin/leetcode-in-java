@@ -24,6 +24,11 @@ public class BinaryTreeApp {
 //		tree.postorderTraverse(tree.root);
 //		System.out.println();
 		
+		// Test if a node exists in the tree
+		System.out.print("Is 5 in the tree? " + tree.search(tree.root, 5));
+		System.out.print("Is 6 in the tree? " + tree.search(tree.root, 6));
+		
+		
 		// Test maxDepth
 //		System.out.print("The maximum depth of the given tree is: " + tree.maxDepth(tree.root));
 //		System.out.print("The maximum depth of the given tree is: " + tree.maxDepthDC(tree.root));
@@ -33,6 +38,9 @@ public class BinaryTreeApp {
 		
 		// Test MaxPathSum
 		System.out.print("The maximum path sum of the given tree is " + tree.maxPathSum(tree.root));
+		
+		// Test Lowest Common Ancestor
+		
 	}
 	
 }

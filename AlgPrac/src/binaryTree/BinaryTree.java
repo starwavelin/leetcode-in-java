@@ -8,6 +8,7 @@ import java.util.Stack;
  * The methods implemented in this class are as follows:
  * 1. insert(Node node, int val)
  * 2. insertNoRec(Node node, int val)
+ * 2-1. search(int key)
  * 3. preorderTraverse(Node root)
  * 4. inorderTraverse(Node root)
  * 5. postorderTraverse(Node root)
@@ -18,6 +19,7 @@ import java.util.Stack;
  * 10. isHeightBalanced(Node root)
  * 11: isHeightBalanced2(Node root)
  * 12. maxPathSum(Node root)
+ * 13. lowestCommonAncestor(Node root, Node node1, Node node2)
  * 
  * @author Guru
  */
@@ -82,6 +84,25 @@ public class BinaryTree {
 				}
 			} //while
 		}//else root != null
+	}
+	
+	/**
+	 * 2-1. Search a node in the tree with its val equals key
+	 * @param key
+	 * @return
+	 */
+	public boolean search(Node root, int key) {
+		while(true) {
+			if (root == null) {
+				return false;
+			} else if (root.val == key) {
+				return true;
+			} else if (root.val > key) {
+				root = root.left;
+			} else {
+				root = root.right;
+			}
+		}
 	}
 	
 	/**
@@ -273,10 +294,23 @@ public class BinaryTree {
         // Conquer
         int cur = Math.max(root.val, Math.max(root.val + left, root.val + right));
         max[0] = Math.max(max[0], Math.max(cur, left + root.val + right));
-        System.out.println("cur is: " + cur + "; max[0] is: " + max[0]);
+//        System.out.println("cur is: " + cur + "; max[0] is: " + max[0]);
         
         // In this solution, "cur" stores the max of the L-sub or the R-sub; 
         // only the max[0] stores the overall max. 
         return cur;
     }
+    
+    /**
+     * 13. Get the lowest common ancestor of two nodes.
+     * Divide and Conquer to solve it.
+     * @param root
+     * @param node1
+     * @param node2
+     * @return
+     */
+//    public Node lowestCommonAncestor(Node root, Node node1, Node node2) {
+//    	
+//    }
+    
 }
