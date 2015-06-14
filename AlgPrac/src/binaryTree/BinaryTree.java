@@ -248,13 +248,31 @@ public class BinaryTree {
     }
     
     /**
-     * http://www.lintcode.com/en/problem/binary-tree-maximum-path-sum/
+     * 12. http://www.lintcode.com/en/problem/binary-tree-maximum-path-sum/
      * Assume the input binary tree may contain negative nodes. 
      * @param root: The root of binary tree.
      * @return: An integer.
      */
-//    public int maxPathSum(Node root) {
-//        
-//    }
-    
+    public int maxPathSum(Node root) {
+    	int max[] = new int[1];
+    	//max[0] = getSum(root, max);  // This is WRONG! should be the following:
+    	
+    	max[0] = Integer.MIN_VALUE;
+        getSum(root, max);
+    	return max[0];
+    }
+    private int getSum(Node root, int[] max) {
+    	if (root == null) {
+            return 0;
+        }
+    	
+    	// Divide
+        int left = getSum(root.left, max);
+        int right = getSum(root.right, max);
+        
+        // Conquer
+        int cur = Math.max(root.val, Math.max(root.val + left, root.val + right));
+        max[0] = Math.max(max[0], Math.max(cur, left + root.val + right));
+        return cur;
+    }
 }

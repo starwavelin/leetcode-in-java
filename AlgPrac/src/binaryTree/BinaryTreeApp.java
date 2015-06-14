@@ -29,7 +29,10 @@ public class BinaryTreeApp {
 //		System.out.print("The maximum depth of the given tree is: " + tree.maxDepthDC(tree.root));
 		
 		// Test if heightBalanced
-		System.out.print("Is the given tree height balanced? " + tree.isHeightBalanced2(tree.root));
+//		System.out.print("Is the given tree height balanced? " + tree.isHeightBalanced2(tree.root));
+		
+		// Test MaxPathSum
+		System.out.print("The maximum path sum of the given tree is " + tree.maxPathSum(tree.root));
 	}
 	
 }
