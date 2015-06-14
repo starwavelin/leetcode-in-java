@@ -273,6 +273,10 @@ public class BinaryTree {
         // Conquer
         int cur = Math.max(root.val, Math.max(root.val + left, root.val + right));
         max[0] = Math.max(max[0], Math.max(cur, left + root.val + right));
+        System.out.println("cur is: " + cur + "; max[0] is: " + max[0]);
+        
+        // In this solution, "cur" stores the max of the L-sub or the R-sub; 
+        // only the max[0] stores the overall max. 
         return cur;
     }
 }
