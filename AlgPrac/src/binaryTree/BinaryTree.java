@@ -1,6 +1,8 @@
 package binaryTree;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 /**
@@ -20,6 +22,7 @@ import java.util.Stack;
  * 11: isHeightBalanced2(Node root)
  * 12. maxPathSum(Node root)
  * 13. lowestCommonAncestor(Node root, Node node1, Node node2)
+ * 14. levelOrderTraverse(Node node)
  * 
  * @author Guru
  */
@@ -338,5 +341,28 @@ public class BinaryTree {
     	}
     } 
     
+    /**
+     * 14. Level Order Traversal (non-recursive way)
+     * @param node
+     */
+    public void levelOrderTraverse(Node node) {
+    	if (node == null) {
+    		return;
+    	}
+    	
+    	Queue<Node> queue = new LinkedList<Node>();    	 
+    	queue.offer(node);	// insert node to the queue
+    	
+    	while (!queue.isEmpty()) {
+    		node = queue.poll(); // dequeue the head of the queue
+    		System.out.print(" " + node.val + " ");
+    		if (node.left != null) {
+    			queue.offer(node.left);
+    		}
+    		if (node.right != null) {
+    			queue.offer(node.right);
+    		}
+    	}
+    }
     
 }

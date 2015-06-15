@@ -8,8 +8,8 @@ public class BinaryTreeApp {
 		System.out.println("*** Welcome to Ben's Binary Tree Test ***");
 		
 //		int[] arr = {1, 2, 3};
-		int[] arr ={8, 5, 9, 7};
-//		int[] arr = {6, 4, 8, 1, 7, 3, 9, 2, 5};
+//		int[] arr ={8, 5, 9, 7};
+		int[] arr = {6, 4, 8, 1, 7, 3, 9, 2, 5};
 		BinaryTree tree = new BinaryTree();
 		for (int i = 0; i < arr.length; i++) {
 			tree.insertNoRec(tree.root, arr[i]);
@@ -42,16 +42,22 @@ public class BinaryTreeApp {
 //		System.out.print("The maximum path sum of the given tree is " + tree.maxPathSum(tree.root));
 		
 		// Test Lowest Common Ancestor
-		Scanner sc = new Scanner(System.in);
-		System.out.print("Enter the value of a node: ");
-		int val1 = sc.nextInt();
-		System.out.print("Enter the value of a node: ");
-		int val2 = sc.nextInt();
-		Node node1 = tree.search(tree.root, val1).node;
-		Node node2 = tree.search(tree.root, val2).node;
-		System.out.print("The lowest common ancestor of Node " + node1.val 
-			+ " and Node " + node2.val + " is: ");
-		System.out.print(tree.lowestCommonAncestor(tree.root, node1, node2).val);
+//		Scanner sc = new Scanner(System.in);
+//		System.out.print("Enter the value of a node: ");
+//		int val1 = sc.nextInt();
+//		System.out.print("Enter the value of a node: ");
+//		int val2 = sc.nextInt();
+//		Node node1 = tree.search(tree.root, val1).node;
+//		Node node2 = tree.search(tree.root, val2).node;
+//		System.out.print("The lowest common ancestor of Node " + node1.val 
+//			+ " and Node " + node2.val + " is: ");
+//		System.out.print(tree.lowestCommonAncestor(tree.root, node1, node2).val);
+		
+		// Test Level Order Traversal
+		System.out.print("The level order traversal of the given tree is: ");
+		tree.levelOrderTraverse(tree.root);
+		
+		
 	}
 	
 }
