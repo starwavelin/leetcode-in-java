@@ -23,6 +23,7 @@ import java.util.Stack;
  * 12. maxPathSum(Node root)
  * 13. lowestCommonAncestor(Node root, Node node1, Node node2)
  * 14. levelOrderTraverse(Node node)
+ * 15. isValidBST(Node root)
  * 
  * @author Guru
  */
@@ -363,6 +364,34 @@ public class BinaryTree {
     			queue.offer(node.right);
     		}
     	}
+    }
+    
+    /**
+     * 15. Validate is a tree BST
+     * @param root
+     * @return
+     */
+    public boolean isValidBST(Node root) {
+    	return inorder(root);
+    }
+    Node prev = null;
+    private boolean inorder(Node root) {
+    	if (root == null) {
+    		return true;
+    	}
+    	if (!inorder(root.left)) {
+    		return false;
+    	}
+    	if (prev != null) {
+    		if (root.val <= prev.val) {
+    			return false;
+    		}
+    	}
+    	prev = root;
+    	if (!inorder(root.right)) {
+    		return false;
+    	}
+    	return true;
     }
     
 }

@@ -8,11 +8,11 @@ public class BinaryTreeApp {
 		System.out.println("*** Welcome to Ben's Binary Tree Test ***");
 		
 //		int[] arr = {1, 2, 3};
-//		int[] arr ={8, 5, 9, 7};
-		int[] arr = {6, 4, 8, 1, 7, 3, 9, 2, 5};
+		int[] arr ={8, 5, 9, 7};
+//		int[] arr = {6, 4, 8, 1, 7, 3, 9, 2, 5};
 		BinaryTree tree = new BinaryTree();
 		for (int i = 0; i < arr.length; i++) {
-			tree.insertNoRec(tree.root, arr[i]);
+			tree.insert(tree.root, arr[i]);
 		}
 		
 		// Test insert, preorder, inorder, postorder
@@ -54,9 +54,11 @@ public class BinaryTreeApp {
 //		System.out.print(tree.lowestCommonAncestor(tree.root, node1, node2).val);
 		
 		// Test Level Order Traversal
-		System.out.print("The level order traversal of the given tree is: ");
-		tree.levelOrderTraverse(tree.root);
+//		System.out.print("The level order traversal of the given tree is: ");
+//		tree.levelOrderTraverse(tree.root);
 		
+		// Test if the given tree a BST
+		System.out.print("Is the given tree BST? " + tree.isValidBST(tree.root));
 		
 	}
 	
