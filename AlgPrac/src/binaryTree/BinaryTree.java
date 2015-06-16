@@ -16,6 +16,8 @@ import java.util.Stack;
  * 5. postorderTraverse(Node root)
  * 6. preorderTraverseDC(Node root)
  * 7. preorderTraverseNoRec(Node root)
+ * 7-1. inorderTraverseNoRec(Node root)
+ * 7-2. postorderTraverseNoRec(Node root)
  * 8. maxDepth(Node root)
  * 9. maxDepthDC(Node root)
  * 10. isHeightBalanced(Node root)
@@ -193,6 +195,51 @@ public class BinaryTree {
 			}
 		}
 	}	
+	
+	/**
+	 * 7-1 The non-recursive version of inorderTraverse
+	 */
+	public void inorderTraverseNoRec(Node root) {
+		Stack<Node> stack = new Stack<Node>();  
+        while ((root != null) || (!stack.isEmpty())) {  
+            if (root != null) {  
+                stack.push(root);  
+                root = root.left;  
+            } else {  
+                root = stack.pop();  
+                System.out.print(" " + root.val + " ");  
+                root = root.right;  
+            }  
+        }  
+	}
+ 	
+	/**
+	 * 7-2 The non-recursive version of postorderTraverse
+	 * @param root
+	 */
+	public void postorderTraverseNoRec(Node root) {
+		Stack<Node> stack = new Stack<Node>();  
+        Node preNode = null;  
+        if (root != null) {  
+            stack.push(root);  
+            while (!stack.isEmpty()) {  
+                root = stack.peek();  
+                if ((root.left == null && root.right == null)   
+                        || (preNode != null && (preNode == root.left 
+                        || preNode == root.right))) {  
+                    System.out.print(" " + root.val + " ");  
+                    stack.pop();  
+                    preNode = root;  
+                } else {  
+                    if (root.right != null)  
+                        stack.push(root.right);  
+                    if (root.left != null)  
+                        stack.push(root.left);  
+                }  
+            }  
+        }  
+	}
+	
 	
 	/**
 	 * 8. Traverse to find the maxDepth
