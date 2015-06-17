@@ -56,11 +56,11 @@ public class MyArray {
 			if (array[j] == value)
 				break;
 		}
-		if (j == numElements)
+		if (j == numElements) {
 			return false;
-		else {
+		} else {
 			for (int k = j; k < numElements; k++) {
-				array[k] = array[k+1];	// move higher ones down				
+				array[k] = array[k + 1];	// move higher ones down				
 			}
 			numElements--;	// decrement the size by 1
 			return true;
