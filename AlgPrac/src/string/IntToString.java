@@ -9,21 +9,20 @@ public class IntToString {
 	
 	/**
 	 * Convert an integer to a String
-	 * @param i the integer to be converted to String
+	 * @param input: the integer to be converted to String
 	 * @return a String representation of the input integer
 	 */
-	public static String intToStr(int i) {
+	public static String intToStr(int input) {
 		StringBuilder sb = new StringBuilder();
-		while (i != 0) {
-			int n = i % 10;
+		while (input != 0) {
+			int n = input % 10;
 			sb.append(n);
-			i = i / 10;
+			input = input / 10;
 		}
-//		sb = sb.reverse();
 		String s = sb.substring(0);
 		sb = new StringBuilder();
-		for (int j = s.length() - 1; j >= 0; j--) {
-			sb.append(s.charAt(j));
+		for (int i = s.length() - 1; i >= 0; i--) {
+			sb.append(s.charAt(i));
 		}
 		s = sb.substring(0);
 		return s;
