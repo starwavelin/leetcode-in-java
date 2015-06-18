@@ -1,14 +1,15 @@
-package arraysAndStrings;
+package array;
 
 import java.util.Scanner;
 
 /**
  * This is a class providing methods
  * for removing duplicates from an unsorted 
- * integer array.
+ * integer array, with the original order 
+ * of elements preserved.
  * 
  * 1. O(n^2) time O(1) space
- * 
+ * 2. 
  * 
  * @author Guru
  *

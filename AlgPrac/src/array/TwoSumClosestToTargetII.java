@@ -1,4 +1,4 @@
-package arraysAndStrings;
+package array;
 
 import java.util.Scanner;
 
@@ -8,20 +8,21 @@ import java.util.Scanner;
  * to the target integer. If there are multiple solutions, 
  * just returning the first pair of indices you found is fine.
  * 
- * O(n^2) solution
+ * O(n) solution
+ * 
  * @author Benjamin Lin
  *
  */
 
-public class TwoSumClosestToTarget {
+public class TwoSumClosestToTargetII {
 	
 	// input array: 2, 4, 8, 10, 12
 	// target value: 17
-	// result: indices of number 4, 12 or 8, 10; return one of them is sufficient.
+	// result: indices 1, 4 or 2, 3; return one of them is sufficient.
 	
 	// input array: 2, 4, 8, 10, 12, 20
 	// target value: 17
-	// result: indices of number 4, 12 or 8, 10; return one of them is sufficient.
+	// result: indices 1, 4 or 2, 3; return one of them is sufficient.
 
 	public static int[] twoSumClosest(int[] input, int target) {
 		if (input.length < 2 || input == null) {
@@ -32,27 +33,34 @@ public class TwoSumClosestToTarget {
 			return new int[]{0, 1};
 		}
 		
-		int[] ret = new int[2];		
-		int diff = Integer.MAX_VALUE;
+		int start = 0;
+		int end = input.length - 1;
 		
-		int i, j, extra;
-		for (i = 0; i < input.length - 1; i++) {
-			for (j = i + 1; j < input.length; j++) {
-				extra = target - input[i];
-				if (Math.abs(extra - input[j]) == 0) { 
-					// found two indices exactly sum up to target
-					return new int[]{i, j};
-				}
-				if (Math.abs(extra - input[j]) < diff) {
-					diff = Math.abs(extra - input[j]);
-					ret[0] = i;
-					ret[1] = j;
-				}
+		int diff = Integer.MAX_VALUE;
+		int[] ret = new int[2];
+		
+		 			
+		while (start + 1 <= end) {
+			if (input[start] + input[end] < target) {
+				if (Math.abs(input[start] + input[end] - target) < diff) {
+					diff = Math.abs(input[start] + input[end] - target);
+					ret[0] = start;
+					ret[1] = end;					
+				} 
+				start++;
+			}	else if (input[start] + input[end] > target) {
+				if (Math.abs(input[start] + input[end] - target) < diff) {
+					diff = Math.abs(input[start] + input[end] - target);
+					ret[0] = start;
+					ret[1] = end;					
+				} 
+				end--;
+			}	else { // when input[start] + input[end] == target
+				ret[0] = start; 
+				ret[1] = end;
+				return ret;
 			}
 		}
-		// The solution above is O(n^2), 
-		// for O(nlogn) solution, look into 
-		// TwoSumClosestToTargetII please
 		
 		return ret;
 	}

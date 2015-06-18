@@ -1,4 +1,4 @@
-package arraysAndStrings;
+package array;
 
 /**
  * This class of Array has 4 methods:

@@ -1,4 +1,4 @@
-package arraysAndStrings;
+package array;
 
 public class MyArrayApp {
 
