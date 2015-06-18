@@ -11,18 +11,17 @@ import java.util.Scanner;
 public class RemoveDupSortedArray {
 	
 	public static int removeDup(int[] nums) {
-		if (nums.length <= 1) {
+		if (nums.length < 2) {
 			return nums.length;
 		}
-		
-		int size = 0; 
-		for (int i = 0; i < nums.length; i++) {
-			if (nums[i] != nums[size]) {
-				size++;
-				nums[size] = nums[i];
+		int prev = 0;
+		for (int cur = 0; cur < nums.length; cur++) {
+			if (nums[prev] != nums[cur]) {
+				prev++;
+				nums[prev] = nums[cur];
 			}
 		}
-		return (size + 1);
+		return prev + 1;
 	}
 	
 	public static void displayArray(int[] arr, int size) {

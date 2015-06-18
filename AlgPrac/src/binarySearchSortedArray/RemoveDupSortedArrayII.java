@@ -15,25 +15,21 @@ public class RemoveDupSortedArrayII {
      * @return : return an integer
      */
 	public static int removeDup(int[] nums) {
-		if (nums.length <= 1) {
+		if (nums.length <= 2) {
 			return nums.length;
 		}
-		int size, i, j;
-		size = i = j = 0;		
-		for (i = 0; i < nums.length;) {
-			int cur = nums[i];
-			for (j = i; j < nums.length; j++) {
-				if (nums[j] != cur) {
-					break;
-				}
-				if (j - i < 2) {
-					nums[size] = cur;
-					size++;
-				}
+		int prev = 1;
+		int cur = 2;
+		while (cur < nums.length) {
+			if (nums[cur] == nums[prev] && nums[cur] == nums[prev - 1]) {
+				cur++;
+			} else {
+				prev++;
+				nums[prev] = nums[cur];
+				cur++;
 			}
-			i = j;
 		}
-		return size;
+		return prev + 1;
 	}
 	
 	public static void displayArray(int[] arr, int size) {
