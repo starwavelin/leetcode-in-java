@@ -19,6 +19,9 @@ import java.util.Scanner;
 public class RemoveDuplicatesUnsortedArray {
 	/**
 	 * Solution 1: Naive O(n^2)
+	 * This method has a bug:
+	 * 3 3 5 3 3 6 returns 3 5 3 6
+	 * 3 3 3 6 returns 3 3 6
 	 * @param nums
 	 * @return
 	 */
@@ -29,9 +32,8 @@ public class RemoveDuplicatesUnsortedArray {
 			target = nums[i];
 			for (int j = i + 1; j < size; j++) {
 				if (nums[j] == target) {
-					// remove nums[j]
 					for (int k = j; k < size - 1; k++) {
-						nums[k] = nums[k + 1]; 
+						nums[k] = nums[k + 1];
 					}
 					size--;
 				}
@@ -40,30 +42,24 @@ public class RemoveDuplicatesUnsortedArray {
 		return size;
 	}
 	
-	
+	/**
+	 * Solution 2: O(n) time solution with the help of HashMap
+	 * @param nums
+	 * @return
+	 */
 	public static ArrayList<Integer> removeDup2(int[] nums) {
 		int size = nums.length;
 		ArrayList<Integer> ret = new ArrayList<Integer>();
+		HashMap<Integer, Integer> hash = new HashMap<Integer, Integer>();
 		for (int i = 0; i < size; i++) {
-			if (find(nums[i])) {
-				;
-			} else {
-				add(nums[i]);
+			if (!hash.containsKey(nums[i])) {
+				hash.put(nums[i], 1);
 				ret.add(nums[i]);
 			}
 		}
 		return ret;
 	}
-	private static HashMap<Integer, Integer> hash = new HashMap<Integer, Integer>();
-	private static void add(int num) {
-		if (!hash.containsKey(num)) {
-			int count = 1;
-			hash.put(num, count);
-		}
-	}
-	private static boolean find(int num) {
-		return hash.containsKey(num);
-	}
+	
 	
 	public static void displayArray(int[] nums, int size) {
 		for(int i = 0; i < size; i++) {
