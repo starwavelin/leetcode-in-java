@@ -117,4 +117,8 @@ public class LinkedList {
 		return head;
 	}
 	
+	public Node getTail() {
+		return tail;
+	}
+	
 }
