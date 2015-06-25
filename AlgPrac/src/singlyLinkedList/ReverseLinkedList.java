@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ReverseLinkedList {
 	public static void main(String[] args) {
 		System.out.println("*** Welcome to Ben's "
-				+ "Remove Duplicates II From A Sorted Linked List Driver ***");
+				+ "Reverse Linked List Driver ***");
 		
 		LinkedList ll = new LinkedList();
 		
