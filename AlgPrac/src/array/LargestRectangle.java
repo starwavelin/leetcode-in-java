@@ -19,7 +19,7 @@ public class LargestRectangle {
 		int size = height.length;
 		int maxArea = 0;
 		for (int i = 0; i < size; i++) {
-			for (int j = i + 1; j < size + 1; j++) {
+			for (int j = i + 1; j <= size; j++) {
 				int h = height[i];
 				
 				// This loop is for finding the lowest height 
@@ -38,10 +38,35 @@ public class LargestRectangle {
 		return maxArea;
 	}
 	
-//	public int solution2(int[] height) {
-//		
-//	}
-//	
+	
+	/**
+	 * Unlike Solution1, when j is scanning the array,
+	 * we keep a variable h to record the lowest height
+	 * in the [i, j] range.
+	 * @param height
+	 * @return
+	 */
+	public static int solution2(int[] height) {
+		int size = height.length;
+		int maxArea = 0;
+		
+		for (int i = 0; i < size; i++) {
+			int h = height[i];
+			
+			// Use the following loop to get the lowest height 
+			// of the rectangle formed by [i, j]
+			for (int j = i + 1; j <= size; j++) {
+				if (j <= size && height[j - 1] < h) {
+					h = height[j - 1];
+				}
+				if ((j - i) * h > maxArea) {
+					maxArea = (j - i) * h;
+				}
+			}
+		}
+		return maxArea;
+	}
+
 //	public int solution3(int[] height) {
 //		
 //	}
@@ -67,9 +92,9 @@ public class LargestRectangle {
 			case 1:
 				result = solution1(testArray);
 				break;
-//			case 2:
-//				result = solution2(testArray);
-//				break;
+			case 2:
+				result = solution2(testArray);
+				break;
 //			case 3:	
 //				result = solution3(testArray);
 //				break;
