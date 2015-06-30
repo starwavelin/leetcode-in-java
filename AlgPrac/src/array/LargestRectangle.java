@@ -1,6 +1,7 @@
 package array;
 
 import java.util.Scanner;
+import java.util.Stack;
 
 /**
  * http://www.lintcode.com/en/problem/largest-rectangle-in-histogram/
@@ -56,7 +57,7 @@ public class LargestRectangle {
 			// Use the following loop to get the lowest height 
 			// of the rectangle formed by [i, j]
 			for (int j = i + 1; j <= size; j++) {
-				if (j <= size && height[j - 1] < h) {
+				if (height[j - 1] < h) {
 					h = height[j - 1];
 				}
 				if ((j - i) * h > maxArea) {
@@ -67,9 +68,35 @@ public class LargestRectangle {
 		return maxArea;
 	}
 
-//	public int solution3(int[] height) {
-//		
-//	}
+	
+	/**
+	 * Idea: enumerate the heights of the histogram first.
+	 * Then, for each height, scan left and right to find the
+	 * left boundary bar and the right boundary bar with 
+	 * heights less than it.
+	 * Calculate the area.
+	 * @param height
+	 * @return
+	 */
+	public static int solution3(int[] height) {
+		if (height == null || height.length == 0) {
+			return 0;
+		}
+		
+		Stack<Integer> stack = new Stack<Integer>();
+		int maxArea = 0;
+		for (int i = 0; i <= height.length; i++) {
+			int cur = (i == height.length) ? -1 : height[i];  
+						// -1 is the dummy bar in the rightmost of histogram
+			while (!stack.isEmpty() && cur <= height[stack.peek()]) {
+				int h = height[stack.pop()];
+				int w = stack.isEmpty() ? i : i - stack.peek() - 1;
+				maxArea = Math.max(maxArea, h * w);
+			}
+			stack.push(i);
+		}
+		return maxArea;
+	}
 	
 	
 	public static void main(String[] args) {
@@ -95,9 +122,9 @@ public class LargestRectangle {
 			case 2:
 				result = solution2(testArray);
 				break;
-//			case 3:	
-//				result = solution3(testArray);
-//				break;
+			case 3:	
+				result = solution3(testArray);
+				break;
 			default:
 				System.out.println("Please check your input for the method number!");
 				break;
