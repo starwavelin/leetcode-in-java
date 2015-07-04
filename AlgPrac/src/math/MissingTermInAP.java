@@ -1,4 +1,4 @@
-package buncee;
+package math;
 
 import java.io.*;
 import java.util.*;
