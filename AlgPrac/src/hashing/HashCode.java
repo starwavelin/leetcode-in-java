@@ -43,6 +43,29 @@ public class HashCode {
 		return (int) (sum % HASH_SIZE);
 	}
 	
+	/**
+	 * hashCode3 uses modMultiplication to deal with the
+	 * exponent of 33 overflow issue.
+	 * So, we don't use Math.pow(33, exp) directly.
+	 * @param key
+	 * @param HASH_SIZE
+	 * @return
+	 */
+	public static int hashCode3(char[] key, int HASH_SIZE) {
+		int ret = 0;
+		int base = 1;
+		for (int i = key.length - 1; i >=0; i--) {
+			ret += modMultiply(key[i], base, HASH_SIZE);
+			ret %= HASH_SIZE;
+			base = modMultiply(base, 33, HASH_SIZE);
+		}
+		return ret % HASH_SIZE;
+	}
+	private static int modMultiply(int a, int b, int c) {
+		long tmp = (long) a * b;
+		return (int) (tmp % c);
+	}
+	
 	
 	public static void main(String[] args) {
 		System.out.println("*** Welcome to Ben's HashCode Test ***");
@@ -54,10 +77,8 @@ public class HashCode {
 		for (int i = 0; i < key.length; i++) {
 			key[i] = s.charAt(i);
 		}
-//		int ret = hashCode1(key, HASH_SIZE);
-//		System.out.print("Your input String " + s + " has hash code value " + ret);
 		
-		int ret = hashCode2(key, HASH_SIZE);
+		int ret = hashCode3(key, HASH_SIZE);
 		System.out.print("Your input String " + s + " has hash code value " + ret);
 	}
 	
