@@ -1,4 +1,4 @@
-package array;
+package bitwise;
 
 import java.util.Scanner;
 /**

@@ -1,4 +1,4 @@
-package array;
+package bitwise;
 
 import java.util.HashMap;
 import java.util.Map.Entry;
@@ -30,7 +30,7 @@ public class SingleNumberII {
 		int[] bits = new int[32];
 		for (int i = 0; i < 32; i++) {
 			for (int j = 0; j < nums.length; j++) {
-				bits[i] += (nums[j] >> i) & 1;
+				bits[i] += (nums[j] >> i) & 1;	// get the bit at bits[i]
 				bits[i] %= 3;
   			}
 			ret = ret | (bits[i] << i);

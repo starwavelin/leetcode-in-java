@@ -10,7 +10,7 @@ public class BitwiseExample {
 		System.out.println("a | b becomes " + (a | b)); // should give 61
 		System.out.println("a ^ b becomes " + (a ^ b)); // should give 49
 		System.out.println("~a becomes " + ~a); 	// should give -61 
-																							// cuz ~ gives the new binarly in 2's complement
+					// cuz ~ gives the new binarly in 2's complement
 		
 		System.out.println("a << 2 becomes " + (a << 2)); // should give 240
 		System.out.println("a >> 2 becomes " + (a >> 2)); // should give 15
