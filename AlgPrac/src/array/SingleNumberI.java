@@ -4,6 +4,12 @@ import java.util.Scanner;
 /**
  * 
  * http://www.lintcode.com/en/problem/single-number/
+ * 
+ * The properties of XOR;
+ * 1. a ^ b = c => a ^ c = b, b ^ c = a
+ * 2. a ^ a = 0 
+ * 3. a ^ 0 = a
+ * 4. (a ^ b) ^ c = a ^ (b ^ c)
  *
  */
 
@@ -11,7 +17,7 @@ public class SingleNumberI {
 	
 	public static int singleNumber(int[] nums) {
 		if (nums == null || nums.length == 0) {
-			return Integer.MIN_VALUE;
+			return 0;
 		}
 		
 		int n = 0;
@@ -23,7 +29,7 @@ public class SingleNumberI {
 	
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Largest Rectangle in Histogram Test ***");
+		System.out.println("*** Welcome to Ben's Single Number I Test ***");
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Input your integer array, \n" +
