@@ -9,6 +9,7 @@ import java.util.Set;
  * http://www.lintcode.com/en/problem/majority-number-iii/
  * Exactly one number int he array which appears more than 1/k times
  * Method: Use HashMap.
+ * O(n) time and O(k) extra space.
  *
  */
 public class MajorityNumberIII {
