@@ -65,6 +65,36 @@ public class TwoSumClosestToTargetII {
 		return ret;
 	}
 	
+	
+	/**
+	 * A simplified solution to twoSumClosest
+	 * @param input
+	 * @param target
+	 * @return
+	 */
+	public static int[] twoSumClosest2(int[] input, int target) {
+		int[] ret = new int[2];
+		int start = 0, end = input.length - 1;
+		int diff = Integer.MAX_VALUE;
+		
+		while(start < end) {
+            int sum = input[start] + input[end];
+            if(Math.abs(target - sum) < diff) {
+                diff = Math.abs(target - sum);
+                ret[0] = start;
+                ret[1] = end;
+            }
+            if(sum > target) { 
+                end--;
+            } else {
+                start++;    
+            }
+        }
+		
+		return ret;
+	}
+	
+	
 	/**
 	 * @param args
 	 */
@@ -82,7 +112,24 @@ public class TwoSumClosestToTargetII {
 		
 		System.out.print("Give your target number: ");
 		int target = sc.nextInt();
-		int[] result = twoSumClosest(testArray, target);
+		
+		
+		System.out.print("Select Method 1 or 2 to do calculation: ");
+		int method = sc.nextInt();
+		int[] result = new int[2];
+		switch(method) {
+			case 1:
+				result = twoSumClosest(testArray, target);
+				break;
+			case 2:
+				result = twoSumClosest2(testArray, target);
+				break;
+			default:
+				System.out.println("Please input integer 1 or 2 only!");
+				break;
+		}
+		
+		/*** Result Output   ***/
 		if (result != null) {
 			System.out.print("The two numbers that are closest to the target " 
 				+ target + " have indices " + result[0] + " and " + result[1]);
