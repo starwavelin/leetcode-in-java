@@ -4,14 +4,14 @@ package stack;
  * This is a stack implemented using array
  */
 
-public class Stack {
+public class StackI {
 	
 	int[] array;
 	int size;
 	int top; 		// pointer always points to the top element of the stack
 	public final int arraySize = 30; // 30 a hard-coded size of the array. 
 	
-	public Stack() {
+	public StackI() {
 		array = new int[arraySize];	
 		size = 0;	// size of the stack
 		top = -1;
@@ -55,7 +55,7 @@ public class Stack {
 	public static void main(String[] args) {
 		System.out.println("*** Welcome to Ben's "
 				+ " Stack implemented by Array Test ***");
-		Stack stack = new Stack();
+		StackI stack = new StackI();
 		
 		stack.push(3);
 		stack.push(8);
