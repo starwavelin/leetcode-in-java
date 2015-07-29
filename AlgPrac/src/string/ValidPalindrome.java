@@ -4,7 +4,10 @@ import java.util.Scanner;
 
 /**
  * https://leetcode.com/problems/valid-palindrome/
- *
+ * in other words "a ba" is a palindrome cuz we only consider
+ * alphabets and digits; the space doesn't cause it to be a non-palindrome.
+ * that's also why we have to put the while(i < j) outside of 
+ * bypass non-letter-digit character steps.
  */
 public class ValidPalindrome {
 	
