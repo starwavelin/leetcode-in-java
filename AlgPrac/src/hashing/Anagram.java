@@ -1,4 +1,4 @@
-package string;
+package hashing;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -39,9 +39,35 @@ public class Anagram {
 		return true;
 	}
 	
-	
+	/**
+	 * Use an integer array to count the appearance of characters
+	 * in the two given strings. If there is an unmatched character,
+	 * its corresponding cell in the integer array would have value -1,
+	 * which we return false immediately
+	 * @param s: given string s1
+	 * @param t: given string s2
+	 * @return true if they are anagrams; false otherwise.
+	 */
 	public static boolean anagram2(String s, String t) {
-		return false;
+		if (s == null && t == null) {
+			return false;
+		}
+		if (s.length() != t.length()) {
+			return false;
+		}
+		
+		int[] count = new int[256];
+		int size = s.length();
+		for (int i = 0; i < size; i++) {
+			count[(int) s.charAt(i)]++;
+		}
+		for (int i = 0; i < size; i++) {
+			count[(int) t.charAt(i)]--;
+			if (count[(int) t.charAt(i)] < 0) {
+				return false;
+			}
+		}
+		return true;
 	}
 	
 	
@@ -54,7 +80,7 @@ public class Anagram {
 		System.out.print("Input another string please: ");
 		String t = sc.next().trim();
 		
-		boolean result = anagram1(s, t);
+		boolean result = anagram2(s, t);
 		if (result) {
 			System.out.println("The given " + s + " and " + t + " are anagrams.");
 		} else {
