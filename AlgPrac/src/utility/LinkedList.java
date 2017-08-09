@@ -1,9 +1,9 @@
-package singlyLinkedList;
+package utility;
 
 public class LinkedList {
 	
-	private Node head;
-	private Node tail;
+	private ListNode head;
+	private ListNode tail;
 	private int size;		// record the number of nodes in this linked list
 	
 	public LinkedList() {
@@ -17,7 +17,7 @@ public class LinkedList {
 	}
 	
 	public void insertFirst(int data) {
-		Node node = new Node(data);
+		ListNode node = new ListNode(data);
 		if (isEmpty()) {
 			head = node;
 			tail = node;
@@ -32,7 +32,7 @@ public class LinkedList {
 	}
 	
 	public void insertLast(int data) {
-		Node node = new Node(data);
+		ListNode node = new ListNode(data);
 		if (isEmpty()) {
 			head = node;
 			tail = node;
@@ -73,8 +73,8 @@ public class LinkedList {
 			return;
 		}		
 		// double pointers
-		Node p1 = head;
-		Node p2 = p1.next;
+		ListNode p1 = head;
+		ListNode p2 = p1.next;
 		while (p2 != tail) {
 			p1 = p1.next;
 			p2 = p1.next;			
@@ -90,7 +90,7 @@ public class LinkedList {
 			System.out.println("List is empty.");
 			return;
 		}
-		Node p1 = head;
+		ListNode p1 = head;
 		while (p1 != null) {
 			p1.displayNode();
 			p1 = p1.next;
@@ -100,12 +100,12 @@ public class LinkedList {
 	
 	
 	// For coding exam purpose
-	public void displayLinkedList(Node head) {
+	public void displayLinkedList(ListNode head) {
 		if (head == null) {
 			System.out.println("List is empty.");
 			return;
 		}
-		Node p1 = head;
+		ListNode p1 = head;
 		while (p1 != null) {
 			p1.displayNode();
 			p1 = p1.next;
@@ -113,11 +113,11 @@ public class LinkedList {
 		System.out.println();
 	}
 	
-	public Node getHead() {
+	public ListNode getHead() {
 		return head;
 	}
 	
-	public Node getTail() {
+	public ListNode getTail() {
 		return tail;
 	}
 	

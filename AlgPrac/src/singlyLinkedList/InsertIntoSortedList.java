@@ -2,39 +2,13 @@ package singlyLinkedList;
 
 import java.util.Scanner;
 
+import utility.LinkedList;
+import utility.ListNode;
+
 public class InsertIntoSortedList {
 
-	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's "
-				+ "Insert an Element into A Sorted Linked List Driver ***");
-		
-		LinkedList ll = new LinkedList();
-		
-		Scanner sc = new Scanner(System.in);
-		System.out.print("Input your integer array, \n"
-				+ "in Ordered Sequence, and \n"
-				+ "leave each number by space: ");
-		String[] strs = sc.nextLine().split(" ");
-		int[] testArray = new int[strs.length];
-		for (int i = 0; i < strs.length; i++) {
-			testArray[i] = Integer.parseInt(strs[i]);
-			
-			ll.insertLast(testArray[i]);
-		}		
-		ll.displayLinkedList();
-		
-		System.out.print("Enter an integer you wanna insert into the "
-				+ "list you just created: ");
-		int valToInsert = sc.nextInt();
-		
-		
-		Node head = ll.getHead();
-		Node newHead = insertIntoSortedList(head, valToInsert);
-		ll.displayLinkedList(newHead);
-	}
-	
-	public static Node insertIntoSortedList(Node head, int val) {
-		Node node = new Node(val);
+	public static ListNode insertIntoSortedList(ListNode head, int val) {
+		ListNode node = new ListNode(val);
 		// Case 1: empty list
 		if (head == null) {
 			head = node;
@@ -57,8 +31,8 @@ public class InsertIntoSortedList {
 			node.next = head;
 			head = node;
 		} else {
-			Node p1 = head;
-			Node p2 = p1.next;
+			ListNode p1 = head;
+			ListNode p2 = p1.next;
 			while (p2.next != null) {
 				if (node.data > p1.data && node.data <= p2.data) {
 					p1.next = node; 
@@ -75,5 +49,30 @@ public class InsertIntoSortedList {
 			}
 		}
 		return head;
+	}
+	
+	public static void main(String[] args) {
+		System.out.println("*** Welcome to Ben's Insert an Element into A Sorted Linked List Driver ***");
+		
+		LinkedList ll = new LinkedList();
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Input your integer array, \nin Ordered Sequence, and leave each number by space: ");
+		String[] strs = sc.nextLine().split(" ");
+		int[] testArray = new int[strs.length];
+		for (int i = 0; i < strs.length; i++) {
+			testArray[i] = Integer.parseInt(strs[i]);
+			ll.insertLast(testArray[i]);
+		}		
+		ll.displayLinkedList();
+		
+		System.out.print("Enter an integer you wanna insert into the "
+				+ "list you just created: ");
+		int valToInsert = sc.nextInt();
+		
+		
+		ListNode head = ll.getHead();
+		ListNode newHead = insertIntoSortedList(head, valToInsert);
+		ll.displayLinkedList(newHead);
 	}
 }

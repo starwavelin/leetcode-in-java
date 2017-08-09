@@ -2,13 +2,16 @@ package singlyLinkedList;
 
 import java.util.Scanner;
 
+import utility.LinkedList;
+import utility.ListNode;
+
 public class ReverseLinkedList {
-	public static Node reverse(Node head) {
+	public static ListNode reverse(ListNode head) {
 		if (head == null || head.next == null) {
 			return head;
 		}
 		
-		Node prev = null, next = null;
+		ListNode prev = null, next = null;
 		while (head != null) {
 			next = head.next;
 			head.next = prev;
@@ -35,10 +38,10 @@ public class ReverseLinkedList {
 		}		
 		ll.displayLinkedList();
 		
-		Node head = ll.getHead();
+		ListNode head = ll.getHead();
 		
 		System.out.print("The given linked list after reverse is: ");
-		Node newHead = reverse(head);
+		ListNode newHead = reverse(head);
 		ll.displayLinkedList(newHead);
 	}
 }

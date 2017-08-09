@@ -1,10 +1,10 @@
-package singlyLinkedList;
+package utility;
 
-public class Node {
+public class ListNode {
 	public int data;
-	public Node next;
+	public ListNode next;
 	
-	public Node(int data) {
+	public ListNode(int data) {
 		this.data = data;
 		next = null;
 	}
