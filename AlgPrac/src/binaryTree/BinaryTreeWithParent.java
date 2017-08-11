@@ -2,6 +2,8 @@ package binaryTree;
 
 import java.util.ArrayList;
 
+import utility.TreeNodeP;
+
 /**
  * This is a binary tree where 
  * each node not only has left and right references
@@ -14,7 +16,7 @@ import java.util.ArrayList;
  */
 public class BinaryTreeWithParent {
 	
-	NodeWithParent root;
+	TreeNodeP root;
 	
 	public BinaryTreeWithParent() {
 		root = null;
@@ -25,13 +27,13 @@ public class BinaryTreeWithParent {
 	 * @param node
 	 * @param val
 	 */
-	public void insertNoRec(NodeWithParent node, int val) {
-		NodeWithParent newNode = new NodeWithParent(val);
-		NodeWithParent parentNode = null;
+	public void insertNoRec(TreeNodeP node, int val) {
+		TreeNodeP newNode = new TreeNodeP(val);
+		TreeNodeP parentNode = null;
 		if (root == null) {
 			root = newNode;
 		} else {
-			NodeWithParent cur = root;
+			TreeNodeP cur = root;
 			while (true) {
 				parentNode = cur;
 				if (val < cur.val) {
@@ -58,8 +60,8 @@ public class BinaryTreeWithParent {
 	 * @param key
 	 * @return
 	 */
-	public NodeWithParent searchNoRec(int key) {
-		NodeWithParent cur = root;
+	public TreeNodeP searchNoRec(int key) {
+		TreeNodeP cur = root;
 		while (cur.val != key) {
 			if (cur == null) {
 				return null;
@@ -80,9 +82,9 @@ public class BinaryTreeWithParent {
 	 * @param node2
 	 * @return the lowest common ancestor Node
 	 */
-	public NodeWithParent lowestCommonAncestor(NodeWithParent node1, NodeWithParent node2) {
-		ArrayList<NodeWithParent> list1 = getPathToRoot(node1);
-		ArrayList<NodeWithParent> list2 = getPathToRoot(node2);
+	public TreeNodeP lowestCommonAncestor(TreeNodeP node1, TreeNodeP node2) {
+		ArrayList<TreeNodeP> list1 = getPathToRoot(node1);
+		ArrayList<TreeNodeP> list2 = getPathToRoot(node2);
 		int i, j;
 		for (i = list1.size() - 1, j = list2.size() - 1; i >= 0 && j >= 0; i--, j--) {
 			if (!list1.get(i).equals(list2.get(j))) {
@@ -92,8 +94,8 @@ public class BinaryTreeWithParent {
 		}
 		return list1.get(i + 1);
 	}
-	private ArrayList<NodeWithParent> getPathToRoot(NodeWithParent node) {
-		ArrayList<NodeWithParent> ret = new ArrayList<NodeWithParent>();
+	private ArrayList<TreeNodeP> getPathToRoot(TreeNodeP node) {
+		ArrayList<TreeNodeP> ret = new ArrayList<TreeNodeP>();
 		while (node != null) {
 			ret.add(node);
 			node = node.parent;

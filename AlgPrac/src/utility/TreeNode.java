@@ -1,14 +1,14 @@
-package binaryTree;
+package utility;
 
 /**
  * The TreeNode used for binaryTree questions.
  */
-public class Node {
+public class TreeNode {
 
 	public int val;
-	public Node left, right;
+	public TreeNode left, right;
 	
-	public Node(int val) {
+	public TreeNode(int val) {
 		this.val = val;
 		this.left = this.right = null;
 	}

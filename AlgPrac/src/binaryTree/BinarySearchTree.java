@@ -5,6 +5,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
+import utility.TreeNode;
+
 /**
  * This is the main class of the logic of the BinaryTree app. The methods
  * implemented in this class are as follows: 
@@ -29,11 +31,11 @@ import java.util.Stack;
  * 
  * @author Guru
  */
-public class BinaryTree {
+public class BinarySearchTree {
 
-	Node root;
+	TreeNode root;
 
-	public BinaryTree() {
+	public BinarySearchTree() {
 		root = null;
 	}
 
@@ -45,19 +47,19 @@ public class BinaryTree {
 	 * @param val
 	 *            : the value of the node to be inserted
 	 */
-	public void insert(Node node, int val) {
+	public void insert(TreeNode node, int val) {
 		if (root == null) {
-			root = new Node(val);
+			root = new TreeNode(val);
 		} else {
 			if (val < node.val) {
 				if (node.left == null) {
-					node.left = new Node(val);
+					node.left = new TreeNode(val);
 				} else {
 					insert(node.left, val);
 				}
 			} else {
 				if (node.right == null) {
-					node.right = new Node(val);
+					node.right = new TreeNode(val);
 				} else {
 					insert(node.right, val);
 				}
@@ -68,13 +70,13 @@ public class BinaryTree {
 	/**
 	 * 2. insert method's non-recursive version two pointers
 	 */
-	public void insertNoRec(Node node, int val) {
-		Node newNode = new Node(val);
+	public void insertNoRec(TreeNode node, int val) {
+		TreeNode newNode = new TreeNode(val);
 		if (root == null) {
 			root = newNode;
 		} else {
-			Node cur = root;
-			Node parent;
+			TreeNode cur = root;
+			TreeNode parent;
 			while (true) {
 				parent = cur;
 				if (val < cur.val) {
@@ -100,7 +102,7 @@ public class BinaryTree {
 	 * @param key
 	 * @return
 	 */
-	public RT search(Node root, int key) {
+	public RT search(TreeNode root, int key) {
 		while (true) {
 			if (root == null) {
 				return new RT(false, null);
@@ -116,9 +118,9 @@ public class BinaryTree {
 
 	class RT {
 		boolean flag;
-		Node node;
+		TreeNode node;
 
-		RT(boolean flag, Node node) {
+		RT(boolean flag, TreeNode node) {
 			this.flag = flag;
 			this.node = node;
 		}
@@ -127,7 +129,7 @@ public class BinaryTree {
 	/**
 	 * 3.
 	 */
-	public void preorderTraverse(Node root) {
+	public void preorderTraverse(TreeNode root) {
 		if (root != null) {
 			System.out.print(" " + root.val + " ");
 			preorderTraverse(root.left);
@@ -138,7 +140,7 @@ public class BinaryTree {
 	/**
 	 * 4.
 	 */
-	public void inorderTraverse(Node root) {
+	public void inorderTraverse(TreeNode root) {
 		if (root != null) {
 			inorderTraverse(root.left);
 			System.out.print(" " + root.val + " ");
@@ -149,7 +151,7 @@ public class BinaryTree {
 	/**
 	 * 5.
 	 */
-	public void postorderTraverse(Node root) {
+	public void postorderTraverse(TreeNode root) {
 		if (root != null) {
 			postorderTraverse(root.left);
 			postorderTraverse(root.right);
@@ -162,14 +164,14 @@ public class BinaryTree {
 	 * 
 	 * @param root
 	 */
-	public void preorderTraverseDC(Node root) {
+	public void preorderTraverseDC(TreeNode root) {
 		ArrayList<Integer> ret = traverseDC(root);
 		for (int element : ret) {
 			System.out.print(" " + element + " ");
 		}
 	}
 
-	private ArrayList<Integer> traverseDC(Node root) {
+	private ArrayList<Integer> traverseDC(TreeNode root) {
 		ArrayList<Integer> ret = new ArrayList<Integer>();
 		if (root != null) {
 			// Divide
@@ -186,8 +188,8 @@ public class BinaryTree {
 	/**
 	 * 7. The non-recursive version of preorderTraverse
 	 */
-	public void preorderTraverseNoRec(Node root) {
-		Stack<Node> stack = new Stack<Node>();
+	public void preorderTraverseNoRec(TreeNode root) {
+		Stack<TreeNode> stack = new Stack<TreeNode>();
 		if (root == null) {
 			return;
 		}
@@ -209,8 +211,8 @@ public class BinaryTree {
 	/**
 	 * 7-1 The non-recursive version of inorderTraverse
 	 */
-	public void inorderTraverseNoRec(Node root) {
-		Stack<Node> stack = new Stack<Node>();
+	public void inorderTraverseNoRec(TreeNode root) {
+		Stack<TreeNode> stack = new Stack<TreeNode>();
 		while (root != null || !stack.isEmpty()) {
 			if (root != null) {
 				stack.push(root);
@@ -228,9 +230,9 @@ public class BinaryTree {
 	 * 
 	 * @param root
 	 */
-	public void postorderTraverseNoRec(Node root) {
-		Stack<Node> stack = new Stack<Node>();
-		Node preNode = null;
+	public void postorderTraverseNoRec(TreeNode root) {
+		Stack<TreeNode> stack = new Stack<TreeNode>();
+		TreeNode preNode = null;
 		if (root != null) {
 			stack.push(root);
 			while (!stack.isEmpty()) {
@@ -257,7 +259,7 @@ public class BinaryTree {
 	 *            : The root of binary tree.
 	 * @return: An integer.
 	 */
-	public int maxDepth(Node root) {
+	public int maxDepth(TreeNode root) {
 		if (root == null) {
 			return 0;
 		}
@@ -265,7 +267,7 @@ public class BinaryTree {
 		return maxDep;
 	}
 
-	private int findMaxDepth(Node root, int curDepth) {
+	private int findMaxDepth(TreeNode root, int curDepth) {
 		int leftDepth = curDepth, rightDepth = curDepth;
 		if (root.left != null) {
 			leftDepth = findMaxDepth(root.left, curDepth + 1);
@@ -284,7 +286,7 @@ public class BinaryTree {
 	 *            : The root of binary tree.
 	 * @return: An integer.
 	 */
-	public int maxDepthDC(Node root) {
+	public int maxDepthDC(TreeNode root) {
 		if (root == null) {
 			return 0;
 		}
@@ -299,11 +301,11 @@ public class BinaryTree {
 	 * @param root
 	 * @return
 	 */
-	public boolean isHeightBalanced(Node root) {
+	public boolean isHeightBalanced(TreeNode root) {
 		return maxDepthWithBalanceDetermine(root) != -1;
 	}
 
-	private int maxDepthWithBalanceDetermine(Node root) {
+	private int maxDepthWithBalanceDetermine(TreeNode root) {
 		if (root == null) {
 			return 0;
 		}
@@ -318,11 +320,11 @@ public class BinaryTree {
 	/**
 	 * 11. isHeightBalanced(Node root) engineering coding style
 	 */
-	public boolean isHeightBalanced2(Node root) {
+	public boolean isHeightBalanced2(TreeNode root) {
 		return heightBal(root).isBal;
 	}
 
-	private ResultType heightBal(Node root) {
+	private ResultType heightBal(TreeNode root) {
 		if (root == null) {
 			return new ResultType(true, 0);
 		}
@@ -354,7 +356,7 @@ public class BinaryTree {
 	 *            : The root of binary tree.
 	 * @return: An integer.
 	 */
-	public int maxPathSum(Node root) {
+	public int maxPathSum(TreeNode root) {
 		int max[] = new int[1];
 		// max[0] = getSum(root, max); // This is WRONG! should be the
 		// following:
@@ -364,7 +366,7 @@ public class BinaryTree {
 		return max[0];
 	}
 
-	private int getSum(Node root, int[] max) {
+	private int getSum(TreeNode root, int[] max) {
 		if (root == null) {
 			return 0;
 		}
@@ -393,14 +395,14 @@ public class BinaryTree {
 	 * @param node2
 	 * @return
 	 */
-	public Node lowestCommonAncestor(Node root, Node node1, Node node2) {
+	public TreeNode lowestCommonAncestor(TreeNode root, TreeNode node1, TreeNode node2) {
 		if (root == null || root == node1 || root == node2) {
 			return root;
 		}
 
 		// Divide
-		Node left = lowestCommonAncestor(root.left, node1, node2);
-		Node right = lowestCommonAncestor(root.right, node1, node2);
+		TreeNode left = lowestCommonAncestor(root.left, node1, node2);
+		TreeNode right = lowestCommonAncestor(root.right, node1, node2);
 
 		// Conquer
 		if (left != null & right != null) {
@@ -419,12 +421,12 @@ public class BinaryTree {
 	 * 
 	 * @param node
 	 */
-	public void levelOrderTraverse(Node node) {
+	public void levelOrderTraverse(TreeNode node) {
 		if (node == null) {
 			return;
 		}
 
-		Queue<Node> queue = new LinkedList<Node>();
+		Queue<TreeNode> queue = new LinkedList<TreeNode>();
 		queue.offer(node); // insert node to the queue
 
 		while (!queue.isEmpty()) {
@@ -445,13 +447,13 @@ public class BinaryTree {
 	 * @param root
 	 * @return
 	 */
-	public boolean isValidBST(Node root) {
+	public boolean isValidBST(TreeNode root) {
 		return inorder(root);
 	}
 
-	Node prev = null;
+	TreeNode prev = null;
 
-	private boolean inorder(Node root) {
+	private boolean inorder(TreeNode root) {
 		if (root == null) {
 			return true;
 		}

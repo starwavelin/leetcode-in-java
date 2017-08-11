@@ -2,6 +2,8 @@ package binaryTree;
 
 import java.util.Scanner;
 
+import utility.TreeNodeP;
+
 /**
  * 							6
  * 						4		8
@@ -28,8 +30,8 @@ public class BinaryTreeWithParentApp {
 		System.out.print("Enter the value of a node: ");
 		int val2 = sc.nextInt();
 		
-		NodeWithParent node1 = tree.searchNoRec(val1);
-		NodeWithParent node2 = tree.searchNoRec(val2);
+		TreeNodeP node1 = tree.searchNoRec(val1);
+		TreeNodeP node2 = tree.searchNoRec(val2);
 		System.out.print("The lowest common ancestor of Node " + node1.val 
 			+ " and Node " + node2.val + " is: ");
 		System.out.print(tree.lowestCommonAncestor(node1, node2).val);

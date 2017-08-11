@@ -10,7 +10,7 @@ public class BinaryTreeApp {
 //		int[] arr = {1, 2, 3};
 //		int[] arr ={8, 5, 9, 7};
 		int[] arr = {6, 4, 8, 1, 7, 3, 9, 2, 5};
-		BinaryTree tree = new BinaryTree();
+		BinarySearchTree tree = new BinarySearchTree();
 		for (int i = 0; i < arr.length; i++) {
 			tree.insert(tree.root, arr[i]);
 		}
