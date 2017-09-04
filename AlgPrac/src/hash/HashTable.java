@@ -1,4 +1,4 @@
-package hashing;
+package hash;
 
 /**
  * Use Array to create a hashtable

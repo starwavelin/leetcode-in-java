@@ -1,4 +1,4 @@
-package hashing;
+package hash;
 
 public class Item {
 	

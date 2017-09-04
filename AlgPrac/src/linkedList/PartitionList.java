@@ -1,29 +1,36 @@
-package singlyLinkedList;
+package linkedList;
 
 import java.util.Scanner;
 
 import utility.LinkedList;
 import utility.ListNode;
 
-public class ReverseLinkedList {
-	public static ListNode reverse(ListNode head) {
+public class PartitionList {
+	
+	public static ListNode partition(ListNode head, int n) {
 		if (head == null || head.next == null) {
 			return head;
 		}
-		
-		ListNode prev = null, next = null;
+		ListNode dummyLeft = new ListNode(-1);
+		ListNode dummyRight = new ListNode(-1);
+		ListNode left = dummyLeft, right = dummyRight;
 		while (head != null) {
-			next = head.next;
-			head.next = prev;
-			prev = head;
-			head = next;
+			if (head.data < n) {
+				left.next = head;
+				left = left.next;
+			} else {
+				right.next = head;
+				right = right.next;
+			}
+			head = head.next;
 		}
-		
-		return prev;
+		right.next = null;
+		left.next = dummyRight.next;
+		return dummyLeft.next;
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Reverse Linked List I (iterative way) Driver ***");
+		System.out.println("*** Welcome to Ben's Partition List Driver ***");
 		
 		LinkedList ll = new LinkedList();
 		
@@ -33,15 +40,17 @@ public class ReverseLinkedList {
 		int[] testArray = new int[strs.length];
 		for (int i = 0; i < strs.length; i++) {
 			testArray[i] = Integer.parseInt(strs[i]);
-			
 			ll.insertLast(testArray[i]);
 		}		
 		ll.displayLinkedList();
 		
+		System.out.print("Input an integer that you want to be the pivot: ");
+		int num = sc.nextInt();
+		
 		ListNode head = ll.getHead();
 		
 		System.out.print("The given linked list after reverse is: ");
-		ListNode newHead = reverse(head);
+		ListNode newHead = partition(head, num);
 		ll.displayLinkedList(newHead);
 	}
 }
