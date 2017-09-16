@@ -1,5 +1,5 @@
 
-As of Sept 4, 2017
+As of Sept 16, 2017
 Categories:
 
 1. array
@@ -14,6 +14,15 @@ Categories:
 10. sorting
 11. stack
 12. string
+13. data structure：data structure design 
 
 ========= in the future =====
-13. graph
+14. graph
+
+=====can use two pointers =====
+array
+binarySearchSortedArray
+hash (?)
+linked list
+stack (?)
+string
