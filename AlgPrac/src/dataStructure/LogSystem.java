@@ -100,7 +100,7 @@ public class LogSystem {
     	ListUtil.display(res);
     	res = sys.retrieve("2016:01:01:01:01:01","2017:01:01:23:00:00","Hour"); 
     		// return [1,2], because you need to return all logs start from 2016:01:01:01 to 2017:01:01:23, 
-    		// where log 3 is left outside the range.
+    		// where log 3, 4 are left outside the range.
     	ListUtil.display(res);
     }
 }
