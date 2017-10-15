@@ -37,8 +37,7 @@ public class StackII {
 	
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's "
-				+ " Stack implemented by LinkedList Test ***");
+		System.out.println("*** Welcome to Xian's Stack implemented by LinkedList Test ***");
 		StackII stack = new StackII();
 		
 		stack.push(2);

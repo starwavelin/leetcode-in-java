@@ -53,8 +53,7 @@ public class StackI {
 	
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's "
-				+ " Stack implemented by Array Test ***");
+		System.out.println("*** Welcome to Xian's Stack implemented by Array Test ***");
 		StackI stack = new StackI();
 		
 		stack.push(3);
