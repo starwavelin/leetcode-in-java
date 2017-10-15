@@ -54,10 +54,18 @@ public class MinStack {
 			minS.offerLast(val);
 		}
 	}
-	 
+	
+	/**
+	 * Note at the line of comparing dataS.pollLast() and minS.peekLast(), 
+	 * if you directly write dataS.pollLast() == minS.peekLast(), that would not work even it the two integers are equivalent in value,
+	 * because these two methods -- pollLast() or peekLast(), return a autoboxed Integer type (object type).
+	 * So, you either need to assign dataS.pollLast() to an int variable then do == comparison, 
+	 * or use .equals()
+	 * I used .equals() cuz it would save me from declaring another variable.
+	 */
 	public void pop() {
 		if (!dataS.isEmpty()) {
-			if (dataS.pollLast() == minS.peekLast())
+			if (dataS.pollLast().equals(minS.peekLast()))
 				minS.pollLast();
 		}
 	}
@@ -80,21 +88,33 @@ public class MinStack {
 		System.out.println("*** Welcome to Xian's MinStack Test ***");
 		MinStack ms = new MinStack();
 		
-		ms.push(-3);
-		ms.push(-5);
-		ms.push(-5);
-		ms.push(4);
-		System.out.println("Now the min is " + ms.getMin()); //should be -5
+//		ms.push(-3);
+//		ms.push(-5);
+//		ms.push(-5);
+//		ms.push(4);
+//		System.out.println("Now the min is " + ms.getMin()); //should be -5
+//		
+//		ms.pop();
+//		System.out.println("Now the min is " + ms.getMin()); //should be -5
+//		
+//		ms.pop();
+//		ms.pop();
+//		System.out.println("Now the min is " + ms.getMin()); //should be -3
+//		
+//		ms.pop();
+//		System.out.println("Now the min is " + ms.getMin()); //should be Integer.MIN_VALUE
+		
+		ms.push(512);
+		ms.push(-1024);
+		ms.push(-1024);
+		ms.push(512);
 		
 		ms.pop();
-		System.out.println("Now the min is " + ms.getMin()); //should be -5
-		
+		System.out.println("Now the min is " + ms.getMin()); //should be -1024
 		ms.pop();
+		System.out.println("Now the min is " + ms.getMin()); //should be -1024
 		ms.pop();
-		System.out.println("Now the min is " + ms.getMin()); //should be -3
-		
-		ms.pop();
-		System.out.println("Now the min is " + ms.getMin()); //should be Integer.MIN_VALUE
+		System.out.println("Now the min is " + ms.getMin()); //should be 512
 	}
 	
 	/**

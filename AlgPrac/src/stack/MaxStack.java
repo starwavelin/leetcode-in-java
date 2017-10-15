@@ -1,10 +1,92 @@
 package stack;
 
-import java.util.Stack;
-
+import java.util.ArrayDeque;
+import java.util.Deque;
+/***************************************************************************
+* Problem No. : 
+* Problem Name: Max Stack
+* Problem URL : 
+* Date        : Oct 14 2017
+* Author	  :	Xian Lin
+* Notes       : 
+* 	This problem is just a transformation of Min Stack.
+* The only part we want to change is 
+* 	when pushing, we want the value being pushed is greater than or equal to the peek of the max stack, 
+* then we push it to the max stack
+* For fun, I rewrote it using ArrayDeque
+* 
+* meta        : tag-stack
+***************************************************************************/
 public class MaxStack {
 	
-	private Stack<Integer> s1;
+	Deque<Integer> dataS;
+	Deque<Integer> maxS;
+	
+	public MaxStack() {
+		dataS = new ArrayDeque<>();
+		maxS = new ArrayDeque<>();
+	}
+	
+	public void push(int x) {
+		dataS.offerLast(x);
+		if (maxS.isEmpty() || x >= maxS.peekLast())
+			maxS.offerLast(x);
+	}
+	
+	public void pop() {
+		if (!dataS.isEmpty()) {
+			if (dataS.pollLast().equals(maxS.peekLast()))
+				maxS.pollLast();
+		}
+	}
+	
+	public int peek() {
+		if (!dataS.isEmpty()) {
+			return dataS.peekLast(); 
+		}
+		return Integer.MIN_VALUE;
+	}
+	
+	public int getMax() {
+		if (!maxS.isEmpty()) {
+			return maxS.peekLast(); 
+		}
+		return Integer.MIN_VALUE;
+	}
+	
+	public static void main(String[] args) {
+		System.out.println("*** Welcome to Xian's MaxStack Test ***");
+		MaxStack ms = new MaxStack();
+		
+		ms.push(19);
+		ms.push(3);
+		ms.push(6);
+		ms.push(28);
+		ms.push(17);
+		System.out.println("Now the max is " + ms.getMax()); //should be 28
+		
+		ms.pop();
+		System.out.println("Now the max is " + ms.getMax()); //should be 28
+		
+		ms.pop();
+		System.out.println("Now the max is " + ms.getMax()); //should be 19
+		
+		MaxStack ms2 = new MaxStack();
+		ms2.push(16);
+		ms2.push(32);
+		ms2.push(32);
+		ms2.push(16);
+		
+		ms2.pop();
+		System.out.println("Now the max is " + ms2.getMax()); //should be 32
+		ms2.pop();
+		System.out.println("Now the max is " + ms2.getMax()); //should be 32
+		ms2.pop();
+		System.out.println("Now the max is " + ms2.getMax()); //should be 16
+	}
+	
+	/**
+	 * private Stack<Integer> s1;
 	private Stack<Integer> s2; // store max values
 	
 	public MaxStack() {
@@ -30,24 +112,5 @@ public class MaxStack {
 	public int getMax() {
 		return s2.peek();
 	}
-	
-	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's "
-				+ " MaxStack Test ***");
-		MaxStack ms = new MaxStack();
-		
-		ms.push(19);
-		ms.push(3);
-		ms.push(6);
-		ms.push(28);
-		ms.push(17);
-		System.out.println("Now the max is " + ms.getMax());
-		
-		ms.pop();
-		System.out.println("Now the max is " + ms.getMax());
-		
-		ms.pop();
-		System.out.println("Now the max is " + ms.getMax());
-	}
-	
+	 */
 }
