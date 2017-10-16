@@ -27,7 +27,7 @@ import java.util.Deque;
 * 	peek() and pop(), or peek() and push(). It is totally your call.
 * 			
 * Complexity  : 
-* 	Time Complexity: O(1) for push, pop, peek and empty
+* 	Time Complexity: O(1) for push and empty; O(n) for pop and peek
 * 	Space Complexity: O(n) n--the number of integers need to be put into stacks.
 * 
 * meta        : tag-stack; tag-queue
