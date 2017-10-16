@@ -83,11 +83,8 @@ public class Stack {
 			ll.offerLast(val);
 		}
 		
-		public int pop() {
-			Integer valToPop = ll.pollLast();
-			if (valToPop == null) 
-				return Integer.MIN_VALUE;
-			return valToPop;
+		public Integer pop() {
+			return ll.pollLast();
 			
 			/* The following is wrong answer, why?
 			 * Even if ll.pollLast() is not null, pollLast() will be executed twice
@@ -98,9 +95,7 @@ public class Stack {
 			*/
 		}
 		
-		public int peek() {
-			if (ll.peekLast() == null)
-				return Integer.MIN_VALUE;
+		public Integer peek() {
 			return ll.peekLast();
 		}
 		
