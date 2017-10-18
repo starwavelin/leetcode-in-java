@@ -94,7 +94,7 @@ public class RotateArray {
 			
 			
 			/* The following is wrong because it mistakenly consider k steps as index of k!!!
-			 * 混淆了, k steps的话，断开两个subarray 的地方应该是 0 -- n-k-1, n-k -- n-1
+			 * 混淆了, k steps的话，断开两个subarray 的地方应该是 0 --> n-k-1, n-k --> n-1
 			reverse(nums, 0, k-1);
 			reverse(nums, k, nums.length-1);
 			reverse(nums, 0, nums.length-1);

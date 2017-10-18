@@ -1,4 +1,4 @@
-package usingArrays;
+package ood;
 
 public class TicTacToe {
 	
