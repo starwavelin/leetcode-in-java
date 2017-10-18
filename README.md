@@ -21,6 +21,10 @@ Supported list of problem categories for searching,
  * [Sorting](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-sort)
  * [Stack](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-stack)
  * [String](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-string)
+ * [Two Pointers](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-two-pointers)
+ 
 
 Company based categories,
  * [Google](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-google)
+ * [Bloomberg](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-bloomberg)
+ 
