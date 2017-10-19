@@ -1,6 +1,8 @@
 package array;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.TreeSet;
 
 /***************************************************************************
@@ -92,12 +94,72 @@ public class TwoSumClosest {
 		return minDiff;
 	}
 	
+	/**
+	 * Solution:
+	 * 	Based on getMinDiff2, this time we want indices of the minDiff being returned. So also similar to Solution 2 of 
+	 * TwoSum, we use a helper class to store value and index of an element.
+	 * And again similar to getMinDiff2, in the while loop, instead of updating minDiff, we update minDiffIndices.
+	 * 
+	 * Time Complexity: O(nlogn) cuz sorting
+	 * Space Complexity: O(n) cuz traverse the array to store each element's original index first.
+	 */
+	public static int[] twoSumClosestIndices(int[] nums, int target) {
+		class Elem {
+			int val;
+			int index;
+			public Elem(int val, int index) { this.val = val; this.index = index; }
+		}
+		if (nums == null || nums.length < 2) {
+			return new int[]{-1, -1};
+		}
+		List<Elem> elems = new ArrayList<>();
+		for (int i = 0; i < nums.length; i++) {
+			elems.add(new Elem(nums[i], i));
+		}
+		elems.sort((Elem e1, Elem e2) -> e1.val - e2.val);
+		int i = 0, j = elems.size() - 1, minDiff = Math.abs(elems.get(i).val + elems.get(j).val - target);
+		int[] ret = (elems.get(i).index < elems.get(j).index) 
+				? new int[]{ elems.get(i).index, elems.get(j).index }
+				: new int[]{ elems.get(j).index, elems.get(i).index };
+		while (i < j) {
+			if (Math.abs(elems.get(i).val + elems.get(j).val - target) < minDiff) {
+				ret = (elems.get(i).index < elems.get(j).index) 
+						? new int[]{ elems.get(i).index, elems.get(j).index }
+						: new int[]{ elems.get(j).index, elems.get(i).index };
+			}
+			if (elems.get(i).val + elems.get(j).val > target) {
+				j--;
+			} else if (elems.get(i).val + elems.get(j).val < target) {
+				i++;
+			} else { // when == target, means difference is 0, directly return their indices.
+				return (elems.get(i).index < elems.get(j).index) 
+						? new int[]{ elems.get(i).index, elems.get(j).index }
+						: new int[]{ elems.get(j).index, elems.get(i).index };
+			}
+		}
+		return ret;
+	} 
 	
 	public static void main(String[] args) {
 		int[] nums = new int[]{33, -2, 14, 5, 4, 9};
-		int target = 22; // minDiff = 1, indices = [2, 4]
+		int target = 22; // minDiff = 1, indices = [2, 5]
 		
 		System.out.println("The minimum difference is " + getMinDiff1(nums, target));
 		System.out.println("The minimum difference is " + getMinDiff2(nums, target));
+		
+		// Reset nums
+		nums = new int[]{33, -2, 14, 5, 4, 9};
+		System.out.println(String.format("The minimum difference have indices: %d %d", twoSumClosestIndices(nums, target)[0], twoSumClosestIndices(nums, target)[1]));
+		nums = new int[]{33, -2, 9, 5, 4, 14};
+		System.out.println(String.format("The minimum difference have indices: %d %d", twoSumClosestIndices(nums, target)[0], twoSumClosestIndices(nums, target)[1]));
+		nums = new int[]{3, 5};
+		target = 8;
+		System.out.println(String.format("The minimum difference have indices: %d %d", twoSumClosestIndices(nums, target)[0], twoSumClosestIndices(nums, target)[1]));
+		nums = new int[]{3, 7};
+		target = 8;
+		System.out.println(String.format("The minimum difference have indices: %d %d", twoSumClosestIndices(nums, target)[0], twoSumClosestIndices(nums, target)[1]));
+		nums = new int[]{6, 4};
+		target = 8;
+		System.out.println(String.format("The minimum difference have indices: %d %d", twoSumClosestIndices(nums, target)[0], twoSumClosestIndices(nums, target)[1]));
 	}
 }

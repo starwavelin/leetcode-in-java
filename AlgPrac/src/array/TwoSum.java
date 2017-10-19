@@ -176,7 +176,9 @@ public class TwoSum {
 				} else if (elems.get(i).val + elems.get(j).val < target) {
 					i++;
 				} else {
-					return new int[]{ elems.get(i).index, elems.get(j).index };
+					return (elems.get(i).index < elems.get(j).index) 
+							? new int[]{ elems.get(i).index, elems.get(j).index }
+							: new int[]{ elems.get(j).index, elems.get(i).index };
 				}
 			}
 			return new int[]{-1, -1};
@@ -229,5 +231,11 @@ public class TwoSum {
 		System.out.println(String.format("Indices for target2? %d %d", arr2.twoSum2(nums, target2)[0], arr2.twoSum2(nums, target2)[1]));
 		System.out.println(String.format("Indices for target1? %d %d", arr2.twoSum3(nums, target1)[0], arr2.twoSum3(nums, target1)[1]));
 		System.out.println(String.format("Indices for target2? %d %d", arr2.twoSum3(nums, target2)[0], arr2.twoSum3(nums, target2)[1]));
+	
+		// specially test Array2 solution 2
+		System.out.println("*** specially test Array2 solution 2 ***");
+		nums = new int[]{33, 5, 14, -2, 4, 9}; // we still want indices [1, 3]
+		System.out.println(String.format("Indices for target1? %d %d", arr2.twoSum2(nums, target1)[0], arr2.twoSum2(nums, target1)[1]));
+		
 	}
 }
