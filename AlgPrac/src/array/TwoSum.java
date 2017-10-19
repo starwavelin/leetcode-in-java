@@ -1,7 +1,11 @@
 package array;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
 
 /***************************************************************************
 * Problem No. : 1
@@ -36,7 +40,7 @@ public class TwoSum {
 		/**
 		 * Solution 1:
 		 * Brute force:
-		 * for each integer, I scan the left integers and see if there is one added to this integer to sum up to be target
+		 * for each integer, I scan the integers left and see if there is one added to this integer to sum up to be target
 		 * if yes, return true.
 		 * if finish the whole process but cannot find one, return false
 		 * 
@@ -114,7 +118,95 @@ public class TwoSum {
 	 * Now we start the real Two Sum problem, wanting indices being returned
 	 */
 	public static class Array2 {
+		/**
+		 * Solution 1:
+		 * Brute force:
+		 * for each integer, I scan the integers left and see if there is one added to this integer to sum up to be target
+		 * if yes, return the indices of this integer and the integer currently being scanned.
+		 * if finish the whole process but cannot find one, return [-1, -1]
+		 * 
+		 * Time complexity: O(n^2) cuz nested for loops
+		 * Space complexity: O(1) cuz just open two pointers
+		 */
+		public int[] twoSum1(int[] nums, int target) {
+			if (nums == null || nums.length < 2)
+				return new int[]{-1, -1};
+			for (int i = 0; i < nums.length; i++) {
+				for (int j = i+1; j < nums.length; j++) {
+					if (nums[i] + nums[j] == target)
+						return new int[]{i, j};
+				}
+			}
+			return new int[]{-1, -1};
+		}
 		
+		/**
+		 * Solution 2:
+		 * Sort first:
+		 * 	But this time we want to record the index of each element cuz the indices being returned should be each element's orig index
+		 * rather than the indices after sorting.
+		 *  That said, we want a helper class Elem to store both value and index information for one element, and use a list of Elems to sort 
+		 * elements based on value. (Given the constraint I don't allow you to use HashMap for now.)
+		 * 	The rest idea is similar to Solution 2 of twoSumExist
+		 * 
+		 * Time complexity: O(nlogn) -- sorting
+		 * Space complexity: O(n) cuz open the index field for each element in the Elem object
+		 */
+		public int[] twoSum2(int[] nums, int target) {
+			class Elem {
+				int val;
+				int index;
+				public Elem (int val, int index) { this.val = val; this.index = index; }
+			}
+			
+			if (nums == null || nums.length < 2)
+				return new int[]{-1, -1};
+			
+			/* To use Collections.sort, I have to use List instead of int[] */
+			List<Elem> elems = new ArrayList<>();
+			for (int i = 0; i < nums.length; i++) {
+				elems.add(new Elem(nums[i], i));
+			}
+			elems.sort((Elem o1, Elem o2) -> o1.val - o2.val);
+			
+			int i = 0, j = elems.size() - 1;
+			while (i < j) {
+				if (elems.get(i).val + elems.get(j).val > target) {
+					j--;
+				} else if (elems.get(i).val + elems.get(j).val < target) {
+					i++;
+				} else {
+					return new int[]{ elems.get(i).index, elems.get(j).index };
+				}
+			}
+			return new int[]{-1, -1};
+		}
+		
+		/**
+		 * Solution 3:
+		 * Use space to trade for time.
+		 * 	Use HashMap, key is the integer and value is the index of the integer in the given array. 
+		 * We just traverse the int array once, for each integer we encounter, we first test if 
+		 * (target - currentInteger) already exists in the map, if yes return the indices of (target - currentInteger) and currentInteger
+		 *  if no, add this <integer, its index> into the map
+		 * 
+		 * Time Complexity: O(n) cuz only traverse once
+		 * Space Complexity: O(n) cuz open a HashMap which would be size n
+		 */
+		public int[] twoSum3(int[] nums, int target) {
+			if (nums == null || nums.length < 2)
+				return new int[]{-1, -1};
+			Map<Integer, Integer> map = new HashMap<>();
+			for (int i = 0; i < nums.length; i++) {
+				if (map.containsKey(target - nums[i])) {
+					return new int[]{map.get(target - nums[i]), i};
+						// 注意: 粗心容易写成 int[]{map.get(target - nums[i]), map.get(nums[i])};
+						// 问题在于这一步我们不把nums[i] put 进 map,我们就可以直接返回nums[i]'s index which is i
+				}
+				map.put(nums[i], i);
+			}
+			return new int[]{-1, -1};
+		}
 	}
 	
 	public static void main(String[] args) {
@@ -122,12 +214,20 @@ public class TwoSum {
 		int target1 = 3; // has solution
 		int target2 = 20; // no solution
 		
-		Array1 arr1 = new Array1();
-		System.out.println("Is there a solution for target1? " + arr1.twoSumExist1(nums, target1));
-		System.out.println("Is there a solution for target2? " + arr1.twoSumExist1(nums, target2));
-		System.out.println("Is there a solution for target1? " + arr1.twoSumExist2(nums, target1));
-		System.out.println("Is there a solution for target2? " + arr1.twoSumExist2(nums, target2));
-		System.out.println("Is there a solution for target1? " + arr1.twoSumExist3(nums, target1));
-		System.out.println("Is there a solution for target2? " + arr1.twoSumExist3(nums, target2));
+//		Array1 arr1 = new Array1();
+//		System.out.println("Is there a solution for target1? " + arr1.twoSumExist1(nums, target1));
+//		System.out.println("Is there a solution for target2? " + arr1.twoSumExist1(nums, target2));
+//		System.out.println("Is there a solution for target1? " + arr1.twoSumExist2(nums, target1));
+//		System.out.println("Is there a solution for target2? " + arr1.twoSumExist2(nums, target2));
+//		System.out.println("Is there a solution for target1? " + arr1.twoSumExist3(nums, target1));
+//		System.out.println("Is there a solution for target2? " + arr1.twoSumExist3(nums, target2));
+		
+		Array2 arr2 = new Array2();
+		System.out.println(String.format("Indices for target1? %d %d", arr2.twoSum1(nums, target1)[0], arr2.twoSum1(nums, target1)[1]));
+		System.out.println(String.format("Indices for target2? %d %d", arr2.twoSum1(nums, target2)[0], arr2.twoSum1(nums, target2)[1]));
+		System.out.println(String.format("Indices for target1? %d %d", arr2.twoSum2(nums, target1)[0], arr2.twoSum2(nums, target1)[1]));
+		System.out.println(String.format("Indices for target2? %d %d", arr2.twoSum2(nums, target2)[0], arr2.twoSum2(nums, target2)[1]));
+		System.out.println(String.format("Indices for target1? %d %d", arr2.twoSum3(nums, target1)[0], arr2.twoSum3(nums, target1)[1]));
+		System.out.println(String.format("Indices for target2? %d %d", arr2.twoSum3(nums, target2)[0], arr2.twoSum3(nums, target2)[1]));
 	}
 }
