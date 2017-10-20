@@ -15,7 +15,7 @@ Supported list of problem categories for searching,
  * [Bitwise](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-bitwise): Bit manipulation
  * [Data Structure](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-data-structure): Data structure design
  * [Dynamic Programming](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-dp)
- * [Divide and Conquer](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-d&c)
+ * [Divide and Conquer](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-divide-and-conquer)
  * [Graph](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-hash)
  * [Hash](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-hash): Use hashing ideas/methods
  * [Linked List](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-linked-list)

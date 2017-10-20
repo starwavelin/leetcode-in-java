@@ -26,7 +26,7 @@ import utility.TreeNode;
 * 	Time Complexity: See solutions in the code comments
 * 	Space Complexity: See solutions in the code comments   
 * 
-* meta        : tag-binary-tree, tag-d&c
+* meta        : tag-binary-tree, tag-divide-and-conquer
 ***************************************************************************/
 public class InvertBinaryTree {
 
@@ -69,14 +69,11 @@ public class InvertBinaryTree {
 	 * Space complexity: O(1) -- Use a tmp reference to help the invert process.
 	 */
 	public static TreeNode invertTree2(TreeNode root) {
-		return invert(root);
-	}
-	private static TreeNode invert(TreeNode root) {
 		if (root == null)
 			return null;
 		TreeNode tmp = root.left;
-		root.left = invert(root.right);
-		root.right = invert(tmp);
+		root.left = invertTree2(root.right);
+		root.right = invertTree2(tmp);
 		return root;
 	}
 	
