@@ -11,9 +11,11 @@ Supported list of problem categories for searching,
  * [Backtracking](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-backtracking): Permutation problems
  * [Binary Search Sorted Array](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-bs-sa): Sorted array problems sometimes can be solved by binary search ideas
  * [Binary Tree](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-binary-tree)
+ * [Binary Search Tree](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-binary-search-tree)
  * [Bitwise](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-bitwise): Bit manipulation
  * [Data Structure](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-data-structure): Data structure design
  * [Dynamic Programming](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-dp)
+ * [Divide and Conquer](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-d&c)
  * [Graph](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-hash)
  * [Hash](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-hash): Use hashing ideas/methods
  * [Linked List](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-linked-list)

@@ -26,7 +26,7 @@ import utility.TreeNode;
 * 	Time Complexity: See solutions in the code comments
 * 	Space Complexity: See solutions in the code comments   
 * 
-* meta        : tag-binary-tree
+* meta        : tag-binary-tree, tag-d&c
 ***************************************************************************/
 public class InvertBinaryTree {
 
@@ -38,6 +38,11 @@ public class InvertBinaryTree {
 	 * 
 	 * Time Complexity: O(n) cuz traverse all the nodes
 	 * Space Complexity: O(1) cuz just open a new var tmp
+	 * 
+	 * Note: 这个解法基本不利用返回值，你看
+	 *  invertTree(root.left);
+		invertTree(root.right);
+		是不赋值给某个变量的， 但最终结果要求返回overall的根，所以在 invertTree() 函数的结尾，return root
 	 */
 	public static TreeNode invertTree(TreeNode root) {
 		if (root == null)
@@ -53,9 +58,26 @@ public class InvertBinaryTree {
 			 when `return root` is hit, that means the current root is PROCESSED */	
 	}
 	
-	
+	/**
+	 * Solution 2:
+	 * D&C, Bottom-Up approach
+	 * We assume the current root's left is processed by assigning the root's right to it
+	 * and also assume the current's root's right is processed by assining the root's left to it.
+	 * And the actual process is done in the leaf level and return back
+	 * 
+	 * Time Complexity: O(n) -- traverse all the nodes
+	 * Space complexity: O(1) -- Use a tmp reference to help the invert process.
+	 */
 	public static TreeNode invertTree2(TreeNode root) {
-		return null;
+		return invert(root);
+	}
+	private static TreeNode invert(TreeNode root) {
+		if (root == null)
+			return null;
+		TreeNode tmp = root.left;
+		root.left = invert(root.right);
+		root.right = invert(tmp);
+		return root;
 	}
 	
 	
@@ -79,8 +101,8 @@ public class InvertBinaryTree {
 		invertTree(root);
 		System.out.println(String.format("Current tree is: %d, %d, %d ,%d", root.val, root.left.val, root.right.val, root.right.left.val));
 		
-		
-		
-		
+		//If applying invertTree method again (no matter version 1 or 2), the tree shall be set back
+		invertTree2(root);
+		System.out.println(String.format("Current tree is: %d, %d, %d ,%d", root.val, root.left.val, root.right.val, root.left.right.val));
 	}
 }
