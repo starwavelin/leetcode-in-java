@@ -1,4 +1,4 @@
-package binaryTree;
+package binarySearchTree;
 
 import java.util.Scanner;
 
@@ -12,14 +12,14 @@ import utility.TreeNodeP;
  * 					 2	
  * 
  */
-public class BinaryTreeWithParentApp {
+public class BinarySearchTreeWithParentApp {
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Binary Tree (with Parent reference) Test ***");
+		System.out.println("*** Welcome to Xian's Binary Search Tree (with Parent reference) App ***");
 		
 //		int[] arr = {1, 2};
 		int[] arr = {6, 4, 8, 1, 7, 3, 9, 2, 5};
-		BinaryTreeWithParent tree = new BinaryTreeWithParent();
+		BinarySearchTreeWithParent tree = new BinarySearchTreeWithParent();
 		for (int i = 0; i < arr.length; i++) {
 			tree.insertNoRec(tree.root, arr[i]);
 		}

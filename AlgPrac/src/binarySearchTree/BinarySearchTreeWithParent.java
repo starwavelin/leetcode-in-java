@@ -1,4 +1,4 @@
-package binaryTree;
+package binarySearchTree;
 
 import java.util.ArrayList;
 
@@ -14,11 +14,11 @@ import utility.TreeNodeP;
  * 2. searchNoRec(int key)
  * 3. lowestCommonAncestor(NodeWithParent node1, NodeWithParent node2)
  */
-public class BinaryTreeWithParent {
+public class BinarySearchTreeWithParent {
 	
 	TreeNodeP root;
 	
-	public BinaryTreeWithParent() {
+	public BinarySearchTreeWithParent() {
 		root = null;
 	}
 	

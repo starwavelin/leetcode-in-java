@@ -1,11 +1,11 @@
-package binaryTree;
+package binarySearchTree;
 
 import java.util.Scanner;
 
-public class BinaryTreeApp {
+public class BinarySearchTreeApp {
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Binary Tree Test ***");
+		System.out.println("*** Welcome to Xian's Binary Search Tree App ***");
 		
 //		int[] arr = {1, 2, 3};
 //		int[] arr ={8, 5, 9, 7};
@@ -58,7 +58,7 @@ public class BinaryTreeApp {
 //		tree.levelOrderTraverse(tree.root);
 		
 		// Test if the given tree a BST
-		System.out.print("Is the given tree BST? " + tree.isValidBST(tree.root));
+		System.out.print("\nIs the given tree BST? " + tree.isValidBST(tree.root));
 		
 	}
 	
