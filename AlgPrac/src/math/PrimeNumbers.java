@@ -82,7 +82,7 @@ public class PrimeNumbers {
 	 *  So when traverse the outer loop, i += 2.
 	 * Time and Space complexity are the same as Solution 1 but the actual running time is < Solution 1's.
 	 * 
-	 * Note: this solution runs 125-150 ms on LeetCode
+	 * Note: this solution runs 50-100 ms on LeetCode
 	 */
 	public static Result getPrimeNumbers2(int n) {
 		int[] nums = new int[n + 1];
@@ -95,7 +95,7 @@ public class PrimeNumbers {
 				primeNums.add(i);
 				count++;
 			}
-			for (int j = i; j * i <= n; j++) {
+			for (int j = i; j * i <= n; j += 2) {
 				nums[j * i] = 0;
 			}
 		}
