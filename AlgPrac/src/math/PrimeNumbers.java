@@ -81,6 +81,8 @@ public class PrimeNumbers {
 	 *  Optimized from Solution 1, we know 2 is a prime number and we then know all other even numbers cannot be prime anymore. 
 	 *  So when traverse the outer loop, i += 2.
 	 * Time and Space complexity are the same as Solution 1 but the actual running time is < Solution 1's.
+	 * 
+	 * Note: this solution runs 125-150 ms on LeetCode
 	 */
 	public static Result getPrimeNumbers2(int n) {
 		int[] nums = new int[n + 1];
@@ -113,6 +115,10 @@ public class PrimeNumbers {
 	 *  
 	 *  Time Complexity: O(n) < this time complexity < O(n^2)
 	 *  Space Complexity: O(1) - just use two pointers  
+	 *  
+	 *  Note: this solution time exceeds limit when n = 499,979 on LeetCode
+	 *  	Maybe the time complexity is more toward O(n^2) compared with Solution 2 and 1?
+	 *  	Maybe Solution 1 and 2 successfully traded space for time so they are faster than this solution.
 	 */
 	public static Result getPrimeNumbers3(int n) {
 		List<Integer> primeNums = new ArrayList<>();
