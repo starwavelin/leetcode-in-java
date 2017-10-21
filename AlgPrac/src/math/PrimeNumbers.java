@@ -2,7 +2,9 @@ package math;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
+
 import utility.ListUtil;
 
 /***************************************************************************
@@ -74,14 +76,99 @@ public class PrimeNumbers {
 		return new Result(primeNums, count);
 	}
 	
+	/**
+	 * Solution 2:
+	 *  Optimized from Solution 1, we know 2 is a prime number and we then know all other even numbers cannot be prime anymore. 
+	 *  So when traverse the outer loop, i += 2.
+	 * Time and Space complexity are the same as Solution 1 but the actual running time is < Solution 1's.
+	 */
+	public static Result getPrimeNumbers2(int n) {
+		int[] nums = new int[n + 1];
+		List<Integer> primeNums = new ArrayList<>();
+		primeNums.add(2);
+		int count = 1;
+		Arrays.fill(nums, 1);
+		for (int i = 3; i <= n; i += 2) {
+			if (nums[i] == 1) {
+				primeNums.add(i);
+				count++;
+			}
+			for (int j = i; j * i <= n; j++) {
+				nums[j * i] = 0;
+			}
+		}
+		return new Result(primeNums, count);
+	}
+	
+	/**
+	 * Solution 3: 
+	 * 	For solution 1 and 2, we use i as the base pointer, and j scans from i all the way to n. 
+	 * 		The core goal of doing so is eliminating composite numbers.
+	 *  	But the checking condition is j * i <= n.
+	 *  Then how about I don't set j as j starts from i to n; instead, when i moves, 
+	 *  	I want j starts from the lowest prime number (in the optimal solution this number is 3) 
+	 *  	all the way to i (in the optimal solution, moving all the way to square root of i is enough)
+	 *  	then if i % j == 0, I know this i is a composite number that can be eliminated.
+	 *  So, the core is using MOD.
+	 *  
+	 *  Time Complexity: O(n) < this time complexity < O(n^2)
+	 *  Space Complexity: O(1) - just use two pointers  
+	 */
+	public static Result getPrimeNumbers3(int n) {
+		List<Integer> primeNums = new ArrayList<>();
+		primeNums.add(2);
+		int count = 1;
+		for (int i = 3; i <= n; i += 2) {
+			boolean isPrime = true;
+			for (int j = 3; j <= Math.sqrt(i); j++) {
+				if (i % j == 0)
+					isPrime = false;
+			}
+			if (isPrime) {
+				primeNums.add(i);
+				count++;
+			}
+		}
+		return new Result(primeNums, count);
+	}
+	
+	/**
+	 * Scenario: Interview says if I tell you the n is 100 for sure, then can you solve this in one pass O(n) time complexity?
+	 * 
+	 * YES.
+	 * 	From our Math knowledge, the first couple prime numbers are 2, 3, 5, 7, 11, 13. 
+	 * And the first composite number that is formed by the multiplication of two prime numbers whose product right above 100
+	 * is 121 (11 * 11), cuz 7 * 13 = 91 < 100. 
+	 * That said, all the composite numbers within 100 must have a factor from {2, 3, 5, 7}.
+	 * Bingo, one for loop one pass solves it.
+	 */
+	public static Result getPrimeNumbers4(int n) {
+		List<Integer> primeNums = new ArrayList<>();
+		Collections.addAll(primeNums, 2, 3, 5, 7);
+		int count = 4;
+		for (int i = 7; i < n; i += 2) {
+			if ((i % 3 != 0) && (i % 5 != 0) && (i % 7 != 0)) {
+				primeNums.add(i);
+				count++;
+			}
+		}
+		return new Result(primeNums, count);
+	}
 	
 	public static void main(String[] args) {
 		int n = 100;
-		System.out.println(String.format("For n = %d", n));
-		System.out.print(String.format("There are %d prime numbers.", getPrimeNumbers1(n).count));
-		System.out.print(" And they are: " );
-		ListUtil.display(getPrimeNumbers1(n).primeNumbers);
-		
-		
+		System.out.print(String.format("For n = %d", n));
+		/*-- Solution 1 --*/
+		System.out.print(String.format("\nThere are %d prime numbers.", getPrimeNumbers1(n).count));
+		System.out.print(" And they are: " ); ListUtil.display(getPrimeNumbers1(n).primeNumbers);
+		/*-- Solution 2 --*/
+		System.out.print(String.format("\nThere are %d prime numbers.", getPrimeNumbers2(n).count));
+		System.out.print(" And they are: " ); ListUtil.display(getPrimeNumbers2(n).primeNumbers);
+		/*-- Solution 3 --*/
+		System.out.print(String.format("\nThere are %d prime numbers.", getPrimeNumbers3(n).count));
+		System.out.print(" And they are: " ); ListUtil.display(getPrimeNumbers3(n).primeNumbers);
+		/*-- Solution 4 --*/
+		System.out.print(String.format("\nThere are %d prime numbers.", getPrimeNumbers4(n).count));
+		System.out.print(" And they are: " ); ListUtil.display(getPrimeNumbers4(n).primeNumbers);
 	}
 }
