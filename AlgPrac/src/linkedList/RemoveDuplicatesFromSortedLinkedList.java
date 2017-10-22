@@ -7,7 +7,7 @@ import utility.ListNode;
 /***************************************************************************
 * Problem No. : 83
 * Problem Name: Remove Duplicates from Sorted List
-* Problem URL : https://leetcode.com/problems/count-primes/description/
+* Problem URL : https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/
 * Date        : Oct 21 2017
 * Author      :	Xian Lin
 * Notes       : 
