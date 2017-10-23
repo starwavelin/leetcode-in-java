@@ -67,14 +67,17 @@ public class LongestSubstring {
 	 * 	when c appears the 2nd time, the l will be updated from 2 plus 1 to be 3. maxLen = 6 - 3 + 1 = 4
 	 */
 	public static int lengthOfLongestSubstring1(String s) {
-		int[] charMap = new int[256]; //size of extended ASCII
-		Arrays.fill(charMap, -1);
+		if (s == null || s.length() == 0) {
+			return 0;
+		}
+		int[] map = new int[256]; //size of extended ASCII
+		Arrays.fill(map, -1);
 		int l = 0, maxLen = 0;
-		for (int r = 0; r < s.length(); r++) {
-			if (charMap[s.charAt(r)] >= l) { // found a repeated occurrence of the char at s.charAt(r), need to update l
-				l = charMap[s.charAt(r)] + 1;
+		for (int r = 0; r < s.length(); r++) { // 易错点：Java中 array.length; cuz length is a field for array. But, s.length(): length() method for string
+			if (map[s.charAt(r)] >= l) { // found a repeated occurrence of the char at s.charAt(r), need to update l
+				l = map[s.charAt(r)] + 1;
 			}
-			charMap[s.charAt(r)] = r; // put right index as value into the array map
+			map[s.charAt(r)] = r; // put right index as value into the array map
 			maxLen = Math.max(r - l + 1, maxLen);
 		}
 		return maxLen;
