@@ -155,20 +155,20 @@ public class SortColors {
 		sortColors3(nums);
 		displayArray(nums);
 		
-		int[] nums01 = new int[]{1, 2};
-		sortColors3(nums01);
-		displayArray(nums01);
+		nums = new int[]{1, 2};
+		sortColors3(nums);
+		displayArray(nums);
 		
-		int[] nums02 = new int[]{2, 1, 0, 0, 2, 0};
-		sortColors3(nums02);
-		displayArray(nums02);
+		nums = new int[]{2, 1, 0, 0, 2, 0};
+		sortColors3(nums);
+		displayArray(nums);
 		
-		int[] nums03 = new int[]{1, 1};
-		sortColors3(nums03);
-		displayArray(nums03);
+		nums = new int[]{1, 1};
+		sortColors3(nums);
+		displayArray(nums);
 		
-		int[] nums04 = new int[]{0, 1, 1, 2};
-		sortColors3(nums04);
-		displayArray(nums04);
+		nums = new int[]{0, 1, 1, 2};
+		sortColors3(nums);
+		displayArray(nums);
 	}
 }
