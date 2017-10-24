@@ -16,7 +16,7 @@ Supported list of problem categories for searching,
  * [Data Structure](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-data-structure): Data structure design
  * [Dynamic Programming](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-dp)
  * [Divide and Conquer](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-divide-and-conquer)
- * [Graph](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-hash)
+ * [Graph](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-graph)
  * [Hash](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-hash): Use hashing ideas/methods
  * [Linked List](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-linked-list)
  * [Math](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-math): Use mathematic knowledge/ideas
