@@ -42,6 +42,9 @@ public class ArrayPartition {
 	 * Space Complexity: O(n)
 	 */
 	public static void partition1(int nums[], int k) {
+		if (nums == null || nums.length == 0) {
+			return;
+		}
 		int[] helpArray = new int[nums.length];
 		int i = 0, j = 0; // i is the pointer for the nums array and j pointer of the helpArray
 		for (; i < nums.length; i++) {
@@ -73,6 +76,9 @@ public class ArrayPartition {
 	 * Space Complexity: O(n)
 	 */
 	public static void partition2(int[] nums, int k) {
+		if (nums == null || nums.length == 0) {
+			return;
+		}
 		int[] helpArr = new int[nums.length];
 		int l = 0, r = nums.length - 1;
 		for (int i = 0; i < nums.length; i++) {
@@ -87,7 +93,67 @@ public class ArrayPartition {
 		}
 	}
 	
+	/* In-place solutions:
+	 * 	And I want to return the index of the first number that is >= k */
 	
+	/**
+	 * Solution 3:
+	 * 	Use two pointers, starting from the two ends of nums array.
+	 * while (l <= r)
+	 * 	if nums[l] < k, l++
+	 * 	if nums[r] >= k, r--
+	 * 	otherwise, if l is still less than or equal to r,  we swap nums[l] and nums[r] then have l++ and r--
+	 * return l cuz when the while loop finishes, l will be pointing to the 1st element that is greater than or equal to k
+	 */
+	public static int partition3(int[] nums, int k) {
+		if (nums == null || nums.length == 0) {
+			return -1;
+		}
+		int l = 0, r = nums.length - 1;
+		while (l <= r) {
+			while (l < nums.length && nums[l] < k) { // this is different from partition ftn in quicksort cuz k is not from the original array, so we need condition "l < nums.length"
+				l++;
+			}
+			while (r >=0 && nums[r] >= k) {
+				r--;
+			}
+			if (l <= r) {
+				int tmp = nums[l];
+				nums[l++] = nums[r];
+				nums[r--] = tmp;
+			}
+		}
+		return l;
+	}
+	
+	/**
+	 * Solution 4: 算法导论里的思路
+	 * 	Two pointers but using left pointer chasing right pointer approach.
+	 * l = -1, r = 0;
+	 * while (l < nums.length)
+	 * 	if (nums[r] < k), then l++, swap nums[l] and nums[r]
+	 * 	otherwise just r++
+	 * after while loop finishes, l+1 is the index of the first element that is greater than or equal to k
+	 * 
+	 * I think this solution has one better point than Solution 3 that I don't need to check l < nums.length or r > nums.length in the while loops, if the given k is not from the original array.
+	 * 而且代码行数 < Solution 3。
+	 */
+	public static int partition4(int[] nums, int k) {
+		if (nums == null || nums.length == 0) {
+			return -1;
+		}
+		int l = -1, r = 0;
+		while (r < nums.length) {
+			if (nums[r] < k) {
+				l++;
+				int tmp = nums[l];
+				nums[l] = nums[r];
+				nums[r] = tmp;
+			}
+			r++;
+		}
+		return l + 1;
+	}
 	
 	public static void displayArray(int[] nums) {
 		System.out.print("\nThe array after partition becomes: ");
@@ -117,6 +183,36 @@ public class ArrayPartition {
 		partition2(nums, 16); // test already partitioned case
 		displayArray(nums);
 		
+		/* Solution 3 */
+		System.out.print("\n\nSolution 3");
+		nums = new int[]{9, 3, -1, 12, 5};
+		int index = partition3(nums, k);
+		displayArray(nums);
+		System.out.println("And the first index >= k is: " + index);
 		
+		nums = new int[]{9, 3, -1, 12, 5};
+		index = partition3(nums, 16); // test already partitioned case
+		displayArray(nums);
+		System.out.println("And the first index >= k is: " + index);
+		
+		index = partition3(nums, -16); // test already partitioned case
+		displayArray(nums);
+		System.out.println("And the first index >= k is: " + index);
+		
+		/* Solution 4 */
+		System.out.print("\n\nSolution 4");
+		nums = new int[]{9, 3, -1, 12, 5};
+		index = partition4(nums, k);
+		displayArray(nums);
+		System.out.println("And the first index >= k is: " + index);
+		
+		nums = new int[]{9, 3, -1, 12, 5};
+		index = partition4(nums, 16); // test already partitioned case
+		displayArray(nums);
+		System.out.println("And the first index >= k is: " + index);
+		
+		index = partition3(nums, -16); // test already partitioned case
+		displayArray(nums);
+		System.out.println("And the first index >= k is: " + index);
 	}
 }
