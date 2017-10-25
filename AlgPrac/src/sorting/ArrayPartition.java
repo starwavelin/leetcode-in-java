@@ -87,6 +87,8 @@ public class ArrayPartition {
 		}
 	}
 	
+	
+	
 	public static void displayArray(int[] nums) {
 		System.out.print("\nThe array after partition becomes: ");
 		for (int n : nums) {
@@ -99,12 +101,20 @@ public class ArrayPartition {
 		int k = 8;
 		
 		/* Solution 1 */
+		System.out.print("Solution 1");
 		partition1(nums, k);
+		displayArray(nums);
+		nums = new int[]{9, 3, -1, 12, 5};
+		partition1(nums, 16); // test already partitioned case
 		displayArray(nums);
 		
 		/* Solution 2 */
+		System.out.print("\n\nSolution 2");
 		nums = new int[]{9, 3, -1, 12, 5};
 		partition2(nums, k);
+		displayArray(nums);
+		nums = new int[]{9, 3, -1, 12, 5};
+		partition2(nums, 16); // test already partitioned case
 		displayArray(nums);
 		
 		
