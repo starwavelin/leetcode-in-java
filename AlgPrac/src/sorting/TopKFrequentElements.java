@@ -1,6 +1,12 @@
 package sorting;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.PriorityQueue;
+
+import utility.ListUtil;
 
 /***************************************************************************
 * Problem No. : 347
@@ -25,20 +31,53 @@ import java.util.List;
 * 	Time Complexity: See code comments
 * 	Space Complexity: See code comments   
 * 
-* meta        : tag-heap, tag-hash, tag-treemap, tag-sort
+* meta        : tag-heap, tag-hash, tag-tree-map, tag-sort
 ***************************************************************************/
 public class TopKFrequentElements {
 
-	
+	/**
+	 * Solution 1: Max Heap
+	 * 	1. Use a HashMap to store frequency:  key - element and value - its frequency  ---O(n)
+	 *  2. Construct a maxHeap using PriorityQueue in Java, with the Map.Entry having the highest frequency at the top of heap
+	 *  		---O(n) heap construction can be O(n)
+	 *  3. Use a List to store the result for the element being polled from PQ, k times -- O(k)
+	 *  
+	 *  Time Complexity: O(n)
+	 *  Space Complexity: O(n) -- HashMap uses O(n) and PQ uses O(n), and List uses O(k)
+	 */
 	public static List<Integer> topKFrequent1(int[] nums, int k) {
+		// count frequency
+		Map<Integer, Integer> map = new HashMap<>();
+		for (int n: nums) {
+			map.put(n, map.getOrDefault(n, 0) + 1);
+		}
 		
+		// construct the maxHeap
+		PriorityQueue<Map.Entry<Integer, Integer>> pq = new PriorityQueue<>((a, b) -> (b.getValue() - a.getValue()));
+		for (Map.Entry<Integer, Integer> entry: map.entrySet()) { //考点：efficiently traverse a HashMap
+			pq.add(entry);
+		}
+		
+		// form the result
+		List<Integer> res = new ArrayList<>();
+		while (res.size() < k) {
+			res.add(pq.poll().getKey()); // we wanna add element to the result
+		}
+		return res;
 	}
 	
 	public static List<Integer> topKFrequent2(int[] nums, int k) {
-		
+		return null;
 	}
 	
 	public static void main(String[] args) {
+		int[] nums = new int[]{1, 1, 2, 3, 1, 2};
+		/* Solution 1 */
+		System.out.print("The top 2 unique elements are: ");
+		ListUtil.display(topKFrequent1(nums, 2));
 		
+		/* Solution 2 */
+		System.out.print("The top 2 unique elements are: ");
+		//ListUtil.display(topKFrequent2(nums, 2));
 	}
 }
