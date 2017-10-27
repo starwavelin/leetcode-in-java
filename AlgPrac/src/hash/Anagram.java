@@ -2,11 +2,29 @@ package hash;
 
 import java.util.Arrays;
 import java.util.Scanner;
-/**
- * Determine if two words are anagrams
- * 
- * http://www.lintcode.com/en/problem/two-strings-are-anagrams/
- */
+
+/***************************************************************************
+* Problem No. : 241
+* Problem Name: Valid Anagram
+* Problem URL : https://leetcode.com/problems/valid-anagram/description/
+* Date        : Oct 26 2017
+* Author      :	Xian Lin
+* Notes       : 
+* 	Scenario: 
+* 		@needOrganize
+* 	Assumption:
+* 
+	Example:
+* 	Input/Output:
+* 		
+* 	Data Structure and Alg:
+* 		See solutions in the code comments
+* Complexity  : 
+* 	Time Complexity: See solutions in the code comments
+* 	Space Complexity: See solutions in the code comments   
+* 
+* meta        : tag-hash, tag-array-map, tag-bloomberg
+***************************************************************************/
 public class Anagram {
 	
 	/**
