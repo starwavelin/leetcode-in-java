@@ -2,6 +2,7 @@ package array;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 
 import utility.ListUtil;
@@ -90,6 +91,15 @@ public class ThreeSum {
 					while (l < nums.length && nums[l] == nums[l - 1]) { //while去有解后leftpointer的重，leftpointer不可越界
 						l++;
 					}
+					/* 有解的情况下, 已经对左指针去重了，还要对右指针去重使效率更高吗？
+					 * 错误！！
+					 * 比如 Input： [-2,0,1,1,2]
+					 * 找到解 [-2, 0, 2] 后，如果再对右指针去重，后果会怎么样？ 略去了[-2,1,1]这个答案 */
+					/*
+					 * while (r > 0 && nums[r] == nums[r - 1]) {
+						 r--;
+					   }
+					 */
 				}
 			}
 			i++;
@@ -100,9 +110,44 @@ public class ThreeSum {
 		return res;
 	}
 	
-	
+	/**
+	 * Solution 2:
+	 * 	Firstly Sort, then
+	 * 	Use HashSet<List<Integer>> to dedup
+	 * Space Complexity: O(n) cuz used HashSet, not as efficient as Solution 1
+	 * Time Complexity is remain O(n^2)
+	 */
 	public static List<List<Integer>> threeSum2(int[] nums) {
-		return null;
+		List<List<Integer>> res = new ArrayList<>();
+		if (nums == null || nums.length < 3) {
+			return res;
+		}
+		Arrays.sort(nums);
+		HashSet<List<Integer>> resSet = new HashSet<>();
+		int i = 0; 
+		while (i < nums.length - 2) {
+			int target = -nums[i];
+			int l = i + 1, r = nums.length - 1;
+			while (l < r) {
+				if (nums[l] + nums[r] < target) {
+					l++;
+				} else if (nums[l] + nums[r] > target) {
+					r--;
+				} else {
+					List<Integer> rec = new ArrayList<>();
+					rec.add(nums[i]);
+					rec.add(nums[l++]); //注意这一行和下一行的 ++， -- 不可少！！
+					rec.add(nums[r--]);
+					/* before adding rec to res, check it in set first!! */
+					if (!resSet.contains(rec)) {
+						resSet.add(rec); // add current record to the set for future dedup purpose
+						res.add(rec);
+					}
+				}
+			}
+			i++; // You don't need to optimize this if you totally rely on HashSet to do dedup
+		}
+		return res;
 	}
 	
 	public static void main(String[] args) {
@@ -121,5 +166,21 @@ public class ThreeSum {
 			ListUtil.display(l);
 		}
 		
+		/* Solution 2 */
+		System.out.println();
+		nums = new int[]{-2, -3, 0, -3, -3, 2, 6, 1, 6};
+		res = threeSum2(nums);
+		for (List<Integer> l : res) {
+			System.out.print("One result is: ");
+			ListUtil.display(l);
+		}
+		
+		System.out.println();
+		nums = new int[]{0, 0, 0};
+		res = threeSum2(nums);
+		for (List<Integer> l : res) {
+			System.out.print("One result is: ");
+			ListUtil.display(l);
+		}
 	}
 }
