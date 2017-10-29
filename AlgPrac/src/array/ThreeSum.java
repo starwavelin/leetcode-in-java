@@ -150,6 +150,59 @@ public class ThreeSum {
 		return res;
 	}
 	
+	/**
+	 * 3Sum without sorting 出于时间关系先不想了，以下解答去重不成功 @needOrganize
+	 * Solution 3:
+	 * 	Scenario: If I say you are not supposed to sort the input array, can you still solve it in a way better than O(n^3)?
+	 * Idea:
+	 * 	Based on Solution 2 which uses HashSet, 
+	 * For each num being iterated in the outer loop, we found a solution based on two-sum sub-problem.
+	 * And for the twoSum sub-problem, we use HashSet to find a solution, and another hashSet to dedup. 
+	 * So in total we use three hashsets, the third hashset is the one to dedup the 3Sum solution. 
+	 * Then, only non-duplicate triplets can be added to the final result set.
+	 * Time Complexity: O(n^2)
+	 * Space Complexity: O(n) -- Use three HashSets and each has O(n)
+	 */
+	public static List<List<Integer>> threeSum3(int[] nums) {
+		List<List<Integer>> res = new ArrayList<>();
+		if (nums == null || nums.length < 3) {
+			return res;
+		}
+		HashSet<List<Integer>> threeSumSet = new HashSet<>(); //3Sum Set
+		int i = 0; 
+		while (i < nums.length - 2) {
+			int target = -nums[i];
+			int j = i + 1; //since we are gonna use HashSet to solve the sub 2Sum problem, one pointer j is enough.
+			HashSet<List<Integer>> twoSumSet = new HashSet<>();
+			HashSet<Integer> set = new HashSet<>();
+			while (j < nums.length) {
+				if (set.contains(target - nums[j])) {
+					//Dedup twoSum solutions first
+					List<Integer> twoSumRec = new ArrayList<>();
+					twoSumRec.add(target - nums[j]);
+					twoSumRec.add(nums[j]);
+					if (!twoSumSet.contains(twoSumRec)) {
+						twoSumSet.add(twoSumRec);
+						//Dedup threeSum solutions
+						List<Integer> threeSumRec = new ArrayList<>();
+						threeSumRec.add(nums[i]);
+						threeSumRec.add(target - nums[j]);
+						threeSumRec.add(nums[j]);
+						if (!threeSumSet.contains(threeSumRec)) {
+							threeSumSet.add(threeSumRec);
+							res.add(threeSumRec);	// add a non duplicate triplet to the final res
+						}
+					}
+				} else {
+					set.add(nums[j]);
+				}
+				j++;
+			}
+			i++;
+		}
+		return res;
+	}
+	
 	public static void main(String[] args) {
 		int[] nums = new int[]{-2, -3, 0, -3, -3, 2, 6, 1, 6};
 		List<List<Integer>> res = threeSum1(nums);
@@ -182,5 +235,47 @@ public class ThreeSum {
 			System.out.print("One result is: ");
 			ListUtil.display(l);
 		}
+		
+		/* Solution 3 */
+		System.out.println();
+		nums = new int[]{-2, -3, 0, -3, -3, 2, 6, 1, 6};
+		res = threeSum3(nums);
+		for (List<Integer> l : res) {
+			System.out.print("One result is: ");
+			ListUtil.display(l);
+		}
+		
+		System.out.println();
+		nums = new int[]{-1, 0, 1, 2, -1, 4};
+		res = threeSum3(nums);
+		for (List<Integer> l : res) {
+			System.out.print("One result is: ");
+			ListUtil.display(l);
+		} // Results should be [-1, -1, 2], [-1, 0, 1].  No dups like [0, 1, -1]
+		
+		//Test
+		/*
+		HashSet<List<Integer>> testR = new HashSet<>();
+		List<Integer> l1 = new ArrayList<>();
+		List<Integer> l2 = new ArrayList<>();
+		List<Integer> l3 = new ArrayList<>();
+		l1.add(-3); 
+		l1.add(-3);
+		l1.add(6);
+		l2.add(-3);
+		l2.add(6);
+		l2.add(-3);
+		l3.add(-3); 
+		l3.add(-3);
+		l3.add(6);
+		testR.add(l1);
+		testR.add(l2);
+		testR.add(l3);
+		for (List<Integer> l : testR) {
+			System.out.print("One Test result is: ");
+			ListUtil.display(l);
+		}
+		//Only two results in testR: -3, 6, -3 and -3, -3, 6. And for our problem we want to consider these two as one.
+		*/
 	}
 }
