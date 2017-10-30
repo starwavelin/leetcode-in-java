@@ -79,15 +79,23 @@ public class TwoSumClosest {
 		if (nums == null || nums.length < 2)
 			return Integer.MAX_VALUE;
 		Arrays.sort(nums);
-		int i = 0, j = nums.length - 1, minDiff = Math.abs(nums[i] + nums[j] - target);
+		int i = 0, j = nums.length - 1;
+		int sum = nums[i] + nums[j]; /* In case the problem wants you to return sum */
+		int minDiff = Math.abs(sum - target);
 		while (i < j) {
-			if (minDiff == 0)
+			int localSum = nums[i] + nums[j];
+			int localDiff = Math.abs(localSum - target);
+			if (localDiff == 0) {
+				sum = localSum;
 				return 0;
-			if (Math.abs(nums[i] + nums[j] - target) < minDiff)
-				minDiff = Math.abs(nums[i] + nums[j] - target);
-			if (nums[i] + nums[j] > target) {
+			}
+			if (localDiff < minDiff) {
+				minDiff = localDiff;
+				sum = localSum;
+			}	
+			if (localSum > target) {
 				j--;
-			} else if (nums[i] + nums[j] < target) {
+			} else if (localSum < target) {
 				i++;
 			}
 		}
