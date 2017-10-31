@@ -36,7 +36,7 @@ public class CopyList {
 	 * Time Complexity: O(n) - traverse the original list once
 	 * Space Complexity: O(n) - the newly formed list should be the same size as the original list
 	 * 
-	 * 关键点：对于新链表，先要做出nextNode, 再连接，原链表指针的移动是最后进行的。
+	 * 关键点：对于新链表，先要做出nextNode, 再连接，移cur, 原链表指针的移动是最后进行的。
 	 */
 	public static ListNode copy1(ListNode head) {
 		if (head == null) {
@@ -56,12 +56,28 @@ public class CopyList {
 		return newH;
 	}
 	
+	/**
+	 * Solution 2: Recursive Solution
+	 * 	Form the current node and then recursively call copy function to form cur's next node.
+	 * 
+	 * Space Complexity: O(n) -- recursion stack
+	 * Time Complexity: O(n)
+	 */
+	public static ListNode copy2(ListNode head) {
+		if (head == null) {
+			return null;
+		}
+		ListNode cur = new ListNode(head.data);
+		cur.next = copy2(head.next);
+		return cur;
+	}
+	
 	public static void main(String[] args) {
 		System.out.println("*** Welcome to Xian's Copy List Driver ***");
 		LinkedList ll = new LinkedList();
 		Scanner sc = new Scanner(System.in);
 		
-		/* Test Solution 1 */
+		/* Test Solutions */
 		System.out.print("Input your integer array, leave each number by space: ");
 		String[] strs = sc.nextLine().split(" ");
 		int[] testArray = new int[strs.length];
@@ -72,7 +88,7 @@ public class CopyList {
 		System.out.print("The original list: ");
 		ll.displayLinkedList();
 		ListNode head = ll.getHead();
-		ListNode newHead = copy1(head); /* Toggle here to test between solutions */
+		ListNode newHead = copy2(head); /* Toggle here to test between solutions */
 		System.out.print("The deep copied list: ");
 		ll.displayLinkedList(newHead);
 	}
