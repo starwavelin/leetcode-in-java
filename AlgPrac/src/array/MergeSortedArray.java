@@ -32,6 +32,8 @@ package array;
 * 	Space Complexity: O() -- See code comments
 * 
 * meta        : tag-array, tag-two-pointers
+* 
+* Note: Merge K Sorted Arrays will use PriorityQueue
 ***************************************************************************/
 public class MergeSortedArray {
 	/**
