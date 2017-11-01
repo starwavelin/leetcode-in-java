@@ -25,7 +25,7 @@ import utility.ListUtil;
 * 		Input: [0,2,3,4,6,8,9]
 		Output: ["0","2->4","6","8->9"]
 * 	Data Structure and Alg:
-* 		User two pointers one pass;
+* 		Use two pointers one pass;
 *  		two pointers var cur and pointer i.
 *  		  cur starts from nums[i], i moves gradually
 *  		The comparisons between nums[i+1] and nums[i] is one of the key points of when to summary range.
@@ -67,11 +67,7 @@ public class SummaryRanges {
 		while (i < nums.length) {
 			if ((i + 1 == nums.length) || (nums[i + 1] - nums[i] >= 2) || (nums[i+1] > 0 && nums[i] < 0) ) { 
 					//(nums[i+1] > 0 && nums[i] < 0) to handle overflow of two large subtraction like 2147483647 - (-2147483647) which gives us -2 in Java
-				if (nums[i] == cur) {
-					res.add(cur + "");
-				} else {
-					res.add(cur + "->" + nums[i]);
-				}
+				res.add(getRange(cur, nums[i]));
 				if (i + 1 < nums.length) { //only update cur after a summary
 					cur = nums[i + 1];
 				}
@@ -79,6 +75,13 @@ public class SummaryRanges {
 			i++;
 		}
 		return res;
+	}
+	
+	/**
+	 * n1 <= n2
+	 */
+	private static String getRange(int n1, int n2) {
+		return (n1 == n2) ? (n1 + "") : (n1 + "->" + n2);
 	}
 	
 	public static void main(String[] args) {
@@ -90,8 +93,9 @@ public class SummaryRanges {
 		for (int i = 0; i < strs.length; i++) {
 			testArray[i] = Integer.parseInt(strs[i]);
 		}
+		System.out.print("The summary ranges are: ");
 		ListUtil.display(summaryRanges(testArray));
 		
-		//System.out.println(2147483647 + 2147483647);
+		//System.out.println(2147483647 + 2147483647); // will print -2
 	}
 }
