@@ -55,6 +55,9 @@ import utility.ListUtil;
 * Pain Point: 
 * 	1. Handle the overflow: each time my statement needs to update cur,
 * 		I need to check overflow first before doing updating. 
+* 
+* Thinking: @TODO 
+* 	Maybe I can just use a long type to bypass all the pains of doing int overflow checking??
 ***************************************************************************/
 public class MissingRanges {
 	
