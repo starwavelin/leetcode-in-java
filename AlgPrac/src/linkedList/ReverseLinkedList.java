@@ -56,6 +56,32 @@ public class ReverseLinkedList {
 		return prev;
 	}
 	
+	/**
+	 * Solution 2:
+	 * Recursively from left to right
+	 * 肯定不能再只是用一个head参数了！！
+	 * 
+	 * 原理如下：
+	 * 	在Solution 1中， 
+	 * 		next = head.next;
+	 * 		head.next = prev;
+	 * 	是做Reverse
+	 * 		prev = head;
+	 * 		head = next;
+	 * 	是进入下一个子问题。
+	 *  我们就是把[进入下一个子问题]的部分，放入递归函数中，加个参数prev可以做到。
+	 *  
+	 *  口诀：reverse 过程不变，入下一子问题过程递归化。prev要用head赋，head要用next赋。
+	 */
+	public static ListNode reverse2(ListNode prev, ListNode head) {
+		if (head == null) {
+			return prev;
+		}
+		ListNode next = head.next;
+		head.next = prev;
+		return reverse2(head, next);
+	}
+	
 	public static void main(String[] args) {
 		System.out.println("*** Welcome to Xian's Reverse Linked List Driver ***");
 		LinkedList ll = new LinkedList();
@@ -68,8 +94,14 @@ public class ReverseLinkedList {
 			ll.insertLast(testArray[i]);
 		}		
 		ll.displayLinkedList();
+		
 		ListNode head = ll.getHead();
 		System.out.print("The given linked list after reverse is: ");
-		ll.displayLinkedList(reverse1(head)); /* Toggle solutions */
+		head = reverse1(head);
+		ll.displayLinkedList(head); 
+		
+		System.out.print("And reverse again becomes: ");
+		head = reverse2(null, head);
+		ll.displayLinkedList(head);
 	}
 }
