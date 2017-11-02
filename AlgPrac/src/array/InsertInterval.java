@@ -99,16 +99,38 @@ public class InsertInterval {
 	 * of size 2 to represent an interval's start and end numbers.
 	 */
 	public static List<int[]> insert2(List<int[]> intervals, int[] newInterval) {
-		return null;
+		List<int[]> res = new ArrayList<>();
+		if (intervals == null || intervals.size() == 0) {
+			if (newInterval != null && newInterval.length == 2) {
+				res.add(newInterval);
+			}
+			return res;
+		}
+		
+		int insPos = 0;
+		for (int[] interval : intervals) {
+			if (newInterval[1] < interval[0]) {
+				res.add(interval);
+			} else if (newInterval[0] > interval[1]) {
+				res.add(interval);
+				insPos++;
+			} else {
+				newInterval[0] = Math.min(newInterval[0], interval[0]);
+				newInterval[1] = Math.max(newInterval[1], interval[1]);
+			}
+		}
+		res.add(insPos, newInterval);
+		return res;
 	}
 	
 	
 	public static void main(String[] args) {
-		/* Test Solution 1 Example 1*/
+		/* Test Solution 1 Example 1 */
 		Interval i1 = new Interval(1, 3);
 		Interval i2 = new Interval(6, 9);
 		List<Interval> intervals = new ArrayList<>();
-		intervals.add(i1); intervals.add(i2);
+		intervals.add(i1);
+		intervals.add(i2);
 		Interval newInterval = new Interval(2, 5);
 		System.out.print("ie1: intervals after insertion becomes: ");
 		List<Interval> res = insert1(intervals, newInterval);
@@ -116,7 +138,18 @@ public class InsertInterval {
 			System.out.print("[" + res.get(i).start + "," + res.get(i).end + "] ");
 		}
 		
-		
+		/* Test Solution 2*/
+		int[] iv1 = new int[]{1, 3};
+		int[] iv2 = new int[]{6, 9};
+		List<int[]> ivs = new ArrayList<>();
+		ivs.add(iv1);
+		ivs.add(iv2);
+		int[] newIv = new int[]{-1, 7};
+		System.out.print("\nSolution 2: intervals after insertion becomes: ");
+		List<int[]> res2 = insert2(ivs, newIv);
+		for (int i = 0; i < res2.size(); i++) {
+			System.out.print("[" + res2.get(i)[0] + "," + res2.get(i)[1] + "] ");
+		} // should give us [[-1,9]]
 	}
 }
 
