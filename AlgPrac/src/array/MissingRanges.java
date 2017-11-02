@@ -21,8 +21,8 @@ import utility.ListUtil;
 		4. The lower bound and upper bound can even be within the range of the given array
 	Example:
 * 	Input/Output: 
-* 		Input: [0,2,3,4,6,8,9], lower 0, upper 100
-		Output: ["1","5","7","10->100"]
+* 		Input: [0,2,3,6,8,9], lower 0, upper 100
+		Output: ["1","4->5","7","10->100"]
 		
 		Input: [-3, 0, 5, 19], lower -2, upper 9
 		Output: ["-2->-1", "1->4", "5->9"]
