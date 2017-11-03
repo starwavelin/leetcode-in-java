@@ -21,7 +21,7 @@ public class BinarySearchII {
 		
 		while (start + 1 < end) {
 			mid = start + (end - start) / 2;
-			if (nums[mid] == target) {
+			if (nums[mid] == target) { //找最后一个，==的时候移动start
 				start = mid;
 			} else if (nums[mid] < target) {
 				start = mid;

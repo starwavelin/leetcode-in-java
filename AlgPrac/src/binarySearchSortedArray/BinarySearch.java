@@ -20,7 +20,7 @@ public class BinarySearch {
 		
 		while (start + 1 < end) {
 			mid = start + (end - start) / 2;
-			if (nums[mid] == target) {
+			if (nums[mid] == target) { //找第一个，==的时候移动end
 				end = mid;
 			} else if (nums[mid] < target) {
 				start = mid;
