@@ -56,8 +56,9 @@ import utility.ListUtil;
 * 	1. Handle the overflow: each time my statement needs to update cur,
 * 		I need to check overflow first before doing updating. 
 * 
-* Thinking: @TODO 
-* 	Maybe I can just use a long type to bypass all the pains of doing int overflow checking??
+* Thinking:
+* 	Maybe I can just use a long type to bypass all the pains of doing int overflow checking?
+* Yes, I can.
 ***************************************************************************/
 public class MissingRanges {
 	
@@ -107,6 +108,46 @@ public class MissingRanges {
 		return (n1 == n2) ? String.valueOf(n1) : String.format("%d->%d", n1, n2);
 	}
 	
+	/**
+	 * Solution 2：
+	 *  Use type long for cur to get rid of overflow 
+	 */
+	public static List<String> findMissingRanges2(int[] nums, int lower, int upper) {
+		List<String> res = new ArrayList<>();
+        if (lower > upper) {
+            return res;
+        }
+        
+        long cur = lower;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] < cur) {
+                continue;
+            }
+
+            if (cur == nums[i]) {
+              cur++;
+              continue;
+            }
+            
+            res.add(getRange2(cur, nums[i] - 1));
+            cur = nums[i] + 1;
+            
+            if (nums[i] == Integer.MAX_VALUE) { /* When nums[i] equals the largest int, good to return the result */
+                return res;
+            }
+        }
+
+        if (cur <= upper) { 
+            res.add(getRange2(cur, upper));
+        }
+            
+        return res;
+    }
+	
+	private static String getRange2(long n1, long n2) {
+		return (n1 == n2) ? String.valueOf(n1) : String.format("%d->%d", n1, n2);
+	}
+	
 	public static void main(String[] args) {
 		System.out.println("*** Welcome to Xian's Missing Ranges Test ***");
 		Scanner sc = new Scanner(System.in);
@@ -125,6 +166,8 @@ public class MissingRanges {
 		
 		System.out.print("The missing ranges are: ");
 		ListUtil.display(findMissingRanges(testArray, lower, upper));
+		System.out.print("The missing ranges are (Sol 2): ");
+		ListUtil.display(findMissingRanges2(testArray, lower, upper));
 		
 		
 		//System.out.print(2147483647 + 1); //print out -2147483648, which is Integer.MIN_VALUE
