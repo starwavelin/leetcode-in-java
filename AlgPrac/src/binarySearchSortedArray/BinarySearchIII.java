@@ -32,9 +32,7 @@ public class BinarySearchIII {
 		
 		if (nums[start] == target) {
 			return start;
-		}
-		
-		if (nums[end] == target) {
+		} else if (nums[end] == target) {
 			return end;
 		}
 		
