@@ -17,36 +17,16 @@ import java.util.Scanner;
 
 public class BubbleSort {
 
-	public static void bubbleSort(int[] input) {
-		for (int j = input.length - 1; j > 0; j--) {
-			for (int i = 0; i < j; i++) {
-				if (input[i] > input[i + 1]) {
-					swap(i, i + 1, input);
+	public static void bubbleSort(int[] nums) {
+		for (int i = nums.length - 1; i > 0; i--) {
+			for (int j = 1; j <= i; j++) {
+				if (nums[j] < nums[j - 1]) {
+					int t = nums[j];
+					nums[j] = nums[j - 1];
+					nums[j - 1] = t;
 				}
 			}
 		}
-	}
-	
-	private static void swap(int i, int j, int[] input) {
-		int tmp = input[i];
-		input[i] = input[j];
-		input[j] = tmp;
-	}
-	
-	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Bubble Sort Test ***");
-
-		Scanner sc = new Scanner(System.in);
-		System.out.print("Input your integer array, \n"
-				+ "leave each number by space: ");
-		String[] strs = sc.nextLine().split(" ");
-		int[] testArray = new int[strs.length];
-		for (int i = 0; i < strs.length; i++) {
-			testArray[i] = Integer.parseInt(strs[i]);
-		}
-		
-		bubbleSort(testArray);
-		displayResult(testArray);
 	}
 	
 	public static void displayResult(int[] ret) {
@@ -55,5 +35,17 @@ public class BubbleSort {
 		}
 		System.out.println();
 	}
-
+	
+	public static void main(String[] args) {
+		System.out.println("*** Welcome to Xian's Bubble Sort Test ***");
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Input your integer array, leave each number by space: ");
+		String[] strs = sc.nextLine().split(" ");
+		int[] testArray = new int[strs.length];
+		for (int i = 0; i < strs.length; i++) {
+			testArray[i] = Integer.parseInt(strs[i]);
+		}
+		bubbleSort(testArray);
+		displayResult(testArray);
+	}
 }
