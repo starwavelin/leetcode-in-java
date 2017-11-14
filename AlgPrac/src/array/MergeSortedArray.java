@@ -111,8 +111,8 @@ public class MergeSortedArray {
 		/* How can we make it work? We can assign all elements from tmp to nums1', since each element 
 		 * within the array changes, and nums1 and nums1' refer to the same memory allocation for the array, 
 		 * nums1 will give us updated elements when retrieving it after finishing this method! */
-		for (k = 0; k < m + n; k++) {
-			nums1[k] = tmp[k];
+		for (i = 0; i < k; i++) {
+			nums1[i] = tmp[i];
 		}
 	}
 	
@@ -144,7 +144,7 @@ public class MergeSortedArray {
 		int[] nums1 = new int[18];
 		int[] nums2 = new int[]{-3, 0, 1, 4, 9};
 		nums1[0] = -1; nums1[1] = 1; nums1[2] = 2; nums1[3] = 4;
-		merge2(nums1, 4, nums2, 5);	//Toggle here to switch methods
+		merge1(nums1, 4, nums2, 5);	//Toggle here to switch methods
 		System.out.print("Now nums1 becomes: ");
 		for (int i = 0; i < 4+5; i++) {
 			System.out.print(nums1[i] + " "); //expect -3, -1, 0, 1, 1, 2, 4, 4, 9
@@ -152,7 +152,7 @@ public class MergeSortedArray {
 		
 		nums1 = new int[10];
 		nums1[0] = -2; nums1[1] = 25;
-		merge2(nums1, 2, nums2, 5); //Toggle here to switch methods
+		merge1(nums1, 2, nums2, 5); //Toggle here to switch methods
 		System.out.print("\nNow nums1 becomes: ");
 		for (int i = 0; i < 2+5; i++) {
 			System.out.print(nums1[i] + " "); //expect -3, -2, 0, 1, 4, 9, 25 

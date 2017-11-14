@@ -13,60 +13,36 @@ import java.util.Scanner;
  *
  */
 public class MergeSort {
-	
-	public static void mergeSort(int[] arr) {
-		sort(arr, 0, arr.length - 1);
+	public static void mergeSort(int[] nums) {
+		sort(nums, 0, nums.length - 1);
 	}
 	
-	private static void sort(int[] arr, int low, int high) {
-		if (high <= low) {	// be careful of this exit condition!!!
+	private static void sort(int[] nums, int start, int end) {
+		if (end <= start) {	// be careful of this exit condition!!!
 			return;
 		}
-		int mid = low + (high - low) / 2;
-		sort(arr, low, mid);
-		sort(arr, mid + 1, high);
-		merge(arr, low, mid, high);
+		int mid = start + (end - start) / 2;
+		sort(nums, start, mid);
+		sort(nums, mid + 1, end);
+		merge(nums, start, mid, end);
 	}
 	
-	private static void merge(int[] arr, int low, int mid, int high) {
-		int[] helpArr = new int[arr.length];
-		for (int i = low; i <= high; i++) {
-			helpArr[i] = arr[i];
-		}
-		int i = low;
-		int j = mid + 1;
-		int k = low;
+	private static void merge(int[] nums, int start, int mid, int end) {
+		int[] tmp = new int[nums.length];
+		int i = start, j = mid + 1, k = start;
 		
-		// Copy the smallest values from either the left or the right side back
-	    // to the target array
-		while (i <= mid && j <= high) {
-			if (helpArr[i] <= helpArr[j]) {
-				arr[k++] = helpArr[i++];
-			} else {
-				arr[k++] = helpArr[j++];
-			}
+		while (i <= mid && j <= end) {
+			tmp[k++] = (nums[i] < nums[j]) ? nums[i++] : nums[j++];
 		}
-		
-		// Copy the rest of the left side of the helpArr into the target array
 		while (i <= mid) {
-			arr[k++] = helpArr[i++];
+			tmp[k++] = nums[i++];
 		}
-	}
-	
-	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Merge Sort Test ***");
-
-		Scanner sc = new Scanner(System.in);
-		System.out.print("Input your integer array, \n"
-				+ "leave each number by space: ");
-		String[] strs = sc.nextLine().split(" ");
-		int[] testArr = new int[strs.length];
-		for (int i = 0; i < strs.length; i++) {
-			testArr[i] = Integer.parseInt(strs[i]);
+		while (j <= end) {
+			tmp[k++] = nums[j++];
 		}
-		
-		mergeSort(testArr);
-		displayResult(testArr);
+		for (i = start; i < k; i++) {
+			nums[i] = tmp[i];
+		}
 	}
 	
 	public static void displayResult(int[] ret) {
@@ -74,5 +50,18 @@ public class MergeSort {
 			System.out.print(element + " ");
 		}
 		System.out.println();
+	}
+	
+	public static void main(String[] args) {
+		System.out.println("*** Welcome to Xian's Merge Sort Test ***");
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Input your integer array, leave each number by space: ");
+		String[] strs = sc.nextLine().split(" ");
+		int[] testArr = new int[strs.length];
+		for (int i = 0; i < strs.length; i++) {
+			testArr[i] = Integer.parseInt(strs[i]);
+		}
+		mergeSort(testArr);
+		displayResult(testArr);
 	}
 }
