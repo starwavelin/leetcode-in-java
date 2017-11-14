@@ -37,8 +37,38 @@ package array;
 ***************************************************************************/
 public class MergeSortedArray {
 	/**
+	 * Solution 2:
+	 * In-place merge integers into nums1, 3 pointers, i for nums1, j for nums2, k for starting writing point of nums1.
+	 * i and j starts from the end element of nums1 and nums2, respectively. k starts from the m+n-1 index of nums1
+	 * 
+	 * Core Alg:
+	 * 	Compare nums1[i] and nums2[j], the larger one should be written to nums1[k], then the corresponding index-- and k--.
+	 * 	Do this till one int array is empty, 
+	 * 		if the int array being empty is nums1, copy the elements left in nums2 onto nums1;
+	 * 		else the elements left are in nums1 and since nums1 is already sorted, done. 
+	 * 
+	 * Time Complexity: O(m+n)
+	 * Space Complexity: O(1) - just declare an extra scanner
+	 */
+	public static void merge2(int[] nums1, int m, int[] nums2, int n) {
+		if (m <= 0 && n <= 0) {
+			return;
+		}
+		int k = m + n -1;
+		m--; n--;
+		while (m >= 0 && n >= 0) {
+			nums1[k--] = (nums1[m] > nums2[n]) ? nums1[m--] : nums2[n--];
+		}
+		// Deal with the case we have elements left in nums2 didn't merge into nums1
+		while (n >= 0) {
+			nums1[k--] = nums2[n--];
+		}
+	}
+	
+	/**
 	 * m - # of elements initialized in nums1; 
 	 * n - # of elements initialized in nums2.
+	 * 
 	 * Solution 1:
 	 * 	result will be saved in a new array and let nums1 refer to this new array
 	 * Process:
@@ -51,7 +81,9 @@ public class MergeSortedArray {
 	 * Space Complexity: O(m+n) cuz you open a new array of m+n length
 	 */
 	public static void merge1(int[] nums1, int m, int[] nums2, int n) {
-		if (m <= 0 && n<= 0) return;
+		if (m <= 0 && n<= 0) {
+			return;
+		}
 		int[] tmp = new int[m + n];
 		int i = 0, j = 0, k = 0;
 		for (; k < m+n; k++) {
@@ -67,7 +99,8 @@ public class MergeSortedArray {
 				tmp[k] = nums1[i++];
 			}
 		}
-		/* why just use nums1 = tmp will not give us updated nums1 after invoking this function?
+		
+		/* Why if I just use nums1 = tmp will not give me updated nums1 after invoking this function?
 		 * This is cuz Java is passed by value!! We can view it as Java replicated a handler nums1',
 		 * and pass nums1' into this function, manipulate it and then let nums1' refer to a new array tmp
 		 * Then, when finishing invoking this function and print the nums1 variable outside of this function 
@@ -84,63 +117,31 @@ public class MergeSortedArray {
 	}
 	
 	/**
-	 * Solution 2:
-	 * In-place merge integers into nums1, 3 pointers, i for nums1, j for nums2, k for starting writing point of nums1.
-	 * i and j starts from the end element of nums1 and nums2, respectively. k starts from the m+n-1 index of nums1
-	 * 
-	 * Core Alg:
-	 * 	Compare nums1[i] and nums2[j], the larger one should be written to nums1[k], then the corresponding index-- and k--.
-	 * 	Do this till one int array is empty, 
-	 * 		if the int array being empty is nums1, copy the elements left in nums2 onto nums1;
-	 * 		else the elements left are in nums1 and since nums1 is already sorted, done. 
-	 * 
-	 * Time Complexity: O(m+n)
-	 * Space Complexity: O(1) - just declare an extra scanner
+	 * 当然如果不是力扣原题那么呆板，我们把return type直接设为int[]即可省去Solution 1最后的Copy O(n)步骤。
 	 */
-	public static void merge2(int[] nums1, int m, int[] nums2, int n) {
-		if (m <= 0 && n <= 0) return;
-		
-		
-		/* The following solution has a bug, what if I only have elements in nums1, but 
-		 * nums2 = [] and n = 0
-		 * cuz k always >= 0 while j = -1 which is always < 0, then infinite while loop... 
-//		int i = m-1, j = n-1, k = m+n-1;
-//		while (k >= 0 ) {
-//			if (i >= 0 && j >= 0) {
-//				if (nums1[i] > nums2[j]) {
-//					nums1[k--] = nums1[i--];
-//				} else {
-//					nums1[k--] = nums2[j--];
-//				}
-//			} else if (i < 0 && j >= 0) {
-//				nums1[k--] = nums2[j--];
-//			}
-//		}
-		*/
-		
-		/* A better apporach is not to use k for exam the while loop, instead, use m and n
-		 * And I don't need to set i and j, cuz now m and n can directly be scanners for nums1 and nums2
-		 * */
-		int k = m + n -1;
-		m--; n--;
-		while (m >= 0 && n >= 0) {
-			if (nums1[m] > nums2[n]) {
-				nums1[k--] = nums1[m--];
-			} else {
-				nums1[k--] = nums2[n--];
+	public static int[] merge(int[] nums1, int m, int[] nums2, int n) {
+		if (m <= 0 && n <= 0) {
+			return null;
+		}
+		int[] tmp = new int[m + n];
+		int i = 0, j = 0, k = 0;
+		while (k < m + n) {
+			if (i < m && j < n) {
+				tmp[k++] = (nums1[i] < nums2[j]) ? nums1[i++] : nums2[j++];
+			} else if (i >= m && j < n) {
+				tmp[k++] = nums2[j++];
+			} else if (i < m && j >= n) {
+				tmp[k++] = nums1[i++];
 			}
 		}
-		// Deal with the case we have elements left in nums2 didn't merge into nums1
-		while (n >= 0) {
-			nums1[k--] = nums2[n--];
-		}
+		return tmp;
 	}
 	
 	public static void main(String[] args) {
 		int[] nums1 = new int[18];
 		int[] nums2 = new int[]{-3, 0, 1, 4, 9};
 		nums1[0] = -1; nums1[1] = 1; nums1[2] = 2; nums1[3] = 4;
-		merge1(nums1, 4, nums2, 5);
+		merge2(nums1, 4, nums2, 5);	//Toggle here to switch methods
 		System.out.print("Now nums1 becomes: ");
 		for (int i = 0; i < 4+5; i++) {
 			System.out.print(nums1[i] + " "); //expect -3, -1, 0, 1, 1, 2, 4, 4, 9
@@ -148,10 +149,18 @@ public class MergeSortedArray {
 		
 		nums1 = new int[10];
 		nums1[0] = -2; nums1[1] = 25;
-		merge1(nums1, 2, nums2, 5);
-		System.out.print("\nNow nums3 becomes: ");
+		merge2(nums1, 2, nums2, 5); //Toggle here to switch methods
+		System.out.print("\nNow nums1 becomes: ");
 		for (int i = 0; i < 2+5; i++) {
 			System.out.print(nums1[i] + " "); //expect -3, -2, 0, 1, 4, 9, 25 
+		}
+		
+		nums1 = new int[10];
+		nums1[0] = -7; nums1[1] = 11;
+		nums1 = merge(nums1, 2, nums2, 5); //Toggle here to switch methods
+		System.out.print("\nNow nums1 becomes: ");
+		for (int i = 0; i < nums1.length; i++) {
+			System.out.print(nums1[i] + " "); //expect -7, -3, 0, 1, 4, 9, 11 
 		}
 	}
 }
