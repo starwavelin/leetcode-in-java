@@ -30,7 +30,7 @@ import java.util.Scanner;
 * 
 * meta        : tag-string, tag-hash, tag-array-map, tag-two-pointers
 ***************************************************************************/
-public class LongestSubstring {
+public class LongestSubstringWithoutRepeatingCharacters {
 	/**
 	 * Quick ref of ASCII table: http://www.asciitable.com/
 	 * 	A-Z: 65-90
@@ -77,17 +77,42 @@ public class LongestSubstring {
 			if (map[s.charAt(r)] >= l) { // found a repeated occurrence of the char at s.charAt(r), need to update l
 				l = map[s.charAt(r)] + 1;
 			}
+			/* Or I can write the above 3 lines as
+			 * l = Math.max(map[s.charAt(r)] + 1, l);
+			 * */
 			map[s.charAt(r)] = r; // put right index as value into the array map
 			maxLen = Math.max(r - l + 1, maxLen);
 		}
 		return maxLen;
 	}
 	
+	/**
+	 * If we are sure the input string contains lower case letters only,
+	 * we can further shrink the size of the array map into 26 
+	 */
+	public static int lengthOfLongestSubstring2(String s) {
+        if (s == null || s.length() == 0) {
+            return 0;
+        }
+        int[] map = new int[26];
+        Arrays.fill(map, -1);
+        int l = 0, maxLen = 0;
+        for (int r = 0; r < s.length(); r++) {
+            if (map[s.charAt(r) - 'a'] >= l) {
+                l = map[s.charAt(r) - 'a'] + 1;
+            }
+            map[s.charAt(r) - 'a'] = r;
+            maxLen = Math.max(maxLen, r - l + 1);
+        }
+        return maxLen;
+    }
+	
 	public static void main(String[] args) {
 		System.out.println("*** Welcome to Xian's Longest Substring without Repeating Characters Test ***");
 		System.out.print("Give a String : ");
 		Scanner sc = new Scanner(System.in);
 		String s = sc.next();
-		System.out.println("The length of the longest substring without repeating characters is " + lengthOfLongestSubstring1(s));
+		System.out.println("The length of the longest substring without repeating characters is " 
+				+ lengthOfLongestSubstring2(s)); //toggle methods
 	}
 }
