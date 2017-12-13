@@ -95,7 +95,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
             return 0;
         }
         int[] map = new int[26];
-        Arrays.fill(map, -1);
+        Arrays.fill(map, -1); /* map中的每个格子初始化成-1的好处是假如重复的字符是index=0的那个数，仍可通过循环中的if简单判断出来 */
         int l = 0, maxLen = 0;
         for (int r = 0; r < s.length(); r++) {
             if (map[s.charAt(r) - 'a'] >= l) {
