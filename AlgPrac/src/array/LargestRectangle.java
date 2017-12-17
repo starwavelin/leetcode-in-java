@@ -1,5 +1,7 @@
 package array;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -15,7 +17,6 @@ import java.util.Stack;
 
 public class LargestRectangle {
 	 
-	
 	public static int solution1(int[] height) {
 		int size = height.length;
 		int maxArea = 0;
@@ -52,16 +53,15 @@ public class LargestRectangle {
 		int maxArea = 0;
 		
 		for (int i = 0; i < size; i++) {
-			int h = height[i];
+			int minH = height[i];
 			
-			// Use the following loop to get the lowest height 
-			// of the rectangle formed by [i, j]
+			// Use inner loop to get the lowest height of the rectangle formed by [i, j]
 			for (int j = i + 1; j <= size; j++) {
-				if (height[j - 1] < h) {
-					h = height[j - 1];
+				if (height[j - 1] < minH) {
+					minH = height[j - 1];
 				}
-				if ((j - i) * h > maxArea) {
-					maxArea = (j - i) * h;
+				if ((j - i) * minH > maxArea) {
+					maxArea = (j - i) * minH;
 				}
 			}
 		}
@@ -78,24 +78,20 @@ public class LargestRectangle {
 	 * @param height
 	 * @return
 	 */
-	public static int solution3(int[] height) {
-		if (height == null || height.length == 0) {
-			return 0;
-		}
-		
-		Stack<Integer> stack = new Stack<Integer>();
-		int maxArea = 0;
-		for (int i = 0; i <= height.length; i++) {
-			int cur = (i == height.length) ? -1 : height[i];  
-						// -1 is the dummy bar in the rightmost of histogram
-			while (!stack.isEmpty() && cur <= height[stack.peek()]) {
-				int h = height[stack.pop()];
-				int w = stack.isEmpty() ? i : i - stack.peek() - 1;
-				maxArea = Math.max(maxArea, h * w);
-			}
-			stack.push(i);
-		}
-		return maxArea;
+	public static int solution3(int[] heights) {
+		if (heights == null || heights.length == 0) {
+            return 0;
+        }
+        int maxArea = 0;
+        Deque<Integer> stack = new ArrayDeque<>();
+        for (int i = 0; i <= heights.length; i++) {
+            int curH = (i == heights.length) ? 0 : heights[i];
+            while (!stack.isEmpty() && curH <= heights[stack.peekLast()]) {
+                maxArea = Math.max(maxArea, heights[stack.pollLast()] * (stack.isEmpty() ? i : i - stack.peekLast() - 1));
+            }
+            stack.offerLast(i);
+        }
+        return maxArea;
 	}
 	
 	
