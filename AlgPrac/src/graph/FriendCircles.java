@@ -63,10 +63,21 @@ public class FriendCircles {
 	 */
 	public static class FC2 {
 		public int findCircleNum(int[][] M) {
-			return 0;
+			int n = M.length;
+			if (n == 0) {
+				return 0;
+			}
+			UnionFind1 uf = new UnionFind1(n);
+			for (int i = 0; i < n - 1; i++) {
+				for (int j = i + 1; j < n; j++) {
+					if (M[i][j] == 1) {
+						uf.union(i, j);
+					}
+				}
+			}
+			return uf.count();
 		}
 	}
-	
 	
 	public static void main(String[] args) {
 		int[][] M1 = new int[][] {{1, 0, 0, 1}, {0, 1, 1, 0}, {0, 1, 1, 1}, {1, 0, 1, 1}};
@@ -74,5 +85,9 @@ public class FriendCircles {
 		FC1 fc1 = new FC1();
 		System.out.println("Number of Friend Circles for M1: " + fc1.findCircleNum(M1)); //should return 1
 		System.out.println("Number of Friend Circles for M1: " + fc1.findCircleNum(M2)); //should return 2
+		
+		FC2 fc2 = new FC2();
+		System.out.println("Number of Friend Circles for M1: " + fc2.findCircleNum(M1)); //should return 1
+		System.out.println("Number of Friend Circles for M1: " + fc2.findCircleNum(M2)); //should return 2
 	}
 }
