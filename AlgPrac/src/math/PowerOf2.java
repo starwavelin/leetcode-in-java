@@ -3,7 +3,7 @@ package math;
 public class PowerOf2 {
 
 	/**
-	 * Sol 1: while loop do mod and division
+	 * Sol 1: while loop do mod (测remainder) and division (求商)
 	 * Time Complexity: O(log_b(n))
 	 * Space Complexity: O(1)
 	 */
