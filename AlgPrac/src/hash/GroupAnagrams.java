@@ -1,5 +1,11 @@
 package hash;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /***************************************************************************
 * Problem No. : 49
 * Problem Name: Group Anagrams
@@ -8,7 +14,7 @@ package hash;
 * Author      :	Xian Lin
 * Notes       : 
 * 	Scenario: 
-* 		@needOrganize
+* 		
 * 	Assumption:
 * 
 	Example:
@@ -24,4 +30,38 @@ package hash;
 ***************************************************************************/
 public class GroupAnagrams {
 
+	public static class Sol {
+		public List<List<String>> groupAnagrams(String[] strs) {
+	        if (strs == null || strs.length == 0) {
+	            return new ArrayList<List<String>>();
+	        }
+	        List<List<String>> res = new ArrayList<>();
+	        Map<String, List<String>> map = new HashMap<>();
+	        for (String word : strs) {
+	            char[] tmp = word.toCharArray();
+	            Arrays.sort(tmp);
+	            String key = String.valueOf(tmp);
+	            
+	            map.putIfAbsent(key, new ArrayList<String>());
+	            map.get(key).add(word);
+	        }
+	        for (String key : map.keySet()) {
+	            res.add(map.get(key));
+	        }
+	        return res;
+	    }
+	}
+	
+	public static void main(String[] args) {
+		Sol sc = new Sol();
+		String[] strs = new String[]{"abc", "kfc", "bca", "cfk"};
+		List<List<String>> res = sc.groupAnagrams(strs);
+		System.out.println("The size of the result set is： " + res.size()); // should return 2
+		for (int i = 0; i < res.size(); i++) {
+			for (String s : res.get(i)) {
+				System.out.print(s + "\t");
+			}
+			System.out.println();
+		}
+	}
 }
