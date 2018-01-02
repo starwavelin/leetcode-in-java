@@ -4,7 +4,7 @@ package array;
 * Problem Name: Game of Life
 * Problem URL : https://leetcode.com/problems/game-of-life/description/
 * Date        : Jan 1 2018
-* Author	  :	Xian Lin
+* Author	      : Xian Lin
 * Notes       : 
 * 	Scenario: 
 * 		
