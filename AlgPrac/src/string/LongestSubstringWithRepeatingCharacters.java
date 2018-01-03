@@ -4,7 +4,7 @@ package string;
 * Problem Name: Longest Substring With Repeating Characters
 * Problem URL : 
 * Date        : Jan 3 2017
-* Author	  :	Xian Lin
+* Author      :	Xian Lin
 * Notes       : 
 * 	Scenario:
 * 		Also known as Longest Uniform Substring. 
