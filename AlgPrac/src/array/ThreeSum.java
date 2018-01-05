@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import utility.ListUtil;
 /***************************************************************************
@@ -43,6 +44,7 @@ public class ThreeSum {
 	 * We don't want this naive solution.
 	 * 
 	 * Solution 1:
+	 *  (这是不用HashSet的去重方法)
 	 * 	Sort the nums array first, then
 	 * 	For each number in nums, we want to find the other two numbers whose sum is the opposite of the given num.
 	 *  The outer for loop costs O(n) and the part inside the for loop is a two-sum on a sorted array problem,
@@ -112,18 +114,18 @@ public class ThreeSum {
 	
 	/**
 	 * Solution 2:
+	 * 	(这是用HashSet的去重方法)
 	 * 	Firstly Sort, then
 	 * 	Use HashSet<List<Integer>> to dedup
 	 * Space Complexity: O(n) cuz used HashSet, not as efficient as Solution 1
 	 * Time Complexity is remain O(n^2)
 	 */
 	public static List<List<Integer>> threeSum2(int[] nums) {
-		List<List<Integer>> res = new ArrayList<>();
+		Set<List<Integer>> res = new HashSet<>();
 		if (nums == null || nums.length < 3) {
-			return res;
+			return new ArrayList<>(res);
 		}
 		Arrays.sort(nums);
-		HashSet<List<Integer>> resSet = new HashSet<>();
 		int i = 0; 
 		while (i < nums.length - 2) {
 			int target = -nums[i];
@@ -139,15 +141,14 @@ public class ThreeSum {
 					rec.add(nums[l++]); //注意这一行和下一行的 ++， -- 不可少！！
 					rec.add(nums[r--]);
 					/* before adding rec to res, check it in set first!! */
-					if (!resSet.contains(rec)) {
-						resSet.add(rec); // add current record to the set for future dedup purpose
-						res.add(rec);
+					if (!res.contains(rec)) {
+						res.add(rec); // add current record to the result set for future dedup purpose
 					}
 				}
 			}
 			i++; // You don't need to optimize this if you totally rely on HashSet to do dedup
 		}
-		return res;
+		return new ArrayList<>(res);
 	}
 	
 	/**
@@ -224,7 +225,7 @@ public class ThreeSum {
 		nums = new int[]{-2, -3, 0, -3, -3, 2, 6, 1, 6};
 		res = threeSum2(nums);
 		for (List<Integer> l : res) {
-			System.out.print("One result is: ");
+			System.out.print("One result is: "); // [[-3,-3,6], [-3,1,2], [-2,0,2]]
 			ListUtil.display(l);
 		}
 		
@@ -232,11 +233,12 @@ public class ThreeSum {
 		nums = new int[]{0, 0, 0};
 		res = threeSum2(nums);
 		for (List<Integer> l : res) {
-			System.out.print("One result is: ");
+			System.out.print("One result is: "); // [[0,0,0]]
 			ListUtil.display(l);
 		}
 		
-		/* Solution 3 */
+		/* Solution 3 Not correct yet */
+		/*
 		System.out.println();
 		nums = new int[]{-2, -3, 0, -3, -3, 2, 6, 1, 6};
 		res = threeSum3(nums);
@@ -252,6 +254,7 @@ public class ThreeSum {
 			System.out.print("One result is: ");
 			ListUtil.display(l);
 		} // Results should be [-1, -1, 2], [-1, 0, 1].  No dups like [0, 1, -1]
+		*/
 		
 		//Test
 		/*
