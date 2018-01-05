@@ -43,7 +43,7 @@ public class ThreeSumClosest {
 		Arrays.sort(nums);
 		int sum = nums[0] + nums[1] + nums[2]; // 考点：when to update this overall sum?
 		int diff = Math.abs(sum - target);
-		for (int i =0; i < nums.length - 2; i++) {
+		for (int i = 0; i < nums.length - 2; i++) {
 			int l = i + 1, r = nums.length - 1;
 			while (l < r) {
 				int localSum = nums[i] + nums[l] + nums[r];
