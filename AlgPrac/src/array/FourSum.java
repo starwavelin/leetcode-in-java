@@ -190,13 +190,23 @@ public class FourSum {
 			System.out.print("One result is: ");
 			ListUtil.display(l);
 		}
-		
 		System.out.println();
-		nums = new int[]{-3, -3, 0, 1, 2, 6};
-		res = fourSum2(nums, k);		/* toggle here to change the solution you wanna use */
+		
+		nums = new int[] {-2, -1, 0, 1, 2, 3};
+		k = 0;
+		res = fourSum1(nums, k); /* toggle here to change the solution you wanna use */
 		for (List<Integer> l : res) {
 			System.out.print("One result is: ");
-			ListUtil.display(l); // should be [-3, -3, 0, 6], [-3, 0, 1, 2]
+			ListUtil.display(l);
 		}
+		
+//		System.out.println();
+//		nums = new int[]{-3, -3, 0, 1, 2, 6};
+//		res = fourSum2(nums, k);		/* toggle here to change the solution you wanna use */
+//		for (List<Integer> l : res) {
+//			System.out.print("One result is: ");
+//			ListUtil.display(l); // should be [-3, -3, 0, 6], [-3, 0, 1, 2]
+//		}
+		
 	}
 }
