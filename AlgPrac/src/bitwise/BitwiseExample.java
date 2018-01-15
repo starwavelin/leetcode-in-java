@@ -1,5 +1,7 @@
 package bitwise;
 
+import java.util.ArrayList;
+
 public class BitwiseExample {
 
 	public static void main(String[] args) {
@@ -14,7 +16,9 @@ public class BitwiseExample {
 		
 		System.out.println("a << 2 becomes " + (a << 2)); // should give 240
 		System.out.println("a >> 2 becomes " + (a >> 2)); // should give 15
-		
+
+		System.out.println(16 >> 2); // 4
+		System.out.println(-16 >> 2); // -4
 	}
 
 }
