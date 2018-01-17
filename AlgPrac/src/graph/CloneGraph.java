@@ -66,7 +66,24 @@ public class CloneGraph {
 	}
 	
 	public static class DFSSol {
-		
+		public UGNode clone(UGNode node) {
+			if (node == null) {
+				return null;
+			}
+			Map<UGNode, UGNode> map = new HashMap<>();
+			return dfs(node, map);
+		}
+		private UGNode dfs(UGNode node, Map<UGNode, UGNode> map) {
+			map.put(node, new UGNode(node.val));
+			for (UGNode nei : node.neighbors) {
+				UGNode newNei = map.get(nei);
+				if (newNei == null) {
+					newNei = dfs(nei, map); //易错点： 在dfs过程中，所得的值 dfs(nei, map); 必须赋给newNei
+				}
+				map.get(node).neighbors.add(newNei);
+			}
+			return map.get(node);
+		}
 	}
 	
 	public static void main(String[] args) {
@@ -85,7 +102,9 @@ public class CloneGraph {
 		four.neighbors.add(three);
 
 		BFSSol bfsSol = new BFSSol();
-		System.out.println("Entry point of cloned graph: " + bfsSol.clone(one).val);
-		
+		System.out.println("Entry point of cloned graph: " + bfsSol.clone(one).val); //1
+	
+		DFSSol dfsSol = new DFSSol();
+		System.out.println("Entry point of cloned graph: " + dfsSol.clone(one).val); //1
 	}
 }
