@@ -2,6 +2,12 @@ package bitwise;
 
 import java.util.Scanner;
 /**
+ * LeetCode 260. Single Number III
+ * https://leetcode.com/problems/single-number-iii/description/
+ * 
+ * Example
+ * 	Input: Given nums = [1, 2, 1, 3, 2, 5]
+ * 	Output: return [3, 5]
  * 
  * http://www.lintcode.com/en/problem/single-number-iii/
  * In an int array with 2n+2 numbers, only two distinct numbers occur only once, others

@@ -62,24 +62,27 @@ public class MaxXORFromTwoNums {
 	 * */
 	public static class Solution {
 		public int findMaximumXOR(int[] nums) {
+			if (nums == null || nums.length == 0) {
+				return 0;
+			}
 			int res = 0, mask = 0;
 			for (int i = 5; i >= 0; i--) {
 				mask = mask | (1 << i);
-				System.out.println(" mask is: " + mask); //DEBUG
+//				System.out.println(" mask is: " + mask); //DEBUG
 				
 				Set<Integer> set = new HashSet<>();
 				for (int num : nums) {
-					set.add(num & mask);  //Note here we use num & mask
+					set.add(num & mask);  //Note here we use num & mask to extract prefix of a number
 				}
-				displaySet(i, set); //DEBUG
+//				displaySet(i, set); //DEBUG
 				
 				int candidate = res | (1 << i);
-				displayCandidate(candidate); //DEBUG
+//				displayCandidate(candidate); //DEBUG
 				
 				for (int prefix : set) {
 					if (set.contains(prefix ^ candidate)) {
 						res = candidate;
-						System.out.println(" res is: " + res); //DEBUG
+//						System.out.println(" res is: " + res); //DEBUG
 						break;
 					}
 				}

@@ -28,16 +28,16 @@ public class SingleNumberII {
 			return -1;
 		}
 		
-		int ret = 0;
-		int[] bits = new int[32];
-		for (int i = 0; i < 32; i++) {
-			for (int j = 0; j < nums.length; j++) {
-				bits[i] += (nums[j] >> i) & 1;	// get the bit at bits[i]
-				bits[i] %= 3;
+		int res = 0;
+		for (int i = 0; i <= 31; i++) {
+			int sum = 0;
+			for (int n : nums) {
+				sum += (n >> i) & 1;
+				sum %= 3;
   			}
-			ret = ret | (bits[i] << i);
+			res = res | (sum << i);
 		}
-		return ret;
+		return res;
 	}
 	
 	/**
