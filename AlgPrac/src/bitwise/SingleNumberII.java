@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Map.Entry;
 import java.util.Scanner;
 /**
+ * LeetCode 137. Single Number II
+ * https://leetcode.com/problems/single-number-ii/description/
  * 
  * http://www.lintcode.com/en/problem/single-number-ii/
  * 3n+1 numbers, every number occurs triple times except one, find that number.

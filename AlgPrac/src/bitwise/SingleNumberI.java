@@ -2,7 +2,10 @@ package bitwise;
 
 import java.util.Scanner;
 /**
+ * LeetCode 136. Single Number
+ * https://leetcode.com/problems/single-number/description/
  * 
+ * LintCode
  * http://www.lintcode.com/en/problem/single-number/
  * 
  * The properties of XOR;
@@ -10,30 +13,32 @@ import java.util.Scanner;
  * 2. a ^ a = 0 
  * 3. a ^ 0 = a
  * 4. (a ^ b) ^ c = a ^ (b ^ c)
- *
  */
 
 public class SingleNumberI {
 	
+	/**
+	 * Time Complexity: O(n)
+	 * Space Complexity: O(1)
+	 */
 	public static int singleNumber(int[] nums) {
 		if (nums == null || nums.length == 0) {
 			return 0;
 		}
 		
-		int n = 0;
-		for (int i = 0; i < nums.length; i++) {
-			n = n ^ nums[i];
+		int res = 0;
+		for (int n : nums) {
+			res = res ^ n;
 		}
-		return n;
+		return res;
 	}
 	
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Single Number I Test ***");
+		System.out.println("*** Welcome to Xian's Single Number I Test ***");
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Input your integer array, \n" +
-				"leave each number by space: ");
+		System.out.print("Input your integer array, leave each number by space: ");
 		String[] strs = sc.nextLine().split(" ");
 		int[] testArray = new int[strs.length];
 		for (int i = 0; i < strs.length; i++) {
