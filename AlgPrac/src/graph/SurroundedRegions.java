@@ -37,7 +37,7 @@ public class SurroundedRegions {
 	 */
 	
 	public static class DFSSol {
-		public void solve(char[][] board) {
+        public void solve(char[][] board) {
 	        int m = board.length; 
 	        if (m == 0) {
 	            return;
@@ -61,7 +61,7 @@ public class SurroundedRegions {
 	        }
 	    }
 		
-	    private void dfs(char[][] board, int row, int col, int m, int n) {
+        private void dfs(char[][] board, int row, int col, int m, int n) {
 	        board[row][col] = 'A';
 	        int[] dx = new int[]{-1, 1, 0, 0};
 	        int[] dy = new int[]{0, 0, -1, 1};
@@ -77,7 +77,7 @@ public class SurroundedRegions {
 	
 	
 	public static class BFSSol {
-		public void solve(char[][] board) {
+        public void solve(char[][] board) {
 	        int m = board.length; 
 	        if (m == 0) {
 	            return;
@@ -101,7 +101,7 @@ public class SurroundedRegions {
 	        }
 	    }
 		
-		private void bfs(char[][] board, int row, int col, int m, int n) {
+        private void bfs(char[][] board, int row, int col, int m, int n) {
 	        board[row][col] = 'A';
 	        int[] dx = new int[]{-1, 1, 0, 0};
 	        int[] dy = new int[]{0, 0, -1, 1};
