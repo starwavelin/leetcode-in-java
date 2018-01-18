@@ -35,6 +35,10 @@ import utility.UGNode;
 * 	Space Complexity: O() -- See Code Comments
 * 
 * meta        : tag-graph, tag-bfs, tag-dfs
+* 
+* Think: How to unit test Clone Graph?
+* 	Some research: 
+* 	1. https://stackoverflow.com/questions/43538038/how-to-junit-test-my-cloning-method
 ***************************************************************************/
 public class CloneGraph {
 
