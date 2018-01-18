@@ -29,4 +29,13 @@ Supported list of problem categories for searching,
 Company based categories,
  * [Google](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-google)
  * [Bloomberg](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-bloomberg)
+
+### LeetCode Problem List
+| No. | Problem   | Difficulty  | Tags  | 
+| ----|-----------|-------------|-------|
+| 3   | Longest Substring Without Repeating Characters | Medium |  |
+| 2   | Add Two Numbers | Medium |  |
+| 1   | [Two Sum](AlgPrac/src/array/TwoSum.java)  | Medium |  |
+
+### Non-LeetCode Problem List
  
