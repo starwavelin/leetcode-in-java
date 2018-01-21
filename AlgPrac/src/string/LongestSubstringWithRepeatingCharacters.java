@@ -133,20 +133,20 @@ public class LongestSubstringWithRepeatingCharacters {
 				+ lus.getLength2("aaoooookkg")); // 5
 		System.out.println("Length of longest substring for c9999999bdllllllllF is: " 
 				+ lus.getLength2("c9999999bdllllllllF")); 
-			// output: 8. There are 7 9's and 8 l's. output is contributed by 8 l's
+			// output: 8. There are seven 9's and eight l's. output is contributed by eight l's
 		
 		
 		Solution sl = new Solution();
-		System.out.println("an empty string, staring index: " + sl.longestUniformSubstring("")[0]
+		System.out.println("an empty string, starting index: " + sl.longestUniformSubstring("")[0]
 				+ " longest length: " + sl.longestUniformSubstring("")[1]); // -1, 0
-		System.out.println("X, staring index: " + sl.longestUniformSubstring("X")[0]
+		System.out.println("X, starting index: " + sl.longestUniformSubstring("X")[0]
 				+ " longest length: " + sl.longestUniformSubstring("X")[1]); // 0, 1
-		System.out.println("aaoooookkg, staring index: " + sl.longestUniformSubstring("aaoooookkg")[0]
+		System.out.println("aaoooookkg, starting index: " + sl.longestUniformSubstring("aaoooookkg")[0]
 				+ " longest length: " + sl.longestUniformSubstring("aaoooookkg")[1]); // 2, 5
-		System.out.println("c9999999bdllllllllF, staring index: " 
+		System.out.println("c9999999bdllllllllF, starting index: " 
 				+ sl.longestUniformSubstring("c9999999bdllllllllF")[0]
 				+ " longest length: " + sl.longestUniformSubstring("c9999999bdllllllllF")[1]);
 			// output: 10, 8. 
-			// There are 7 9's and 8 l's. output is contributed by 8 l's
+			// There are seven 9's and eight l's. output is contributed by eight l's
 	}
 }

@@ -86,4 +86,7 @@ Company based categories,
 
 
 ### Non-LeetCode Problem List
+| No. | Problem   | Difficulty  | Tags  |
+| ----|-----------|-------------|-------|
+| 1   | [Longest Uniform Substring](AlgPrac/src/string/LongestSubstringWithRepeatingCharacters.java)  | Medium | string, two-pointer, [视频](https://www.youtube.com/watch?v=U2LLrtePzhc) |
  
