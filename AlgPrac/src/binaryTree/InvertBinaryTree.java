@@ -32,9 +32,10 @@ public class InvertBinaryTree {
 
 	/**
 	 * Solution 1:
-	 * Recursion top-down approach
-	 * For each root, use a tmp variable to help swap its left subtree and right subtree, until reach 
-	 * leaves and finish processing them.
+	 * Recursive top-down approach
+	 * 
+	 * For each root, use a tmp variable to help swap its left subtree and right subtree, until reaching 
+	 * the leaves and finishing to process them.
 	 * 
 	 * Time Complexity: O(n) cuz traverse all the nodes
 	 * Space Complexity: O(1) cuz just open a new var tmp
@@ -61,8 +62,9 @@ public class InvertBinaryTree {
 	/**
 	 * Solution 2:
 	 * D&C, Bottom-Up approach
-	 * We assume the current root's left is processed by assigning the root's right to it
-	 * and also assume the current's root's right is processed by assining the root's left to it.
+	 * 
+	 * We ASSUME the current root's left is processed by assigning the root's right to it
+	 * and also assume the current's root's right is processed by assigning the root's left to it.
 	 * And the actual process is done in the leaf level and return back
 	 * 
 	 * Time Complexity: O(n) -- traverse all the nodes
