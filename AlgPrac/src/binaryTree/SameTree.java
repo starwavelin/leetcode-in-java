@@ -13,9 +13,9 @@ public class SameTree {
 	 * 	```
 	 * I cannot handle this case:
 	 * 
-	 * 		1		 1
-	 * 	   /			/ \
-	 * 	  1		  null 1
+	 * 	    1         1
+	 * 	   /	        / \
+	 * 	  1	       null 1
 	 * 
 	 * Directly returning will give me "11" and "11" so the two Strings will be equal.
 	 * 
@@ -37,7 +37,7 @@ public class SameTree {
 	    
 	    private void preorder(TreeNode root, StringBuilder sb) {
 	        if (root == null) {
-	        		sb.append("#");
+	        	    sb.append("#");
 	            return;
 	        }
 	        sb.append(root.val);
