@@ -1,6 +1,6 @@
 package string;
 /***************************************************************************
-* Problem No. : 
+* Problem No. : NLC 1
 * Problem Name: Longest Substring With Repeating Characters
 * Problem URL : 
 * Date        : Jan 3 2017
