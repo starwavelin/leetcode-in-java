@@ -35,12 +35,11 @@ public class LowestCommonAncestor {
             return null;
         }
         if (root.val < Math.min(p.val, q.val)) {
-            return lowestCommonAncestor(root.right, p, q);
+            return lowestCommonAncestor(root.right, p, q); //要在子问题就有所return
         } else if (root.val > Math.max(p.val, q.val)) {
             return lowestCommonAncestor(root.left, p, q);
-        } else {
-            return root;    
         }
+        return root;
     }
 	
 }
