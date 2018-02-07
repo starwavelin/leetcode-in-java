@@ -24,9 +24,10 @@ import java.util.Map;
 * 	
 * 	Assumption:
 * 		For the get(int key) method, if the key doesn't exist, return Integer.MIN_VALUE;
-* 	Input: 
+* 	LC Input: 
+* 		["LRUCache","put","put","get","put","get","put","get","get","get"]
+		[[2],[1,1],[2,2],[1],[3,3],[2],[4,4],[1],[3],[4]]
 * 	Output: 
-* 
 * 
 * 	Data Structure and Alg:
 * 		HashMap with LinkedList Node. 
@@ -35,7 +36,6 @@ import java.util.Map;
 * 			Just used cache (recently used) should be removed from its current position and append to the end
 * 			Head always stores the least recently used cache and when evicting is needed, remove head.
 * 		We also used placeholder dummyHead and dummyTail, so the head and tail mentioned above are the actual head / tail of the cache data.
-* 		
 * 		
 * Complexity  : 
 * 	Time Complexity: get O(1); put O(1)
@@ -46,10 +46,12 @@ import java.util.Map;
 public class LruCache {
 
 	class Node {
+		int key;
 		int val;
 		Node prev;
 		Node next;
-		public Node (int val) {
+		public Node (int key, int val) {
+			this.key = key;
 			this.val = val;
 		}
 	}
@@ -61,8 +63,8 @@ public class LruCache {
 	
 	public LruCache(int capacity) {
 		this.capacity = capacity;
-		dummyHead = new Node(-1);
-		dummyTail = new Node(-1);
+		dummyHead = new Node(-1, -1);
+		dummyTail = new Node(-1, -1);
 		dummyHead.next = dummyTail;
 		dummyTail.prev = dummyHead;
 		map = new HashMap<>();
@@ -82,7 +84,15 @@ public class LruCache {
 		return cur.val;
 	}
 	
-	
+	/**
+	 * put's tricky part:
+	 * 	当capacity==map.size()时，我们要remove least recently used cache from both linked list and map.
+	 *  但在remove前要把要remove的node, which is dummyHead.next 先存起来，以免如下错误❌
+	 *  		remove(dummyHead.next);
+			map.remove(dummyHead.next.key);
+	 *  After you already removed dummyHead.next, dummyHead.next becomes another node so you are gonna remove another node from the map, 
+	 *  which will cause error!!
+	 */
 	public void put(int key, int value) {
 		/* Cases:
 		 * 1. key already exists, update value
@@ -98,14 +108,15 @@ public class LruCache {
 			append(cur);
 			cur.val = value;
 		} else {
-			if (capacity - map.size() == 0) {
-				remove(dummyHead.next);
+			if (capacity == map.size()) {
+				Node toRm = dummyHead.next;
+				remove(toRm);
+				map.remove(toRm.key);
 			}
-			Node node = new Node(value);
+			Node node = new Node(key, value);
 			map.put(key, node);
 			append(node);
 		}
-		
 	}
 	
 	private void remove(Node node) {
@@ -119,5 +130,4 @@ public class LruCache {
 		dummyTail.prev.next = node;
 		dummyTail.prev = node;
 	}
-	
 }
