@@ -38,6 +38,7 @@ public class ReverseLinkedList {
 	 * 	Use var prev to keep head's previous node,
 	 *  Use head to traverse the linked list till head reaches null, return prev.
 	 * Tips: You can see the pattern within the while loop
+	 * 三指针法。
 	 * 
 	 * Time Complexity: O(n) one pass
 	 * Space Complexity: O(1)
