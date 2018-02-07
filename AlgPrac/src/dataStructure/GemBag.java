@@ -31,7 +31,7 @@ import java.util.Map;
 * 	Time Complexity: See solutions in the code comments
 * 	Space Complexity: See solutions in the code comments   
 * 
-* meta        : tag-data-structure
+* meta        : tag-data-structure, tag-twosigma
 ***************************************************************************/
 public class GemBag {
 
