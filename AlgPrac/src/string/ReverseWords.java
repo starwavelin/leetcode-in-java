@@ -32,32 +32,29 @@ public class ReverseWords {
 		public void reverseWords(char[] s) {
 			if (s == null || s.length == 0)
 				return;
-			for (int i = 0, j = 0; j <= s.length; j++) { // think: why here we want j <= s.length ?
-				if (j == s.length || s[j] == ' ') { // think: why `j == s.length` should be placed before ` s[j] == ' '`?
-					reverse(s, i, j - 1);
-					i = j + 1;
-				}
-			}
+			for (int i = 0, j = 0; j < s.length; j++) {
+	            if (j == s.length - 1 || s[j + 1] == ' ') {
+	                reverse(s, i, j);
+	                i = j + 2;
+	            }
+	        }
 			reverse(s, 0, s.length - 1);
 		}
 		
-		/* in Rotate Array problem, I used `while (start < end)`
-		 * this time I am using a for loop which follows the thought of binary search
-		 * */
 		private void reverse(char[] s, int start, int end) {
-//			while (start < end) {
-//				char t = s[start];
-//				s[start++] = s[end];
-//				s[end--] = t;
-//			}
-			
-			for (int i = 0; i <= (end - start) / 2; i++) {
-				char t = s[start + i];
-				s[start + i] = s[end - i];
-				s[end - i] = t;
+			while (start < end) {
+				char t = s[start];
+				s[start++] = s[end];
+				s[end--] = t;
 			}
-			/* But to be honest, this +i -i approach seems to be easier to errored, 
-			 * suggest using the `while (start < end)` one*/
+			
+//			for (int i = 0; i <= (end - start) / 2; i++) {
+//				char t = s[start + i];
+//				s[start + i] = s[end - i];
+//				s[end - i] = t;
+//			}
+			/* But to be honest, this +i -i approach seems to be easier to error, 
+			 * suggest to use the `while (start < end)` one*/
 		}
 	}
 	
