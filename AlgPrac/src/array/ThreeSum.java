@@ -12,7 +12,7 @@ import utility.ListUtil;
 * Problem Name: Three Sum
 * Problem URL : https://leetcode.com/problems/3sum/description/
 * Date        : Oct 27 2017
-* Author	  :	Xian Lin
+* Author      : Xian Lin
 * Notes       : 
 * 	Scenario: 
 * 		Given an array S of n integers, are there elements a, b, c in S such that a + b + c = 0? 
@@ -90,18 +90,12 @@ public class ThreeSum {
 					rec.add(nums[l++]);
 					rec.add(nums[r--]);
 					res.add(rec);
-					while (l < nums.length && nums[l] == nums[l - 1]) { //while去有解后leftpointer的重，leftpointer不可越界
+					while (l < r && nums[l] == nums[l - 1]) { //while去有解后 left pointer 的重，left pointer不可越界
 						l++;
 					}
-					/* 有解的情况下, 已经对左指针去重了，还要对右指针去重使效率更高吗？
-					 * 错误！！
-					 * 比如 Input： [-2,0,1,1,2]
-					 * 找到解 [-2, 0, 2] 后，如果再对右指针去重，后果会怎么样？ 略去了[-2,1,1]这个答案 */
-					/*
-					 * while (r > 0 && nums[r] == nums[r - 1]) {
-						 r--;
-					   }
-					 */
+					while (r > l && nums[r] == nums[r + 1]) {
+						r--;
+					}
 				}
 			}
 			i++;

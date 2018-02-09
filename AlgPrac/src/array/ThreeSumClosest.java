@@ -37,42 +37,55 @@ public class ThreeSumClosest {
 	 * Space Complexity: O(1)
 	 */
 	public static int threeSumClosest(int[] nums, int target) {
-		if (nums == null || nums.length < 3) {
-			return Integer.MIN_VALUE;  // Use MIN_VALUE to represent the result from an unsatisfied input
-		}
-		Arrays.sort(nums);
-		int sum = nums[0] + nums[1] + nums[2]; // 考点：when to update this overall sum?
-		int diff = Math.abs(sum - target);
-		for (int i = 0; i < nums.length - 2; i++) {
-			int l = i + 1, r = nums.length - 1;
-			while (l < r) {
-				int localSum = nums[i] + nums[l] + nums[r];
-				int localDiff = Math.abs(localSum - target);
-				if (localDiff < diff) {
-					diff = localDiff;
-					sum = localSum;
-				}
-				if (localSum < target) { //注意这里的比较，不是localSum < sum, 应该是 localSum跟target比较！！！
-					l++;
-				} else {
-					r--;
-				}
-			}
-		}
-		return sum;
+        int res = Integer.MIN_VALUE;
+        if (nums == null || nums.length < 3) {
+            return res;
+        }
+        Arrays.sort(nums);
+        res = nums[0] + nums[1] + nums[nums.length - 1];
+        int diff = Math.abs(res - target);
+        
+        int i = 0;
+        while (i < nums.length) {
+            int j = i + 1, k = nums.length - 1;   /* j - left pointer, k - right pointer */ 
+            while (j < k) {
+                int localSum = nums[i] + nums[j] + nums[k];
+                int localDiff = Math.abs(localSum - target);
+                if (localDiff == 0) {
+                    return localSum;
+                }
+                if (localDiff < diff) { 
+                    diff = localDiff;
+                    res = localSum;
+                }
+                if (localSum < target) { //注意这里的比较应该是 localSum 跟 target ！！
+                    j++;
+                } else {
+                    k--;
+                }
+            }
+            i++;
+            while (i < nums.length && nums[i] == nums[i - 1]) {
+                i++;
+            }
+        }
+        return res;
 	}
 	
 	public static void main(String[] args) {
 		int[] nums = new int[]{-4, 1, 2, -1};
 		int k = 1;
 		System.out.println(String.format("The 3 sum cloeset to %d is %d", k, threeSumClosest(nums, k)));
+			// closest sum: 2
 		
 		nums = new int[]{1, 2, 3};
 		k = 100;
 		System.out.println(String.format("The 3 sum cloeset to %d is %d", k, threeSumClosest(nums, k)));
+			// closest sum: 6
 		
 		nums = new int[]{0, 2, 1, -3};
 		k = 1;
 		System.out.println(String.format("The 3 sum cloeset to %d is %d", k, threeSumClosest(nums, k)));
+			// closest sum: 0
 	}
 }
