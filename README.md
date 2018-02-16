@@ -88,5 +88,8 @@ Company based categories,
 ### Non-LeetCode Problem List
 | No. | Problem   | Difficulty  | Tags  |
 | ----|-----------|-------------|-------|
+| 4   | [Insertion Sort](AlgPrac/src/sorting/InsertionSort.java)  | Easy | Sort, Two Pointers, 视频 |
+| 3   | [Selection Sort](AlgPrac/src/sorting/SelectionSort.java)  | Easy | Sort, Two Pointers, [视频](https://www.youtube.com/watch?v=TPA2FzUJRKM) |
+| 2   | [Bubble Sort](AlgPrac/src/sorting/BubbleSort.java)  | Easy | Sort, Two Pointers, [视频](https://www.youtube.com/watch?v=kKLwS9jv8Yc) |
 | 1   | [Longest Uniform Substring](AlgPrac/src/string/LongestSubstringWithRepeatingCharacters.java)  | Medium | String, Two Pointers, [视频](https://www.youtube.com/watch?v=U2LLrtePzhc) |
  
