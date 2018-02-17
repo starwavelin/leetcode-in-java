@@ -21,7 +21,7 @@ package binarySearchSortedArray;
 * 	Time Complexity: O() -- See Code Comments
 * 	Space Complexity: O() -- See Code Comments
 * 
-* meta        : tag-bs-sa
+* meta        : tag-binarySearch
 ***************************************************************************/
 public class FindPeakElement {
 	

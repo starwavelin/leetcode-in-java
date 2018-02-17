@@ -9,7 +9,7 @@ For example, to search on problems on arrays: you navigate to [this repo url](ht
 Supported list of problem categories for searching,
  * [Array](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-array)
  * [Backtracking](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-backtracking): Backtracking/Permutation/Combination problems
- * [Binary Search Sorted Array](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-bs-sa): Sorted array problems sometimes can be solved by binary search ideas
+ * [Binary Search](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-binarySearch): Binary search problems and problems using binary search ideas
  * [Binary Tree](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-binary-tree)
  * [Binary Search Tree](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-binary-search-tree)
  * [Bitwise](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-bitwise): Bit manipulation

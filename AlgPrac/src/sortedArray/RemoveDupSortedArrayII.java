@@ -1,4 +1,4 @@
-package binarySearchSortedArray;
+package sortedArray;
 
 import java.util.Scanner;
 /***************************************************************************
