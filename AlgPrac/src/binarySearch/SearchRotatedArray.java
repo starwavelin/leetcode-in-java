@@ -9,7 +9,6 @@ import java.util.Scanner;
 public class SearchRotatedArray {
 	
 	/**
-	 * 
 	 * @param nums: an integer rotated array
 	 * @param target: an int to be searched
 	 * @return : the index of the target; if not found, return -1
@@ -18,10 +17,7 @@ public class SearchRotatedArray {
 		if (nums == null || nums.length == 0) {
 			return -1;
 		}
-		
-		int start, end, mid;
-		start = mid = 0;
-		end = nums.length - 1;
+		int start = 0, end = nums.length - 1, mid;
 		while (start + 1 < end) {
 			mid = start + (end - start) / 2;
 			if (nums[mid] == target) {
@@ -49,7 +45,6 @@ public class SearchRotatedArray {
 		return -1;
 	}
 	
-	
 	public static void main(String[] args) {
 		System.out.println("*** Welcome to Ben's Search in Rotated Array Test ***");
 		
@@ -66,8 +61,7 @@ public class SearchRotatedArray {
 		int target = sc.nextInt();
 		int result = search(testArray, target);
 		if (result != -1) {
-			System.out.print("The number " 
-				+ target + " is found at position " + result );
+			System.out.print("The number " + target + " is found at position " + result);
 		} else {
 			System.out.print("The number " + target + " is NOT found!");
 		}
