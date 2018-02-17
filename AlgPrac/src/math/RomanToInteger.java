@@ -1,18 +1,23 @@
 package math;
-
-/**
- * A very cultural dependent question. 
- * 
- * Firstly, we need to know:
- * 罗马字符 与 阿拉伯数字对应关系
- * I - 1， V - 5， X - 10， L - 50， C - 100， D - 500， M - 1000。
- * 	
- * Assumption: 	
- * 	1. The input string is a Roman numeral guaranteed. 
- *  2. The range of the output integer will be between 1 and 3999. 
- *  
- * meta        : tag-math, tag-hash
- */
+/***************************************************************************
+* Problem No. : 13
+* Problem Name: Roman to Integer
+* Problem URL : https://leetcode.com/problems/roman-to-integer/description/
+* Date        : Dec 30 2017
+* Author      : Xian Lin
+* 
+* A very cultural dependent question. 
+*
+* Firstly, we need to know:
+* 	罗马字符 与 阿拉伯数字对应关系
+* 	I - 1， V - 5， X - 10， L - 50， C - 100， D - 500， M - 1000。
+* 	
+* Assumption  : 	
+* 	1. The input string is a Roman numeral guaranteed. 
+*   2. The range of the output integer will be between 1 and 3999. 
+*  
+* meta        : tag-math, tag-hash
+***************************************************************************/
 public class RomanToInteger {
 	
 	/**
