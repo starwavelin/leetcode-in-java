@@ -1,4 +1,4 @@
-package binarySearchSortedArray;
+package binarySearch;
 
 /***************************************************************************
 * Problem No. : 162

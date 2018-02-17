@@ -1,8 +1,7 @@
-package binarySearchSortedArray;
+package binarySearch;
 
 import java.util.Scanner;
 /**
- * 
  * Write an efficient algorithm that searches for a value in an m x n matrix, return the occurrence of it.
  * This matrix has the following properties:
     * Integers in each row are sorted from left to right.
@@ -10,9 +9,7 @@ import java.util.Scanner;
     * No duplicate integers in each row or column.
  *
  */
-
 public class SearchMatrixII {
-	
 	/**
      * @param matrix: A list of lists of integers
      * @param: A number you want to search in the matrix
@@ -20,36 +17,29 @@ public class SearchMatrixII {
      */
     public static int searchMatrix(int[][] matrix, int target) {
         // Idea: From the lower left corner, move either to the right or up to find target
-    	// O(n + m)
-    	int count = 0;
-    	if (matrix == null || matrix.length == 0 || matrix[0][0] > target) {
-    		return count;
-    	}
-    	
-    	int numRows = matrix.length;
-    	int numCols = matrix[0].length;
-    	int row = numRows - 1;
-    	int col = 0;
-    	for (int i = 0; i < numRows + numCols - 1; i++) {
-    		if (matrix[row][col] == target) {
-    			count++;
-    			if (col + 1 == numCols) {
-    				return count;
-    			}
-    			col++; // move to the right
-    		} else if (matrix[row][col] > target) {
-    			if (row == 0) {
-    				return count;
-    			}
-    			row--; // move up
-    		} else {
-    			if (col + 1 == numCols) {
-    				return count;
-    			}
-    			col++;
-    		}
-    	}
-    	return count;
+    		// O(n + m)
+    		int count = 0;
+        int m = matrix.length;
+        if (m == 0) {
+            return count;
+        }
+        int n = matrix[0].length;
+        if (n == 0) {
+            return count;
+        }
+        
+        int i = m - 1, j = 0;
+        while (i >= 0 && j < n) {
+            if (matrix[i][j] == target) {
+                count++;
+                i--;
+            } else if (matrix[i][j] < target) {
+                j++;
+            } else {
+                i--;
+            }
+        }
+        return count;
     }
 	
 	public static void main(String[] args) {
