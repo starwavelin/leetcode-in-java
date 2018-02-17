@@ -16,24 +16,25 @@ public class SearchMinRotatedArray {
      */
     public static int findMin(int[] nums) {
         if (nums == null || nums.length == 0) {
-        	return -1;
+        	    return -1;
         }
         
-        int start, end, mid;
-        start = 0;
-        end = nums.length - 1;
+        int start = 0, end = nums.length - 1, mid;
+        if (nums[start] < nums[end]) {
+        	    return nums[start];
+        }
         while (start + 1 < end) {
-        	mid = start + (end - start) / 2;
-        	if (nums[mid] > nums[end]) {
-        		start = mid;
-        	} else {
-        		end = mid;
-        	}
+        	    mid = start + (end - start) / 2;
+        	    if (nums[mid] > nums[start]) {
+        	        start = mid;
+        	    } else {
+        	        end = mid;
+        	    }
         }
         if (nums[start] < nums[end]) {
-        	return nums[start];
+        	    return nums[start];
         } else {
-        	return nums[end];
+        	    return nums[end];
         }
     }
 	
@@ -41,8 +42,7 @@ public class SearchMinRotatedArray {
 		System.out.println("*** Welcome to Ben's Search Minimum in Rotated Array Test ***");
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Input your integer rotated array, \n" +
-				"leave each number by space: ");
+		System.out.print("Input your integer rotated array, \n" + "leave each number by space: ");
 		String[] strs = sc.nextLine().split(" ");
 		int[] testArray = new int[strs.length];
 		for (int i = 0; i < strs.length; i++) {
