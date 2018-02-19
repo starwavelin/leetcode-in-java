@@ -22,7 +22,7 @@ import java.util.Scanner;
 * 		Use cur to traverse the array till cur reaches the array length
 * 			if (nums[prev] == nums[cur]) cur++ to continue traverse the array
 * 			if (nums[prev] != nums[cur]) prev++, use nums[cur] to replace nums[prev], cur++
-* 		The length of the new array if prev + 1.
+* 		The length of the new array is prev + 1.
 * 		
 * Complexity  : 
 * 	Time Complexity: O(n) cuz traverse the whole array
@@ -33,16 +33,18 @@ import java.util.Scanner;
 public class RemoveDupSortedArray {
 	
 	public static int removeDup(int[] nums) {
-		if (nums == null || nums.length < 2) {
+		if (nums == null) {
+			return 0;
+		}
+		if (nums.length < 2) {
 			return nums.length;
 		}
 		int prev = 0, cur = 1;
 		while (cur < nums.length) {
-			if (nums[prev] == nums[cur])
+			if (nums[prev] == nums[cur]) {
 				cur++;
-			else {
-				prev++;
-				nums[prev] = nums[cur++];
+			} else {
+				nums[++prev] = nums[cur++];
 			}
 		}
 		return prev + 1;

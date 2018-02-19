@@ -34,7 +34,10 @@ public class RemoveDupSortedArrayII {
 	 * 	only when nums[cur] == nums[prev] && nums[cur] == nums[prev - 1] we do so.
      */
 	public static int removeDup(int[] nums) {
-		if (nums == null || nums.length < 3) {
+		if (nums == null) {
+			return 0;
+		}
+		if (nums.length < 3) {
 			return nums.length;
 		}
 		int prev = 1;
@@ -43,9 +46,7 @@ public class RemoveDupSortedArrayII {
 			if (nums[cur] == nums[prev] && nums[cur] == nums[prev - 1]) {
 				cur++;
 			} else {
-				prev++;
-				nums[prev] = nums[cur];
-				cur++;
+				nums[++prev] = nums[cur++];
 			}
 		}
 		return prev + 1;
