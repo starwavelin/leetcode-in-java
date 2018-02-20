@@ -29,6 +29,9 @@ public class BitwiseExample {
 		int y = -128; // -128
 		System.out.println(y >> 1); // negative number -128/2 = -64
 		System.out.println(y >>> 1); // positive number is it Math.abs(-128/2) = 64 ? NO!! It should be Integer.MAX_VALUE + 1 + (-128 / 2)
-	}
 	
+		System.out.println();
+		System.out.println("-23 % 10 = " + (-23 % 10));  // output: -3
+		System.out.println("-2 % 10 = " + (-2 % 10));	// output: -2  Java's % gives us remainder
+	}
 }
