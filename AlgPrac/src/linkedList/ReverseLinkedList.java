@@ -9,7 +9,7 @@ import utility.ListNode;
 * Problem Name: Reverse Linked List
 * Problem URL : https://leetcode.com/problems/reverse-linked-list/description/
 * Date        : Nov 2 2017
-* Author	  :	Xian Lin
+* Author      : Xian Lin
 * Notes       : 
 * 	Scenario: 
 * 		Reverse a linked list and return the head of the reversed linked list
@@ -31,7 +31,6 @@ import utility.ListNode;
 * 考点: 双或多指针；递归。
 ***************************************************************************/
 public class ReverseLinkedList {
-	
 	/**
 	 * Solution 1: Iterative solution:
 	 * 	Use var next to keep head's next node,
@@ -43,18 +42,20 @@ public class ReverseLinkedList {
 	 * Time Complexity: O(n) one pass
 	 * Space Complexity: O(1)
 	 */
-	public static ListNode reverse1(ListNode head) {
-		if (head == null || head.next == null) {
-			return head;
+	private static class Solution1 {
+		public ListNode reverse(ListNode head) {
+			if (head == null || head.next == null) {
+				return head;
+			}
+			ListNode prev = null, next;
+			while (head != null) {
+				next = head.next; //抓住绳子，记下head的下一个节点
+				head.next = prev;
+				prev = head;	//这两步为实际的指针移动
+				head = next;
+			}
+			return prev;
 		}
-		ListNode prev = null, next;
-		while (head != null) {
-			next = head.next; //抓住绳子，记下head的下一个节点
-			head.next = prev;
-			prev = head;	//这两步为实际的指针移动
-			head = next;
-		}
-		return prev;
 	}
 	
 	/**
@@ -74,13 +75,15 @@ public class ReverseLinkedList {
 	 *  
 	 *  口诀：reverse 过程不变，入下一子问题过程递归化。prev要用head赋，head要用next赋。
 	 */
-	public static ListNode reverse2(ListNode prev, ListNode head) {
-		if (head == null) {
-			return prev;
+	private static class Solution2 {
+		public ListNode reverse(ListNode prev, ListNode head) {
+			if (head == null) {
+				return prev;
+			}
+			ListNode next = head.next;
+			head.next = prev;
+			return reverse(head, next);
 		}
-		ListNode next = head.next;
-		head.next = prev;
-		return reverse2(head, next);
 	}
 	
 	public static void main(String[] args) {
@@ -96,13 +99,15 @@ public class ReverseLinkedList {
 		}		
 		ll.displayLinkedList();
 		
+		Solution1 sol1 = new Solution1();
 		ListNode head = ll.getHead();
 		System.out.print("The given linked list after reverse is: ");
-		head = reverse1(head);
+		head = sol1.reverse(head);
 		ll.displayLinkedList(head); 
 		
+		Solution2 sol2 = new Solution2();
 		System.out.print("And reverse again becomes: ");
-		head = reverse2(null, head);
+		head = sol2.reverse(null, head);
 		ll.displayLinkedList(head);
 	}
 }
