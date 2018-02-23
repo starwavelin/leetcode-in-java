@@ -88,7 +88,8 @@ Company based categories,
 ### Non-LeetCode Problem List
 | No. | Problem   | Difficulty  | Tags  |
 | ----|-----------|-------------|-------|
-| 5   | Binary Search  | Easy | Binary Search, 视频 |
+| 6   | Binary Search (Recursion Solution) | Easy | Binary Search, 视频 |
+| 5   | [Binary Search](AlgPrac/src/binarySearch/BinarySearch.java) | Easy | Binary Search, [视频](https://www.youtube.com/watch?v=J0NTXwqIO4U) |
 | 4   | [Insertion Sort](AlgPrac/src/sorting/InsertionSort.java)  | Easy | Sort, Two Pointers, [视频](https://www.youtube.com/watch?v=ys6-TlRqAo8) |
 | 3   | [Selection Sort](AlgPrac/src/sorting/SelectionSort.java)  | Easy | Sort, Two Pointers, [视频](https://www.youtube.com/watch?v=TPA2FzUJRKM) |
 | 2   | [Bubble Sort](AlgPrac/src/sorting/BubbleSort.java)  | Easy | Sort, Two Pointers, [视频](https://www.youtube.com/watch?v=kKLwS9jv8Yc) |
