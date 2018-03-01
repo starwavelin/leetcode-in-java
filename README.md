@@ -3,7 +3,7 @@ This is a repo containing my practice of algorithim problems drawn from [LeetCod
 
 
 ### Searching in this Repository
-I have enabled searching by tag by adding meta to each source file. During search you may append `tag-` as prefix of the tag string. 
+I have enabled searching by tag by adding meta to each source file. During search you may append `tag-` as prefix of the tag string.
 For example, to search on problems on arrays: you navigate to [this repo url](https://github.com/starwavelin/AlgorithmPractice) and enter following on search box: `tag-array`
 
 Supported list of problem categories for searching,
@@ -24,7 +24,7 @@ Supported list of problem categories for searching,
  * [Stack](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-stack)
  * [String](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-string)
  * [Two Pointers](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-two-pointers)
- 
+
 
 Company based categories,
  * [Google](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-google)
@@ -88,10 +88,9 @@ Company based categories,
 ### Non-LeetCode Problem List
 | No. | Problem   | Difficulty  | Tags  |
 | ----|-----------|-------------|-------|
-| 6   | Binary Search (Recursion Solution) | Easy | Binary Search, 视频 |
+| 6   | [Binary Search (Recursion Solution)](AlgPrac/src/binarySearch/BinarySearchIII.java) | Easy | Binary Search, [视频](https://youtu.be/U3zw4T6Anjs) |
 | 5   | [Binary Search](AlgPrac/src/binarySearch/BinarySearch.java) | Easy | Binary Search, [视频](https://www.youtube.com/watch?v=J0NTXwqIO4U) |
 | 4   | [Insertion Sort](AlgPrac/src/sorting/InsertionSort.java)  | Easy | Sort, Two Pointers, [视频](https://www.youtube.com/watch?v=ys6-TlRqAo8) |
 | 3   | [Selection Sort](AlgPrac/src/sorting/SelectionSort.java)  | Easy | Sort, Two Pointers, [视频](https://www.youtube.com/watch?v=TPA2FzUJRKM) |
 | 2   | [Bubble Sort](AlgPrac/src/sorting/BubbleSort.java)  | Easy | Sort, Two Pointers, [视频](https://www.youtube.com/watch?v=kKLwS9jv8Yc) |
 | 1   | [Longest Uniform Substring](AlgPrac/src/string/LongestSubstringWithRepeatingCharacters.java)  | Medium | String, Two Pointers, [视频](https://www.youtube.com/watch?v=U2LLrtePzhc) |
- 

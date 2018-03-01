@@ -4,7 +4,7 @@ package array;
 * Problem Name: Get the 2nd smallest number in an array
 * Problem URL : 
 * Date        : Jan 2 2018
-* Author	      : Xian Lin
+* Author      : Xian Lin
 * Notes       : 
 * 	Scenario: 
 * 		
@@ -29,6 +29,10 @@ public class SecondSmallest {
 	
 	public static class Sol {
 		/*
+		 * 关键点：
+		 * 	Loop中的第一个条件判断： second = first; 再去update first.
+		 * 	second要紧跟first.
+		 * 
 		 * Following the Assumption part above, duplication is allowed.
 		 * And in a given array like [-1, -1, 0, -1, 2], the 2nd smallest number is 0.
 		 * 
