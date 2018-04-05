@@ -1,5 +1,7 @@
 ### Overview
-This is a repo containing my practice of algorithim problems drawn from [LeetCode](https://leetcode.com/problemset/all/) with my Java solution in [AlgPrac](https://github.com/starwavelin/AlgorithmPractice/tree/master/AlgPrac) project.
+This is a repo containing my practice of algorithim problems drawn from [LeetCode](https://leetcode.com/problemset/all/) with my Java solution in [AlgPrac](https://github.com/starwavelin/AlgorithmPractice/tree/master/AlgPrac) project.  
+[:pencil2:](#leetcode-problem-list)  
+[:sweat_drops:](#non-leetcode-problem-list)
 
 
 ### Searching in this Repository
@@ -286,6 +288,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 2   | Add Two Numbers | Medium |  | |
 | 1   | [Two Sum](AlgPrac/src/array/TwoSum.java)  | Medium |  | |
 
+[[↑] Back to top](#overview)
 
 ### Non-LeetCode Problem List
 | No. | Problem   | Difficulty  | Tags  | Videos |
@@ -296,3 +299,5 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 3   | [Selection Sort](AlgPrac/src/sorting/SelectionSort.java)  | Easy | Sort, Two Pointers| [讲解](https://www.youtube.com/watch?v=TPA2FzUJRKM) |
 | 2   | [Bubble Sort](AlgPrac/src/sorting/BubbleSort.java)  | Easy | Sort, Two Pointers| [讲解](https://www.youtube.com/watch?v=kKLwS9jv8Yc) |
 | 1   | [Longest Uniform Substring](AlgPrac/src/string/LongestSubstringWithRepeatingCharacters.java)  | Medium | String, Two Pointers| [讲解](https://www.youtube.com/watch?v=U2LLrtePzhc) |
+
+[[↑] Back to top](#overview)
