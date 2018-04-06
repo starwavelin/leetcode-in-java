@@ -45,7 +45,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 245	| Shortest Word Distance III $ |	Medium | | |
 | 244	| Shortest Word Distance II $ |	Medium | | |
 | 243	| Shortest Word Distance $ |	Easy | | |
-| 242	| Valid Anagram	| Easy | | |
+| 242	| [Valid Anagram](AlgPrac/src/hash/Anagram.java) | Easy | Hash, ArrayMap | [讲解](https://youtu.be/PaqSyN63kB8) |
 | 241	| Different Ways to Add Parentheses |	Medium | | |
 | 240	| Search a 2D Matrix II	| Medium | | |
 | 239	| Sliding Window Maximum |	Hard | | |
@@ -283,7 +283,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 7	  | Reverse Integer	| Easy || |
 | 6	  | ZigZag Conversion	| Easy || |
 | 5	  | Longest Palindromic Substring	| Medium || |
-| 4	  | Median of Two Sorted Arrays	| Hard || |
+| 4	  | Median of Two Sorted Arrays	| Hard | Sort, Merge Sort, Binary Search | [讲解1](https://youtu.be/raYYmEwyJ0o), |
 | 3   | Longest Substring Without Repeating Characters | Medium |  | |
 | 2   | Add Two Numbers | Medium |  | |
 | 1   | [Two Sum](AlgPrac/src/array/TwoSum.java)  | Medium |  | |
@@ -293,6 +293,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 ### Non-LeetCode Problem List
 | No. | Problem   | Difficulty  | Tags  | Videos |
 | ----|-----------|-------------|-------|--------|
+|S 136| [Single Number](https://github.com/starwavelin/JavaPrac/blob/master/IKM/src/demo/SSingleNumber.java) | Easy | Hash, Sort| [讲解](https://youtu.be/4SrfltpNxr8) |
 | 6   | [Binary Search (Recursion Solution)](AlgPrac/src/binarySearch/BinarySearchIII.java) | Easy | Binary Search| [讲解](https://youtu.be/U3zw4T6Anjs) |
 | 5   | [Binary Search](AlgPrac/src/binarySearch/BinarySearch.java) | Easy | Binary Search| [讲解](https://www.youtube.com/watch?v=J0NTXwqIO4U) |
 | 4   | [Insertion Sort](AlgPrac/src/sorting/InsertionSort.java)  | Easy | Sort, Two Pointers| [讲解](https://www.youtube.com/watch?v=ys6-TlRqAo8) |
