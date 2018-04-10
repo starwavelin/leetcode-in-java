@@ -9,26 +9,26 @@ import utility.TreeNode;
 
 /**
  * This is the main class of the logic of the BinaryTree app. The methods
- * implemented in this class are as follows: 
- * 1. insert(Node node, int val) 
- * 2. insertNoRec(Node node, int val) 
- * 2-1. search(int key) 
- * 3. preorderTraverse(Node root) 
- * 4. inorderTraverse(Node root) 
- * 5. postorderTraverse(Node root) 
- * 6. preorderTraverseDC(Node root) 
- * 7. preorderTraverseNoRec(Node root) 
- * 7-1. inorderTraverseNoRec(Node root) 
- * 7-2. postorderTraverseNoRec(Node root) 
- * 8. maxDepth(Node root) 
- * 9. maxDepthDC(Node root) 
+ * implemented in this class are as follows:
+ * 1. insert(Node node, int val)
+ * 2. insertNoRec(Node node, int val)
+ * 2-1. search(int key)
+ * 3. preorderTraverse(Node root)
+ * 4. inorderTraverse(Node root)
+ * 5. postorderTraverse(Node root)
+ * 6. preorderTraverseDC(Node root)
+ * 7. preorderTraverseNoRec(Node root)
+ * 7-1. inorderTraverseNoRec(Node root)
+ * 7-2. postorderTraverseNoRec(Node root)
+ * 8. maxDepth(Node root)
+ * 9. maxDepthDC(Node root)
  * 10. isHeightBalanced(Node root)
- * 11: isHeightBalanced2(Node root) 
- * 12. maxPathSum(Node root) 
- * 13. lowestCommonAncestor(Node root, Node node1, Node node2) 
- * 14. levelOrderTraverse(Node node) 
+ * 11: isHeightBalanced2(Node root)
+ * 12. maxPathSum(Node root)
+ * 13. lowestCommonAncestor(Node root, Node node1, Node node2)
+ * 14. levelOrderTraverse(Node node)
  * 15. isValidBST(Node root)
- * 
+ *
  * @author Guru
  */
 public class BinarySearchTree {
@@ -41,7 +41,7 @@ public class BinarySearchTree {
 
 	/**
 	 * 1. insert method can be used to build a binary tree
-	 * 
+	 *
 	 * @param node
 	 *            : a node to be inserted into the binary tree
 	 * @param val
@@ -50,19 +50,19 @@ public class BinarySearchTree {
 	public void insert(TreeNode node, int val) {
 		if (root == null) {
 			root = new TreeNode(val);
-		} else {
-			if (val < node.val) {
-				if (node.left == null) {
-					node.left = new TreeNode(val);
-				} else {
-					insert(node.left, val);
-				}
+			return;
+		}
+		if (val < node.val) {
+			if (node.left == null) {
+				node.left = new TreeNode(val);
 			} else {
-				if (node.right == null) {
-					node.right = new TreeNode(val);
-				} else {
-					insert(node.right, val);
-				}
+				insert(node.left, val);
+			}
+		} else {
+			if (node.right == null) {
+				node.right = new TreeNode(val);
+			} else {
+				insert(node.right, val);
 			}
 		}
 	}
@@ -98,7 +98,7 @@ public class BinarySearchTree {
 
 	/**
 	 * 2-1. Search a node in the tree with its val equals key
-	 * 
+	 *
 	 * @param key
 	 * @return
 	 */
@@ -161,7 +161,7 @@ public class BinarySearchTree {
 
 	/**
 	 * 6. Use Divide and Conquer to solve preorder traversal
-	 * 
+	 *
 	 * @param root
 	 */
 	public void preorderTraverseDC(TreeNode root) {
@@ -227,7 +227,7 @@ public class BinarySearchTree {
 
 	/**
 	 * 7-2 The non-recursive version of postorderTraverse
-	 * 
+	 *
 	 * @param root
 	 */
 	public void postorderTraverseNoRec(TreeNode root) {
@@ -254,7 +254,7 @@ public class BinarySearchTree {
 
 	/**
 	 * 8. Traverse to find the maxDepth
-	 * 
+	 * top-down approach, final result obtained on leaves
 	 * @param root
 	 *            : The root of binary tree.
 	 * @return: An integer.
@@ -281,7 +281,7 @@ public class BinarySearchTree {
 
 	/**
 	 * 9. Use D&C to find the maxDepth
-	 * 
+	 *
 	 * @param root
 	 *            : The root of binary tree.
 	 * @return: An integer.
@@ -297,7 +297,7 @@ public class BinarySearchTree {
 
 	/**
 	 * 10. http://www.lintcode.com/en/problem/balanced-binary-tree/
-	 * 
+	 *
 	 * @param root
 	 * @return
 	 */
@@ -351,7 +351,7 @@ public class BinarySearchTree {
 	/**
 	 * 12. http://www.lintcode.com/en/problem/binary-tree-maximum-path-sum/
 	 * Assume the input binary tree may contain negative nodes.
-	 * 
+	 *
 	 * @param root
 	 *            : The root of binary tree.
 	 * @return: An integer.
@@ -389,7 +389,7 @@ public class BinarySearchTree {
 	/**
 	 * 13. Get the lowest common ancestor of two nodes. Divide and Conquer to
 	 * solve it.
-	 * 
+	 *
 	 * @param root
 	 * @param node1
 	 * @param node2
@@ -418,7 +418,7 @@ public class BinarySearchTree {
 
 	/**
 	 * 14. Level Order Traversal (non-recursive way)
-	 * 
+	 *
 	 * @param node
 	 */
 	public void levelOrderTraverse(TreeNode node) {
@@ -443,7 +443,7 @@ public class BinarySearchTree {
 
 	/**
 	 * 15. Validate is a tree BST
-	 * 
+	 *
 	 * @param root
 	 * @return
 	 */

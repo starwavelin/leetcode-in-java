@@ -1,5 +1,6 @@
 ### Overview
-This is a repo containing my practice of algorithim problems drawn from [LeetCode](https://leetcode.com/problemset/all/) with my Java solution in [AlgPrac](https://github.com/starwavelin/AlgorithmPractice/tree/master/AlgPrac) project.  
+This is a repo containing my practice of algorithm problems drawn from [LeetCode](https://leetcode.com/problemset/all/) with my Java solution in [AlgPrac](https://github.com/starwavelin/AlgorithmPractice/tree/master/AlgPrac) project.  
+* [Summary](SUMMARY.md): Summary of how to review algorithm problems
 * LeetCode Problem List [:pencil2:](#leetcode-problem-list)  
 * Non-LeetCode Problem List [:sweat_drops:](#non-leetcode-problem-list)
 
