@@ -1,3 +1,4 @@
+## Table of Contents
   - [Linear Solution Space](#linear-solution-space)
     - [Two Pointer solution](#two-pointer-solution)
     - [Stack Type](#stack-type)
@@ -114,7 +115,9 @@ public int lengthOfLongestSubstring(String s) { /* could have another parameter 
 }
 ```
 
-### Array Input Type
+### Array Input Type  
+
+[[↑] Back to top](#table-of-contents)
 
 ## Binary Solution Space
 
@@ -308,7 +311,9 @@ public int maxPathSum(TreeNode root) {
 
 **Complexity**  
 Time Complexity: O(n) cuz we traversed every node  
-Space Complexity: Recursion stack -- O(logn) if balanced tree and O(n) if linear shape tree.
+Space Complexity: Recursion stack -- O(logn) if balanced tree and O(n) if linear shape tree.  
+
+[[↑] Back to top](#table-of-contents)
 
 ## Sorting Algorithms
 
