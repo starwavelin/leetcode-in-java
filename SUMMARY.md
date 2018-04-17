@@ -1,3 +1,22 @@
+  - [线性解空间](#线性解空间)
+    - [Two Pointer solution](#two-pointer-solution)
+    - [Stack Type](#stack-type)
+    - [Hash Type](#hash-type)
+    - [LinkedList Type](#linkedlist-type)
+    - [String Input Type](#string-input-type)
+    - [Array Input Type](#array-input-type)
+  - [二叉解空间](#二叉解空间)
+    - [Binary Search](#binary-search)
+    - [Binary Tree](#binary-tree)
+  - [排序算法](#排序算法)
+  - [图](#图)
+  - [回溯法](#回溯法)
+  - [动态规划](#动态规划)
+  - [其它类型🌲](#其它类型🌲)
+  - [数据结构设计](#数据结构设计)
+  - [位运算](#位运算)
+  - [数学](#数学)
+
 ## 线性解空间
 
 ### Two Pointer solution
@@ -278,12 +297,12 @@ Code run: bottom up
 **Code**
 ```java
 public int maxPathSum(TreeNode root) {
-	if (root == null) {
-		return 0;
-	}
+  if (root == null) {
+    return 0;
+  }
   int left = maxPathSum(root.left);
   int right = maxPathSum(root.right);
-	return root.val + Math.max(Math.max(left, right), 0);
+  return root.val + Math.max(Math.max(left, right), 0);
 }
 ```
 
