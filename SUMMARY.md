@@ -37,29 +37,6 @@ public void reverse(char[] s, int start, int end) {
 
 ### Stack Type
 
-#### Best Practice of Using Stack in Java
-In the past I always used ```Stack``` class from Java API to represent a stack. However, it is not recommended in the industry because ```Stack``` is thread-safe, which will cause overhead. Instead, industry usually uses [```ArrayDeque```](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayDeque.html) to implement a stack.  
-Initialization: Old Way  
-```java
-Stack<T> s = new Stack<>();
-```
-Initialization: New Way  
-```java
-Deque<T> stack = new ArrayDeque<>();
-```
-##### Compare of the methods a stack can have  
-You should use the methods under ArrayDeque to mimick a stack
-
-| Using Stack| Using ArrayDeque|
-| -----------|:---------------:|
-| push(E e)  | offerLast(E e)  |
-| pop()      | pollLast()      |
-| empty()    | isEmpty()       |
-| peek()     | peekLast()      |
-
-*I personally like to use ```xxxLast()``` methods to mimick push, pop, peek, but you can also use the same set of ```xxxFirst()``` to mimick these actions. But, do please be consistent.*  
-*Added on 2018-04-16:* Deque is an interface which extends Queue, and Deques can also be used as LIFO (Last-In-First-Out) stacks. In the new way of initialization, I can also use ```stack.push(e)``` which is equivalent to ```stack.addFirst(e)```, per [Deque API](https://docs.oracle.com/javase/8/docs/api/java/util/Deque.html)
-
 ### Hash Type
 
 ### LinkedList Type
@@ -121,6 +98,62 @@ public int lengthOfLongestSubstring(String s) { /* could have another parameter 
 ### Array Input Type
 
 ## 二叉解空间
+
+### Binary Search
+
+#### Transformation between 2D and 1D Arrays
+Disregarding whether the combined one-dimensional array is strictly increasing, the following formula can be used for any 2D, 1D array transformations.  
+*m*: the number of rows in 2D arrray;  
+*n*: the number of columns in 2D array;  
+*m x n*: the full length of the combined 1D array;  
+*index*: a number's index in the 1D array, starting from 0;  
+*row*: the row index of a number in 2D array, starting from 0;  
+*col*: the col index of a number in 2D array, starting from 0.  
+##### 2D to 1D transformation
+```
+index = row * n + col % n  
+```  
+(can also be written as ```index = row * n + col```)
+##### 1D to 2D transformation
+```
+row = index / n
+```  
+```
+col = index % n
+```
+
+#### Binary Search Template
+The following template with its transformations can be used to find the first, last or any position of a target number in a *Sorted* array.  
+The following template is for finding the first position the target number occurs in an array, with other options written in the code comments.  
+```java
+public int search(int[] nums, int target) {
+	if (nums == null || nums.length == 0) {
+		return -1; /* -1 means cannot find target */
+	}
+	int start = 0, end = nums.length - 1, mid;
+	while (start + 1 < end) {
+		mid = start + (end - start) / 2; /* avoid overflow */
+		if (nums[mid] == target) {
+			end = mid; /* You can use start = mid for last position, and return mid for any position */
+		} else if (nums[mid] < target) {
+			start = mid;
+		} else {
+			end = mid;
+		}
+	}
+
+	if (nums[start] == target) {
+		return start;
+	} else if (nums[end] == target) {
+		return end;
+	}	/* For last position, you want to flip the checking order to check nums[end] first. For any position, it doesn't matter */
+
+	return -1;
+}
+```
+
+### Binary Tree
+
 
 ## 排序算法
 
