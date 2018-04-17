@@ -154,7 +154,7 @@ public int search(int[] nums, int target) {
 
 ### Binary Tree
 
-#### Binary Tree BFS
+#### BFS
 I directly use the binary tree level order traversal as a template
 ```java
 public List<List<Integer>> levelOrder(Node root) {
@@ -228,7 +228,7 @@ public String serialize(TreeNode root) {
 }
 ```
 
-#### Binary Tree DFS
+#### DFS
 The binary tree's DFS template is basically about the 3 type of traverse: preorder, inorder and postorder.  
 The following code use pre-order traversal as an example:  
 ```java
@@ -244,8 +244,65 @@ public void traverse(Node root) {
 }
 ```
 
+#### Divide and Conquer
+```java
+public ReturnType f(Node root, List<E> res) {
+	//Base case: may be like below
+	if (root == null) {
+		return null;
+	}
+
+	//Divide
+	ReturnType left = f(root.left);
+	ReturnType right = f(root.right);
+
+	//Conquer
+	/* Combine the left and right subtree solutions into one */
+	/* res will be updated here */
+}
+```
+One example is [Binary Tree Max Path Sum From Root](#binary-tree-max-path-sum-from-root)  
+**Further**  
+Divide and Conquer methodology is like MapReduce, where map is "divide" and reduce is "conquer".
+
+#### Binary Tree Max Path Sum From Root
+**Problem**  
+Given a binary tree, find the maximum path sum from its root. The path may end at any node, and contain at least one node in it.  
+Keep in mind, for this problem, a node may have negative, 0 or positive integer value.
+
+**Analize**  
+This is the prerequisite questions for LeetCode 124 [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/description/) in which the path is defined as any node to any node following the parent-child connection.  
+Use Divide and Conquer to solve.  
+Code run: bottom up    
+
+**Code**
+```java
+public int maxPathSum(TreeNode root) {
+	if (root == null) {
+		return 0;
+	}
+  int left = maxPathSum(root.left);
+  int right = maxPathSum(root.right);
+	return root.val + Math.max(Math.max(left, right), 0);
+}
+```
+
+**Complexity**  
+Time Complexity: O(n) cuz we traversed every node  
+Space Complexity: Recursion stack -- O(logn) if balanced tree and O(n) if linear shape tree.
+
 ## 排序算法
 
 ## 图
 
 ## 回溯法
+
+## 动态规划
+
+## 其它类型🌲
+
+## 数据结构设计
+
+## 位运算
+
+## 数学
