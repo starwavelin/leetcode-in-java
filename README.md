@@ -163,7 +163,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 128	| Longest Consecutive Sequence |	Hard | | |
 | 127	| Word Ladder |	Medium | | |
 | 126	| Word Ladder II |	Hard | | |
-| 125	| Valid Palindrome |	Easy | | |
+| 125	| [Valid Palindrome](AlgPrac/src/string/ValidPalindrome.java) |	Easy | | |
 | 124	| Binary Tree Maximum Path Sum |	Hard | | |
 | 123	| Best Time to Buy and Sell Stock III |	Hard | | |
 | 122	| Best Time to Buy and Sell Stock II |	Medium | | |
