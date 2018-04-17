@@ -1,23 +1,23 @@
-  - [线性解空间](#线性解空间)
+  - [Linear Solution Space](#linear-solution-space)
     - [Two Pointer solution](#two-pointer-solution)
     - [Stack Type](#stack-type)
     - [Hash Type](#hash-type)
     - [LinkedList Type](#linkedlist-type)
     - [String Input Type](#string-input-type)
     - [Array Input Type](#array-input-type)
-  - [二叉解空间](#二叉解空间)
+  - [Binary Solution Space](#binary-solution-space)
     - [Binary Search](#binary-search)
     - [Binary Tree](#binary-tree)
-  - [排序算法](#排序算法)
-  - [图](#图)
-  - [回溯法](#回溯法)
-  - [动态规划](#动态规划)
-  - [其它类型🌲](#其它类型🌲)
-  - [数据结构设计](#数据结构设计)
-  - [位运算](#位运算)
-  - [数学](#数学)
+  - [Sorting Algorithms](#sorting-algorithms)
+  - [Graph](#graph)
+  - [Backtracking](#backtracking)
+  - [Dynamic Programming](#dynamic-programming)
+  - [Other Type Trees](#other-type-trees)
+  - [Data Structure Design](#data-structure-design)
+  - [Bit Operation](#bit-operation)
+  - [Math](#math)
 
-## 线性解空间
+## Linear Solution Space
 
 ### Two Pointer solution
 
@@ -116,7 +116,7 @@ public int lengthOfLongestSubstring(String s) { /* could have another parameter 
 
 ### Array Input Type
 
-## 二叉解空间
+## Binary Solution Space
 
 ### Binary Search
 
@@ -310,18 +310,18 @@ public int maxPathSum(TreeNode root) {
 Time Complexity: O(n) cuz we traversed every node  
 Space Complexity: Recursion stack -- O(logn) if balanced tree and O(n) if linear shape tree.
 
-## 排序算法
+## Sorting Algorithms
 
-## 图
+## Graph
 
-## 回溯法
+## Backtracking
 
-## 动态规划
+## Dynamic Programming
 
-## 其它类型🌲
+## Other Type Trees
 
-## 数据结构设计
+## Data Structure Design
 
-## 位运算
+## Bit Operation
 
-## 数学
+## Math
