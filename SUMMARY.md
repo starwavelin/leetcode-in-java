@@ -343,6 +343,11 @@ private void swap(int[] nums, int i, int j) {
 ```
 **Time Complexity** O(n^2)
 
+#### Selection Sort
+
+
+#### Insertion Sort
+
 
 ### Non-Comparison Sorting
 
