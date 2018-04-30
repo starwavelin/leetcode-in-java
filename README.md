@@ -36,6 +36,33 @@ Company based categories,
 ### LeetCode Problem List
 Note: $ means paid-to-view problems; \* means SQL problems; \# means bash problems.  
 
+**Problem 751 -**
+
+| No. | Problem   | Difficulty  | Tags  | Videos |
+| ----|-----------|-------------|-------|--------|
+| 763	| Partition Labels | Medium | | |
+| 762	| Prime Number of Set Bits in Binary Representation | Easy | | |
+| 761	| Special Binary String | Hard | | |
+| 760	| Find Anagram Mappings $ | Easy | | |
+| 759	| Employee Free Time $ | Hard | | |
+| 758	| Bold Words in String $ | Easy | | |
+| 757	| Set Intersection Size At Least Two | Hard | | |
+| 756	| Pyramid Transition Matrix | Medium | | |
+| 755	| Pour Water $ | Medium | | |
+| 754	| Reach a Number | Medium | | |
+| 753	| Cracking the Safe | Hard | | |
+| 752	| Open the Lock | Medium | | |
+| 751	| IP to CIDR $ | Easy | | |
+
+[[↑] Back to top](#overview)
+
+**Problem 501 - 750**
+
+| No. | Problem   | Difficulty  | Tags  | Videos |
+| ----|-----------|-------------|-------|--------|
+
+[[↑] Back to top](#overview)
+
 **Problem 251 - 500**
 
 | No. | Problem   | Difficulty  | Tags  | Videos |
