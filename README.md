@@ -36,6 +36,254 @@ Company based categories,
 ### LeetCode Problem List
 Note: $ means paid-to-view problems; \* means SQL problems; \# means bash problems.  
 
+**Problem 251 - 500**
+
+| No. | Problem   | Difficulty  | Tags  | Videos |
+| ----|-----------|-------------|-------|--------|
+| 500	| Keyboard Row | Easy | | |
+| 499	| The Maze III | Hard | | |
+| 498	| Diagonal Traverse	| Medium | | |
+| 496	| Next Greater Element I | Easy | | |
+| 495	| Teemo Attacking | Medium | | |
+| 494	| Target Sum | Medium | | |
+| 493	| Reverse Pairs | Hard | | |
+| 492	| Construct the Rectangle	| Easy | | |
+| 491	| Increasing Subsequences |	Medium | | |
+| 490	| The Maze | Medium | | |
+| 488	| Zuma Game | Hard | | |
+| 487	| Max Consecutive Ones II $ | Medium | | |
+| 486	| Predict the Winner | Medium | | |
+| 485	| Max Consecutive Ones | Easy | | |
+| 484	| Find Permutation $ | Medium | | |
+| 483	| Smallest Good Base | Hard | | |
+| 482	| License Key Formatting | Medium | | |
+| 481	| Magical String | Medium | | |
+| 480	| Sliding Window Median | Hard | | |
+| 479	| Largest Palindrome Product | Easy | | |
+| 477	| Total Hamming Distance | Medium | | |
+| 476	| Number Complement | Easy | | |
+| 475	| Heaters | Easy | | |
+| 474	| Ones and Zeroes | Medium | | |
+| 473	| Matchsticks to Square | Medium | | |
+| 472	| Concatenated Words | Hard | | |
+| 471	| Encode String with Shortest Length $ | Hard | | |
+| 469	| Convex Polygon $ | Medium | | |
+| 468	| Validate IP Address | Medium | | |
+| 467	| Unique Substrings in Wraparound String | Medium | | |
+| 466	| Count The Repetitions | Hard | | |
+| 465	| Optimal Account Balancing $ | Hard | | |
+| 464	| Can I Win | Medium | | |
+| 463	| Island Perimeter | Easy | | |
+| 462	| Minimum Moves to Equal Array Elements II | Medium | | |
+| 461	| Hamming Distance | Easy | | |
+| 460	| LFU Cache | Hard | | |
+| 459	| Repeated Substring Pattern | Easy | | |
+| 458	| Poor Pigs | Easy | | |
+| 457	| Circular Array Loop | Medium | | |
+| 456	| 132 Pattern | Medium | | |
+| 455	| Assign Cookies | Easy | | |
+| 454	| 4Sum II | Medium | | |
+| 453	| Minimum Moves to Equal Array Elements | Easy | | |
+| 452	| Minimum Number of Arrows to Burst Balloons | Medium | | |
+| 451	| Sort Characters By Frequency | Medium | | |
+| 450	| Delete Node in a BST | Medium | | |
+| 449	| Serialize and Deserialize BST | Medium | | |
+| 448	| Find All Numbers Disappeared in an Array | Easy | | |
+| 447	| Number of Boomerangs | Easy | | |
+| 446	| Arithmetic Slices II - Subsequence | Hard | | |
+| 445	| Add Two Numbers II | Medium | | |
+| 444	| Sequence Reconstruction $ | Medium | | |
+| 442	| Find All Duplicates in an Array | Medium | | |
+| 441	| Arranging Coins | Easy  | | |
+| 440	| K-th Smallest in Lexicographical Order | Hard | | |
+| 439	| Ternary Expression Parser $ | Medium | | |
+| 438	| Find All Anagrams in a String | Easy  | | |
+| 437	| Path Sum III | Easy | | |
+| 436	| Find Right Interval | Medium | | |
+| 435	| Non-overlapping Intervals | Medium | | |
+| 434	| Number of Segments in a String | Easy  | | |
+| 433	| Minimum Genetic Mutation | Medium | | |
+| 432	| All O`one Data Structure | Hard  | | |
+| 425	| Word Squares | Hard | | |
+| 424	| Longest Repeating Character Replacement | Medium | | |
+| 423	| Reconstruct Original Digits from English | Medium | | |
+| 422	| Valid Word Square $ | Easy | | |
+| 421	| Maximum XOR of Two Numbers in an Array | Medium | | |
+| 420	| Strong Password Checker | Hard | | |
+| 419	| Battleships in a Board | Medium | | |
+| 418	| Sentence Screen Fitting $ | Medium | | |
+| 417	| Pacific Atlantic Water Flow | Medium | | |
+| 416	| Partition Equal Subset Sum | Medium | | |
+| 415	| Add Strings | Easy | | |
+| 414	| Third Maximum Number | Easy | | |
+| 413	| Arithmetic Slices | Medium | | |
+| 412	| Fizz Buzz | Easy  | | |
+| 411	| Minimum Unique Word Abbreviation $ | Hard | | |
+| 410	| Split Array Largest Sum | Hard | | |
+| 409	| Longest Palindrome | Easy | | |
+| 408	| Valid Word Abbreviation $ | Easy | | |
+| 407	| Trapping Rain Water II | Hard | | |
+| 406	| Queue Reconstruction by Height | Medium | | |
+| 405	| Convert a Number to Hexadecimal | Easy | | |
+| 404	| Sum of Left Leaves | Easy | | |
+| 403	| Frog Jump | Hard | | |
+| 402	| Remove K Digits | Medium | | |
+| 401	| Binary Watch | Easy | | |
+| 400	| Nth Digit | Easy | | |
+| 399	| Evaluate Division | Medium | | |
+| 398	| Random Pick Index | Medium | | |
+| 397	| Integer Replacement | Easy | | |
+| 396	| Rotate Function | Easy | | |
+| 395	| Longest Substring with At Least K Repeating Characters | Medium | | |
+| 394	| Decode String | Medium | | |
+| 393	| UTF-8 Validation | Medium | | |
+| 392	| Is Subsequence | Medium | | |
+| 391	| Perfect Rectangle | Hard  | | |
+| 390	| Elimination Game | 	Medium | | |
+| 389	| Find the Difference | Easy  | | |
+| 388	| Longest Absolute File Path | Medium | | |
+| 387	| First Unique Character in a String | Easy | | |
+| 386	| Lexicographical Numbers | Medium | | |
+| 385	| Mini Parser | Medium | | |
+| 384	| Shuffle an Array | Medium | | |
+| 383	| Ransom Note | Easy  | | |
+| 382	| Linked List Random Node | Medium | | |
+| 381	| Insert Delete GetRandom O(1) - Duplicates allowed | Hard | | |
+| 380	| Insert Delete GetRandom O(1) | Medium | | |
+| 379	| Design Phone Directory $ | Medium | | |
+| 378	| Kth Smallest Element in a Sorted Matrix | Medium | | |
+| 377	| Combination Sum IV | Medium | | |
+| 376	| Wiggle Subsequence | Medium | | |
+| 375	| Guess Number Higher or Lower II | Medium | | |
+| 374	| Guess Number Higher or Lower | Easy | | |
+| 373	| Find K Pairs with Smallest Sums | Medium | | |
+| 372	| Super Pow | Medium | | |
+| 371	| Sum of Two Integers | Easy | | |
+| 370	| Range Addition $ | Medium | | |
+| 369	| Plus One Linked List $ | Medium | | |
+| 368	| Largest Divisible Subset | Medium | | |
+| 367	| Valid Perfect Square | Medium | | |
+| 366	| Find Leaves of Binary Tree $ | Medium | | |
+| 365	| Water and Jug Problem | Medium | | |
+| 364	| Nested List Weight Sum II $ | Medium | | |
+| 363	| Max Sum of Rectangle No Larger Than K | Hard | | |
+| 362	| Design Hit Counter $ | Medium | | |
+| 361	| Bomb Enemy $ | Medium | | |
+| 360	| Sort Transformed Array $ | Medium | | |
+| 359	| Logger Rate Limiter $ | Easy | | |
+| 358	| Rearrange String k Distance Apart $ | Hard | | |
+| 357	| Count Numbers with Unique Digits | Medium | | |
+| 356	| Line Reflection $ | Medium | | |
+| 355	| Design Twitter | Medium | | |
+| 354	| Russian Doll Envelopes | Hard | | |
+| 353	| Design Snake Game $ | Medium | | |
+| 352	| Data Stream as Disjoint Intervals | Hard | | |
+| 351	| Android Unlock Patterns $ | Medium | | |
+| 350	| Intersection of Two Arrays II | Easy | | |
+| 349	| Intersection of Two Arrays | Easy  | | |
+| 348	| Design Tic-Tac-Toe  $ | Medium | | |
+| 347	| Top K Frequent Elements | Medium | | |
+| 346	| Moving Average from Data Stream  $ | Easy | | |
+| 345	| Reverse Vowels of a String | Easy | | |
+| 344	| Reverse String | Easy | | |
+| 343	| Integer Break | Medium | | |
+| 342	| Power of Four | Easy | | |
+| 341	| Flatten Nested List Iterator $ | Medium | | |
+| 340	| Longest Substring with At Most K Distinct Characters $ | Hard | | |
+| 339	| Nested List Weight Sum $ | Easy | | |
+| 338	| Counting Bits | Medium | | |
+| 337	| House Robber III | Medium | | |
+| 336	| Palindrome Pairs | Hard | | |
+| 335	| Self Crossing | Medium | | |
+| 334	| Increasing Triplet Subsequence | Medium | | |
+| 333	| Largest BST Subtree $ | Medium | | |
+| 332	| Reconstruct Itinerary | Medium | | |
+| 331	| Verify Preorder Serialization of a Binary Tree | Medium | | |
+| 330	| Patching Array | Medium | | |
+| 329	| Longest Increasing Path in a Matrix | Medium | | |
+| 328	| Odd Even Linked List | Easy | | |
+| 327	| Count of Range Sum | Hard | | |
+| 326	| Power of Three | Easy | | |
+| 325	| Maximum Size Subarray Sum Equals k $ | Easy | | |
+| 324	| Wiggle Sort II | Medium | | |
+| 323	| Number of Connected Components in an Undirected Graph $ | Medium | | |
+| 322	| Coin Change | Medium | | |
+| 321	| Create Maximum Number | Hard | | |
+| 320	| Generalized Abbreviation $ | Medium | | |
+| 319	| Bulb Switcher | Medium | | |
+| 318	| Maximum Product of Word Lengths | Medium | | |
+| 317	| Shortest Distance from All Buildings $ | Hard | | |
+| 316	| Remove Duplicate Letters | Medium | | |
+| 315	| Count of Smaller Numbers After Self | Hard | | |
+| 314	| Binary Tree Vertical Order Traversal $ | Medium | | |
+| 313	| Super Ugly Number | Medium | | |
+| 312	| Burst Balloons | Medium | | |
+| 311	| Sparse Matrix Multiplication $ | Medium | | |
+| 310	| Minimum Height Trees | Medium | | |
+| 309	| Best Time to Buy and Sell Stock with Cooldown | Medium | | |
+| 308	| Range Sum Query 2D - Mutable $ | Hard | | |
+| 307	| Range Sum Query - Mutable | Medium | | |
+| 306	| Additive Number | Medium | | |
+| 305	| Number of Islands II $ | Hard | | |
+| 304	| Range Sum Query 2D - Immutable | Medium | | |
+| 303	| Range Sum Query - Immutable | Easy | | |
+| 302	| Smallest Rectangle Enclosing Black Pixels $ | Hard | | |
+| 301	| Remove Invalid Parentheses | Hard | | |
+| 300	| Longest Increasing Subsequence | Medium | | |
+| 299	| Bulls and Cows | Easy | | |
+| 298	| Binary Tree Longest Consecutive Sequence $ | Medium | | |
+| 297	| Serialize and Deserialize Binary Tree | Medium | | |
+| 296	| Best Meeting Point $ | Hard | | |
+| 295	| Find Median from Data Stream | Hard | | |
+| 294	| Flip Game II $ | Medium | | |
+| 293	| Flip Game $ | Easy | | |
+| 292	| Nim Game | Easy | | |
+| 291	| Word Pattern II $ | Hard | | |
+| 290	| Word Pattern | Easy | | |
+| 289	| Game of Life | Medium | | |
+| 288	| Unique Word Abbreviation $ | Easy | | |
+| 287	| Find the Duplicate Number | Hard | | |
+| 286	| Walls and Gates $ | Medium | | |
+| 285	| Inorder Successor in BST $ | Medium | | |
+| 284	| Peeking Iterator | Medium | | |
+| 283	| Move Zeroes | Easy | | |
+| 282	| Expression Add Operators | Hard | | |
+| 281	| Zigzag Iterator $ | Medium | | |
+| 280	| Wiggle Sort $ | Medium | | |
+| 279	| Perfect Squares | Medium | | |
+| 278	| First Bad Version | Easy | | |
+| 277	| Find the Celebrity $ | Medium | | |
+| 276	| Paint Fence $ | Easy | | |
+| 275	| H-Index II | Medium | | |
+| 274	| H-Index | Medium | | |
+| 273	| Integer to English Words | Medium | | |
+| 272	| Closest Binary Search Tree Value II $ | Hard | | |
+| 271	| Encode and Decode Strings $ | Medium | | |
+| 270	| Closest Binary Search Tree Value $ | Easy | | |
+| 269	| Alien Dictionary $ | Hard | | |
+| 268	| Missing Number | Medium | | |
+| 267	| Palindrome Permutation II $ | Medium | | |
+| 266	| Palindrome Permutation $ | Easy | | |
+| 265	| Paint House II $ | Hard | | |
+| 264	| Ugly Number II | Medium | | |
+| 263	| Ugly Number | Easy | | |
+| 262	| Trips and Users * | Hard | | |
+| 261	| Graph Valid Tree $ | Medium | | |
+| 260	| Single Number III | Medium | | |
+| 259	| 3Sum Smaller $ | Medium | | |
+| 258	| Add Digits | Easy | | |
+| 257	| Binary Tree Paths | Easy | | |
+| 256	| Paint House $ | Medium | | |
+| 255	| Verify Preorder Sequence in Binary Search Tree $ | Medium | | |
+| 254	| Factor Combinations $ | Medium | | |
+| 253	| Meeting Rooms II $ | Medium | | |
+| 252	| Meeting Rooms $ | Easy | | |
+| 251	| Flatten 2D Vector $ | Medium | | |
+
+[[↑] Back to top](#overview)
+
+**Problem 1 - 250**
+
 | No. | Problem   | Difficulty  | Tags  | Videos |
 | ----|-----------|-------------|-------|--------|
 | 250	| Count Univalue Subtrees $ | Medium | | |

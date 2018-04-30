@@ -3,7 +3,7 @@
 require 'optparse'
 
 options = {
-  max_header_depth: 3,
+  max_header_depth: 4, # the original is 3
   toc_regex_string: '^%TOC(:([\d]+))?%$',
   stdout: false,
   dry_run: false,
