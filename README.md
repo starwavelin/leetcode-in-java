@@ -464,13 +464,13 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 292	| Nim Game | Easy | | |
 | 291	| Word Pattern II $ | Hard | | |
 | 290	| Word Pattern | Easy | | |
-| 289	| Game of Life | Medium | | |
+| 289	| [Game of Life](AlgPrac/src/array/GameOfLife.java) | Medium | | |
 | 288	| Unique Word Abbreviation $ | Easy | | |
 | 287	| Find the Duplicate Number | Hard | | |
 | 286	| Walls and Gates $ | Medium | | |
 | 285	| Inorder Successor in BST $ | Medium | | |
 | 284	| Peeking Iterator | Medium | | |
-| 283	| Move Zeroes | Easy | | |
+| 283	| [Move Zeroes](AlgPrac/src/array/MoveZeros.java) | Easy | | |
 | 282	| Expression Add Operators | Hard | | |
 | 281	| Zigzag Iterator $ | Medium | | |
 | 280	| Wiggle Sort $ | Medium | | |
@@ -494,7 +494,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 262	| Trips and Users * | Hard | | |
 | 261	| Graph Valid Tree $ | Medium | | |
 | 260	| Single Number III | Medium | | |
-| 259	| 3Sum Smaller $ | Medium | | |
+| 259	| [3Sum Smaller](AlgPrac/src/array/ThreeSumSmaller.java) $ | Medium | | |
 | 258	| Add Digits | Easy | | |
 | 257	| Binary Tree Paths | Easy | | |
 | 256	| Paint House $ | Medium | | |
@@ -521,8 +521,8 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 242	| [Valid Anagram](AlgPrac/src/hash/Anagram.java) | Easy | Hash, ArrayMap | [讲解](https://youtu.be/PaqSyN63kB8) |
 | 241	| Different Ways to Add Parentheses |	Medium | | |
 | 240	| Search a 2D Matrix II	| Medium | | |
-| 239	| Sliding Window Maximum |	Hard | | |
-| 238	| Product of Array Except Self |	Medium | | |
+| 239	| [Sliding Window Maximum](AlgPrac/src/array/SlidingWindowMaximum.java) |	Hard | | |
+| 238	| [Product of Array Except Self](AlgPrac/src/array/ProductWithoutItself.java) |	Medium | | |
 | 237	| Delete Node in a Linked List |	Easy | | |
 | 236	| Lowest Common Ancestor of a Binary Tree |	Medium | | |
 | 235	| Lowest Common Ancestor of a Binary Search Tree |	Medium | | |
@@ -532,7 +532,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 231	| Power of Two	| Easy | | |
 | 230	| Kth Smallest Element in a BST |	Medium | | |
 | 229	| Majority Element II	| Medium | | |
-| 228	| Summary Ranges |	Easy | | |
+| 228	| [Summary Ranges](AlgPrac/src/array/SummaryRanges.java) | Easy | | |
 | 227	| Basic Calculator II |	Medium | | |
 | 226	| Invert Binary Tree |	Easy | | |
 | 225	| Implement Stack using Queues |	Medium | | |
@@ -571,7 +571,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 192	| Word Frequency # |	Medium | | |
 | 191	| Number of 1 Bits |	Easy | | |
 | 190	| Reverse Bits |	Easy | | |
-| 189	| Rotate Array |	Easy | | |
+| 189	| [Rotate Array](AlgPrac/src/array/RotateArray.java) |	Easy | | |
 | 188	| Best Time to Buy and Sell Stock IV |	Hard | | |
 | 187	| Repeated DNA Sequences |	Medium | | |
 | 186	| Reverse Words in a String II $ |	Medium | | |
@@ -597,7 +597,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 166	| Fraction to Recurring Decimal |	Medium | | |
 | 165	| Compare Version Numbers |	Easy | | |
 | 164	| Maximum Gap |	Hard | | |
-| 163	| Missing Ranges $ |	Medium | | |
+| 163	| [Missing Ranges](AlgPrac/src/array/MissingRanges.java) $ |	Medium | | |
 | 162	| Find Peak Element |	Medium | | |
 | 161	| One Edit Distance $ |	Medium | | |
 | 160	| Intersection of Two Linked Lists |	Easy | | |
@@ -637,9 +637,9 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 126	| Word Ladder II |	Hard | | |
 | 125	| [Valid Palindrome](AlgPrac/src/string/ValidPalindrome.java) |	Easy | | |
 | 124	| Binary Tree Maximum Path Sum |	Hard | | |
-| 123	| Best Time to Buy and Sell Stock III |	Hard | | |
-| 122	| Best Time to Buy and Sell Stock II |	Medium | | |
-| 121	| Best Time to Buy and Sell Stock |	Medium | | |
+| 123	| [Best Time to Buy and Sell Stock III](AlgPrac/src/array/BuySellStock3.java) |	Hard | | |
+| 122	| [Best Time to Buy and Sell Stock II](AlgPrac/src/array/BuySellStock2.java) |	Medium | | |
+| 121	| [Best Time to Buy and Sell Stock](AlgPrac/src/array/BuySellStock1.java) |	Medium | | |
 | 120	| Triangle |	Medium | | |
 | 119	| Pascal's Triangle II |	Easy | | |
 | 118	| Pascal's Triangle |	Easy | | |
@@ -676,7 +676,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 87	| Scramble String |	Hard | | |
 | 86	| Partition List |	Medium | | |
 | 85	| Maximal Rectangle |	Hard | | |
-| 84	| Largest Rectangle in Histogram |	Hard | | |
+| 84	| [Largest Rectangle in Histogram](AlgPrac/src/array/LargestRectangle.java) |	Hard | | |
 | 83	| Remove Duplicates from Sorted List |	Easy | | |
 | 82	| Remove Duplicates from Sorted List II |	Medium | | |
 | 81	| Search in Rotated Sorted Array II |	Medium | | |
@@ -703,8 +703,8 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 60	| Permutation Sequence |	Medium | | |
 | 59	| Spiral Matrix II |	Medium | | |
 | 58	| Length of Last Word |	Easy | | |
-| 57	| Insert Interval |	Hard | | |
-| 56	| Merge Intervals |	Hard | | |
+| 57	| [Insert Interval](AlgPrac/src/array/InsertInterval.java) |	Hard | | |
+| 56	| [Merge Intervals](AlgPrac/src/array/MergeIntervals.java) |	Hard | | |
 | 55	| Jump Game |	Medium | | |
 | 54	| Spiral Matrix |	Medium | | |
 | 53	| Maximum Subarray |	Medium | | |
@@ -742,10 +742,10 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 21  |	Merge Two Sorted Lists	| Easy || |
 | 20  |	Valid Parentheses		| Easy || |
 | 19  |	Remove Nth Node From End of List	| Easy || |
-| 18  |	4Sum	| Medium || |
+| 18  |	[4Sum](AlgPrac/src/array/FourSum.java)	| Medium || |
 | 17  |	Letter Combinations of a Phone Number	| Medium || |
-| 16  |	3Sum Closest	| Medium || |
-| 15  |	3Sum		| Medium || |
+| 16  |	[3Sum Closest](AlgPrac/src/array/ThreeSumClosest.java)	| Medium || |
+| 15  |	[3Sum](AlgPrac/src/array/ThreeSum.java)		| Medium || |
 | 14  |	Longest Common Prefix	| Easy || |
 | 13  |	Roman to Integer		| Easy || |
 | 12  | Integer to Roman		| Medium || |
