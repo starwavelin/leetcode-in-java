@@ -2,53 +2,70 @@ package array;
 
 import java.util.Scanner;
 
-/**
- * http://www.lintcode.com/en/problem/product-of-array-exclude-itself/
- *
- */
+/***************************************************************************
+* Problem No. : 238
+* Problem Name: Product of Array Except Self
+* Problem URL : https://leetcode.com/problems/product-of-array-except-self/description/
+* Date        : May 1, 2018
+* Author      : Xian Lin
+* Notes       :
+* 	Scenario:
+* 		
+* 	Assumption:
+* 		
+	Example:
+* 	Input/Output:
+* 		
+* 	Data Structure and Alg:
+* 		see code comments
+* Complexity  :
+* 	Time Complexity: O() -- see code comments
+* 	Space Complexity: O() -- see code comments
+*
+* meta        : tag-array, tag-
+***************************************************************************/
 public class ProductWithoutItself {
-	
-	public static long[] productExcludeItself(int[] A) {
-		if (A == null || A.length == 0) {
+
+	public static int[] productExcludeItself(int[] nums) {
+		if (nums == null || nums.length == 0) {
 			return null;
 		}
-		
-		int size = A.length;
-		long[] ret = new long[size];
-		
+
+		int size = nums.length;
+		int[] res = new int[size];
+
 		// initialize ret array
 		for (int i = 0; i < size; i++) {
-			ret[i] = 1;
+			res[i] = 1;
 		}
-		
+
 		// Solve the left part
 		for (int i = 1; i < size; i++) {
-			ret[i] = ret[i-1] * A[i-1];
+			res[i] = res[i-1] * nums[i-1];
 		}
-		
+
 		// Solve the right part
-		long tmp = 1;
-		for (int i = size-1; i >= 0; i--) {
-			ret[i] = ret[i] * tmp;
-			tmp = tmp * A[i];
+		int tmp = 1;
+		for (int i = size - 1; i >= 0; i--) {
+			res[i] = res[i] * tmp;
+			tmp = tmp * nums[i];
 		}
-		
-		return ret;
+
+		return res;
 	}
-	
+
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Product Without Itself Test ***");
-		
+		System.out.println("*** Welcome to Xian's Product Without Itself Test ***");
+
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Input your integer array, \n" +
-				"leave each number by space: ");
+		System.out.print("Input your integer array, \nleave each number by space: ");
 		String[] strs = sc.nextLine().split(" ");
 		int[] testArray = new int[strs.length];
 		for (int i = 0; i < strs.length; i++) {
 			testArray[i] = Integer.parseInt(strs[i]);
 		}
-		
-		long[] result = productExcludeItself(testArray);
+
+		int[] result = productExcludeItself(testArray);
 		if (result != null) {
 			System.out.print("The product array without multiplying itself is: ");
 			for (long l : result) {

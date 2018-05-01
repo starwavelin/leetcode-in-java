@@ -10,9 +10,9 @@ import utility.ListUtil;
 * Problem Name: Summary Ranges
 * Problem URL : https://leetcode.com/problems/summary-ranges/description/
 * Date        : Oct 31 2017
-* Author	  :	Xian Lin
-* Notes       : 
-* 	Scenario: 
+* Author      :	Xian Lin
+* Notes       :
+* 	Scenario:
 * 		Given a sorted integer array without duplicates, return the summary of its ranges.
 * 	Assumption:
 * 		1. Integers in the array can be negative.
@@ -21,7 +21,7 @@ import utility.ListUtil;
 * 		4. The given integer can be in the range [Integer.MIN_VALUE, Integer.MAX_VALUE] inclusively.
 * 			[-2,147,483,648, 2,147,483,647]
 	Example:
-* 	Input/Output: 
+* 	Input/Output:
 * 		Input: [0,2,3,4,6,8,9]
 		Output: ["0","2->4","6","8->9"]
 * 	Data Structure and Alg:
@@ -35,19 +35,19 @@ import utility.ListUtil;
 *  			Core question, when to summary a range?
 *  				1. when index i reaches the last index
 *  				2. when the difference between nums[i + 1] and nums[i] is greater than 1
-*  				3. when nums[i + 1] is positive and nums[i] is negative -- this case is to handle the overflow of 
+*  				3. when nums[i + 1] is positive and nums[i] is negative -- this case is to handle the overflow of
 *  					the difference of two numbers whose absolute values are large
 *  					ie. (2147483647 - (-2147483647)) will give you -2 in Java, due to overflow
 *  				当确定要Summary的时候，就剩两种情况：summary单个数，还是Summary一个范围。这两种情况通过nums[i]与cur的比较而获得。
 *  			Then update cur to i+1 if i+1 is within the index range after finishing a range summary.
 *  		Return the result.
-*  
-* Complexity  : 
+*
+* Complexity  :
 * 	Time Complexity: O(n) -- traverse the given array one pass
 * 	Space Complexity: O(1) -- Just two extra pointers
-* 
+*
 * meta        : tag-array, tag-two-pointers, tag-google
-* 
+*
 * Pain Point: 1. handle the overflow of the difference of two numbers whose absolute values are very large
 ***************************************************************************/
 public class SummaryRanges {
@@ -65,7 +65,7 @@ public class SummaryRanges {
 		}
 		int i = 0, cur = nums[0];
 		while (i < nums.length) {
-			if ((i + 1 == nums.length) || (nums[i + 1] - nums[i] >= 2) || (nums[i+1] > 0 && nums[i] < 0) ) { 
+			if ((i + 1 == nums.length) || (nums[i + 1] - nums[i] >= 2) || (nums[i+1] > 0 && nums[i] < 0) ) {
 					//(nums[i+1] > 0 && nums[i] < 0) to handle overflow of two large subtraction like 2147483647 - (-2147483647) which gives us -2 in Java
 				res.add(getRange(cur, nums[i]));
 				if (i + 1 < nums.length) { //only update cur after a summary
@@ -76,14 +76,14 @@ public class SummaryRanges {
 		}
 		return res;
 	}
-	
+
 	/**
 	 * n1 <= n2
 	 */
 	private static String getRange(int n1, int n2) {
 		return (n1 == n2) ? (n1 + "") : (n1 + "->" + n2);
 	}
-	
+
 	public static void main(String[] args) {
 		System.out.println("*** Welcome to Xian's Summary Ranges Test ***");
 		Scanner sc = new Scanner(System.in);
@@ -95,7 +95,7 @@ public class SummaryRanges {
 		}
 		System.out.print("The summary ranges are: ");
 		ListUtil.display(summaryRanges(testArray));
-		
+
 		//System.out.println(2147483647 + 2147483647); // will print -2
 	}
 }

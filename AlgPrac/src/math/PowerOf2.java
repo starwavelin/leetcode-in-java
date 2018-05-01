@@ -1,6 +1,24 @@
 package math;
 
 /***************************************************************************
+* Problem No. : 231
+* Problem Name: Power of Two
+* Problem URL : https://leetcode.com/problems/power-of-two/description/
+* Date        : 
+* Author      : Xian Lin
+* Notes       :
+* 	Scenario:
+* 		
+* 	Assumption:
+* 		
+	Example:
+* 	Input/Output:
+* 		
+* 	Data Structure and Alg:
+* 		see code comments
+* Complexity  :
+* 	Time Complexity: O() -- see code comments
+* 	Space Complexity: O() -- see code comments
 * 
 * meta        : tag-math, tag-bitwise
 ***************************************************************************/

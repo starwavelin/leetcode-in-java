@@ -532,7 +532,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 232	| [Implement Queue using Stacks](AlgPrac/src/stack/QueueUsingStacks.java) |	Easy | | |
 | 231	| [Power of Two](AlgPrac/src/math/PowerOf2.java)	| Easy | | |
 | 230	| Kth Smallest Element in a BST |	Medium | | |
-| 229	| [Majority Element II](AlgPrac/src/math/MajorityNumberII.java)	| Medium | | |
+| 229	| Majority Element II [形式2](AlgPrac/src/math/MajorityNumberII.java)	| Medium | | |
 | 228	| [Summary Ranges](AlgPrac/src/array/SummaryRanges.java) | Easy | | |
 | 227	| Basic Calculator II |	Medium | | |
 | 226	| [Invert Binary Tree](AlgPrac/src/binaryTree/InvertBinaryTree.java) |	Easy | | |
