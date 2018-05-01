@@ -163,7 +163,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 638	| Shopping Offers | Medium | | |
 | 637	| Average of Levels in Binary Tree | Easy | | |
 | 636	| Exclusive Time of Functions | Medium | | |
-| 635	| Design Log Storage System $ | Medium | | |
+| 635	| [Design Log Storage System](AlgPrac/src/dataStructure/LogSystem.java) $ | Medium | | |
 | 634	| Find the Derangement of An Array $ | Medium | | |
 | 633	| Sum of Square Numbers | Easy | | |
 | 632	| Smallest Range | Hard | | |
@@ -332,7 +332,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 424	| Longest Repeating Character Replacement | Medium | | |
 | 423	| Reconstruct Original Digits from English | Medium | | |
 | 422	| Valid Word Square $ | Easy | | |
-| 421	| Maximum XOR of Two Numbers in an Array | Medium | | |
+| 421	| [Maximum XOR of Two Numbers in an Array](AlgPrac/src/bitwise/MaxXORFromTwoNums.java) | Medium | | |
 | 420	| Strong Password Checker | Hard | | |
 | 419	| Battleships in a Board | Medium | | |
 | 418	| Sentence Screen Fitting $ | Medium | | |
@@ -493,7 +493,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 263	| Ugly Number | Easy | | |
 | 262	| Trips and Users * | Hard | | |
 | 261	| Graph Valid Tree $ | Medium | | |
-| 260	| Single Number III | Medium | | |
+| 260	| [Single Number III](AlgPrac/src/bitwise/SingleNumberIII.java) | Medium | | |
 | 259	| [3Sum Smaller](AlgPrac/src/array/ThreeSumSmaller.java) $ | Medium | | |
 | 258	| Add Digits | Easy | | |
 | 257	| Binary Tree Paths | Easy | | |
@@ -524,7 +524,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 239	| [Sliding Window Maximum](AlgPrac/src/array/SlidingWindowMaximum.java) |	Hard | | |
 | 238	| [Product of Array Except Self](AlgPrac/src/array/ProductWithoutItself.java) |	Medium | | |
 | 237	| Delete Node in a Linked List |	Easy | | |
-| 236	| [Lowest Common Ancestor of a Binary Tree])(AlgPrac/src/binaryTree/LowestCommonAncestorBT.java) |	Medium | | |
+| 236	| [Lowest Common Ancestor of a Binary Tree](AlgPrac/src/binaryTree/LowestCommonAncestorBT.java) |	Medium | | |
 | 235	| [Lowest Common Ancestor of a Binary Search Tree](AlgPrac/src/binarySearchTree/LowestCommonAncestor.java) |	Medium | | |
 | 234	| Palindrome Linked List |	Easy | | |
 | 233	| Number of Digit One |	Medium | | |
@@ -590,7 +590,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 173	| Binary Search Tree Iterator |	Medium | | |
 | 172	| Factorial Trailing Zeroes |	Easy | | |
 | 171	| Excel Sheet Column Number |	Easy | | |
-| 170	| Two Sum III - Data structure design $ |	Easy | | |
+| 170	| [Two Sum III - Data structure design](AlgPrac/src/dataStructure/TwoSumData.java) $ |	Easy | | |
 | 169	| Majority Element |	Easy | | |
 | 168	| Excel Sheet Column Title |	Easy | | |
 | 167	| Two Sum II - Input array is sorted $ |	Medium | | |
@@ -614,7 +614,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 149	| Max Points on a Line |	Hard | | |
 | 148	| Sort List |	Medium | | |
 | 147	| Insertion Sort List |	Medium | | |
-| 146	| LRU Cache |	Hard | | |
+| 146	| [LRU Cache](AlgPrac/src/dataStructure/LruCache.java) |	Hard | | |
 | 145	| Binary Tree Postorder Traversal |	Hard | | |
 | 144	| Binary Tree Preorder Traversal |	Medium | | |
 | 143	| Reorder List |	Medium | | |
@@ -623,8 +623,8 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 140	| Word Break II |	Hard | | |
 | 139	| Word Break |	Medium | | |
 | 138	| Copy List with Random Pointer |	Hard | | |
-| 137	| Single Number II |	Medium | | |
-| 136	| Single Number |	Medium | | |
+| 137	| [Single Number II](AlgPrac/src/bitwise/SingleNumberII.java) |	Medium | | |
+| 136	| [Single Number](AlgPrac/src/bitwise/SingleNumberI.java) |	Medium | | |
 | 135	| Candy |	Hard | | |
 | 134	| Gas Station |	Medium | | |
 | 133	| Clone Graph |	Medium | | |
