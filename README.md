@@ -520,7 +520,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 243	| Shortest Word Distance $ |	Easy | | |
 | 242	| [Valid Anagram](AlgPrac/src/hash/Anagram.java) | Easy | Hash, ArrayMap | [讲解](https://youtu.be/PaqSyN63kB8) |
 | 241	| Different Ways to Add Parentheses |	Medium | | |
-| 240	| Search a 2D Matrix II	| Medium | | |
+| 240	| [Search a 2D Matrix II](AlgPrac/src/binarySearch/SearchMatrixII.java)	| Medium | | |
 | 239	| [Sliding Window Maximum](AlgPrac/src/array/SlidingWindowMaximum.java) |	Hard | | |
 | 238	| [Product of Array Except Self](AlgPrac/src/array/ProductWithoutItself.java) |	Medium | | |
 | 237	| Delete Node in a Linked List |	Easy | | |
@@ -598,7 +598,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 165	| Compare Version Numbers |	Easy | | |
 | 164	| Maximum Gap |	Hard | | |
 | 163	| [Missing Ranges](AlgPrac/src/array/MissingRanges.java) $ |	Medium | | |
-| 162	| Find Peak Element |	Medium | | |
+| 162	| [Find Peak Element](AlgPrac/src/binarySearch/FindPeakElement.java) |	Medium | | |
 | 161	| One Edit Distance $ |	Medium | | |
 | 160	| Intersection of Two Linked Lists |	Easy | | |
 | 159	| Longest Substring with At Most Two Distinct Characters $ |	Hard | | |
@@ -606,8 +606,8 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 157	| Read N Characters Given Read4 $ |	Easy | | |
 | 156	| Binary Tree Upside Down $ |	Medium | | |
 | 155	| Min Stack |	Easy | | |
-| 154	| Find Minimum in Rotated Sorted Array II |	Hard | | |
-| 153	| Find Minimum in Rotated Sorted Array |	Medium | | |
+| 154	| [Find Minimum in Rotated Sorted Array II](AlgPrac/src/binarySearch/SearchMinRotatedArray.java) |	Hard | | |
+| 153	| [Find Minimum in Rotated Sorted Array](AlgPrac/src/binarySearch/SearchMinRotatedArrayII.java) |	Medium | | |
 | 152	| Maximum Product Subarray |	Medium | | |
 | 151	| Reverse Words in a String |	Medium | | |
 | 150	| Evaluate Reverse Polish Notation |	Medium | | |
@@ -679,14 +679,14 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 84	| [Largest Rectangle in Histogram](AlgPrac/src/array/LargestRectangle.java) |	Hard | | |
 | 83	| Remove Duplicates from Sorted List |	Easy | | |
 | 82	| Remove Duplicates from Sorted List II |	Medium | | |
-| 81	| Search in Rotated Sorted Array II |	Medium | | |
+| 81	| [Search in Rotated Sorted Array II](AlgPrac/src/binarySearch/SearchRotatedArray2.java) |	Medium | | |
 | 80	| Remove Duplicates from Sorted Array II |	Medium | | |
 | 79	| Word Search |	Medium | | |
-| 78	| Subsets |	Medium | | |
+| 78	| [Subsets](AlgPrac/src/backtracking/Subsets.java) |	Medium | | |
 | 77	| Combinations |	Medium | | |
 | 76	| Minimum Window Substring |	Hard | | |
 | 75	| Sort Colors |	Medium | | |
-| 74	| Search a 2D Matrix |	Medium | | |
+| 74	| [Search a 2D Matrix](AlgPrac/src/binarySearch/SearchMatrix.java) |	Medium | | |
 | 73	| Set Matrix Zeroes |	Medium | | |
 | 72	| Edit Distance |	Hard | | |
 | 71	| Simplify Path |	Medium | | |
@@ -725,9 +725,9 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 38  |	Count and Say |	Easy || |
 | 37  |	Sudoku Solver |	Hard || |
 | 36  |	Valid Sudoku	| Easy || |
-| 35  |	Search Insert Position	| Medium || |
-| 34  |	Search for a Range	| Medium || |
-| 33  |	Search in Rotated Sorted Array	| Hard || |
+| 35  |	[Search Insert Position](AlgPrac/src/binarySearch/SearchInsertPosition.java) | Medium || |
+| 34  |	[Search for a Range](AlgPrac/src/binarySearch/SearchRange.java)	| Medium || |
+| 33  |	[Search in Rotated Sorted Array](AlgPrac/src/binarySearch/SearchRotatedArray.java)	| Hard || |
 | 32  |	Longest Valid Parentheses	| Hard || |
 | 31  |	Next Permutation		| Medium || |
 | 30  |	Substring with Concatenation of All Words	| Hard || |
@@ -756,7 +756,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 7	  | Reverse Integer	| Easy || |
 | 6	  | ZigZag Conversion	| Easy || |
 | 5	  | Longest Palindromic Substring	| Medium || |
-| 4	  | Median of Two Sorted Arrays	| Hard | Sort, Merge Sort, Binary Search | [讲解1](https://youtu.be/raYYmEwyJ0o), |
+| 4	  | [Median of Two Sorted Arrays](AlgPrac/src/binarySearch/MedianSortedArray.java)	| Hard | Sort, Merge Sort, Binary Search | [讲解1](https://youtu.be/raYYmEwyJ0o), |
 | 3   | Longest Substring Without Repeating Characters | Medium |  | |
 | 2   | Add Two Numbers | Medium |  | |
 | 1   | [Two Sum](AlgPrac/src/array/TwoSum.java)  | Medium |  | |
