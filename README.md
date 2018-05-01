@@ -94,7 +94,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 719	| Find K-th Smallest Pair Distance | Hard | | |
 | 718	| Maximum Length of Repeated Subarray | Medium | | |
 | 717	| 1-bit and 2-bit Characters | Easy | | |
-| 716	| Max Stack $ | Hard | | |
+| 716	| [Max Stack](AlgPrac/src/stack/MaxStack.java) $ | Hard | | |
 | 715	| Range Module | Hard | | |
 | 714	| Best Time to Buy and Sell Stock with Transaction Fee | Medium | | |
 | 713	| Subarray Product Less Than K | Medium | | |
@@ -119,7 +119,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 683	| K Empty Slots | Hard | | |
 | 682	| Baseball Game | Easy | | |
 | 681	| Next Closest Time $ | Medium | | |
-| 680	| Valid Palindrome II | Easy | | |
+| 680	| [Valid Palindrome II](AlgPrac/src/string/ValidPalindrome2.java) | Easy | | |
 | 679	| 24 Game | Hard | | |
 | 678	| Valid Parenthesis String | Medium | | |
 | 677	| Map Sum Pairs | Medium | | |
@@ -370,7 +370,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 386	| Lexicographical Numbers | Medium | | |
 | 385	| Mini Parser | Medium | | |
 | 384	| Shuffle an Array | Medium | | |
-| 383	| Ransom Note | Easy  | | |
+| 383	| [Ransom Note](AlgPrac/src/string/RansomNote.java) | Easy  | | |
 | 382	| Linked List Random Node | Medium | | |
 | 381	| Insert Delete GetRandom O(1) - Duplicates allowed | Hard | | |
 | 380	| Insert Delete GetRandom O(1) | Medium | | |
@@ -405,15 +405,15 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 351	| Android Unlock Patterns $ | Medium | | |
 | 350	| Intersection of Two Arrays II | Easy | | |
 | 349	| Intersection of Two Arrays | Easy  | | |
-| 348	| Design Tic-Tac-Toe  $ | Medium | | |
-| 347	| Top K Frequent Elements | Medium | | |
+| 348	| [Design Tic-Tac-Toe](AlgPrac/src/ood/TicTacToe.java) $ | Medium | | |
+| 347	| [Top K Frequent Elements](AlgPrac/src/sorting/TopKFrequentElements.java) | Medium | | |
 | 346	| Moving Average from Data Stream  $ | Easy | | |
 | 345	| Reverse Vowels of a String | Easy | | |
 | 344	| Reverse String | Easy | | |
 | 343	| Integer Break | Medium | | |
-| 342	| Power of Four | Easy | | |
+| 342	| [Power of Four](AlgPrac/src/math/PowerOf4.java) | Easy | | |
 | 341	| Flatten Nested List Iterator $ | Medium | | |
-| 340	| Longest Substring with At Most K Distinct Characters $ | Hard | | |
+| 340	| [Longest Substring with At Most K Distinct Characters](AlgPrac/src/string/LongestSubstringWithAtMostKDistinctChars.java) $ | Hard | | |
 | 339	| Nested List Weight Sum $ | Easy | | |
 | 338	| Counting Bits | Medium | | |
 | 337	| House Robber III | Medium | | |
@@ -427,7 +427,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 329	| Longest Increasing Path in a Matrix | Medium | | |
 | 328	| Odd Even Linked List | Easy | | |
 | 327	| Count of Range Sum | Hard | | |
-| 326	| Power of Three | Easy | | |
+| 326	| [Power of Three](AlgPrac/src/math/PowerOf3.java) | Easy | | |
 | 325	| Maximum Size Subarray Sum Equals k $ | Easy | | |
 | 324	| Wiggle Sort II | Medium | | |
 | 323	| Number of Connected Components in an Undirected Graph $ | Medium | | |
@@ -526,16 +526,16 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 237	| Delete Node in a Linked List |	Easy | | |
 | 236	| [Lowest Common Ancestor of a Binary Tree](AlgPrac/src/binaryTree/LowestCommonAncestorBT.java) |	Medium | | |
 | 235	| [Lowest Common Ancestor of a Binary Search Tree](AlgPrac/src/binarySearchTree/LowestCommonAncestor.java) |	Medium | | |
-| 234	| Palindrome Linked List |	Easy | | |
+| 234	| [Palindrome Linked List](AlgPrac/src/linkedList/IsPalindrome.java) |	Easy | | |
 | 233	| Number of Digit One |	Medium | | |
-| 232	| Implement Queue using Stacks|	Easy | | |
-| 231	| Power of Two	| Easy | | |
+| 232	| [Implement Queue using Stacks](AlgPrac/src/stack/QueueUsingStacks.java) |	Easy | | |
+| 231	| [Power of Two](AlgPrac/src/math/PowerOf2.java)	| Easy | | |
 | 230	| Kth Smallest Element in a BST |	Medium | | |
-| 229	| Majority Element II	| Medium | | |
+| 229	| [Majority Element II](AlgPrac/src/math/MajorityNumberII.java)	| Medium | | |
 | 228	| [Summary Ranges](AlgPrac/src/array/SummaryRanges.java) | Easy | | |
 | 227	| Basic Calculator II |	Medium | | |
 | 226	| [Invert Binary Tree](AlgPrac/src/binaryTree/InvertBinaryTree.java) |	Easy | | |
-| 225	| Implement Stack using Queues |	Medium | | |
+| 225	| [Implement Stack using Queues](AlgPrac/src/stack/StackUsingQueues.java) |	Medium | | |
 | 224	| Basic Calculator |	Medium | | |
 | 223	| Rectangle Area |	Easy | | |
 | 222	| Count Complete Tree Nodes |	Medium | | |
@@ -554,13 +554,13 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 209	| Minimum Size Subarray Sum |	Medium | | |
 | 208	| Implement Trie (Prefix Tree) |	Medium | | |
 | 207	| Course Schedule |	Medium | | |
-| 206	| Reverse Linked List |	Easy | | |
+| 206	| [Reverse Linked List](AlgPrac/src/linkedList/ReverseLinkedList.java) |	Easy | | |
 | 205	| Isomorphic Strings |	Easy | | |
-| 204	| Count Primes |	Easy | | |
+| 204	| [Count Primes](AlgPrac/src/math/PrimeNumbers.java) |	Easy | | |
 | 203	| Remove Linked List Elements |	Easy | | |
 | 202	| Happy Number | Easy | | |
 | 201	| Bitwise AND of Numbers Range |	Medium | | |
-| 200	| [Number of Islands](AlgPrac/src/java/NumberOfIslands.java) |	Medium | | |
+| 200	| [Number of Islands](AlgPrac/src/graph/NumberOfIslands.java) |	Medium | | |
 | 199	| Binary Tree Right Side View |	Medium | | |
 | 198	| House Robber |	Easy | | |
 | 197	| Rising Temperature * |	Easy | | |
@@ -574,7 +574,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 189	| [Rotate Array](AlgPrac/src/array/RotateArray.java) |	Easy | | |
 | 188	| Best Time to Buy and Sell Stock IV |	Hard | | |
 | 187	| Repeated DNA Sequences |	Medium | | |
-| 186	| Reverse Words in a String II $ |	Medium | | |
+| 186	| [Reverse Words in a String II](AlgPrac/src/string/ReverseWords.java) $ |	Medium | | |
 | 185	| Department Top Three Salaries * |	Hard | | |
 | 184	| Department Highest Salary * |	Medium | | |
 | 183	| Customers Who Never Order * |	Easy | | |
@@ -591,7 +591,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 172	| Factorial Trailing Zeroes |	Easy | | |
 | 171	| Excel Sheet Column Number |	Easy | | |
 | 170	| [Two Sum III - Data structure design](AlgPrac/src/dataStructure/TwoSumData.java) $ |	Easy | | |
-| 169	| Majority Element |	Easy | | |
+| 169	| [Majority Element](AlgPrac/src/math/MajorityNumberI.java) |	Easy | | |
 | 168	| Excel Sheet Column Title |	Easy | | |
 | 167	| Two Sum II - Input array is sorted $ |	Medium | | |
 | 166	| Fraction to Recurring Decimal |	Medium | | |
@@ -599,20 +599,20 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 164	| Maximum Gap |	Hard | | |
 | 163	| [Missing Ranges](AlgPrac/src/array/MissingRanges.java) $ |	Medium | | |
 | 162	| [Find Peak Element](AlgPrac/src/binarySearch/FindPeakElement.java) |	Medium | | |
-| 161	| One Edit Distance $ |	Medium | | |
+| 161	| [One Edit Distance](AlgPrac/src/string/OneEditDistance.java) $ |	Medium | | |
 | 160	| Intersection of Two Linked Lists |	Easy | | |
 | 159	| Longest Substring with At Most Two Distinct Characters $ |	Hard | | |
 | 158	| Read N Characters Given Read4 II - Call multiple times $ |	Hard | | |
 | 157	| Read N Characters Given Read4 $ |	Easy | | |
 | 156	| Binary Tree Upside Down $ |	Medium | | |
-| 155	| Min Stack |	Easy | | |
+| 155	| [Min Stack](AlgPrac/src/stack/MinStack.java) |	Easy | | |
 | 154	| [Find Minimum in Rotated Sorted Array II](AlgPrac/src/binarySearch/SearchMinRotatedArray.java) |	Hard | | |
 | 153	| [Find Minimum in Rotated Sorted Array](AlgPrac/src/binarySearch/SearchMinRotatedArrayII.java) |	Medium | | |
 | 152	| Maximum Product Subarray |	Medium | | |
-| 151	| Reverse Words in a String |	Medium | | |
+| 151	| [Reverse Words in a String](AlgPrac/src/string/ReverseWords.java) |	Medium | | |
 | 150	| Evaluate Reverse Polish Notation |	Medium | | |
 | 149	| Max Points on a Line |	Hard | | |
-| 148	| Sort List |	Medium | | |
+| 148	| [Sort List](AlgPrac/src/linkedList/SortList.java) |	Medium | | |
 | 147	| Insertion Sort List |	Medium | | |
 | 146	| [LRU Cache](AlgPrac/src/dataStructure/LruCache.java) |	Hard | | |
 | 145	| Binary Tree Postorder Traversal |	Hard | | |
@@ -668,24 +668,24 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 95	| Unique Binary Search Trees II |	Medium | | |
 | 94	| Binary Tree Inorder Traversal |	Medium | | |
 | 93	| Restore IP Addresses |	Medium | | |
-| 92	| Reverse Linked List II |	Medium | | |
+| 92	| [Reverse Linked List II](AlgPrac/src/linkedList/ReverseLinkedListII.java) |	Medium | | |
 | 91	| [Decode Ways](AlgPrac/src/dp/DecodeWays.java) |	Medium | | |
 | 90	| Subsets II |	Medium | | |
 | 89	| Gray Code |	Medium | | |
-| 88	| Merge Sorted Array |	Easy | | |
+| 88	| [Merge Sorted Array](AlgPrac/src/sortedArray/MergeTwoSortedArray.java) |	Easy | | |
 | 87	| Scramble String |	Hard | | |
-| 86	| Partition List |	Medium | | |
+| 86	| [Partition List](AlgPrac/src/linkedList/PartitionList.java) |	Medium | | |
 | 85	| Maximal Rectangle |	Hard | | |
 | 84	| [Largest Rectangle in Histogram](AlgPrac/src/array/LargestRectangle.java) |	Hard | | |
-| 83	| Remove Duplicates from Sorted List |	Easy | | |
-| 82	| Remove Duplicates from Sorted List II |	Medium | | |
+| 83	| [Remove Duplicates from Sorted List](AlgPrac/src/linkedList/RemoveDuplicatesFromSortedLinkedList.java) |	Easy | | |
+| 82	| [Remove Duplicates from Sorted List II](AlgPrac/src/linkedList/RemoveDuplicatesII.java) |	Medium | | |
 | 81	| [Search in Rotated Sorted Array II](AlgPrac/src/binarySearch/SearchRotatedArray2.java) |	Medium | | |
-| 80	| Remove Duplicates from Sorted Array II |	Medium | | |
+| 80	| [Remove Duplicates from Sorted Array II](AlgPrac/src/sortedArray/RemoveDupSortedArrayII.java) |	Medium | | |
 | 79	| Word Search |	Medium | | |
 | 78	| [Subsets](AlgPrac/src/backtracking/Subsets.java) |	Medium | | |
 | 77	| Combinations |	Medium | | |
 | 76	| Minimum Window Substring |	Hard | | |
-| 75	| Sort Colors |	Medium | | |
+| 75	| [Sort Colors](AlgPrac/src/sorting/SortColors.java) |	Medium | | |
 | 74	| [Search a 2D Matrix](AlgPrac/src/binarySearch/SearchMatrix.java) |	Medium | | |
 | 73	| Set Matrix Zeroes |	Medium | | |
 | 72	| Edit Distance |	Hard | | |
@@ -694,7 +694,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 69	| Sqrt(x) |	Medium | | |
 | 68	| Text Justification |	Hard | | |
 | 67	| Add Binary |	Easy | | |
-| 66	| Plus One |	Easy | | |
+| 66	| [Plus One](AlgPrac/src/math/PlusOne.java) |	Easy | | |
 | 65	| Valid Number |	Hard | | |
 | 64	| Minimum Path Sum |	Medium | | |
 | 63	| Unique Paths II |	Medium | | |
@@ -719,7 +719,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 44  |	[Wildcard Matching](AlgPrac/src/dp/WildcardMatching.java)	| Hard | | |
 | 43  |	Multiply Strings |	Medium || |
 | 42  |	Trapping Rain Water	| Hard || |
-| 41  |	First Missing Positive	| Hard || |
+| 41  |	[First Missing Positive](AlgPrac/src/sorting/FirstMissingPositive.java)	| Hard || |
 | 40  |	Combination Sum II	| Medium || |
 | 39  |	Combination Sum	| Medium || |
 | 38  |	Count and Say |	Easy || |
@@ -732,32 +732,32 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 31  |	Next Permutation		| Medium || |
 | 30  |	Substring with Concatenation of All Words	| Hard || |
 | 29  |	Divide Two Integers		| Medium || |
-| 28  |	Implement strStr()	| Easy || |
+| 28  |	[Implement strStr()](AlgPrac/src/string/StrStr.java)	| Easy || |
 | 27  |	Remove Element		| Easy || |
-| 26  |	Remove Duplicates from Sorted Array		| Easy || |
+| 26  |	[Remove Duplicates from Sorted Array](AlgPrac/src/sortedArray/RemoveDupSortedArray.java) | Easy || |
 | 25  |	Reverse Nodes in k-Group		| Hard || |
 | 24  |	Swap Nodes in Pairs		| Medium || |
-| 23  |	Merge k Sorted Lists	| Hard || |
+| 23  |	[Merge k Sorted Lists](AlgPrac/src/linkedList/MergeKSortedLists.java)	| Hard || |
 | 22  |	Generate Parentheses	| Medium || |
 | 21  |	Merge Two Sorted Lists	| Easy || |
 | 20  |	Valid Parentheses		| Easy || |
-| 19  |	Remove Nth Node From End of List	| Easy || |
+| 19  |	[Remove Nth Node From End of List](AlgPrac/src/linkedList/RemoveNthFromEnd.java)	| Easy || |
 | 18  |	[4Sum](AlgPrac/src/array/FourSum.java)	| Medium || |
 | 17  |	Letter Combinations of a Phone Number	| Medium || |
 | 16  |	[3Sum Closest](AlgPrac/src/array/ThreeSumClosest.java)	| Medium || |
 | 15  |	[3Sum](AlgPrac/src/array/ThreeSum.java)		| Medium || |
 | 14  |	Longest Common Prefix	| Easy || |
-| 13  |	Roman to Integer		| Easy || |
-| 12  | Integer to Roman		| Medium || |
+| 13  |	[Roman to Integer](AlgPrac/src/math/RomanToInteger.java)		| Easy || |
+| 12  | [Integer to Roman](AlgPrac/src/math/IntegerToRoman.java)		| Medium || |
 | 11  |	Container With Most Water		| Medium || |
 | 10  |	Regular Expression Matching		| Hard || |
 | 9	  | Palindrome Number		| Easy || |
-| 8	  | String to Integer (atoi)	| Easy || |
+| 8	  | [String to Integer] (AlgPrac/src/string/AToI.java)	| Easy || |
 | 7	  | Reverse Integer	| Easy || |
 | 6	  | ZigZag Conversion	| Easy || |
 | 5	  | Longest Palindromic Substring	| Medium || |
 | 4	  | [Median of Two Sorted Arrays](AlgPrac/src/binarySearch/MedianSortedArray.java)	| Hard | Sort, Merge Sort, Binary Search | [讲解1](https://youtu.be/raYYmEwyJ0o), |
-| 3   | Longest Substring Without Repeating Characters | Medium |  | |
+| 3   | [Longest Substring Without Repeating Characters](AlgPrac/src/string/LongestSubstringWithoutRepeatingCharacters.java) | Medium |  | |
 | 2   | Add Two Numbers | Medium |  | |
 | 1   | [Two Sum](AlgPrac/src/array/TwoSum.java)  | Medium |  | |
 

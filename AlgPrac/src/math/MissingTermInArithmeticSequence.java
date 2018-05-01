@@ -3,7 +3,7 @@ package math;
 import java.io.*;
 import java.util.*;
 
-public class MissingTermInAP {
+public class MissingTermInArithmeticSequence {
 	
 	public static void main(String[] args) {
 		
@@ -31,8 +31,5 @@ public class MissingTermInAP {
 		System.out.println("theorySum is " + theorySum);
 		
 		System.out.println(missing);
-		
-		
 	}
-	
 }
