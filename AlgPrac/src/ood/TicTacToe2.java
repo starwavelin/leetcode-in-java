@@ -1,26 +1,26 @@
 package ood;
 
-public class TicTacToe {
-	
+public class TicTacToe2 {
+
 	public static final int X = 1, O = -1;	// two players X and O
 	public static final int EMPTY = 0;		// use 0 to denote an empty cell
 	private int board[][] = new int[3][3];	// game board
 	private int player;						// the current player
-	
+
 	// constructor
-	public TicTacToe() {
+	public TicTacToe2() {
 		clearBoard();
 	}
-	
+
 	public void clearBoard() {
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 3; j++) {
-				board[i][j] = EMPTY; 
+				board[i][j] = EMPTY;
 			}
 		}
 		player = X;		// X is the first player by default
 	}
-	
+
 	// Puts an X or O mark at position (i, j)
 	public void putMark(int i, int j) throws IllegalArgumentException {
 		if ((i < 0) || (i > 2) || (j < 0) || (j > 2)) {
@@ -32,7 +32,7 @@ public class TicTacToe {
 		board[i][j] = player;		// place mark for the current player
 		player = -player;			// switch player [use the fact that X = -O]
 	}
-	
+
 	// Check if the board configuration is a Win situation for a player
 	public boolean isWin(int mark) {
 		boolean ret = ((board[0][0] + board[0][1] + board[0][2] == mark * 3)	// row 0
@@ -46,7 +46,7 @@ public class TicTacToe {
 				);
 		return ret;
 	}
-	
+
 	// Returns the winning player or 0 indicates a tie
 	public int winner() {
 		if (isWin(X)) {
@@ -57,13 +57,13 @@ public class TicTacToe {
 			return 0;
 		}
 	}
-	
+
 	public String toString() {
 		String s = "";
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 3; j++) {
 				switch(board[i][j]) {
-				case X: 
+				case X:
 					s += "X";
 					break;
 				case O:
@@ -83,5 +83,5 @@ public class TicTacToe {
 		}
 		return s;
 	}
-	
+
 }

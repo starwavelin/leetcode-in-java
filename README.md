@@ -406,7 +406,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 351	| Android Unlock Patterns $ | Medium | | |
 | 350	| Intersection of Two Arrays II | Easy | | |
 | 349	| Intersection of Two Arrays | Easy  | | |
-| 348	| [Design Tic-Tac-Toe](AlgPrac/src/ood/TicTacToe.java) $ | Medium | | |
+| 348	| Design Tic-Tac-Toe [形式2](AlgPrac/src/ood/TicTacToe2.java) $ | Medium | | |
 | 347	| [Top K Frequent Elements](AlgPrac/src/sorting/TopKFrequentElements.java) | Medium | | |
 | 346	| Moving Average from Data Stream  $ | Easy | | |
 | 345	| Reverse Vowels of a String | Easy | | |

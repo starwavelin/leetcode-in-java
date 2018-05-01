@@ -3,7 +3,7 @@ package ood;
 public class TicTacToeDriver {
 	
 	public static void main(String[] args) {
-		TicTacToe ttt = new TicTacToe();
+		TicTacToe2 ttt = new TicTacToe2();
 		
 		/* X moves */				/* O moves */
 		ttt.putMark(1, 1);			ttt.putMark(0, 2);
