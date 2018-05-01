@@ -2,115 +2,79 @@ package stack;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.Stack;
+
 /***************************************************************************
-* Problem No. : 
+* Problem No. : 716
 * Problem Name: Max Stack
-* Problem URL : 
-* Date        : Oct 14 2017
-* Author	  :	Xian Lin
-* Notes       : 
-* 	This problem is just a transformation of Min Stack.
-* The only part we want to change is 
-* 	when pushing, we want the value being pushed is greater than or equal to the peek of the max stack, 
-* then we push it to the max stack
-* For fun, I rewrote it using ArrayDeque
-* 
-* meta        : tag-stack
+* Problem URL : https://leetcode.com/problems/max-stack/description/
+* Date        : May 1, 2018
+* Author      : Xian Lin
+* Notes       :
+* 	Scenario:
+* 		
+* 	Assumption:
+* 		
+	Example:
+* 	Input/Output:
+* 		
+* 	Data Structure and Alg:
+* 		see code comments
+* Complexity  :
+* 	Time Complexity: O() -- see code comments
+* 	Space Complexity: O() -- see code comments
+*
+* meta        : tag-stack, tag-data-structure
 ***************************************************************************/
 public class MaxStack {
-	
-	Deque<Integer> dataS;
-	Deque<Integer> maxS;
-	
-	public MaxStack() {
-		dataS = new ArrayDeque<>();
-		maxS = new ArrayDeque<>();
-	}
-	
-	public void push(int x) {
-		dataS.offerLast(x);
-		if (maxS.isEmpty() || x >= maxS.peekLast())
-			maxS.offerLast(x);
-	}
-	
-	public void pop() {
-		if (!dataS.isEmpty()) {
-			if (dataS.pollLast().equals(maxS.peekLast()))
-				maxS.pollLast();
-		}
-	}
-	
-	public int peek() {
-		if (!dataS.isEmpty()) {
-			return dataS.peekLast(); 
-		}
-		return Integer.MIN_VALUE;
-	}
-	
-	public int getMax() {
-		if (!maxS.isEmpty()) {
-			return maxS.peekLast(); 
-		}
-		return Integer.MIN_VALUE;
-	}
-	
-	public static void main(String[] args) {
-		System.out.println("*** Welcome to Xian's MaxStack Test ***");
-		MaxStack ms = new MaxStack();
-		
-		ms.push(19);
-		ms.push(3);
-		ms.push(6);
-		ms.push(28);
-		ms.push(17);
-		System.out.println("Now the max is " + ms.getMax()); //should be 28
-		
-		ms.pop();
-		System.out.println("Now the max is " + ms.getMax()); //should be 28
-		
-		ms.pop();
-		System.out.println("Now the max is " + ms.getMax()); //should be 19
-		
-		MaxStack ms2 = new MaxStack();
-		ms2.push(16);
-		ms2.push(32);
-		ms2.push(32);
-		ms2.push(16);
-		
-		ms2.pop();
-		System.out.println("Now the max is " + ms2.getMax()); //should be 32
-		ms2.pop();
-		System.out.println("Now the max is " + ms2.getMax()); //should be 32
-		ms2.pop();
-		System.out.println("Now the max is " + ms2.getMax()); //should be 16
-	}
-	
-	/**
-	 * private Stack<Integer> s1;
-	private Stack<Integer> s2; // store max values
-	
-	public MaxStack() {
-		s1 = new Stack<Integer>();
-		s2 = new Stack<Integer>();
-	}
-	
-	public void push(int num) {
-		s1.push(num);
-		if (s2.isEmpty() || s2.peek() <= num) {
-			s2.push(num);
-		}
-	}
-	
-	public int pop() {
-		int ret = s1.pop();
-		if (ret == s2.peek()) {
-			s2.pop();
-		}
-		return ret;
-	}
-	
-	public int getMax() {
-		return s2.peek();
-	}
-	 */
+	Deque<Integer> stack;
+	Deque<Integer> maxStack;
+
+    /** initialize your data structure here. */
+    public MaxStack() {
+        stack = new ArrayDeque<>();
+		maxStack = new ArrayDeque<>();
+    }
+    
+    public void push(int x) {
+        int max = maxStack.isEmpty() ? x : maxStack.peek();
+		maxStack.push(max > x ? max : x);
+		stack.push(x);
+    }
+    
+    public int pop() {
+        maxStack.pop();
+		return stack.pop();
+    }
+    
+    public int top() {
+        return stack.peek();
+    }
+    
+    public int peekMax() {
+        return maxStack.peek();
+    }
+    
+    public int popMax() {
+        int max = peekMax();
+		Stack<Integer> buffer = new Stack();
+		while (top() != max) {
+            buffer.push(pop());
+        }	
+		pop();
+		while (!buffer.isEmpty()) {
+            push(buffer.pop());
+        }	
+		return max;
+    }
 }
+
+/**
+ * Your MaxStack object will be instantiated and called as such:
+ * MaxStack obj = new MaxStack();
+ * obj.push(x);
+ * int param_2 = obj.pop();
+ * int param_3 = obj.top();
+ * int param_4 = obj.peekMax();
+ * int param_5 = obj.popMax();
+ */

@@ -94,7 +94,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 719	| Find K-th Smallest Pair Distance | Hard | | |
 | 718	| Maximum Length of Repeated Subarray | Medium | | |
 | 717	| 1-bit and 2-bit Characters | Easy | | |
-| 716	| [Max Stack](AlgPrac/src/stack/MaxStack.java) $ | Hard | | |
+| 716	| [Max Stack](AlgPrac/src/stack/MaxStack.java) $ | Hard | Stack, Data Structure | |
 | 715	| Range Module | Hard | | |
 | 714	| Best Time to Buy and Sell Stock with Transaction Fee | Medium | | |
 | 713	| Subarray Product Less Than K | Medium | | |
@@ -766,6 +766,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 ### Non-LeetCode Problem List
 | No. | Problem   | Difficulty  | Tags  | Videos |
 | ----|-----------|-------------|-------|--------|
+|S 716| [Max Stack](AlgPrac/src/stack/MaxStack2.java) | Medium | Stack, Data Structure| |
 |S 136| [Single Number](https://github.com/starwavelin/JavaPrac/blob/master/IKM/src/demo/SSingleNumber.java) | Easy | Hash, Sort| [讲解](https://youtu.be/4SrfltpNxr8) |
 | 6   | [Binary Search (Recursion Solution)](AlgPrac/src/binarySearch/BinarySearchIII.java) | Easy | Binary Search| [讲解](https://youtu.be/U3zw4T6Anjs) |
 | 5   | [Binary Search](AlgPrac/src/binarySearch/BinarySearch.java) | Easy | Binary Search| [讲解](https://www.youtube.com/watch?v=J0NTXwqIO4U) |
