@@ -216,7 +216,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 551	| Student Attendance Record I | Easy | | |
 | 549	| Binary Tree Longest Consecutive Sequence II $ | Medium | | |
 | 548	| Split Array with Equal Sum $ | Medium | | |
-| 547	| Friend Circles | Medium | | |
+| 547	| [Friend Circles](AlgPrac/src/graph/FriendCircles.java) | Medium | | |
 | 546	| Remove Boxes | Hard | | |
 | 545	| Boundary of Binary Tree $ | Medium | | |
 | 544	| Output Contest Matches $ | Medium | | |
@@ -336,7 +336,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 420	| Strong Password Checker | Hard | | |
 | 419	| Battleships in a Board | Medium | | |
 | 418	| Sentence Screen Fitting $ | Medium | | |
-| 417	| Pacific Atlantic Water Flow | Medium | | |
+| 417	| [Pacific Atlantic Water Flow](AlgPrac/src/graph/PacificAtlanticWaterFlow.java) | Medium | | |
 | 416	| Partition Equal Subset Sum | Medium | | |
 | 415	| Add Strings | Easy | | |
 | 414	| Third Maximum Number | Easy | | |
@@ -560,7 +560,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 203	| Remove Linked List Elements |	Easy | | |
 | 202	| Happy Number | Easy | | |
 | 201	| Bitwise AND of Numbers Range |	Medium | | |
-| 200	| Number of Islands |	Medium | | |
+| 200	| [Number of Islands](AlgPrac/src/java/NumberOfIslands.java) |	Medium | | |
 | 199	| Binary Tree Right Side View |	Medium | | |
 | 198	| House Robber |	Easy | | |
 | 197	| Rising Temperature * |	Easy | | |
@@ -627,10 +627,10 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 136	| [Single Number](AlgPrac/src/bitwise/SingleNumberI.java) |	Medium | | |
 | 135	| Candy |	Hard | | |
 | 134	| Gas Station |	Medium | | |
-| 133	| Clone Graph |	Medium | | |
+| 133	| [Clone Graph](AlgPrac/src/graph/CloneGraph.java) |	Medium | | |
 | 132	| Palindrome Partitioning II |	Hard | | |
 | 131	| Palindrome Partitioning |	Medium | | |
-| 130	| Surrounded Regions |	Medium | | |
+| 130	| [Surrounded Regions](AlgPrac/src/graph/SurroundedRegions.java) |	Medium | | |
 | 129	| Sum Root to Leaf Numbers |	Medium | | |
 | 128	| Longest Consecutive Sequence |	Hard | | |
 | 127	| Word Ladder |	Medium | | |
@@ -640,7 +640,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 123	| [Best Time to Buy and Sell Stock III](AlgPrac/src/array/BuySellStock3.java) |	Hard | | |
 | 122	| [Best Time to Buy and Sell Stock II](AlgPrac/src/array/BuySellStock2.java) |	Medium | | |
 | 121	| [Best Time to Buy and Sell Stock](AlgPrac/src/array/BuySellStock1.java) |	Medium | | |
-| 120	| Triangle |	Medium | | |
+| 120	| [Triangle](AlgPrac/src/dp/TriangleDC.java) |	Medium | | |
 | 119	| Pascal's Triangle II |	Easy | | |
 | 118	| Pascal's Triangle |	Easy | | |
 | 117	| Populating Next Right Pointers in Each Node II |	Hard | | |
@@ -669,7 +669,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 94	| Binary Tree Inorder Traversal |	Medium | | |
 | 93	| Restore IP Addresses |	Medium | | |
 | 92	| Reverse Linked List II |	Medium | | |
-| 91	| Decode Ways |	Medium | | |
+| 91	| [Decode Ways](AlgPrac/src/dp/DecodeWays.java) |	Medium | | |
 | 90	| Subsets II |	Medium | | |
 | 89	| Gray Code |	Medium | | |
 | 88	| Merge Sorted Array |	Easy | | |
@@ -690,7 +690,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 73	| Set Matrix Zeroes |	Medium | | |
 | 72	| Edit Distance |	Hard | | |
 | 71	| Simplify Path |	Medium | | |
-| 70	| Climbing Stairs |	Easy | | |
+| 70	| [Climbing Stairs](AlgPrac/src/dp/ClimbStairs.java) |	Easy | | |
 | 69	| Sqrt(x) |	Medium | | |
 | 68	| Text Justification |	Hard | | |
 | 67	| Add Binary |	Easy | | |
@@ -716,7 +716,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 47  | Permutations II | Hard | | |
 | 46  | Permutations |	Medium | | |
 | 45  |	Jump Game II	| Hard | | |
-| 44  |	Wildcard Matching	| Hard | | |
+| 44  |	[Wildcard Matching](AlgPrac/src/dp/WildcardMatching.java)	| Hard | | |
 | 43  |	Multiply Strings |	Medium || |
 | 42  |	Trapping Rain Water	| Hard || |
 | 41  |	First Missing Positive	| Hard || |
