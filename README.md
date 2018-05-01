@@ -34,7 +34,8 @@ Company based categories,
  * [Bloomberg](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-bloomberg)
 
 ### LeetCode Problem List
-Note: $ means paid-to-view problems; \* means SQL problems; \# means bash problems.  
+Note: $ means paid-to-view problems; \* means SQL problems; \# means bash problems;
+\! menas the current solution has wrong answers     
 
 **Problem 751 -**
 

@@ -28,18 +28,6 @@ import java.util.Set;
 ***************************************************************************/
 public class MaxXORFromTwoNums {
 	/*
-		20180501:
-		Wrong Answer
-		Input:
-			[14,70,53,83,49,91,36,80,92,51,66,70]
-		Output:
-			63
-		Expected:
-			127
-		Need to Pay attention to!!
-	*/
-
-	/*
 	 * Properties:
 	 * a ^ 0 = a;
 	 *
@@ -73,12 +61,32 @@ public class MaxXORFromTwoNums {
 	 *
 	 * */
 	public static class Solution {
+		
 		public int findMaximumXOR(int[] nums) {
+			int res = 0, mask = 0;
+			for (int i = 31; i >= 0; i--) {
+				mask = mask | (1 << i);
+				Set<Integer> set = new HashSet<>();
+				for (int num : nums) {
+					set.add(num & mask);
+				}
+				int candidate = res | (1 << i);
+				for (int prefix : set) {
+					if (set.contains(candidate ^ prefix)) {
+						res = candidate;
+						break;
+					}
+				}
+			}
+			return res;
+		}
+		
+		public int findMaximumXOR_Testing(int[] nums) {
 			if (nums == null || nums.length == 0) {
 				return 0;
 			}
 			int res = 0, mask = 0;
-			for (int i = 5; i >= 0; i--) {
+			for (int i = 5; i >= 0; i--) {  // HERE, i = 5 is for testing, Looking-into-detail only, right sol has i = 31 !!!
 				mask = mask | (1 << i);
 //				System.out.println(" mask is: " + mask); //DEBUG
 
@@ -118,6 +126,6 @@ public class MaxXORFromTwoNums {
 	public static void main(String[] args) {
 		Solution s = new Solution();
 		int[] nums = new int[] {5, 25, 8};
-		System.out.println("The maximum XOR is: " + s.findMaximumXOR(nums));
+		System.out.println("The maximum XOR is: " + s.findMaximumXOR_Testing(nums));
 	}
 }
