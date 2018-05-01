@@ -3,18 +3,38 @@ package dataStructure;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * This class provides Two Sum Data Structure
- * for adding up two numbers in an array to 
- * aim a target number
- * @author Benjamin Lin
- *
- */
+
+/***************************************************************************
+* Problem No. : 170
+* Problem Name: Two Sum III - Data structure design
+* Problem URL : https://leetcode.com/problems/two-sum-iii-data-structure-design/description/
+* Date        : May 1, 2018
+* Author      : Xian Lin
+* Notes       :
+* 	Scenario:
+*
+* 	Assumption:
+*
+	Example:
+* 	Input/Output:
+*
+* 	Data Structure and Alg:
+* 		see code comments
+* Complexity  :
+* 	Time Complexity: O() -- see code comments
+* 	Space Complexity: O() -- see code comments
+*
+* meta        : tag-data-structure
+***************************************************************************/
 
 public class TwoSumData {
-		
-	private Map<Integer, Integer> hash = new HashMap<Integer, Integer>();
-	
+
+	private Map<Integer, Integer> hash;
+
+	public TwoSum() {
+		hash = new HashMap<>();
+	}
+
 	public void add(int num) {
 		if (!hash.containsKey(num)) {
 			int count = 1;
@@ -23,7 +43,7 @@ public class TwoSumData {
 			hash.put(num, hash.get(num) + 1);
 		}
 	}
-	
+
 	public boolean find(int target) {
 		for (Map.Entry<Integer, Integer> entry : hash.entrySet()) {
 			int num = entry.getKey();
@@ -40,8 +60,8 @@ public class TwoSumData {
 		}
 		return false;
 	}
-	
-	
+
+
 	public static void main(String[] args) {
 		TwoSumData tsd = new TwoSumData();
 		tsd.add(1);
@@ -50,10 +70,10 @@ public class TwoSumData {
 		tsd.add(3);
 		tsd.add(8);
 		tsd.add(10);
-		
+
 		System.out.println("The result of finding 14 is " + tsd.find(14));
 		System.out.println("The result of finding 18 is " + tsd.find(18));
 		System.out.println("The result of finding 5 is " + tsd.find(5));
-		
+
 	}
 }
