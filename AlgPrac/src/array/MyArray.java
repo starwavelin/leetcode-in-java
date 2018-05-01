@@ -132,6 +132,10 @@ public class MyArray {
 		System.out.println();
 	}
 	
+	public int getSize() {
+		return numElements;
+	}
+	
 	public int getIndex(int index) {
 		return array[index];
 	}
