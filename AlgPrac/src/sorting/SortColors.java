@@ -72,30 +72,30 @@ public class SortColors {
 		int count0 = 0, count1 = 0, count2 = 0;
 		for (int n : nums) {
 			switch (n) {
-				case 0:
-					count0++;
-					break;
-				case 1:
-					count1++;
-					break;
-				case 2:
-					count2++;
-					break;
-				default:
-					return; // illegal input number, directly return
-				}
-			}
-			int i = 0;
-			while (i < count0) {
-				nums[i++] = 0; //写while loop别忘了更新scanner
-			}
-			while (i < count0 + count1) {
-				nums[i++] = 1;
-			}
-			while (i < count0 + count1 + count2) {
-				nums[i++] = 2;
+			case 0:
+				count0++;
+				break;
+			case 1:
+				count1++;
+				break;
+			case 2:
+				count2++;
+				break;
+			default:
+				return; // illegal input number, directly return
 			}
 		}
+		int i = 0;
+		while (i < count0) {
+			nums[i++] = 0; //写while loop别忘了更新scanner
+		}
+		while (i < count0 + count1) {
+			nums[i++] = 1;
+		}
+		while (i < count0 + count1 + count2) {
+			nums[i++] = 2;
+		}
+	}
 
 	/**
 	 * Solution 3: Use the thought of array partition

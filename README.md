@@ -23,7 +23,7 @@ Supported list of problem categories for searching,
  * [Hash](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-hash): Use hashing ideas/methods
  * [Linked List](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-linked-list)
  * [Math](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-math): Use mathematic knowledge/ideas
- * [Sorting](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-sort)
+ * [Sort](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-sort)
  * [Stack](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-stack)
  * [String](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-string)
  * [Two Pointers](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-two-pointers)
@@ -705,7 +705,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 59	| Spiral Matrix II |	Medium | | |
 | 58	| Length of Last Word |	Easy | | |
 | 57	| [Insert Interval](AlgPrac/src/array/InsertInterval.java) |	Hard | | |
-| 56	| [Merge Intervals](AlgPrac/src/array/MergeIntervals.java) |	Hard | | |
+| 56	| [Merge Intervals](AlgPrac/src/array/MergeIntervals.java) |	Hard | Sort | |
 | 55	| Jump Game |	Medium | | |
 | 54	| Spiral Matrix |	Medium | | |
 | 53	| Maximum Subarray |	Medium | | |

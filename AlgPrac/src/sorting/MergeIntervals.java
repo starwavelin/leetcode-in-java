@@ -1,35 +1,37 @@
-package array;
+package sorting;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import utility.Interval;
 
 /***************************************************************************
 * Problem No. : 56
 * Problem Name: Merge Intervals
 * Problem URL : https://leetcode.com/problems/merge-intervals/description/
 * Date        : Nov 2 2017
-* Author	  :	Xian Lin
-* Notes       : 
-* 	Scenario: 
+* Author      :	Xian Lin
+* Notes       :
+* 	Scenario:
 * 		Given a collection of intervals, merge all overlapping intervals.
 * 	Assumption:
 * 		1. Given intervals are non-overlapping
 * 		2. Given intervals are NOT sorted
 	Example:
 * 	Input/Output:
-* 	ie1: 
+* 	ie1:
 * 		given intervals: [[1,3],[7,14],[2,6],[8,10]]
-* 		output intervals: [[1,6],[7,14]] 
+* 		output intervals: [[1,6],[7,14]]
 * 	Data Structure and Alg:
 * 		See code comments
-* 		  
-* Complexity  : 
+*
+* Complexity  :
 * 	Time Complexity: O() -- See code comments
 * 	Space Complexity: O() -- See code comments
-* 
+*
 * meta        : tag-array, tag-factset
-* 
+*
 * 考点: Math.max(), Math.min()的应用
 ***************************************************************************/
 public class MergeIntervals {
@@ -40,11 +42,11 @@ public class MergeIntervals {
 	 * 	Then traverse the interval list,
 	 * 		if the cur interval is the last interval OR cur interval has no overlap with its next interval
 	 * 			append cur interval to the result
-	 * 		else 
-	 * 			merge cur interval and its next interval and 
+	 * 		else
+	 * 			merge cur interval and its next interval and
 	 * 			save the merged interval to cur's next interval (Important, save to intervals.get(i+1))
 	 *	return result
-	 * 
+	 *
 	 * Time Complexity: O(n) -- one pass
 	 * Space Complexity: O(1)
 	 */
@@ -64,7 +66,7 @@ public class MergeIntervals {
 		}
 		return res;
 	}
-	
+
 	public static void main(String[] args) {
 		/* Test Solution 1 Example 1 */
 		Interval i1 = new Interval(1, 3);
