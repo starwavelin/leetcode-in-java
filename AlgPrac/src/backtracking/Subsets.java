@@ -8,9 +8,9 @@ import java.util.List;
 * Problem Name: Subsets
 * Problem URL : https://leetcode.com/problems/subsets/description/
 * Date        : Dec 17 2017
-* Author	  :	Xian Lin
-* Notes       : 
-* 	Scenario: 
+* Author      :	Xian Lin
+* Notes       :
+* 	Scenario:
 * 		Given an array nums of DISTINCT integers and find all the subsets.
 * 	Assumption:
 * 		1. distinct integers in the given array
@@ -20,15 +20,15 @@ import java.util.List;
 * 		one possible output is below:
 * 		[[], [1], [1, 2], [1, 2, 3], [1, 3], [2], [2, 3], [3]]
 * 	Data Structure and Alg:
-* 		See Code Comments  
-* Complexity  : 
+* 		See Code Comments
+* Complexity  :
 * 	Time Complexity: O() -- See Code Comments
 * 	Space Complexity: O() -- See Code Comments
-* 
+*
 * meta        : tag-backtracking
 ***************************************************************************/
 public class Subsets {
-	
+
 	/**
 	 * Time Complexity: O(2^n)
 	 * Space Complexity: O(n) help path list that would hold n elements at most.
@@ -43,7 +43,7 @@ public class Subsets {
 		dfs(nums, 0, path, res);
 		return res;
 	}
-	
+
 	private static void dfs(int[] nums, int pos, List<Integer> path, List<List<Integer>> res) {
 		res.add(new ArrayList<Integer>(path));
 		for (int i = pos; i < nums.length; i++) { // loop counter should starts with pos instead of 0
@@ -53,7 +53,7 @@ public class Subsets {
 			path.remove(path.size() - 1);
 		}
 	}
-	
+
 	public static void main(String[] args) {
 		int[] nums = new int[] {3, 1, 2};
 		List<List<Integer>> res = subsets(nums);
