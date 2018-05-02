@@ -753,7 +753,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 11  |	Container With Most Water		| Medium || |
 | 10  |	Regular Expression Matching		| Hard || |
 | 9	  | Palindrome Number		| Easy || |
-| 8	  | [String to Integer](AlgPrac/src/string/AToI.java)	| Easy || |
+| 8	  | [String to Integer](AlgPrac/src/string/AToI.java)	| Easy | String, Math | |
 | 7	  | Reverse Integer	| Easy || |
 | 6	  | ZigZag Conversion	| Easy || |
 | 5	  | Longest Palindromic Substring	| Medium || |

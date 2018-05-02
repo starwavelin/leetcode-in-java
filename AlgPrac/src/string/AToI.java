@@ -2,15 +2,35 @@ package string;
 
 import java.util.Scanner;
 
-/**
- * Convert a String into an Integer
- * 
- */
+
+/***************************************************************************
+* Problem No. : 8
+* Problem Name: String to Integer (atoi)
+* Problem URL : https://leetcode.com/problems/string-to-integer-atoi/description/
+* Date        : May 2, 2018
+* Author      : Xian Lin
+* Notes       :
+* 	Scenario:
+* 		Convert a string into an integer
+* 	Assumption:
+* 		
+	Example:
+* 	Input/Output:
+* 		
+* 	Data Structure and Alg:
+* 		see code comments
+* Complexity  :
+* 	Time Complexity: O() -- see code comments
+* 	Space Complexity: O() -- see code comments
+*
+* meta        : tag-string, tag-math
+***************************************************************************/
 public class AToI {
 	
 	// Integer.MAX_VALUE = 2147483647  the last digit of this number is 7
 	
 	private static final int maxDiv10 = Integer.MAX_VALUE / 10;
+	
 	public static int atoi(String str) {
 		int i = 0;
 		str = str.trim();
