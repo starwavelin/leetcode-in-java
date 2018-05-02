@@ -38,18 +38,21 @@ public class LargestRectangle {
 	 * @author Guru
 	 */
 
-	public static int solution1(int[] height) {
-		int size = height.length;
+	/*
+		TLE at Test Case 95
+	*/
+	public static int solution1(int[] heights) {
+		int size = heights.length;
 		int maxArea = 0;
 		for (int i = 0; i < size; i++) {
 			for (int j = i + 1; j <= size; j++) {
-				int h = height[i];
+				int h = heights[i];
 
 				// This loop is for finding the lowest height
 				// in the bars of (j-i) region
 				for (int k = i; k < j; k++) {
-					if (height[k] < h) {
-						h = height[k];
+					if (heights[k] < h) {
+						h = heights[k];
 					}
 				}
 
@@ -63,23 +66,24 @@ public class LargestRectangle {
 
 
 	/**
+	 * Solution 2: AC	741ms
 	 * Unlike Solution1, when j is scanning the array,
 	 * we keep a variable h to record the lowest height
 	 * in the [i, j] range.
-	 * @param height
+	 * @param heights
 	 * @return
 	 */
-	public static int solution2(int[] height) {
-		int size = height.length;
+	public static int solution2(int[] heights) {
+		int size = heights.length;
 		int maxArea = 0;
 
 		for (int i = 0; i < size; i++) {
-			int minH = height[i];
+			int minH = heights[i];
 
 			// Use inner loop to get the lowest height of the rectangle formed by [i, j]
 			for (int j = i + 1; j <= size; j++) {
-				if (height[j - 1] < minH) {
-					minH = height[j - 1];
+				if (heights[j - 1] < minH) {
+					minH = heights[j - 1];
 				}
 				if ((j - i) * minH > maxArea) {
 					maxArea = (j - i) * minH;
@@ -90,12 +94,13 @@ public class LargestRectangle {
 	}
 
 	/**
+	* Solution 3: AC 26ms
 	* Idea: enumerate the heights of the histogram first.
 	* Then, for each height, scan left and right to find the
 	* left boundary bar and the right boundary bar with
 	* heights less than it.
 	* Calculate the area.
-	* @param height
+	* @param heights
 	* @return
 	*/
 	public static int solution3(int[] heights) {
@@ -106,10 +111,10 @@ public class LargestRectangle {
 		Deque<Integer> stack = new ArrayDeque<>();
 		for (int i = 0; i <= heights.length; i++) {
 			int curH = (i == heights.length) ? 0 : heights[i];
-			while (!stack.isEmpty() && curH <= heights[stack.peekLast()]) {
-				maxArea = Math.max(maxArea, heights[stack.pollLast()] * (stack.isEmpty() ? i : i - stack.peekLast() - 1));
+			while (!stack.isEmpty() && curH <= heights[stack.peek()]) {
+				maxArea = Math.max(maxArea, heights[stack.pop()] * (stack.isEmpty() ? i : i - stack.peek() - 1));
 			}
-			stack.offerLast(i);
+			stack.push(i);
 		}
 		return maxArea;
 	}
