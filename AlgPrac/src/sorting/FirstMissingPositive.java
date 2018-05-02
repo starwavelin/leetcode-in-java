@@ -8,24 +8,24 @@ import java.util.Set;
 * Problem Name: First Missing Positive
 * Problem URL : https://leetcode.com/problems/first-missing-positive/description/
 * Date        : Dec 13 2017
-* Author	  :	Xian Lin
-* Notes       : 
-* 	Scenario: 
-* 		
+* Author      :	Xian Lin
+* Notes       :
+* 	Scenario:
+*
 * 	Assumption:
-* 		
+*
 	Example:
 * 	Input: [2, 1, 0, -1]
 * 	Output: 3
 * 	Input: [4, 5, -1, 1]
 * 	Output: 2
-* 
+*
 * 	Data Structure and Alg:
-* 		see code comments  
-* Complexity  : 
+* 		see code comments
+* Complexity  :
 * 	Time Complexity: O() -- see code comments
 * 	Space Complexity: O() -- see code comments
-* 
+*
 * meta        : tag-hash, tag-sort
 ***************************************************************************/
 public class FirstMissingPositive {
@@ -34,7 +34,7 @@ public class FirstMissingPositive {
 	 * Solution 1:
 	 * Space O(n) solution using hash
 	 * Time Complexity O(n) -- 扫两遍，第一遍是input array, 第二遍是 From 1 to max
-	 * 
+	 *
 	 * Use a hashset to store all the positive integers in the given array,
 	 * use a max to get the maximum integer from the given array.
 	 * Then traverse the numbers from 1 to max,
@@ -61,17 +61,17 @@ public class FirstMissingPositive {
 			}
 		}
 		return max + 1;
-    }
-	
+	}
+
 	/**
 	 * Solution 2:
 	 * Space O(1) solution using the idea of bucket sort
 	 * Time Complexity O(n)
-	 * 
+	 *
 	 * Since it requires us to use O(1) space, that means we are not able to create any new array/map/set,
 	 * then the idea is to overwrite the original input array.
 	 * Bucket-sort idea
-	 * 
+	 *
 	 */
 	public static int firstMissingPositive2(int[] nums) {
 		if (nums == null || nums.length == 0) {
@@ -95,14 +95,14 @@ public class FirstMissingPositive {
 			}
 		}
 		return len + 1;
-    }
-	
+	}
+
 	public static void swap(int[] nums, int i, int j) {
 		int k = nums[i];
 		nums[i] = nums[j];
 		nums[j] = k;
 	}
-	
+
 	public static void main(String[] args) {
 		int[] nums1 = new int[]{2, 1, 0, -1};
 		int[] nums2 = new int[]{4, 5, -1, 1, 2};

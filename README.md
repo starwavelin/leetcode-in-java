@@ -742,7 +742,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 22  |	Generate Parentheses	| Medium || |
 | 21  |	Merge Two Sorted Lists	| Easy || |
 | 20  |	Valid Parentheses		| Easy || |
-| 19  |	[Remove Nth Node From End of List](AlgPrac/src/linkedList/RemoveNthFromEnd.java)	| Easy || |
+| 19  |	[Remove Nth Node From End of List](AlgPrac/src/linkedList/RemoveNthFromEnd.java)	| Easy | Linked List | |
 | 18  |	[4Sum](AlgPrac/src/array/FourSum.java)	| Medium || |
 | 17  |	Letter Combinations of a Phone Number	| Medium || |
 | 16  |	[3Sum Closest](AlgPrac/src/array/ThreeSumClosest.java)	| Medium || |
