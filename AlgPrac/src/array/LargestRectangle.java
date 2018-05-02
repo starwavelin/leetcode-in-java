@@ -5,33 +5,54 @@ import java.util.Deque;
 import java.util.Scanner;
 import java.util.Stack;
 
-/**
- * http://www.lintcode.com/en/problem/largest-rectangle-in-histogram/
- * Largest Rectangle in Histogram
- * Solution 1: O(n^3)
- * Solution 2: O(n^2)
- * Solution 3: O(n)
- * @author Guru
- *
- */
 
+/***************************************************************************
+* Problem No. : 84
+* Problem Name: Largest Rectangle in Histogram
+* Problem URL : https://leetcode.com/problems/largest-rectangle-in-histogram/description/
+* Date        : May 1, 2018
+* Author      : Xian Lin
+* Notes       :
+* 	Scenario:
+*
+* 	Assumption:
+*
+	Example:
+* 	Input/Output:
+*
+* 	Data Structure and Alg:
+* 		see code comments
+* Complexity  :
+* 	Time Complexity: O() -- see code comments
+* 	Space Complexity: O() -- see code comments
+*
+* meta        : tag-array, tag-
+***************************************************************************/
 public class LargestRectangle {
-	 
+	/**
+	 * http://www.lintcode.com/en/problem/largest-rectangle-in-histogram/
+	 * Largest Rectangle in Histogram
+	 * Solution 1: O(n^3)
+	 * Solution 2: O(n^2)
+	 * Solution 3: O(n)
+	 * @author Guru
+	 */
+
 	public static int solution1(int[] height) {
 		int size = height.length;
 		int maxArea = 0;
 		for (int i = 0; i < size; i++) {
 			for (int j = i + 1; j <= size; j++) {
 				int h = height[i];
-				
-				// This loop is for finding the lowest height 
+
+				// This loop is for finding the lowest height
 				// in the bars of (j-i) region
 				for (int k = i; k < j; k++) {
 					if (height[k] < h) {
 						h = height[k];
 					}
 				}
-				
+
 				if ((j - i ) * h > maxArea) {
 					maxArea = (j - i) * h;
 				}
@@ -39,8 +60,8 @@ public class LargestRectangle {
 		}
 		return maxArea;
 	}
-	
-	
+
+
 	/**
 	 * Unlike Solution1, when j is scanning the array,
 	 * we keep a variable h to record the lowest height
@@ -51,10 +72,10 @@ public class LargestRectangle {
 	public static int solution2(int[] height) {
 		int size = height.length;
 		int maxArea = 0;
-		
+
 		for (int i = 0; i < size; i++) {
 			int minH = height[i];
-			
+
 			// Use inner loop to get the lowest height of the rectangle formed by [i, j]
 			for (int j = i + 1; j <= size; j++) {
 				if (height[j - 1] < minH) {
@@ -68,11 +89,11 @@ public class LargestRectangle {
 		return maxArea;
 	}
 
-	
+
 	/**
 	 * Idea: enumerate the heights of the histogram first.
 	 * Then, for each height, scan left and right to find the
-	 * left boundary bar and the right boundary bar with 
+	 * left boundary bar and the right boundary bar with
 	 * heights less than it.
 	 * Calculate the area.
 	 * @param height
@@ -93,11 +114,11 @@ public class LargestRectangle {
         }
         return maxArea;
 	}
-	
-	
+
+
 	public static void main(String[] args) {
 		System.out.println("*** Welcome to Ben's Largest Rectangle in Histogram Test ***");
-		
+
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Input your integer array, \n" +
 				"leave each number by space: ");
@@ -106,9 +127,9 @@ public class LargestRectangle {
 		for (int i = 0; i < strs.length; i++) {
 			testArray[i] = Integer.parseInt(strs[i]);
 		}
-		
+
 		System.out.print("Give your Solution (1, 2, or 3): ");
-		
+
 		int method = sc.nextInt();
 		int result = 0;
 		switch (method) {
@@ -118,7 +139,7 @@ public class LargestRectangle {
 			case 2:
 				result = solution2(testArray);
 				break;
-			case 3:	
+			case 3:
 				result = solution3(testArray);
 				break;
 			default:

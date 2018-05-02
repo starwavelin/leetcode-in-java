@@ -37,7 +37,7 @@ public class SurroundedRegions {
 	*/
 
 	public static class DFSSol {
-    public void solve(char[][] board) {
+		public void solve(char[][] board) {
 			int m = board.length;
 			if (m == 0) {
 				return;
