@@ -8,10 +8,12 @@ import java.util.List;
  * UGNoe = UndirectedGraphNode
  */
 public class UGNode {
-	public int val;
+	
+	public int label;
 	public List<UGNode> neighbors;
-	public UGNode(int val) {
-		this.val = val;
+	
+	public UGNode(int label) {
+		this.label = label;
 		neighbors = new ArrayList<UGNode>();
 	}
 }

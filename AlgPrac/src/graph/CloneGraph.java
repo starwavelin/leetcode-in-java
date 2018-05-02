@@ -11,33 +11,33 @@ import utility.UGNode;
 * Problem Name: Clone Graph
 * Problem URL : https://leetcode.com/problems/clone-graph/description/
 * Date        : Jan 17 2018
-* Author	  	  :	Xian Lin
-* Notes       : 
-* 	Scenario: 
+* Author      :	Xian Lin
+* Notes       :
+* 	Scenario:
 * 		Clone a graph and return the entry node of the cloned graph.
 * 	Assumption:
-* 		
-	Example: 
+*
+	Example:
 * 	Input:
 * 		1--2
 * 		|  |
-* 		3--4	 
-* 	Output: 
+* 		3--4
+* 	Output:
 * 		1'--2'
 * 		|  |
 * 		3'--4'
 * 	should return 1'
-* 		
+*
 * 	Data Structure and Alg:
-* 		See Code Comments  
-* Complexity  : 
+* 		See Code Comments
+* Complexity  :
 * 	Time Complexity: O() -- See Code Comments
 * 	Space Complexity: O() -- See Code Comments
-* 
+*
 * meta        : tag-graph, tag-bfs, tag-dfs
-* 
+*
 * Think: How to unit test Clone Graph?
-* 	Some research: 
+* 	Some research:
 * 	1. https://stackoverflow.com/questions/43538038/how-to-junit-test-my-cloning-method
 ***************************************************************************/
 public class CloneGraph {
@@ -51,7 +51,7 @@ public class CloneGraph {
 		}
 		private UGNode bfs(UGNode node) {
 			Map<UGNode, UGNode> map = new HashMap<>();
-			map.put(node, new UGNode(node.val));
+			map.put(node, new UGNode(node.label));
 			Queue<UGNode> q = new ArrayDeque<>();
 			q.offer(node);
 			while (!q.isEmpty()) {
@@ -59,7 +59,7 @@ public class CloneGraph {
 				for(UGNode nei: cur.neighbors) {
 					UGNode newNei = map.get(nei);
 					if (newNei == null) {
-						map.put(nei, new UGNode(nei.val));
+						map.put(nei, new UGNode(nei.label));
 						q.offer(nei);
 					}
 					map.get(cur).neighbors.add(map.get(nei));
@@ -68,7 +68,7 @@ public class CloneGraph {
 			return map.get(node);
 		}
 	}
-	
+
 	public static class DFSSol {
 		public UGNode clone(UGNode node) {
 			if (node == null) {
@@ -78,7 +78,7 @@ public class CloneGraph {
 			return dfs(node, map);
 		}
 		private UGNode dfs(UGNode node, Map<UGNode, UGNode> map) {
-			map.put(node, new UGNode(node.val));
+			map.put(node, new UGNode(node.label));
 			for (UGNode nei : node.neighbors) {
 				UGNode newNei = map.get(nei);
 				if (newNei == null) {
@@ -89,7 +89,7 @@ public class CloneGraph {
 			return map.get(node);
 		}
 	}
-	
+
 	public static void main(String[] args) {
 		/* Construct the original graph */
 		UGNode one = new UGNode(1);
@@ -106,9 +106,9 @@ public class CloneGraph {
 		four.neighbors.add(three);
 
 		BFSSol bfsSol = new BFSSol();
-		System.out.println("Entry point of cloned graph: " + bfsSol.clone(one).val); //1
-	
+		System.out.println("Entry point of cloned graph: " + bfsSol.clone(one).label); //1
+
 		DFSSol dfsSol = new DFSSol();
-		System.out.println("Entry point of cloned graph: " + dfsSol.clone(one).val); //1
+		System.out.println("Entry point of cloned graph: " + dfsSol.clone(one).label); //1
 	}
 }
