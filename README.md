@@ -758,7 +758,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 6	  | ZigZag Conversion	| Easy || |
 | 5	  | Longest Palindromic Substring	| Medium || |
 | 4	  | [Median of Two Sorted Arrays](AlgPrac/src/binarySearch/MedianSortedArray.java)	| Hard | Sort, Merge Sort, Binary Search | [讲解1](https://youtu.be/raYYmEwyJ0o), |
-| 3   | [Longest Substring Without Repeating Characters](AlgPrac/src/string/LongestSubstringWithoutRepeatingCharacters.java) | Medium |  | |
+| 3   | [Longest Substring Without Repeating Characters](AlgPrac/src/string/LongestSubstringWithoutRepeatingCharacters.java) | Medium | String, Hash, Two Pointers | |
 | 2   | Add Two Numbers | Medium |  | |
 | 1   | [Two Sum](AlgPrac/src/array/TwoSum.java)  | Medium |  | |
 

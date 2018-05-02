@@ -4,7 +4,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 /***************************************************************************
 * Problem No. :
-* Problem Name: Max Stack
+* Problem Name: Max Stack (self created)
 * Problem URL :
 * Date        : Oct 14 2017
 * Author      :	Xian Lin
