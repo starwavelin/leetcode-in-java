@@ -30,11 +30,11 @@ import java.util.Queue;
 ***************************************************************************/
 public class SurroundedRegions {
 	/**
-	 * 思路：思路同200. Number of Islands 是用染色法。只是这题要求OOO部分完全被X包围才算全部染为X。
-	 * 假如OOO部分有贴于二维数组边界的，如题中例子左下角的O，那么它就不能被染成X。
-	 *
-	 * 所以方法是扫两遍二维矩阵。第一遍先找到所有贴边的O，用DFS或BFS将与贴边的O相连的所有O都标为“A”。而后全局扫描，将所有的A还原成O，所有的O标为X.
-	 */
+	* 思路：思路同200. Number of Islands 是用染色法。只是这题要求OOO部分完全被X包围才算全部染为X。
+	* 假如OOO部分有贴于二维数组边界的，如题中例子左下角的O，那么它就不能被染成X。
+	*
+	* 所以方法是扫两遍二维矩阵。第一遍先找到所有贴边的O，用DFS或BFS将与贴边的O相连的所有O都标为“A”。而后全局扫描，将所有的A还原成O，所有的O标为X.
+	*/
 
 	public static class DFSSol {
     public void solve(char[][] board) {
