@@ -89,32 +89,30 @@ public class LargestRectangle {
 		return maxArea;
 	}
 
-
 	/**
-	 * Idea: enumerate the heights of the histogram first.
-	 * Then, for each height, scan left and right to find the
-	 * left boundary bar and the right boundary bar with
-	 * heights less than it.
-	 * Calculate the area.
-	 * @param height
-	 * @return
-	 */
+	* Idea: enumerate the heights of the histogram first.
+	* Then, for each height, scan left and right to find the
+	* left boundary bar and the right boundary bar with
+	* heights less than it.
+	* Calculate the area.
+	* @param height
+	* @return
+	*/
 	public static int solution3(int[] heights) {
 		if (heights == null || heights.length == 0) {
-            return 0;
-        }
-        int maxArea = 0;
-        Deque<Integer> stack = new ArrayDeque<>();
-        for (int i = 0; i <= heights.length; i++) {
-            int curH = (i == heights.length) ? 0 : heights[i];
-            while (!stack.isEmpty() && curH <= heights[stack.peekLast()]) {
-                maxArea = Math.max(maxArea, heights[stack.pollLast()] * (stack.isEmpty() ? i : i - stack.peekLast() - 1));
-            }
-            stack.offerLast(i);
-        }
-        return maxArea;
+			return 0;
+		}
+		int maxArea = 0;
+		Deque<Integer> stack = new ArrayDeque<>();
+		for (int i = 0; i <= heights.length; i++) {
+			int curH = (i == heights.length) ? 0 : heights[i];
+			while (!stack.isEmpty() && curH <= heights[stack.peekLast()]) {
+				maxArea = Math.max(maxArea, heights[stack.pollLast()] * (stack.isEmpty() ? i : i - stack.peekLast() - 1));
+			}
+			stack.offerLast(i);
+		}
+		return maxArea;
 	}
-
 
 	public static void main(String[] args) {
 		System.out.println("*** Welcome to Ben's Largest Rectangle in Histogram Test ***");
