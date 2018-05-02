@@ -15,7 +15,7 @@ public class PartitionList {
 		ListNode dummyRight = new ListNode(-1);
 		ListNode left = dummyLeft, right = dummyRight;
 		while (head != null) {
-			if (head.data < n) {
+			if (head.val < n) {
 				left.next = head;
 				left = left.next;
 			} else {

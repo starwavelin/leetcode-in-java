@@ -48,7 +48,7 @@ public class MergeKSortedLists {
 		}
 		
 		/* form the min heap */
-		Queue<ListNode> minHeap = new PriorityQueue<>(lists.length, (a, b) -> ( a.data - b.data ));
+		Queue<ListNode> minHeap = new PriorityQueue<>(lists.length, (a, b) -> ( a.val - b.val ));
 		for (int i = 0; i < lists.length; i++) {
 			if (lists[i] != null) {	//注意checking condition，一个list可能一开始就是null
 				minHeap.offer(lists[i]);

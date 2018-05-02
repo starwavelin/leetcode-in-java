@@ -59,9 +59,9 @@ public class RemoveDuplicatesII {
 		dummy.next = head;
 		head = dummy;
 		while (head.next != null && head.next.next != null) {
-			if (head.next.data == head.next.next.data) {
-				int dataToRemove = head.next.data;
-				while (head.next != null && head.next.data == dataToRemove) { /* Core: Rm all the same nodes */ 
+			if (head.next.val == head.next.next.val) {
+				int dataToRemove = head.next.val;
+				while (head.next != null && head.next.val == dataToRemove) { /* Core: Rm all the same nodes */ 
 					head.next = head.next.next;
 				}
 			} else {

@@ -45,7 +45,7 @@ public class IsPalindrome {
 	        ListNode pre = head;
 	        while (slow.next != null) {
 	            slow = slow.next;
-	            if (pre.data != slow.data)
+	            if (pre.val != slow.val)
 	                return false;
 	            pre = pre.next;
 	        }

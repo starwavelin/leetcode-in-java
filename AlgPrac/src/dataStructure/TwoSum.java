@@ -27,7 +27,7 @@ import java.util.Map;
 * meta        : tag-data-structure
 ***************************************************************************/
 
-public class TwoSumData {
+public class TwoSum {
 
 	private Map<Integer, Integer> hash;
 
@@ -63,7 +63,7 @@ public class TwoSumData {
 
 
 	public static void main(String[] args) {
-		TwoSumData tsd = new TwoSumData();
+		TwoSum tsd = new TwoSum(); //tsd = two sum data structure
 		tsd.add(1);
 		tsd.add(7);
 		tsd.add(7);

@@ -43,12 +43,12 @@ public class CopyList {
 			return null;
 		}
 		//Copy the first node first
-		ListNode newH = new ListNode(head.data);
+		ListNode newH = new ListNode(head.val);
 		ListNode cur = newH;
 		ListNode next;
 		//Copy the following nodes if exist //口诀：做nextNode,连cur与next,cur指next,移原指针。
 		while (head.next != null) {
-			next = new ListNode(head.next.data);
+			next = new ListNode(head.next.val);
 			cur.next = next;
 			cur = next;
 			head = head.next;
@@ -67,7 +67,7 @@ public class CopyList {
 		if (head == null) {
 			return null;
 		}
-		ListNode cur = new ListNode(head.data);
+		ListNode cur = new ListNode(head.val);
 		cur.next = copy2(head.next);
 		return cur;
 	}

@@ -44,7 +44,7 @@ public class RemoveDuplicatesFromSortedLinkedList {
 		}
 		ListNode node = head;
 		while (node.next != null) {
-			if (node.data == node.next.data) {
+			if (node.val == node.next.val) {
 				node.next = node.next.next;
 			} else {
 				node = node.next;
@@ -70,7 +70,7 @@ public class RemoveDuplicatesFromSortedLinkedList {
 		}
 		ListNode prev = head, cur = prev.next;
 		while (cur != null) {
-			if (prev.data == cur.data) {
+			if (prev.val == cur.val) {
 				cur = cur.next;
 			} else {
 				prev.next = cur; //delete repeated integer nodes.

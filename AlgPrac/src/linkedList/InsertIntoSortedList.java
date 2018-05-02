@@ -17,7 +17,7 @@ public class InsertIntoSortedList {
 		
 		// Case 2: non-empty list with only one element
 		if (head.next == null) {
-			if (node.data <= head.data) {
+			if (node.val <= head.val) {
 				node.next = head;
 				head = node;
 			} else {
@@ -27,24 +27,24 @@ public class InsertIntoSortedList {
 		}
 		
 		// Case 3: non-empty list with at least 2 elements already
-		if (node.data <= head.data) {
+		if (node.val <= head.val) {
 			node.next = head;
 			head = node;
 		} else {
 			ListNode p1 = head;
 			ListNode p2 = p1.next;
 			while (p2.next != null) {
-				if (node.data > p1.data && node.data <= p2.data) {
+				if (node.val > p1.val && node.val <= p2.val) {
 					p1.next = node; 
 					node.next = p2;
 				}
 				p1 = p1.next;
 				p2 = p1.next;
 			}
-			if (node.data > p1.data && node.data <= p2.data) {
+			if (node.val > p1.val && node.val <= p2.val) {
 				p1.next = node; 
 				node.next = p2;
-			} else if (node.data > p2.data) {
+			} else if (node.val > p2.val) {
 				p2.next = node;
 			}
 		}
