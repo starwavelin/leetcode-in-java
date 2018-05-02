@@ -66,7 +66,7 @@ public class LargestRectangle {
 
 
 	/**
-	 * Solution 2: AC	741ms
+	 * Solution 2: AC 741ms
 	 * Unlike Solution1, when j is scanning the array,
 	 * we keep a variable h to record the lowest height
 	 * in the [i, j] range.
