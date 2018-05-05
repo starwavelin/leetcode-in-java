@@ -18,11 +18,11 @@
   - [Bit Operation](#bit-operation)
   - [Math](#math)
 
-## Linear Solution Space
+# Linear Solution Space
 
-### Two Pointer solution
+## Two Pointer Method
 
-#### Merging Two Sorted Arrays Template
+### Merging Two Sorted Arrays Template
 Setting a new array of size m+n  
 ```java
 public int[] merge(int[] A, int[] B) {
@@ -43,7 +43,7 @@ public int[] merge(int[] A, int[] B) {
 三while loop模板。  
 Think: how does the template listed above relate to the merge function defined in merge sort?
 
-#### Reversing Word/Array Template
+### Reversing Word/Array Template
 reverse function using char[] as example  
 ```java
 public void reverse(char[] s, int start, int end) {
@@ -55,13 +55,13 @@ public void reverse(char[] s, int start, int end) {
 }
 ```
 
-### Stack Type
+## Stack Type
 
-### Hash Type
+## Hash Type
 
-### LinkedList Type
+## LinkedList Type
 
-#### Finding the Middle Node Templates
+### Finding the Middle Node Templates
 For a linked list with odd number of nodes, the middle node is the middle one; for a linked list with even nodes, we define the middle node to be the first one of the central two nodes.    
 Method: Fast slow pointers  
 ```java
@@ -78,8 +78,8 @@ public Node findMiddle(Node head) {
 }
 ```
 
-#### Reverse Linked List Templates
-##### Iterative Way
+### Reverse Linked List Templates
+#### Iterative Way
 ```java
 public Node reverse(Node head) {
 	Node prev = null, next = null;
@@ -93,9 +93,9 @@ public Node reverse(Node head) {
 }
 ```
 
-### String Input Type
+## String Input Type
 
-#### Longest Substring Template
+### Longest Substring Template
 ```java
 public int lengthOfLongestSubstring(String s) { /* could have another parameter for number of distinct chars */
 	// 1. Defensive Check over s
@@ -115,15 +115,15 @@ public int lengthOfLongestSubstring(String s) { /* could have another parameter 
 }
 ```
 
-### Array Input Type  
+## Array Input Type  
 
 [[↑] Back to top](#table-of-contents)
 
-## Binary Solution Space
+# Binary Solution Space
 
-### Binary Search
+## Binary Search
 
-#### Transformation between 2D and 1D Arrays
+### Transformation between 2D and 1D Arrays
 Disregarding whether the combined one-dimensional array is strictly increasing, the following formula can be used for any 2D, 1D array transformations.  
 *m*: the number of rows in 2D arrray;  
 *n*: the number of columns in 2D array;  
@@ -131,12 +131,12 @@ Disregarding whether the combined one-dimensional array is strictly increasing, 
 *index*: a number's index in the 1D array, starting from 0;  
 *row*: the row index of a number in 2D array, starting from 0;  
 *col*: the col index of a number in 2D array, starting from 0.  
-##### 2D to 1D transformation
+#### 2D to 1D transformation
 ```
 index = row * n + col % n  
 ```  
 (can also be written as ```index = row * n + col```)
-##### 1D to 2D transformation
+#### 1D to 2D transformation
 ```
 row = index / n
 ```  
@@ -144,7 +144,7 @@ row = index / n
 col = index % n
 ```
 
-#### Binary Search Template
+### Binary Search Template
 The following template with its transformations can be used to find the first, last or any position of a target number in a *Sorted* array.  
 The following template is for finding the first position the target number occurs in an array, with other options written in the code comments.  
 ```java
@@ -174,9 +174,9 @@ public int search(int[] nums, int target) {
 }
 ```
 
-### Binary Tree
+## Binary Tree
 
-#### BFS
+### BFS
 I directly use the binary tree level order traversal as a template
 ```java
 public List<List<Integer>> levelOrder(Node root) {
@@ -250,7 +250,7 @@ public String serialize(TreeNode root) {
 }
 ```
 
-#### DFS
+### DFS
 The binary tree's DFS template is basically about the 3 type of traverse: preorder, inorder and postorder.  
 The following code use pre-order traversal as an example:  
 ```java
@@ -266,7 +266,7 @@ public void traverse(Node root) {
 }
 ```
 
-#### Divide and Conquer
+### Divide and Conquer
 ```java
 public ReturnType f(Node root, List<E> res) {
 	//Base case: may be like below
@@ -287,7 +287,7 @@ One example is [Binary Tree Max Path Sum From Root](#binary-tree-max-path-sum-fr
 **Further**  
 Divide and Conquer methodology is like MapReduce, where map is "divide" and reduce is "conquer".
 
-#### Binary Tree Max Path Sum From Root
+### Binary Tree Max Path Sum From Root
 **Problem**  
 Given a binary tree, find the maximum path sum from its root. The path may end at any node, and contain at least one node in it.  
 Keep in mind, for this problem, a node may have negative, 0 or positive integer value.
@@ -315,11 +315,11 @@ Space Complexity: Recursion stack -- O(logn) if balanced tree and O(n) if linear
 
 [[↑] Back to top](#table-of-contents)
 
-## Sorting Algorithms
+# Sorting Algorithms
 
-### Comparison Sorting
+## Comparison Sorting
 
-#### Bubble Sort
+### Bubble Sort
 **What is Bubble Sort?** You can review from
 [here](http://blog.csdn.net/han_xiaoyang/article/details/12163251)
 and look for *五、冒泡排序*  
@@ -343,35 +343,180 @@ private void swap(int[] nums, int i, int j) {
 ```
 **Time Complexity** O(n^2)
 
-#### Selection Sort
+### Selection Sort
+**What is Selection Sort?** You can review from [here](http://blog.csdn.net/han_xiaoyang/article/details/12163251)
+and look for *四、选择排序*
+**口诀** 找最小数，与左互换。  
+**Code**
+```java
+public void sort(int[] nums) {
+	for (int i = 0; i < nums.length - 1; i++) {
+		int minIndex = i;
+		for (int j = i + 1; j < nums.length; j++) {
+			if (nums[j] < nums[minIndex]) {
+				minIndex = j;
+			}
+		}
+		if (minIndex != i) {
+			swap(nums, i, minIndex);
+		}
+	}
+}
+```
+**Notes**  
+Time Complexity:  
+Worst: O(n^2)  Average: O(n^2)  Best: O(n^2)  
+三者相同的原因：因为无论何种情况每次取min都要扫描余下的数，
+扫描```(n-1) + (n-2)... + 1 = n(n-1)/2``` 次
+
+### Insertion Sort
+**What is Insertion Sort?**  
+The first couple (worst case scenario only the first one) elements are already
+sorted, and we just find the next unsorted element, and find the right position
+for this element to be added in, and shift the elements that come after this
+element being inserted.  
+You can review from
+[here](http://blog.csdn.net/han_xiaoyang/article/details/12163251)
+and look for *一、插入排序*  
+**口诀** 局部有序，挪移插入。  
+**Code**
+```java
+public void sort(int[] nums) {
+	for (int i = 1; i < nums.length; i++) { /* starting from i=1 cuz i=0 is definitely sorted */
+		int j = i;
+		int cur = nums[j];
+		while (j > 0 && cur < nums[j-1]) { //挪移
+			nums[j] = nums[j-1];
+			j--;
+		}
+		nums[j] = cur; //插入
+	}
+}
+```
+注意：  
+1. 双指针法：移动着的j来实现挪移和插入  
+2. 要先把```nums[j]```用变量存起来，否则在挪移中，```nums[j]```被更新而没有事先存，
+就丧失了要插入的小的数
+  
+**Notes**  
+Time Complexity:  
+Worst: O(n^2)   
+Best: O(n) comparions and O(1) swap.  
+Best case O(n) will occur if the given numbers are already sorted in ascending
+order, then we only loop the nums and no insertions involved; or there is just
+one element needs to be inserted into front.    
+That said, Insertion Sort will be efficient if the given numbers are pretty
+much ordered.  
+
+### Merge Array Template
+This merge array template would be helpful for mergeSort.  
+You may also review LeetCode [88. Merge Sorted Array](https://github.com/starwavelin/AlgorithmPractice/blob/master/AlgPrac/src/array/MergeSortedArray.java#L122) as a reference.  
+
+```java
+public void merge(int[] nums1, int m, int[] nums2, int n) { /* m - length of nums1; n - length of nums2 */
+	int[] tmp = new int[m + n];
+	int i = 0, j = 0, k = 0;
+
+	/* 代码块 */
+	while (i < m && j < n) {
+		tmp[k++] = (nums1[i] < nums2[j]) ? nums1[i++] : nums2[j++];
+	}
+	while (i < m) {
+		tmp[k++] = nums1[i++];
+	}
+	while (j < n) {
+		tmp[k++] = nums2[j++];
+	}
+
+	for (i = 0; i < k; i++) {
+        nums1[i] = tmp[i];
+    }
+}
+```
+
+The ```merge``` part of mergeSort is to combine the arrays of elements from ```start``` to ```mid``` and from ```mid + 1``` to ```end```  
+Surely ```start```, ```mid``` and ```end``` are given from the mergeSort function, which means their values are valid.  
+And you can see we will have ```i <= m_index``` and ```j <= n_index``` then.  
+
+```java
+public void merge(int[] nums, int start, int mid, int end) {
+	int[] tmp = new int[nums.length];
+	int i = start, j = mid + 1, k = start;
+
+	while (i <= mid && j <= end) {
+		tmp[k++] = (nums[i] < nums[j]) ? nums[i++] : nums[j++];
+	}
+	while (i <= mid) {
+		tmp[k++] = nums[i++];
+	}
+	while (j <= end) {
+		tmp[k++] = nums[j++];
+	}
+
+	for (i = start; i < k; i++) { /* when copy to original array nums, i should start from `start` */
+		nums[i] = tmp[i];
+	}
+}
+```
+
+### Merge Sort
+```java
+public void mergeSort(int[] nums) {
+	sort(nums, 0, nums.length - 1);
+}
+
+private void sort(int[] nums, int start, int end) {
+	if (end <= start) {	// be careful of this exit condition!!!
+		return;
+	}
+	int mid = start + (end - start) / 2;
+	sort(nums, start, mid);
+	sort(nums, mid + 1, end);
+	merge(nums, start, mid, end);
+}
+
+private void merge(int[] nums, int start, int mid, int end) {
+	int[] tmp = new int[nums.length];
+	int i = start, j = mid + 1, k = start;
+
+	while (i <= mid && j <= end) {
+		tmp[k++] = (nums[i] < nums[j]) ? nums[i++] : nums[j++];
+			/* nums[i] < nums[j] is an instable version; <= gives a stable version */
+	}
+	while (i <= mid) {
+		tmp[k++] = nums[i++];
+	}
+	while (j <= end) {
+		tmp[k++] = nums[j++];
+	}
+	for (i = start; i < k; i++) {
+		nums[i] = tmp[i];
+	}
+}
+```
+
+### Partition Array Templates
+
+### Quick Sort
 
 
-#### Insertion Sort
-
-#### Merge Array Template
-
-#### Merge Sorted
-
-#### Partition Array Templates
-
-#### Quick Sort
-
-
-### Non-Comparison Sorting
+## Non-Comparison Sorting
 
 [[↑] Back to top](#table-of-contents)
 
-## Graph
+# Graph
 
-## Backtracking
+# Backtracking
 
-## Dynamic Programming
+# Dynamic Programming
 
-## Other Type Trees
+# Other Type Trees
 
-## Data Structure Design
+# Data Structure Design
 
-## Bit Operation
+# Bit Operation
+
+## Concepts
 
 ### Division by 2 or 2's Exponents
 Divison by 2 or 2's exponent can be expressed in right shift ">>".  
@@ -424,4 +569,4 @@ If we want it to be 1 in Java, we need ```Math.floorMod(-5, 3)```
 
 [[↑] Back to top](#table-of-contents)
 
-## Math
+# Math
