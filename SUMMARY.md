@@ -348,6 +348,14 @@ private void swap(int[] nums, int i, int j) {
 
 #### Insertion Sort
 
+#### Merge Array Template
+
+#### Merge Sorted
+
+#### Partition Array Templates
+
+#### Quick Sort
+
 
 ### Non-Comparison Sorting
 
@@ -364,5 +372,56 @@ private void swap(int[] nums, int i, int j) {
 ## Data Structure Design
 
 ## Bit Operation
+
+### Division by 2 or 2's Exponents
+Divison by 2 or 2's exponent can be expressed in right shift ">>".  
+ie. 6 / 2  === 6 >> 1  
+cuz (in binary) 6 is 110 and 110 right shift one bit becomes 11 and 11 in decimal is 3.  
+ie. 16 / 4 === 16 >> 2  which is 10000 >> 2 = 100  
+Note: when using bit operation to do calculation, writing comments will be good cuz bit operation is not easily readable.  
+```
+int i = 16 >> 2 // divide by 4
+```  
+
+### Biwise AND to help Mod (%), the operand after ```%``` must be ```2^n```
+In circuar array, when ```array[0]``` is filled and ```array[len-1]``` is empty and we append to head:  
+```
+(head - 1 + len) % len === (head - 1) & (len - 1)
+```  
+Using & is more efficient cuz % is still some division operations, and ```+ len``` still has a risk of overflow.  
+Similarly, ```(tail + 1) % len === (tail + 1) & (len - 1)```  
+And, ```&``` can only help when the operand after ```%``` is ```2^n```  
+```
+X mod 2^n = X & (2^n - 1)
+```  
+
+### How to avoid integer overflow?
+Try not to let the intermediate value exceed the result.  
+ie. ```int newCapacity = oldCapacity + oldCapacity >> 1```  in which ```oldCapacity >> 1``` is always less than ```newCapacity```
+
+### >> vs >>>
+'>>' means using the current leftmost digit to fill in the leftmost digit after right shift; '>>>' means using 0 to fill in the leftmost digit after a right shift.
+
+### 2's Complement | 补码
+|      | Unsigned | 1's Complement|2's Complememnt|
+| -----| ---------| --------------|---------------|
+| 000  | 0        | 0             | 0             |
+| 001  | 1        | 1             | 1             |
+| 010  | 2        | 2             | 2             |
+| 011  | 3        | 3             | 3             |
+| 100  | 4        | -0            | -4            |
+| 101  | 5        | -1            | -3            |
+| 110  | 6        | -2            | -2            |
+| 111  | 7        | -3            | -1            |
+
+### -5 % 3 = ? in Java and Python
+In Java, we got -2, Remainder.  
+In Python, we got 1, Modular.  
+Modular: -5 / 3 = roundFloor(-1.66) = -2  
+  -2 * 3 = -6  
+  -5 - (-6) = 1  
+If we want it to be 1 in Java, we need ```Math.floorMod(-5, 3)```
+
+[[↑] Back to top](#table-of-contents)
 
 ## Math
