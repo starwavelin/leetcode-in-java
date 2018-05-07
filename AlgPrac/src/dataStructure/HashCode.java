@@ -1,11 +1,21 @@
-package hash;
+package dataStructure;
 
-import java.math.BigInteger;
 import java.util.Scanner;
-
+/**
+ * 算法老师讲到的一些计算HashCode的方法。
+ * 注意：
+ * 1. hashCode(哈希码)是由一个对象经某种映射后，形成的数码，这个数码不是arrayIndex。
+ * 	arrayIndex = hashCode % arrySize <-- 这才是arrayIndex的由来，要由hashCode更进一步去 模 数组大小，
+ * 	或者业界用 亦或(XOR)的方法来得到arrayIndex
+ * 2. 以下实现了3种hashCode()函数，就是第1点中提到的“某种映射”过程。
+ *  这3种函数有个共同点，就是要去映射的对象已经被转置为了char[]
+ * 3. 研究如何设计这种映射函数，是数学家的事情 ---- 算法老师。 
+ * 4. 在Java中我们要得到hashCode,可以直接call key.hashCode()
+ * @author xianlin
+ */
 public class HashCode {
 	
-	private static final int HASH_SIZE = 1007;
+	private static final int HASH_SIZE = 1007; // Caution: Different from the concept of arraySize
 	
 	/**
 	 * hashCode1 method, where long is enough to solve the input char[]
@@ -18,7 +28,7 @@ public class HashCode {
 		int size = key.length;
 		long sum = 0;
 		for (int i = 0; i < size; i++) {
-			sum += key[i] * Math.pow(33, size-1-i);
+			sum += key[i] * Math.pow(33, size - 1 - i);
 		}
 		return (int) (sum % HASH_SIZE);
 	}
@@ -38,7 +48,7 @@ public class HashCode {
 		int size = key.length;
 		long sum = 0;
 		for (int i = 0; i < size; i++) {
-			sum += key[i] * Math.pow(33, size-1-i) % HASH_SIZE;
+			sum += key[i] * Math.pow(33, size - 1 - i) % HASH_SIZE;
 		}
 		return (int) (sum % HASH_SIZE);
 	}
@@ -54,7 +64,7 @@ public class HashCode {
 	public static int hashCode3(char[] key, int HASH_SIZE) {
 		int ret = 0;
 		int base = 1;
-		for (int i = key.length - 1; i >=0; i--) {
+		for (int i = key.length - 1; i >= 0; i--) {
 			ret += modMultiply(key[i], base, HASH_SIZE);
 			ret %= HASH_SIZE;
 			base = modMultiply(base, 33, HASH_SIZE);
@@ -81,5 +91,4 @@ public class HashCode {
 		int ret = hashCode3(key, HASH_SIZE);
 		System.out.print("Your input String " + s + " has hash code value " + ret);
 	}
-	
 }
