@@ -45,8 +45,8 @@ public class MyArrayList {
 	private boolean isFull() { return size == capacity; }
 	
 	private void growth() {
-		capacity = capacity + capacity >> 1;  // capacity * 1.5 and ensure int value no overflow
-		Arrays.copyOf(data, capacity);
+		capacity = capacity + (capacity >> 1);  // capacity * 1.5 and ensure int value no overflow
+		data = Arrays.copyOf(data, capacity);  //注意，一定要将copyOf之后的结果赋给 data array，要不然 data array就没有变化
 	}
 	
 	public int get(int index) {
@@ -83,4 +83,12 @@ public class MyArrayList {
 	}
 	
 	public int getSize() { return size; }
+	
+	public void display() {
+		System.out.print("The current array list is: ");
+		for (int i = 0; i < size; i++) {
+			System.out.print(data[i] + " ");
+		}
+		System.out.println();
+	}
 }
