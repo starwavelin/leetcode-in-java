@@ -1,7 +1,7 @@
 package string;
 /***************************************************************************
 * Problem No. : NLC 1
-* Problem Name: Longest Substring With Repeating Characters
+* Problem Name: Longest Uniform Substring
 * Problem URL : 
 * Date        : Jan 3 2017
 * Author      :	Xian Lin
@@ -23,7 +23,7 @@ package string;
 * 
 * meta        : tag-string, tag-two-pointers
 ***************************************************************************/
-public class LongestSubstringWithRepeatingCharacters {
+public class LongestUniformSubstring {
 
 	/**
 	 * Let's start with an easier problem. Let's say I just want you to find
@@ -34,7 +34,7 @@ public class LongestSubstringWithRepeatingCharacters {
 	 * when prev == cur, we increment curLen; when prev != cur, we reset curLen = 1;
 	 * when curLen > longestLen, we update longestLen = curLen.  
 	 */
-	public static class LongestUniformSubstring {
+	public static class EasierVersion {
 		public int getLength(String s) {
 			int longestLen = 0;
 			if (s == null || s.length() == 0) {
@@ -122,9 +122,38 @@ public class LongestSubstringWithRepeatingCharacters {
 		}
 	}
 	
+	/**
+	 * Best Solution:
+	 * 不需要记录curLen，直接利用双指针i,j 
+	 * (j-i)获得一个新长度跟记录的长度比对，如果大于记录的长度我们就更新记录的长度以及对应的index（就是i）
+	 * 
+	 * @author xianlin
+	 */
+	public static class Solution2 {
+		public int[] lus(String s) {
+			int index = -1, len = 0;
+			if (s == null || s.length() == 0) {
+				return new int[] {index, len};
+			}
+			int i = 0, j = 1;
+			while (i < s.length()) {
+				if (j == s.length() || s.charAt(j) != s.charAt(i)) {
+					if (j - i > len) {
+						len = j - i;
+						index = i;
+					}
+					i = j;
+				}
+				j++;
+			}
+			return new int[] {index, len};
+		}
+	}
+	
+	
 	public static void main(String[] args) {
 		/* The easier version of this problem */
-		LongestUniformSubstring lus = new LongestUniformSubstring();
+		EasierVersion lus = new EasierVersion();
 		System.out.println("Length of longest substring for an empty string is: " 
 				+ lus.getLength2("")); // 0
 		System.out.println("Length of longest substring for X is: " 
@@ -134,6 +163,7 @@ public class LongestSubstringWithRepeatingCharacters {
 		System.out.println("Length of longest substring for c9999999bdllllllllF is: " 
 				+ lus.getLength2("c9999999bdllllllllF")); 
 			// output: 8. There are seven 9's and eight l's. output is contributed by eight l's
+		System.out.println();
 		
 		
 		Solution sl = new Solution();
@@ -148,5 +178,20 @@ public class LongestSubstringWithRepeatingCharacters {
 				+ " longest length: " + sl.longestUniformSubstring("c9999999bdllllllllF")[1]);
 			// output: 10, 8. 
 			// There are seven 9's and eight l's. output is contributed by eight l's
+		System.out.println();
+		
+		Solution2 s2 = new Solution2();
+		System.out.println("an empty string, starting index: " + s2.lus("")[0]
+				+ " longest length: " + s2.lus("")[1]); // -1, 0
+		System.out.println("X, starting index: " + s2.lus("X")[0]
+				+ " longest length: " + s2.lus("X")[1]); // 0, 1
+		System.out.println("aaoooookkg, starting index: " + s2.lus("aaoooookkg")[0]
+				+ " longest length: " + s2.lus("aaoooookkg")[1]); // 2, 5
+		System.out.println("c9999999bdllllllllF, starting index: " 
+				+ s2.lus("c9999999bdllllllllF")[0]
+				+ " longest length: " + s2.lus("c9999999bdllllllllF")[1]);
+			// output: 10, 8. 
+			// There are seven 9's and eight l's. output is contributed by eight l's
+		
 	}
 }

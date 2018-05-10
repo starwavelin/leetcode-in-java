@@ -774,6 +774,6 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 4   | [Insertion Sort](AlgPrac/src/sorting/InsertionSort.java)  | Easy | Sort, Two Pointers| [讲解](https://www.youtube.com/watch?v=ys6-TlRqAo8) |
 | 3   | [Selection Sort](AlgPrac/src/sorting/SelectionSort.java)  | Easy | Sort, Two Pointers| [讲解](https://www.youtube.com/watch?v=TPA2FzUJRKM) |
 | 2   | [Bubble Sort](AlgPrac/src/sorting/BubbleSort.java)  | Easy | Sort, Two Pointers| [讲解](https://www.youtube.com/watch?v=kKLwS9jv8Yc) |
-| 1   | [Longest Uniform Substring](AlgPrac/src/string/LongestSubstringWithRepeatingCharacters.java)  | Medium | String, Two Pointers| [讲解](https://www.youtube.com/watch?v=U2LLrtePzhc) |
+| 1   | [Longest Uniform Substring](AlgPrac/src/string/LongestUniformSubstring.java)  | Medium | String, Two Pointers| [讲解](https://www.youtube.com/watch?v=U2LLrtePzhc) |
 
 [[↑] Back to top](#overview)
