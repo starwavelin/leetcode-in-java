@@ -3,7 +3,7 @@
 * Problem Name: Longest Uniform Substring
 * Problem URL :
 * Date        : Oct 2 2018
-* Author      :	Xian Lin
+* Author      : Xian Lin
 ***************/
 
 function lus(arr) {
