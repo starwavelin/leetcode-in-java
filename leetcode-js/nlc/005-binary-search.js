@@ -10,7 +10,7 @@ function binarySearch1stIndex(arr, target) {
   let start = 0, end = arr.length - 1;
   let mid;
   while (start + 1 < end) {
-    mid = start + (end - start) / 2;
+    mid = start + Math.floor((end - start) / 2);
     if (arr[mid] > target) {
       end = mid;
     } else if (arr[mid] < target) {
@@ -31,7 +31,7 @@ function binarySearchLastIndex(arr, target) {
   let start = 0, end = arr.length - 1;
   let mid;
   while (start + 1 < end) {
-    mid = start + (end - start) / 2;
+    mid = start + Math.floor((end - start) / 2);
     if (arr[mid] > target) {
       end = mid;
     } else if (arr[mid] < target) {
@@ -52,7 +52,7 @@ function binarySearchAnyIndex(arr, target) {
   let start = 0, end = arr.length - 1;
   let mid;
   while (start + 1 < end) {
-    mid = start + (end - start) / 2;
+    mid = start + Math.floor((end - start) / 2);
     if (arr[mid] === target) {
       return mid;
     } else if (arr[mid] < target) {
