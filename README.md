@@ -757,7 +757,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 7	  | Reverse Integer	| Easy || |
 | 6	  | ZigZag Conversion	| Easy || |
 | 5	  | Longest Palindromic Substring	| Medium || |
-| 4	  | [Median of Two Sorted Arrays](AlgPrac/src/binarySearch/MedianSortedArray.java)	| Hard | Sort, Merge Sort, Binary Search | [讲解1](https://youtu.be/raYYmEwyJ0o), |
+| 4	  | [Median of Two Sorted Arrays](AlgPrac/src/binarySearch/MedianSortedArray.java)	| Hard | Sort, Merge Sort, Binary Search | [讲解1](https://youtu.be/raYYmEwyJ0o), [JS 解](leetcode-js/004-median-of-two-sorted-arrays.js)|
 | 3   | [Longest Substring Without Repeating Characters](AlgPrac/src/string/LongestSubstringWithoutRepeatingCharacters.java) | Medium | String, Hash, Two Pointers | |
 | 2   | Add Two Numbers | Medium |  | |
 | 1   | [Two Sum](AlgPrac/src/array/TwoSum.java)  | Medium |  | |
@@ -769,11 +769,11 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | ----|-----------|-------------|-------|--------|
 |S 716| [Max Stack](AlgPrac/src/stack/MaxStack2.java) | Medium | Stack, Data Structure| |
 |S 136| [Single Number](https://github.com/starwavelin/JavaPrac/blob/master/IKM/src/demo/SSingleNumber.java) | Easy | Hash, Sort| [讲解](https://youtu.be/4SrfltpNxr8) |
-| 6   | [Binary Search (Recursion Solution)](AlgPrac/src/binarySearch/BinarySearchIII.java) | Easy | Binary Search| [讲解](https://youtu.be/U3zw4T6Anjs) [JS 解](leetcode-js/nlc/006-binary-search-recursive.js)|
-| 5   | [Binary Search](AlgPrac/src/binarySearch/BinarySearch.java) | Easy | Binary Search| [讲解](https://www.youtube.com/watch?v=J0NTXwqIO4U) [JS 解](leetcode-js/nlc/005-binary-search.js)|
-| 4   | [Insertion Sort](AlgPrac/src/sorting/InsertionSort.java)  | Easy | Sort, Two Pointers| [讲解](https://www.youtube.com/watch?v=ys6-TlRqAo8) [JS 解](leetcode-js/nlc/004-insertion-sort.js)|
-| 3   | [Selection Sort](AlgPrac/src/sorting/SelectionSort.java)  | Easy | Sort, Two Pointers| [讲解](https://www.youtube.com/watch?v=TPA2FzUJRKM) [JS 解](leetcode-js/nlc/003-selection-sort.js)|
-| 2   | [Bubble Sort](AlgPrac/src/sorting/BubbleSort.java)  | Easy | Sort, Two Pointers| [讲解](https://www.youtube.com/watch?v=kKLwS9jv8Yc) [JS 解](leetcode-js/nlc/002-bubble-sort.js)|
-| 1   | [Longest Uniform Substring](AlgPrac/src/string/LongestUniformSubstring.java) | Medium | String, Two Pointers| [讲解](https://www.youtube.com/watch?v=U2LLrtePzhc) [JS 解](leetcode-js/nlc/001-longest-uniform-substring.js)|
+| 6   | [Binary Search (Recursion Solution)](AlgPrac/src/binarySearch/BinarySearchIII.java) | Easy | Binary Search| [讲解](https://youtu.be/U3zw4T6Anjs), [JS 解](leetcode-js/nlc/006-binary-search-recursive.js)|
+| 5   | [Binary Search](AlgPrac/src/binarySearch/BinarySearch.java) | Easy | Binary Search| [讲解](https://www.youtube.com/watch?v=J0NTXwqIO4U), [JS 解](leetcode-js/nlc/005-binary-search.js)|
+| 4   | [Insertion Sort](AlgPrac/src/sorting/InsertionSort.java)  | Easy | Sort, Two Pointers| [讲解](https://www.youtube.com/watch?v=ys6-TlRqAo8), [JS 解](leetcode-js/nlc/004-insertion-sort.js)|
+| 3   | [Selection Sort](AlgPrac/src/sorting/SelectionSort.java)  | Easy | Sort, Two Pointers| [讲解](https://www.youtube.com/watch?v=TPA2FzUJRKM), [JS 解](leetcode-js/nlc/003-selection-sort.js)|
+| 2   | [Bubble Sort](AlgPrac/src/sorting/BubbleSort.java)  | Easy | Sort, Two Pointers| [讲解](https://www.youtube.com/watch?v=kKLwS9jv8Yc), [JS 解](leetcode-js/nlc/002-bubble-sort.js)|
+| 1   | [Longest Uniform Substring](AlgPrac/src/string/LongestUniformSubstring.java) | Medium | String, Two Pointers| [讲解](https://www.youtube.com/watch?v=U2LLrtePzhc), [JS 解](leetcode-js/nlc/001-longest-uniform-substring.js)|
 
 [[↑] Back to top](#overview)
