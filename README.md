@@ -494,7 +494,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 263	| Ugly Number | Easy | | |
 | 262	| Trips and Users * | Hard | | |
 | 261	| Graph Valid Tree $ | Medium | | |
-| 260	| [Single Number III](AlgPrac/src/bitwise/SingleNumberIII.java) | Medium | | |
+| 260	| [Single Number III](AlgPrac/src/bitwise/SingleNumberIII.java) | Medium | Bit | [讲解](https://youtu.be/kOMJAZ0t_F4) |
 | 259	| [3Sum Smaller](AlgPrac/src/array/ThreeSumSmaller.java) $ | Medium | | |
 | 258	| Add Digits | Easy | | |
 | 257	| Binary Tree Paths | Easy | | |
@@ -624,8 +624,8 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 140	| Word Break II |	Hard | | |
 | 139	| Word Break |	Medium | | |
 | 138	| Copy List with Random Pointer |	Hard | | |
-| 137	| [Single Number II](AlgPrac/src/bitwise/SingleNumberII.java) |	Medium | | |
-| 136	| [Single Number](AlgPrac/src/bitwise/SingleNumberI.java) |	Medium | | |
+| 137	| [Single Number II](AlgPrac/src/bitwise/SingleNumberII.java) |	Medium | Bit | [讲解](https://youtu.be/puXcQpwgcD0) |
+| 136	| [Single Number](AlgPrac/src/bitwise/SingleNumberI.java) |	Medium | Bit, Hash | [讲解](https://youtu.be/7xU7g04FJHw) |
 | 135	| Candy |	Hard | | |
 | 134	| Gas Station |	Medium | | |
 | 133	| [Clone Graph](AlgPrac/src/graph/CloneGraph.java) |	Medium | | |
