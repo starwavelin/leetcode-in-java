@@ -673,7 +673,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 91	| [Decode Ways](AlgPrac/src/dp/DecodeWays.java) |	Medium | | |
 | 90	| Subsets II |	Medium | | |
 | 89	| Gray Code |	Medium | | |
-| 88	| [Merge Sorted Array](AlgPrac/src/sortedArray/MergeTwoSortedArray.java) |	Easy | | |
+| 88	| [Merge Sorted Array](AlgPrac/src/sortedArray/MergeTwoSortedArray.java) | Easy | Array | [讲解](https://youtu.be/eCtTFp6k8Ls) |
 | 87	| Scramble String |	Hard | | |
 | 86	| [Partition List](AlgPrac/src/linkedList/PartitionList.java) |	Medium | | |
 | 85	| Maximal Rectangle |	Hard | | |
