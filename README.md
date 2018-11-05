@@ -575,7 +575,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 189	| [Rotate Array](AlgPrac/src/array/RotateArray.java) |	Easy | | |
 | 188	| Best Time to Buy and Sell Stock IV |	Hard | | |
 | 187	| Repeated DNA Sequences |	Medium | | |
-| 186	| [Reverse Words in a String II](AlgPrac/src/string/ReverseWords.java) $ |	Medium | | |
+| 186	| [Reverse Words in a String II](AlgPrac/src/string/ReverseWords.java) $ |	Medium | | [讲解](https://youtu.be/bSf8iwxYSgo) |
 | 185	| Department Top Three Salaries * |	Hard | | |
 | 184	| Department Highest Salary * |	Medium | | |
 | 183	| Customers Who Never Order * |	Easy | | |
@@ -610,7 +610,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 154	| [Find Minimum in Rotated Sorted Array II](AlgPrac/src/binarySearch/SearchMinRotatedArray.java) |	Hard | | |
 | 153	| [Find Minimum in Rotated Sorted Array](AlgPrac/src/binarySearch/SearchMinRotatedArrayII.java) |	Medium | | |
 | 152	| Maximum Product Subarray |	Medium | | |
-| 151	| [Reverse Words in a String](AlgPrac/src/string/ReverseWords.java) |	Medium | | |
+| 151	| [Reverse Words in a String](AlgPrac/src/string/ReverseWords.java) |	Medium | | [讲解](https://youtu.be/54uU5Zhzorw) |
 | 150	| Evaluate Reverse Polish Notation |	Medium | | |
 | 149	| Max Points on a Line |	Hard | | |
 | 148	| [Sort List](AlgPrac/src/linkedList/SortList.java) |	Medium | | |
