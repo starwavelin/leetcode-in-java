@@ -594,7 +594,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 170	| [Two Sum III - Data structure design](AlgPrac/src/dataStructure/TwoSumData.java) $ |	Easy | | |
 | 169	| [Majority Element](AlgPrac/src/math/MajorityNumberI.java) |	Easy | | |
 | 168	| Excel Sheet Column Title |	Easy | | |
-| 167	| Two Sum II - Input array is sorted $ |	Medium | | |
+| 167	| Two Sum II - Input array is sorted $ |	Medium | | [Video](https://youtu.be/SGaWWnFSV-0)|
 | 166	| Fraction to Recurring Decimal |	Medium | | |
 | 165	| Compare Version Numbers |	Easy | | |
 | 164	| Maximum Gap |	Hard | | |
