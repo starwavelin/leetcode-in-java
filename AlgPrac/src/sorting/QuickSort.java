@@ -3,75 +3,63 @@ package sorting;
 import java.util.Scanner;
 
 /**
- * This is my QuickSort Version One using pivot as the middle element of the input array
+ * This is my QuickSort Version One.
+ * The index of pivot (abbreviated as variable "pivot") is defined within the partition function.
+ * The pivot is always the leftmost element in a partitioned array.
  */
 public class QuickSort {
 
-	public static void quickSort(int[] nums) {
+	public static void sort(int[] nums) {
 		// check for empty or null array
 		if (nums == null || nums.length <= 1) {
 			return;
 		}
-		sort(nums, 0, nums.length - 1);
+		quickSort(nums, 0, nums.length - 1);
 	}
 
-	private static void sort(int[] nums, int low, int high) {
-		if (high <= low) {
+	private static void quickSort(int[] nums, int left, int right) {
+		if (left > right) {
 			return;
 		}
-		// Get the pivot element from the middle of the list
-		int pivot = nums[low + (high - low) / 2];
-		int pivotIndex = partition(nums, low, high, pivot);
-		// Recursion
-		sort(nums, low, pivotIndex -1);
-		sort(nums, pivotIndex + 1, high);
-	}
-
-	private static int partition(int[] nums, int low, int high, int pivot) {
-		int i = low, j = high;
 		
-		// Divide into two lists
-		while (i <= j) {
-			// If the current value from the left list is smaller than the
-			// pivot element, then get the next element from the left list
-			while (nums[i] < pivot) { //if change to <=, stackoverflow, why?
-				i++;
-			}
-			// If the current value from the right list is larger than the
-			// pivot element, then get the next element from the right list
-			while (nums[j] > pivot) {
-				j--;
-			}
-
-			// If we have found a value in the left list larger
-			// than or equal the pivot element and if we have found a value in the right
-			// list smaller than the pivot element,
-			// then we exchange the two values.
-			// As we are done we can increase i and j
-			if (i <= j) {  // from <= to <, infinity loop
-				int temp = nums[i];
-				nums[i] = nums[j];
-				nums[j] = temp;
-				i++;
-				j--;
-			}
-		}
-		return i;
+		int partitionIndex = partition(nums, left, right);
+		
+		// Recursion
+		quickSort(nums, left, partitionIndex -1);
+		quickSort(nums, partitionIndex + 1, right);
 	}
+
+	private static int partition(int[] nums, int left, int right) {
+		int pivot = left;
+		int i = pivot + 1; // slow pointer i, the fast pointer will be the j below
+		for (int j = i; j <= right; j++) {
+            if (nums[j] < nums[pivot]) {
+                swap(nums, j, i);
+                i++;
+            }
+        }
+        swap(nums, pivot, i - 1);
+		return i - 1;
+	}
+	
+	private static void swap(int[] nums, int i, int j) {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+    }
 
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Quick Sort One (pivot as middle element) Test ***");
+		System.out.println("*** Welcome to Coding Bro's Quick Sort One (pivot as leftmost element) Test ***");
 
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Input your integer array, \n"
-				+ "leave each number by space: ");
+		System.out.print("Input your integer array,\n leave each number by space: ");
 		String[] strs = sc.nextLine().split(" ");
 		int[] testArr = new int[strs.length];
 		for (int i = 0; i < strs.length; i++) {
 			testArr[i] = Integer.parseInt(strs[i]);
 		}
 
-		quickSort(testArr);
+		sort(testArr);
 		displayResult(testArr);
 	}
 

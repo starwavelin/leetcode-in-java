@@ -5,7 +5,7 @@ import java.util.Scanner;
  * This is my QuickSort version II using the last element of the input array as
  * the pivot
  */
-public class QuickSortII {
+public class QuickSortVI {
 	
 	public static void quickSort(int[] nums) {
 		// check for empty or null array
@@ -49,11 +49,10 @@ public class QuickSortII {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Quick Sort II Test ***");
+		System.out.println("*** Welcome to Coding Bro's Quick Sort VI Test ***");
 
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Input your integer array, \n"
-				+ "leave each number by space: ");
+		System.out.print("Input your integer array, \nleave each number by space: ");
 		String[] strs = sc.nextLine().split(" ");
 		int[] testArr = new int[strs.length];
 		for (int i = 0; i < strs.length; i++) {
