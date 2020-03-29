@@ -24,7 +24,7 @@ import java.util.Set;
 * 	Time Complexity: O() -- See Code Comments
 * 	Space Complexity: O() -- See Code Comments
 *
-* meta        : tag-bitwise
+* meta        : tag-bit
 ***************************************************************************/
 public class MaxXORFromTwoNums {
 	/*

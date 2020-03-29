@@ -25,7 +25,7 @@ import java.util.List;
 * 	Time Complexity: O() -- See Code Comments
 * 	Space Complexity: O() -- See Code Comments
 *
-* meta        : tag-backtracking
+* meta        : tag-combinatorics
 ***************************************************************************/
 public class Subsets {
 
