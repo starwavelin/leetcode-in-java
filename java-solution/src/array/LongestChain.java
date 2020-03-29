@@ -27,7 +27,7 @@ public class LongestChain {
 			 */
 			Map<String, Integer> map = new HashMap<>();
 			
-			for (String word :words) {
+			for (String word: words) {
 				if (map.containsKey(word)) {
 					continue;
 				}

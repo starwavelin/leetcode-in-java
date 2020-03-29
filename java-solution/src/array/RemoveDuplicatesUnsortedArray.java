@@ -17,6 +17,8 @@ import java.util.Scanner;
  *
  */
 public class RemoveDuplicatesUnsortedArray {
+	private static Scanner sc;
+
 	/**
 	 * Solution 1: Naive O(n^2)
 	 * This method has a bug:
@@ -75,12 +77,10 @@ public class RemoveDuplicatesUnsortedArray {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's "
-				+ " Remove Duplicates from an Unsorted Array Test ***");
+		System.out.println("*** Welcome to Coding Bro's Remove Duplicates from an Unsorted Array Test ***");
 		
-		Scanner sc = new Scanner(System.in);
-		System.out.print("Input your integer Unsorted array, \n" +
-				"leave each number by space: ");
+		sc = new Scanner(System.in);
+		System.out.print("Input your integer Unsorted array, leaving each number by space: ");
 		String[] strs = sc.nextLine().split(" ");
 		int[] testArray = new int[strs.length];
 		for (int i = 0; i < strs.length; i++) {

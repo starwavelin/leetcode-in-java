@@ -149,9 +149,9 @@ public class MissingRanges {
 	}
 
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Xian's Missing Ranges Test ***");
+		System.out.println("*** Welcome to Coding Bro's Missing Ranges Test ***");
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Input your integer sorted array, leave each number by space: ");
+		System.out.print("Input your integer sorted array, leaving each number by space: ");
 		String[] strs = sc.nextLine().split(" ");
 		int[] testArray = new int[strs.length];
 		for (int i = 0; i < strs.length; i++) {

@@ -1,4 +1,4 @@
-package bitwise;
+package bit;
 
 public class BitwiseExample {
 

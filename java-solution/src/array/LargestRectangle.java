@@ -120,11 +120,10 @@ public class LargestRectangle {
 	}
 
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Largest Rectangle in Histogram Test ***");
+		System.out.println("*** Welcome to Coding Bro's Largest Rectangle in Histogram Test ***");
 
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Input your integer array, \n" +
-				"leave each number by space: ");
+		System.out.print("Input your integer array, leaving each number by space: ");
 		String[] strs = sc.nextLine().split(" ");
 		int[] testArray = new int[strs.length];
 		for (int i = 0; i < strs.length; i++) {

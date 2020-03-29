@@ -1,4 +1,4 @@
-package backtracking;
+package combinatorics;
 
 import java.util.LinkedList;
 import java.util.List;

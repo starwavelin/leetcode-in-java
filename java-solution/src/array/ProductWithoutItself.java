@@ -55,10 +55,10 @@ public class ProductWithoutItself {
 	}
 
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Xian's Product Without Itself Test ***");
+		System.out.println("*** Welcome to Coding Bro's Product Without Itself Test ***");
 
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Input your integer array, \nleave each number by space: ");
+		System.out.print("Input your integer array, leaving each number by space: ");
 		String[] strs = sc.nextLine().split(" ");
 		int[] testArray = new int[strs.length];
 		for (int i = 0; i < strs.length; i++) {
