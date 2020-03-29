@@ -90,7 +90,7 @@ public class Anagram {
 
 
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Anagram Test ***");
+		System.out.println("*** Welcome to Coding Bro's Anagram Test ***");
 
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Input a string please: ");
