@@ -33,7 +33,7 @@ public class GroupAnagrams {
 	public static class Sol {
 		public List<List<String>> groupAnagrams(String[] strs) {
 	        if (strs == null || strs.length == 0) {
-	            return new ArrayList<List<String>>();
+	            return new ArrayList<>();
 	        }
 	        List<List<String>> res = new ArrayList<>();
 	        Map<String, List<String>> map = new HashMap<>();
@@ -41,6 +41,8 @@ public class GroupAnagrams {
 	            char[] tmp = word.toCharArray();
 	            Arrays.sort(tmp);
 	            String key = String.valueOf(tmp);
+//	            String key = tmp.toString();
+	            System.out.println("key is: " + key);
 	            
 	            map.putIfAbsent(key, new ArrayList<String>());
 	            map.get(key).add(word);
