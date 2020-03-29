@@ -1,40 +1,38 @@
 ### Overview
-This is a repo containing my practice of algorithm problems drawn from [LeetCode](https://leetcode.com/problemset/all/) with my Java solution in [AlgPrac](https://github.com/starwavelin/AlgorithmPractice/tree/master/AlgPrac) project.  
-* [Summary](SUMMARY.md): Summary of how to review algorithm problems
-* LeetCode Problem List [:pencil2:](#leetcode-problem-list)  
-* Non-LeetCode Problem List [:sweat_drops:](#non-leetcode-problem-list)
+This is a repo containing my practice of algorithm problems drawn from [LeetCode](https://leetcode.com/problemset/all/) with my Java solution in [java-solution](https://github.com/starwavelin/leetcode-in-java/tree/master/java-solution) project.  
+ * [Summary](SUMMARY.md): Summary of how to review algorithm problems
+ * LeetCode Problem List [:pencil2:](#leetcode-problem-list)  
+ * Non-LeetCode Problem List [:sweat_drops:](#non-leetcode-problem-list)
 
 ### Searching in this Repository
-I have enabled searching by tag by adding meta to each source file. During search you may append `tag-` as prefix of the tag string.
-For example, to search on problems on arrays: you navigate to [this repo url](https://github.com/starwavelin/AlgorithmPractice) and enter following on search box: `tag-array`
+I have enabled searching by tag by adding meta to each source file. During search you may append `tag-` as prefix of the tag string. For example, to search on problems on arrays: you navigate to [this repo url](https://github.com/starwavelin/leetcode-in-java) and enter following on search box: `tag-array`
 
 Supported list of problem categories for searching,
- * [Backtracking](https://github.com/starwavelin/AlgorithmPractice/search?utf8=%E2%9C%93&q=tag-backtracking): Backtracking/Permutation/Combination problems
-
-* [Array](../../search?utf8=✓&q=tag-array)
-* [String](../../search?utf8=✓&q=tag-string)
-* [Two Pointers](../../search?utf8=✓&q=tag-two-pointers)
-* [Interval](./)
-* [Sorting](../../search?utf8=✓&q=tag-sort)
-* [Linked List](../../search?utf8=✓&q=tag-linked-list)
-* [Hash](../../search?utf8=✓&q=tag-hash)
-* [Stack](../../search?utf8=✓&q=tag-stack)
-* [Queue](./)
-* [Binary Search](../../search?utf8=✓&q=tag-binary-search)
-* [Binary Tree](../../search?utf8=✓&q=tag-binary-tree)
+ * [Array](../../search?utf8=✓&q=tag-array)
+ * [String](../../search?utf8=✓&q=tag-string)
+ * [Two Pointers](../../search?utf8=✓&q=tag-two-pointers)
+ * [Interval](./)
+ * [Sorting](../../search?utf8=✓&q=tag-sort)
+ * [Linked List](../../search?utf8=✓&q=tag-linked-list)
+ * [Hash](../../search?utf8=✓&q=tag-hash)
+ * [Stack](../../search?utf8=✓&q=tag-stack)
+ * [Queue](./)
+ * [Binary Search](../../search?utf8=✓&q=tag-binary-search)
+ * [Binary Tree](../../search?utf8=✓&q=tag-binary-tree)
   * [Binary Search Tree](../../search?utf8=✓&q==tag-binary-search-tree)
   * [Divide and Conquer](../../search?utf8=✓&q==tag-divide-and-conquer)
-* [Advanced Tree](./)
-* [Graph](../../search?utf8=✓&q=tag-graph)
-* [Combinatorics](../../search?utf8=✓&q=tag-combinatorics)
-* [Dynamic Programming](../../search?utf8=✓&q=tag-dp)
-* [Bit](../../search?utf8=✓&q=tag-bit)
-* [Math](../../search?utf8=✓&q=tag-math)
-* [Data Structure Design](../../search?utf8=✓&q=tag-data-structure)
+ * [Advanced Tree](./)
+ * [Graph](../../search?utf8=✓&q=tag-graph)
+ * [Combinatorics](../../search?utf8=✓&q=tag-combinatorics)
+ * [Dynamic Programming](../../search?utf8=✓&q=tag-dp)
+ * [Bit](../../search?utf8=✓&q=tag-bit)
+ * [Math](../../search?utf8=✓&q=tag-math)
+ * [Data Structure Design](../../search?utf8=✓&q=tag-data-structure)
 
 Company based categories,
-* [Google](../../search?utf8=✓&q=tag-google)
-* [Bloomberg](../../search?utf8=✓&q=tag-bloomberg)
+ * [Google](../../search?utf8=✓&q=tag-google)
+ * [Facebook](../../search?utf8=✓&q=tag-fb)
+ * [Bloomberg](../../search?utf8=✓&q=tag-bloomberg)
 
 ### LeetCode Problem List
 Note: $ means paid-to-view problems; \* means SQL problems; \# means bash problems;
