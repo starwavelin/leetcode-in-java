@@ -372,7 +372,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 386	| Lexicographical Numbers | Medium | | |
 | 385	| Mini Parser | Medium | | |
 | 384	| Shuffle an Array | Medium | | |
-| 383	| [Ransom Note](java-solution/src/string/RansomNote.java) | Easy  | | |
+| 383	| [Ransom Note](java-solution/src/hash/RansomNote.java) | Easy  | | |
 | 382	| Linked List Random Node | Medium | | |
 | 381	| Insert Delete GetRandom O(1) - Duplicates allowed | Hard | | |
 | 380	| Insert Delete GetRandom O(1) | Medium | | |
