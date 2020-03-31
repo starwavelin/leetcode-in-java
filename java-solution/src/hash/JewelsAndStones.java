@@ -30,43 +30,43 @@ import java.util.Set;
 
 public class JewelsAndStones {
 
-		class Solution1 {
-      	public int numJewelsInStones(String J, String S) {
-		        if (J.length() == 0) {
-		            return 0;
-		        }
+	class Solution1 {
+		public int numJewelsInStones(String J, String S) {
+			if (J.length() == 0) {
+				return 0;
+			}
 
-		        int count = 0;
-		        List<Character> jewelTypes = new ArrayList<>();
-		        for (int i = 0; i < J.length(); i++) {
-		            jewelTypes.add(J.charAt(i));
-		        }
-		        for (int i = 0; i < S.length(); i++) {
-		            if (jewelTypes.contains(S.charAt(i))) {
-		                count++;
-		            }
-		        }
-		        return count;
-	    	}
-    }
+			int count = 0;
+			List<Character> jewelTypes = new ArrayList<>();
+			for (int i = 0; i < J.length(); i++) {
+				jewelTypes.add(J.charAt(i));
+			}
+			for (int i = 0; i < S.length(); i++) {
+				if (jewelTypes.contains(S.charAt(i))) {
+					count++;
+				}
+			}
+			return count;
+		}
+	}
 
-		class Solution2 {
-      	public int numJewelsInStones(String J, String S) {
-		        if (J.length() == 0) {
-		            return 0;
-		        }
+	class Solution2 {
+		public int numJewelsInStones(String J, String S) {
+			if (J.length() == 0) {
+				return 0;
+			}
 
-		        int count = 0;
-		        Set<Character> jewelTypes = new HashSet<>();
-		        for (char c: J.toCharArray()) {
-		            jewelTypes.add(c);
-		        }
-		        for (char c: S.toCharArray()) {
-		            if (jewelTypes.contains(c)) {
-		                count++;
-		            }
-		        }
-		        return count;
-	    	}
-    }
+			int count = 0;
+			Set<Character> jewelTypes = new HashSet<>();
+			for (char c : J.toCharArray()) {
+				jewelTypes.add(c);
+			}
+			for (char c : S.toCharArray()) {
+				if (jewelTypes.contains(c)) {
+					count++;
+				}
+			}
+			return count;
+		}
+	}
 }
