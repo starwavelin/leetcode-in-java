@@ -42,6 +42,18 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 
 | No. | Problem   | Difficulty  | Tags  | Videos |
 | ----|-----------|-------------|-------|--------|
+| 775	| Global and Local Inversions | Medium | | |
+| 774	| Minimize Max Distance to Gas Station $ | Hard | | |
+| 773	| Sliding Puzzle | Hard | | |
+| 772	| Basic Calculator III $ | Hard | | |
+| 771	| [Jewels and Stones](java-solution/src/hash/JewelsAndStones.java) | Easy | Hash, ArrayList, HashSet | |
+| 770	| Basic Calculator IV	| Hard | | |
+| 769	| Max Chunks To Make Sorted	| Medium | | |
+| 768	| Max Chunks To Make Sorted II | Hard | | |
+| 767	| Reorganize String	| Medium | | |
+| 766	| Toeplitz Matrix	| Easy | | |
+| 765	| Couples Holding Hands	| Hard | | |
+| 764	| Largest Plus Sign	| Medium | | |
 | 763	| Partition Labels | Medium | | |
 | 762	| Prime Number of Set Bits in Binary Representation | Easy | | |
 | 761	| Special Binary String | Hard | | |
