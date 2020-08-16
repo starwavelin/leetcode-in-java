@@ -1,33 +1,33 @@
-Original Date: Sept 16, 2017
-Updated on March 29, 2020
+Created Date: Sept 16, 2017
+Updated Date: August 16, 2020
 
 Categories:
 
-1. 线性-数组		Array
-2. 线性-字符串	String
-3. 双指针法		Two Pointers
-4. 线性-区间		Interval
-5. 排序思想		Sorting
-6. 线性-链表		Linked List
-7. 线性-Hash		Hash
-8. 栈			Stack
-9. 队列			Queue
-10. 二分搜索		Binary Search
-11. 二叉树		Binary Tree
-12. 高级树		Advanced Tree
-13. 图			Graph
-14. 图-排列组合	Combinatorics
-15. 动态规划		Dynamic Programming
-16. 位运算		Bit
-17. 数学			Math
-18. 数据结构设计	Data Structure Design
+1. 线性-数组        array
+2. 线性-字符串      string
+3. 双指针法         two_pointers
+4. 线性-区间        interval
+5. 排序思想         sorting
+6. 线性-链表        linked_list
+7. 线性-哈希        hash
+8. 栈              stack
+9. 队列            queue
+10. 二分搜索        binary_search
+11. 二叉树         binary_tree
+12. 高级树         advanced_tree
+13. 图             graph
+14. 图-排列组合     combinatorics
+15. 动态规划        dp
+16. 位运算         bit
+17. 数学           math
+18. 数据结构设计    data_structure
 
 If they are presented in package name, their name will be in Camel case starting with a lower case letter, ie. dataStructure.
 If they are presented in metadata name for searching, their name will be in lower case connected with hyphen, ie. data-structure
 
-=====Problems that can apply two pointer approach=====
+===== Problems that may apply two pointers approach =====
 array
-binarySearch [This package name include binary search and sorted array problems]
+binarySearch
 hash (?)
 linkedList
 stack (?)
