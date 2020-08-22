@@ -59,7 +59,7 @@ public class InfixToPostfix {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Infix To Postfix Test ***");
+		System.out.println("*** Welcome to @codingbro's Infix To Postfix Test ***");
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Please type in an infix expression, such as (1+2)*4: ");

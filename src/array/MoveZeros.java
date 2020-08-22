@@ -5,7 +5,7 @@ package array;
 * Problem Name: Move Zeros
 * Problem URL : https://leetcode.com/problems/move-zeroes/description/
 * Date        : Oct 17 2017
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       :
 * 	Scenario:
 * 		Given an integer array, move its all zeros into the end of the array but preserve the order of non-zero elements

@@ -7,7 +7,7 @@ import java.util.Scanner;
 * Problem Name: Remove Duplicates from Sorted Array
 * Problem URL : https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
 * Date        : Oct 21 2017
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       : 
 * 	Scenario: 
 * 		Given a sorted array, remove the duplicates in place such that each element appear only once and return the new length.
@@ -58,7 +58,7 @@ public class RemoveDupSortedArray {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Xian's Remove Duplicates in Sorted Array I Test ***");
+		System.out.println("*** Welcome to @codingbro's Remove Duplicates in Sorted Array I Test ***");
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Input your integer sorted array (with duplicates), leave each number by space: ");
 		String[] strs = sc.nextLine().split(" ");

@@ -8,7 +8,7 @@ import java.util.Scanner;
 * Problem Name: String to Integer (atoi)
 * Problem URL : https://leetcode.com/problems/string-to-integer-atoi/description/
 * Date        : May 2, 2018
-* Author      : Xian Lin
+* Author      : @codingbro
 * Notes       :
 * 	Scenario:
 * 		Convert a string into an integer
@@ -57,7 +57,7 @@ public class AToI {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's String to Integer Test ***");
+		System.out.println("*** Welcome to @codingbro's String to Integer Test ***");
 		
 		System.out.print("Give a String that you wanna convert to int type: ");
 		Scanner sc = new Scanner(System.in);

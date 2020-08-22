@@ -7,7 +7,7 @@ import java.util.Map;
 * Problem Name: LRU Cache
 * Problem URL : https://leetcode.com/problems/lru-cache/description/
 * Date        : Jan 31 2018
-* Author      : Xian Lin
+* Author      : @codingbro
 * Notes       : 
 * 	Scenario: 
 * 		Say I have a Least Recently Used Cache of capacity 5, and I already have the following 

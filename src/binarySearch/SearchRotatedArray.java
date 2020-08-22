@@ -46,7 +46,7 @@ public class SearchRotatedArray {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Search in Rotated Array Test ***");
+		System.out.println("*** Welcome to @codingbro's Search in Rotated Array Test ***");
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Input your integer sorted array, \n" +

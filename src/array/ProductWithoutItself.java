@@ -7,7 +7,7 @@ import java.util.Scanner;
 * Problem Name: Product of Array Except Self
 * Problem URL : https://leetcode.com/problems/product-of-array-except-self/description/
 * Date        : May 1, 2018
-* Author      : Xian Lin
+* Author      : @codingbro
 * Notes       :
 * 	Scenario:
 * 		

@@ -8,7 +8,7 @@ import java.util.Scanner;
 * Problem Name: Longest Substring Without Repeating Characters
 * Problem URL : https://leetcode.com/problems/longest-substring-without-repeating-characters/
 * Date        : Oct 18 2017
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       :
 * 	Scenario:
 * 		Given a string, find the length of the longest substring without repeating characters.
@@ -108,7 +108,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
 	}
 
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Xian's Longest Substring without Repeating Characters Test ***");
+		System.out.println("*** Welcome to @codingbro's Longest Substring without Repeating Characters Test ***");
 		System.out.print("Give a String : ");
 		Scanner sc = new Scanner(System.in);
 		String s = sc.next();

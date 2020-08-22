@@ -5,7 +5,7 @@ package stack;
 * Problem Name: 
 * Problem URL : 
 * Date        : Oct 15 2017
-* Author	  :	Xian Lin
+* Author	  :	@codingbro
 * Notes       : 
 * 	Scenario: 
 * 1. Use Array to implement a queue, rotation is enabled.
@@ -70,7 +70,7 @@ public class Queue {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Xian's Queue implemented by Array Test ***");
+		System.out.println("*** Welcome to @codingbro's Queue implemented by Array Test ***");
 		ArrayQueue q = new ArrayQueue();
 		
 		q.enqueue(4);

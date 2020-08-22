@@ -26,7 +26,7 @@ public class OmitChars {
 	}
 
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Omit Character Test ***");
+		System.out.println("*** Welcome to @codingbro's Omit Character Test ***");
 
 		System.out.print("Give an input String: ");
 		Scanner sc = new Scanner(System.in);

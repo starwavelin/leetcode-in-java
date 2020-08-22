@@ -9,7 +9,7 @@ import utility.ListNode;
 * Problem Name: Remove Duplicates from Sorted List
 * Problem URL : https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/
 * Date        : Oct 21 2017
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       : 
 * 	Scenario: 
 * 		Given a sorted linked list, delete all duplicates such that each element appear only once.
@@ -82,7 +82,7 @@ public class RemoveDuplicatesFromSortedLinkedList {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Xian's Remove Duplicates From A Sorted Linked List Driver ***");
+		System.out.println("*** Welcome to @codingbro's Remove Duplicates From A Sorted Linked List Driver ***");
 		LinkedList ll = new LinkedList();
 		Scanner sc = new Scanner(System.in);
 		

@@ -10,7 +10,7 @@ import java.util.Set;
 * Problem Name: Jewels and Stones
 * Problem URL : https://leetcode.com/problems/jewels-and-stones/
 * Date        : March 20 2020
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       :
 * 	Scenario:
 * 		@needOrganize

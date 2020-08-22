@@ -6,7 +6,7 @@ import utility.ListNode;
 * Problem Name: Palindrome Linked List
 * Problem URL : https://leetcode.com/problems/palindrome-linked-list/description/
 * Date        : Feb 23 2018
-* Author      : Xian Lin
+* Author      : @codingbro
 * Notes       : 
 * 	Scenario: 
 * 		Given a singly linked list, determine if it is a palindrome.

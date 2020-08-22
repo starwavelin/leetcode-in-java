@@ -4,7 +4,7 @@ package string;
 * Problem Name: Valid Palindrome II
 * Problem URL : https://leetcode.com/problems/valid-palindrome-ii/description/
 * Date        : Apr 17 2018
-* Author      : Xian Lin
+* Author      : @codingbro
 * Notes       :
 * 	Scenario:
 * 		Given a non-empty string, determine if it is a palindrome by removing at most one character.

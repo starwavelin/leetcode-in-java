@@ -8,7 +8,7 @@ import java.util.List;
 * Problem Name: Subsets
 * Problem URL : https://leetcode.com/problems/subsets/description/
 * Date        : Dec 17 2017
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       :
 * 	Scenario:
 * 		Given an array nums of DISTINCT integers and find all the subsets.

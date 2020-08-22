@@ -4,7 +4,7 @@ package string;
 * Problem Name: Longest Uniform Substring
 * Problem URL : 
 * Date        : Jan 3 2017
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       : 
 * 	Scenario:
 * 		Also known as Longest Uniform Substring. 

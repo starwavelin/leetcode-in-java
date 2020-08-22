@@ -10,7 +10,7 @@ import utility.TreeNode;
 * Problem Name: Invert Binary Tree
 * Problem URL : https://leetcode.com/problems/invert-binary-tree/description/
 * Date        : Oct 20 2017
-* Author	  :	Xian Lin
+* Author	  :	@codingbro
 * Notes       : 
 * 	Scenario: 
 * 		Invert a binary tree based on the vertical symmetry. 

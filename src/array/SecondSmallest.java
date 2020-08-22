@@ -4,7 +4,7 @@ package array;
 * Problem Name: Get the 2nd smallest number in an array
 * Problem URL : 
 * Date        : Jan 2 2018
-* Author      : Xian Lin
+* Author      : @codingbro
 * Notes       : 
 * 	Scenario: 
 * 		

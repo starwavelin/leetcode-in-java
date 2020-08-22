@@ -5,7 +5,7 @@ package string;
 * Problem Name: One Edit Distance
 * Problem URL : https://leetcode.com/problems/one-edit-distance/description/
 * Date        : Oct 23 2017
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       :
 * 	Scenario:
 * 		Given two strings S and T, determine if they are both one edit distance apart.

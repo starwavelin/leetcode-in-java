@@ -11,7 +11,7 @@ import utility.Interval;
 * Problem Name: Merge Intervals
 * Problem URL : https://leetcode.com/problems/merge-intervals/description/
 * Date        : Nov 2 2017
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       :
 * 	Scenario:
 * 		Given a collection of intervals, merge all overlapping intervals.

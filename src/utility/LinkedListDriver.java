@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class LinkedListDriver {
 
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's LinkedList Driver ***");
+		System.out.println("*** Welcome to @codingbro's LinkedList Driver ***");
 
 		LinkedList linkedlist = new LinkedList();
 		

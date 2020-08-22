@@ -9,7 +9,7 @@ import java.util.Stack;
 * Problem Name: Max Stack
 * Problem URL : https://leetcode.com/problems/max-stack/description/
 * Date        : May 1, 2018
-* Author      : Xian Lin
+* Author      : @codingbro
 * Notes       :
 * 	Scenario:
 * 		

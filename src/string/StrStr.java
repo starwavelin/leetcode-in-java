@@ -22,7 +22,7 @@ public class StrStr {
 	
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's String String Test ***");
+		System.out.println("*** Welcome to @codingbro's String String Test ***");
 		
 		Scanner sc = new Scanner(System.in);		
 		System.out.print("Input your source string: ");

@@ -5,7 +5,7 @@ package binarySearch;
 * Problem Name: Find Peak Element
 * Problem URL : https://leetcode.com/problems/find-peak-element/description/
 * Date        : Feb 16 2018
-* Author      : Xian Lin
+* Author      : @codingbro
 * Notes       : 
 * 	Scenario: 
 * 		

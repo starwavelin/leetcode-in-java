@@ -61,7 +61,7 @@ public class BinarySearchIII {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Binary Search III Test ***");
+		System.out.println("*** Welcome to @codingbro's Binary Search III Test ***");
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Input your integer sorted array, \nleave each number by space: ");

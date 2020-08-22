@@ -78,7 +78,7 @@ public class HashCode {
 	
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's HashCode Test ***");
+		System.out.println("*** Welcome to @codingbro's HashCode Test ***");
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Input your String, I will convert it to char[]: ");

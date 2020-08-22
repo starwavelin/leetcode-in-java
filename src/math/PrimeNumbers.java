@@ -12,7 +12,7 @@ import utility.ListUtil;
 * Problem Name: Count Primes
 * Problem URL : https://leetcode.com/problems/count-primes/description/
 * Date        : Oct 20 2017
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       : 
 * 	Scenario: 
 * 		#1 The original question just requires me to count the number of prime numbers from 1 to n. n >= 2

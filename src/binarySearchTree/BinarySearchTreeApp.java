@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class BinarySearchTreeApp {
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Xian's Binary Search Tree App ***");
+		System.out.println("*** Welcome to @codingbro's Binary Search Tree App ***");
 		
 //		int[] arr = {1, 2, 3};
 //		int[] arr ={8, 5, 9, 7};

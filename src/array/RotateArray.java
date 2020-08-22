@@ -5,7 +5,7 @@ package array;
 * Problem Name: Rotate Array
 * Problem URL : https://leetcode.com/problems/rotate-array/description/
 * Date        : Oct 17 2017
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       :
 * 	Scenario:
 * 		Given an integer array, and k steps. Move all of its elements after k to the front.

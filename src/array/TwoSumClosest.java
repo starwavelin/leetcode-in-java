@@ -10,7 +10,7 @@ import java.util.TreeSet;
 * Problem Name: Two Sum Closest
 * Problem URL : 
 * Date        : Oct 18 2017
-* Author	  :	Xian Lin
+* Author	  :	@codingbro
 * Notes       : 
 * 	Scenario: 
 * 		Given an array of integers, return 

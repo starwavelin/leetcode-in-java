@@ -4,7 +4,7 @@ package math;
 * Problem Name: Integer to Roman
 * Problem URL : https://leetcode.com/problems/integer-to-roman/description/
 * Date        : Feb 15 2018
-* Author      : Xian Lin
+* Author      : @codingbro
 * 
 * A very cultural dependent question. 
 *

@@ -69,7 +69,7 @@ public class SingleNumberII {
 	
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Single Number II Test ***");
+		System.out.println("*** Welcome to @codingbro's Single Number II Test ***");
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Input your integer array, \n" +

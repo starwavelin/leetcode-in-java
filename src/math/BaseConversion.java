@@ -91,7 +91,7 @@ public class BaseConversion {
 	
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's BaseConversion Test ***");
+		System.out.println("*** Welcome to @codingbro's BaseConversion Test ***");
 		
 		Scanner sc = new Scanner(System.in);
 //		System.out.print("Input a decimal number: ");

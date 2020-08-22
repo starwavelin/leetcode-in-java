@@ -60,7 +60,7 @@ public class ColorfulNumber {
 	
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's ColorfulNumber Test ***");
+		System.out.println("*** Welcome to @codingbro's ColorfulNumber Test ***");
 		
 		System.out.println(colorfulNum(3245));
 		System.out.println(colorfulNum(326));

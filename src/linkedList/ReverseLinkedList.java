@@ -9,7 +9,7 @@ import utility.ListNode;
 * Problem Name: Reverse Linked List
 * Problem URL : https://leetcode.com/problems/reverse-linked-list/description/
 * Date        : Nov 2 2017
-* Author      : Xian Lin
+* Author      : @codingbro
 * Notes       : 
 * 	Scenario: 
 * 		Reverse a linked list and return the head of the reversed linked list
@@ -87,7 +87,7 @@ public class ReverseLinkedList {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Xian's Reverse Linked List Driver ***");
+		System.out.println("*** Welcome to @codingbro's Reverse Linked List Driver ***");
 		LinkedList ll = new LinkedList();
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Input your integer array, leave each number by space: ");

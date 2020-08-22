@@ -9,7 +9,7 @@ import java.util.Map;
 * Problem Name: Two Sum III - Data structure design
 * Problem URL : https://leetcode.com/problems/two-sum-iii-data-structure-design/description/
 * Date        : May 1, 2018
-* Author      : Xian Lin
+* Author      : @codingbro
 * Notes       :
 * 	Scenario:
 *

@@ -5,7 +5,7 @@ package math;
 * Problem Name: Power of Two
 * Problem URL : https://leetcode.com/problems/power-of-two/description/
 * Date        : 
-* Author      : Xian Lin
+* Author      : @codingbro
 * Notes       :
 * 	Scenario:
 * 		

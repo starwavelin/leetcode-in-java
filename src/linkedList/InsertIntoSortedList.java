@@ -52,7 +52,7 @@ public class InsertIntoSortedList {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Insert an Element into A Sorted Linked List Driver ***");
+		System.out.println("*** Welcome to @codingbro's Insert an Element into A Sorted Linked List Driver ***");
 		
 		LinkedList ll = new LinkedList();
 		

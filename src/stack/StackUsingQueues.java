@@ -7,7 +7,7 @@ import java.util.LinkedList;
 * Problem Name: Implement Stack Using Queues
 * Problem URL : https://leetcode.com/problems/implement-stack-using-queues/description/
 * Date        : Oct 14 2017
-* Author	  :	Xian Lin
+* Author	  :	@codingbro
 * Notes       : 
 * 	Scenario: 
 * 		Design a stack using queues only

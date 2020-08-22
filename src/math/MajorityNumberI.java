@@ -7,7 +7,7 @@ import java.util.Scanner;
 * Problem Name: Majority Element
 * Problem URL : https://leetcode.com/problems/majority-element/description/
 * Date        : May 1, 2018
-* Author      : Xian Lin
+* Author      : @codingbro
 * Notes       :
 * 	Scenario:
 *
@@ -46,7 +46,7 @@ public class MajorityNumberI {
 
 
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Majority Number I Test ***");
+		System.out.println("*** Welcome to @codingbro's Majority Number I Test ***");
 
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Input your integer array, \n" +

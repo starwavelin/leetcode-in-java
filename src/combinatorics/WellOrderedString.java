@@ -30,7 +30,7 @@ public class WellOrderedString {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's WellOrderedString Test ***");
+		System.out.println("*** Welcome to @codingbro's WellOrderedString Test ***");
 		generateWellOrderedString("", 2);
 		System.out.println("Total such strings are: " + stringCount);
 	}

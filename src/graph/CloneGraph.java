@@ -11,7 +11,7 @@ import utility.UGNode;
 * Problem Name: Clone Graph
 * Problem URL : https://leetcode.com/problems/clone-graph/description/
 * Date        : Jan 17 2018
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       :
 * 	Scenario:
 * 		Clone a graph and return the entry node of the cloned graph.

@@ -8,7 +8,7 @@ import java.util.Scanner;
 * Problem Name: Valid Anagram
 * Problem URL : https://leetcode.com/problems/valid-anagram/description/
 * Date        : Oct 26 2017
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       :
 * 	Scenario:
 * 		@needOrganize

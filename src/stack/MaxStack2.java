@@ -7,7 +7,7 @@ import java.util.Deque;
 * Problem Name: Max Stack (self created)
 * Problem URL :
 * Date        : Oct 14 2017
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       :
 * 	This problem is just a transformation of Min Stack.
 * The only part we want to change is
@@ -55,7 +55,7 @@ public class MaxStack2 {
 	}
 
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Xian's MaxStack Test ***");
+		System.out.println("*** Welcome to @codingbro's MaxStack Test ***");
 		MaxStack2 ms = new MaxStack2();
 
 		ms.push(19);

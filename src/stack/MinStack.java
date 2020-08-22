@@ -7,7 +7,7 @@ import java.util.Deque;
 * Problem Name: Min Stack
 * Problem URL : https://leetcode.com/problems/min-stack/description/
 * Date        : Oct 14 2017
-* Author	  :	Xian Lin
+* Author	  :	@codingbro
 * Notes       : 
 * 	Scenario: 
 * 		Design a stack that can do push, pop, peek a typical stack can do, plus a function to getMin()
@@ -85,7 +85,7 @@ public class MinStack {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Xian's MinStack Test ***");
+		System.out.println("*** Welcome to @codingbro's MinStack Test ***");
 		MinStack ms = new MinStack();
 		
 //		ms.push(-3);

@@ -10,7 +10,7 @@ import java.util.List;
 * Problem Name: Sliding Window Maximum
 * Problem URL : https://leetcode.com/problems/sliding-window-maximum/description/
 * Date        : Dec 15 2017
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       :
 * 	Scenario:
 *

@@ -5,7 +5,7 @@ package bit;
 * Problem Name: Single Number 4 (Self-created)
 * Problem URL : 
 * Date        : Jan 17 2018
-* Author	  :	Xian Lin
+* Author	  :	@codingbro
 * Notes       : 
 * 	Scenario: 
 * 		This is a question created by me, similar to Single Number II.

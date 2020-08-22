@@ -7,7 +7,7 @@ import java.util.List;
 * Problem Name: Pacific Atlantic Water Flow
 * Problem URL : https://leetcode.com/problems/pacific-atlantic-water-flow/description/
 * Date        : Jan 18 2018
-* Author      : Xian Lin
+* Author      : @codingbro
 * Notes       :
 * 	Scenario:
 * 		mxn二维非负矩阵记录了水的高度，水可以从上下左右四个方向流向等高的或低于当前水位的格子。

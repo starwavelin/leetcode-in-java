@@ -4,17 +4,17 @@ import java.util.Scanner;
 
 /**
  * Get the equilibrium index from an integer array.
- * Return the index where the sum of its left elements 
+ * Return the index where the sum of its left elements
  * 	equals the sum of its right elements; itself shall be eliminated.
- * 
+ *
  * Note: an integer array may have multiple equilibrium indexes,
  * for this problem, given one of them will be fine.
  */
 
 public class EquilibriumIndex {
-	
+
 	/**
-	 * This method returns the first equilibrium index found 
+	 * This method returns the first equilibrium index found
 	 * 	in the given integer array
 	 * @param A: the given integer array
 	 * @return the first equilibrium index
@@ -24,13 +24,13 @@ public class EquilibriumIndex {
 		if (A == null || A.length == 0) {
 			return ret;
 		}
-		
+
 		int leftSum = 0;
 		int rightSum = 0;
 		for (int i = 0; i < A.length; i++) {
 			rightSum += A[i];
 		}
-		
+
 		for (int i = 0; i < A.length; i++) {
 			int tmpRight = rightSum - A[i];
 			if (leftSum == tmpRight) {
@@ -41,13 +41,13 @@ public class EquilibriumIndex {
 				rightSum = tmpRight;
 			}
 		}
-		
+
 		return ret;
 	}
-	
+
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Coding Bro's Equilibrium Index Test ***");
-		
+		System.out.println("*** Welcome to @codingbro's Equilibrium Index Test ***");
+
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Input your integer array, leaving each number by space: ");
 		String[] strs = sc.nextLine().split(" ");
@@ -55,7 +55,7 @@ public class EquilibriumIndex {
 		for (int i = 0; i < strs.length; i++) {
 			testArray[i] = Integer.parseInt(strs[i]);
 		}
-		
+
 		int result = getEquilibriumIndex(testArray);
 		if (result != -1) {
 			System.out.print("The equilibrium of the given array is: " + result);

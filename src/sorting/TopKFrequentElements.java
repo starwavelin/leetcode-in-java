@@ -14,7 +14,7 @@ import utility.ListUtil;
 * Problem Name: Top K Frequent Elements
 * Problem URL : https://leetcode.com/problems/top-k-frequent-elements/description/
 * Date        : Oct 24 2017
-* Author	  :	Xian Lin
+* Author	  :	@codingbro
 * Notes       : 
 * 	Scenario: 
 * 		Given a non-empty array of integers, return the k most frequent elements.

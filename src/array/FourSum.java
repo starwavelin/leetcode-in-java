@@ -14,35 +14,35 @@ import utility.ListUtil;
 * Problem Name: Four Sum
 * Problem URL : https://leetcode.com/problems/4sum/description/
 * Date        : Oct 30 2017
-* Author	  :	Xian Lin
-* Notes       : 
-* 	Scenario: 
-* 		Given an array S of n integers, find four integers in S such that their sum equals a given number, target. 
+* Author	  :	@codingbro
+* Notes       :
+* 	Scenario:
+* 		Given an array S of n integers, find four integers in S such that their sum equals a given number, target.
 * 		Return all the unique quadruplets.
 * 	Assumption:
-* 		1. 
+* 		1.
 	Example:
 * 	Input: [1, 0, -1, 0, -2, 2], and target = 0
-* 	Output: 
+* 	Output:
 * 		[
   			[-1,  0, 0, 1],
   			[-2, -1, 1, 2],
   			[-2,  0, 0, 2]
 		]
 * 	Data Structure and Alg:
-* 		See Code Comments  
-* Complexity  : 
+* 		See Code Comments
+* Complexity  :
 * 	Time Complexity: O() -- See Code Comments
 * 	Space Complexity: O() -- See Code Comments
-* 
+*
 * meta        : tag-array, tag-two-pointers, tag-sort, tag-hash
 ***************************************************************************/
 public class FourSum {
-	
+
 	/**
 	 * Solution 1:
 	 * 	Sort the given input array first, then for each element in the outer loop, the inner one becomes a 3Sum problem,
-	 * and we solve the 3Sum problem in O(n^2). Then total time complexity is O(n^3). 
+	 * and we solve the 3Sum problem in O(n^2). Then total time complexity is O(n^3).
 	 * And the key point is to de-duplicates.
 	 * Space complexity is O(1) cuz we just use several pointers to help us.
 	 */
@@ -89,17 +89,17 @@ public class FourSum {
 		}
 		return res;
 	}
-	
+
 	/**
 	 * Solution 2:
 	 * 	Decompose this problem into a twice twoSum problem, and use HashMap to buy time.
 	 * Procedure as below:
 	 * 	Use a HashMap with key = twoSum and value = List of solutions contributing to this twoSum.
-	 * 	Then traverse this hashMap and see if (target - key) is also in the hashMap, 
-	 * 		if yes, concatenate the solutions from key and (target - key) to form a quadruplet 
-	 * 
+	 * 	Then traverse this hashMap and see if (target - key) is also in the hashMap,
+	 * 		if yes, concatenate the solutions from key and (target - key) to form a quadruplet
+	 *
 	 * ie. Input [-3, -3, 0, 1, 2, 6] k = 0
-	 * 	HashMap would be 
+	 * 	HashMap would be
 	 * 		[
 	 * 			<-3, [[-3, 0]]>,
 	 * 			<-2, [[-3, 1]]>,
@@ -114,14 +114,14 @@ public class FourSum {
 	 * Then the solution would be contributed from keys -3 and 3, -2 and 2, -1 and 1
 	 * which are primitively [-3, 0, -3, 6], [-3, 0, 1, 2], [-3, 1, 0, 2], [-3, 2, 0, 1] and after de-dup
 	 * [-3, -3, 0, 6], [-3, 0, 1, 2]
-	 * 
-	 * Note: 
+	 *
+	 * Note:
 	 * to dedup, I use Collections.sort(formedList) before adding a list to the final solutions set,
 	 * and also use a HashSet to avoid duplicates being added in.
 	 * But still  @needCorrection, see code below...
-	 * 
+	 *
 	 * Time Complexity: Best case O(n^2) if the solution sets for key and and (target - key) are even; worst case can still be O(n^3)
-	 * Space Complexity: O(n^2) cuz the twoSum hashmap is formed by double loops over the input array of size n 
+	 * Space Complexity: O(n^2) cuz the twoSum hashmap is formed by double loops over the input array of size n
 	 */
 	public static List<List<Integer>> fourSum2(int[] nums, int target) {
 		List<List<Integer>> res = new ArrayList<>();
@@ -181,7 +181,7 @@ public class FourSum {
 		}
 		return res;
 	}
-	
+
 	public static void main(String[] args) {
 		int[] nums = new int[]{1, 0, -1, 0, -2, 2};
 		int k = 0;
@@ -191,7 +191,7 @@ public class FourSum {
 			ListUtil.display(l);
 		}
 		System.out.println();
-		
+
 		nums = new int[] {-2, -1, 0, 1, 2, 3};
 		k = 0;
 		res = fourSum1(nums, k); /* toggle here to change the solution you wanna use */
@@ -199,7 +199,7 @@ public class FourSum {
 			System.out.print("One result is: ");
 			ListUtil.display(l);
 		}
-		
+
 //		System.out.println();
 //		nums = new int[]{-3, -3, 0, 1, 2, 6};
 //		res = fourSum2(nums, k);		/* toggle here to change the solution you wanna use */
@@ -207,6 +207,6 @@ public class FourSum {
 //			System.out.print("One result is: ");
 //			ListUtil.display(l); // should be [-3, -3, 0, 6], [-3, 0, 1, 2]
 //		}
-		
+
 	}
 }

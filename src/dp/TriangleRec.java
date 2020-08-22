@@ -71,7 +71,7 @@ public class TriangleRec {
 	
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Triangle (Minimum Path Sum) Test "
+		System.out.println("*** Welcome to @codingbro's Triangle (Minimum Path Sum) Test "
 				+ "using Recursion ***");
 
 		TriangleRec tr = new TriangleRec();

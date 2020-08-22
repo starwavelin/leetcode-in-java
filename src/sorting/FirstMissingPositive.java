@@ -8,7 +8,7 @@ import java.util.Set;
 * Problem Name: First Missing Positive
 * Problem URL : https://leetcode.com/problems/first-missing-positive/description/
 * Date        : Dec 13 2017
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       :
 * 	Scenario:
 *

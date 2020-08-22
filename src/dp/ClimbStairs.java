@@ -5,7 +5,7 @@ package dp;
 * Problem Name: Climb Stairs
 * Problem URL : https://leetcode.com/problems/climbing-stairs/description/
 * Date        : Jan 2 2018
-* Author	      : Xian Lin
+* Author	      : @codingbro
 * Notes       : 
 * 	Scenario: 
 * 		A little different from the original question:

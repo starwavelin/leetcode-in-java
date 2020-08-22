@@ -8,7 +8,7 @@ import java.util.Map;
 * Problem Name: Gem Bag
 * Problem URL :
 * Date        : Jan 31 2018
-* Author      : Xian Lin
+* Author      : @codingbro
 * Notes       : 
 * 	Scenario: 
 * 		Giving you a bag of gems of different colors, and each color has a certain number of gems. 

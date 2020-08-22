@@ -25,7 +25,7 @@ public class SearchMinRotatedArrayII {
     }
 	
     public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Search Minimum in Rotated Array II Test ***");
+		System.out.println("*** Welcome to @codingbro's Search Minimum in Rotated Array II Test ***");
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Input your integer rotated array, \n" +

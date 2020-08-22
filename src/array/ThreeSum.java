@@ -12,7 +12,7 @@ import utility.ListUtil;
 * Problem Name: Three Sum
 * Problem URL : https://leetcode.com/problems/3sum/description/
 * Date        : Oct 27 2017
-* Author      : Xian Lin
+* Author      : @codingbro
 * Notes       : 
 * 	Scenario: 
 * 		Given an array S of n integers, are there elements a, b, c in S such that a + b + c = 0? 

@@ -6,7 +6,7 @@ import java.util.Scanner;
 * Problem Name: Valid Palindrome
 * Problem URL : https://leetcode.com/problems/valid-palindrome/description/
 * Date        : Apr 17 2018
-* Author      : Xian Lin
+* Author      : @codingbro
 * Notes       :
 * 	Scenario:
 * 		Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
@@ -63,7 +63,7 @@ public class ValidPalindrome {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Xian's Valid Palindrome Test ***");
+		System.out.println("*** Welcome to @codingbro's Valid Palindrome Test ***");
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Input your string: ");

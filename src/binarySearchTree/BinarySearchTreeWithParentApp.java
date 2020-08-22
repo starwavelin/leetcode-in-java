@@ -15,7 +15,7 @@ import utility.TreeNodeP;
 public class BinarySearchTreeWithParentApp {
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Xian's Binary Search Tree (with Parent reference) App ***");
+		System.out.println("*** Welcome to @codingbro's Binary Search Tree (with Parent reference) App ***");
 		
 //		int[] arr = {1, 2};
 		int[] arr = {6, 4, 8, 1, 7, 3, 9, 2, 5};

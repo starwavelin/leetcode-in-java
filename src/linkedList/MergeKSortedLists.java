@@ -11,7 +11,7 @@ import utility.ListNode;
 * Problem Name: Merge k Sorted Lists
 * Problem URL : https://leetcode.com/problems/merge-k-sorted-lists/description/
 * Date        : Oct 31 2017
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       : 
 * 	Scenario: 
 * 		Merge k sorted linked lists and return it as one sorted list.
@@ -70,7 +70,7 @@ public class MergeKSortedLists {
 	
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Xian's Merge K Sorted Lists Driver ***");
+		System.out.println("*** Welcome to @codingbro's Merge K Sorted Lists Driver ***");
 		Scanner sc = new Scanner(System.in);
 		
 		/* Maybe I need to use something like Thread.wait() to make sure 

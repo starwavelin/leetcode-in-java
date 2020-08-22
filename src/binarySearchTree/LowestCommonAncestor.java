@@ -6,7 +6,7 @@ import utility.TreeNode;
 * Problem Name: Lowest Common Ancestor of a Binary Search Tree
 * Problem URL : https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/
 * Date        : Nov 9 2017
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       : 
 * 	Scenario: 
 * 	

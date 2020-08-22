@@ -10,7 +10,7 @@ import utility.ListNode;
 * Problem Name: Remove Nth Node From End of List
 * Problem URL : https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/
 * Date        : May 2, 2018
-* Author      : Xian Lin
+* Author      : @codingbro
 * Notes       :
 * 	Scenario:
 * 		Remove the Nth node from the end of the list.
@@ -52,7 +52,7 @@ public class RemoveNthFromEnd {
 	}
 
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Remove Nth from End of List Driver ***");
+		System.out.println("*** Welcome to @codingbro's Remove Nth from End of List Driver ***");
 
 		LinkedList ll = new LinkedList();
 

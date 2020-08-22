@@ -5,7 +5,7 @@ package binarySearch;
 * Problem Name: Search Rotated Sorted Array II
 * Problem URL : https://leetcode.com/problems/search-in-rotated-sorted-array-ii/description/
 * Date        : Feb 17 2018
-* Author      : Xian Lin
+* Author      : @codingbro
 * Notes       : 
 * 	Scenario: 
 * 		Allow duplicates in the rotated sorted array

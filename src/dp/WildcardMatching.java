@@ -4,7 +4,7 @@ package dp;
 * Problem Name: Wildcard Matching
 * Problem URL : https://leetcode.com/problems/wildcard-matching/
 * Date        : Jan 10 2017
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       : 
 * 	Scenario:
 * 		

@@ -43,7 +43,7 @@ public class SearchMatrixII {
     }
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Search Matrix II Test ***");
+		System.out.println("*** Welcome to @codingbro's Search Matrix II Test ***");
 		
 		int[][] matrix = new int[][] {
 				{0, 1, 2, 4},

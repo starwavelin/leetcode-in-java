@@ -5,7 +5,7 @@ package math;
 * Problem Name: Plus One
 * Problem URL : https://leetcode.com/problems/plus-one/description/
 * Date        : Oct 19 2017
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       :
 * 	Scenario:
 * 		Given a non-negative integer represented as a non-empty array of digits, plus one to the integer.

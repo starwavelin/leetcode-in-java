@@ -8,7 +8,7 @@ import java.util.LinkedList;
 * Problem Name: 
 * Problem URL : 
 * Date        : Oct 15 2017
-* Author	  :	Xian Lin
+* Author	  :	@codingbro
 * Notes       : 
 * 	Scenario: 
 * 1. Use Array to implement a stack
@@ -110,7 +110,7 @@ public class Stack {
 	
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Xian's Stack implemented by Array Test ***");
+		System.out.println("*** Welcome to @codingbro's Stack implemented by Array Test ***");
 		
 		/* Test stack implemented via array */
 //		StackI stack1 = new StackI();

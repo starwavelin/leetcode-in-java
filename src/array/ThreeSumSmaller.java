@@ -7,7 +7,7 @@ import java.util.Arrays;
 * Problem Name: Three Sum Smaller
 * Problem URL : https://leetcode.com/problems/3sum-smaller/description/
 * Date        : Feb 9 2018
-* Author      : Xian Lin
+* Author      : @codingbro
 * Notes       : 
 * 	Scenario: 
 * 		

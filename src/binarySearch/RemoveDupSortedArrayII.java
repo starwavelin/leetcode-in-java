@@ -6,7 +6,7 @@ import java.util.Scanner;
 * Problem Name: Remove Duplicates from Sorted Array II
 * Problem URL : https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/description/
 * Date        : Oct 21 2017
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       : 
 * 	Scenario: 
 * 		Given a sorted array, remove the duplicates in place such that each element can at most appear twice and return the new length.
@@ -93,7 +93,7 @@ public class RemoveDupSortedArrayII {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Xian's Remove Duplicates in Sorted Array II Test ***");
+		System.out.println("*** Welcome to @codingbro's Remove Duplicates in Sorted Array II Test ***");
 		Scanner sc = new Scanner(System.in);
 		
 		/* Solution 1 */

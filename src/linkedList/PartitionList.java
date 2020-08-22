@@ -30,7 +30,7 @@ public class PartitionList {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Partition List Driver ***");
+		System.out.println("*** Welcome to @codingbro's Partition List Driver ***");
 		
 		LinkedList ll = new LinkedList();
 		

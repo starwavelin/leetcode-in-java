@@ -7,7 +7,7 @@ import java.util.Arrays;
 * Problem Name: Three Sum Closest
 * Problem URL : https://leetcode.com/problems/3sum-closest/description/
 * Date        : Oct 30 2017
-* Author	  :	Xian Lin
+* Author	  :	@codingbro
 * Notes       : 
 * 	Scenario: 
 * 		Given an array S of n integers, find three integers in S such that the sum is closest to a given number, target. 

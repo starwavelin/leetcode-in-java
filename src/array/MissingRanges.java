@@ -10,7 +10,7 @@ import utility.ListUtil;
 * Problem Name: Missing Ranges
 * Problem URL : https://leetcode.com/problems/missing-ranges/description/
 * Date        : Nov 1 2017
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       :
 * 	Scenario:
 * 		Given a sorted integer array where the range of elements are in the inclusive range [lower, upper], return its missing ranges.

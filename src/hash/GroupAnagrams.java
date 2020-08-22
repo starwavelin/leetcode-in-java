@@ -11,7 +11,7 @@ import java.util.Map;
 * Problem Name: Group Anagrams
 * Problem URL : https://leetcode.com/problems/group-anagrams/description/
 * Date        : Oct 26 2017
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       : 
 * 	Scenario: 
 * 		

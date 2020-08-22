@@ -4,7 +4,7 @@ package dp;
 * Problem Name: Decode Ways
 * Problem URL : https://leetcode.com/problems/decode-ways/description/
 * Date        : Jan 10 2018
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       :
 * 	Scenario:
 *

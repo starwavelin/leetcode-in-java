@@ -9,7 +9,7 @@ import utility.ListNode;
 * Problem Name: Copy List
 * Problem URL : The Pre-requisite question of Copy List with Random Pointer
 * Date        : Oct 30 2017
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       : 
 * 	Scenario: 
 * 		Given a linked list, make a deep copy of it and return the head of the deep-copied new linked list.
@@ -73,7 +73,7 @@ public class CopyList {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Xian's Copy List Driver ***");
+		System.out.println("*** Welcome to @codingbro's Copy List Driver ***");
 		LinkedList ll = new LinkedList();
 		Scanner sc = new Scanner(System.in);
 		

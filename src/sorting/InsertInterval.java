@@ -11,7 +11,7 @@ import utility.ListUtil;
 * Problem Name: Insert Interval
 * Problem URL : https://leetcode.com/problems/insert-interval/description/
 * Date        : Nov 2 2017
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       :
 * 	Scenario:
 * 		Given a set of non-overlapping sorted intervals, insert a new interval into the intervals (merge if necessary).

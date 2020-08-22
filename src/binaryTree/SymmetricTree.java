@@ -7,7 +7,7 @@ import utility.TreeNode;
 * Problem Name: Symmetric Tree
 * Problem URL : https://leetcode.com/problems/symmetric-tree/description/
 * Date        : Oct 24 2017
-* Author	  :	Xian Lin
+* Author	  :	@codingbro
 * Notes       : 
 * 	Scenario: 
 * 		Determine if a tree is symmetric; and this "symmetric" means being symmetric against the vertical axis of symmetry

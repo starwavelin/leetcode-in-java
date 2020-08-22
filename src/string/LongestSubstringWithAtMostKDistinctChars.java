@@ -7,7 +7,7 @@ import java.util.Scanner;
 * Problem Name: Longest Substring With At Most K Distinct Characters
 * Problem URL : https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/description/
 * Date        : Dec 13 2017
-* Author	  :	Xian Lin
+* Author	  :	@codingbro
 * Notes       : 
 * 	Scenario: 
 * 		
@@ -57,7 +57,7 @@ public class LongestSubstringWithAtMostKDistinctChars {
     }
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Xian's Longest Substring With At Most K Distinct Characters Test ***");
+		System.out.println("*** Welcome to @codingbro's Longest Substring With At Most K Distinct Characters Test ***");
 		System.out.print("Give a String : ");
 		Scanner sc = new Scanner(System.in);
 		String s = sc.next();

@@ -5,7 +5,7 @@ package sorting;
 * Problem Name: Array Partition
 * Problem URL :
 * Date        : Oct 25 2017
-* Author      : Xian Lin
+* Author      : @codingbro
 * Notes       :
 * 	Scenario:
 * 		Given an integer array and an integer k, I want you to partition the array such that all the

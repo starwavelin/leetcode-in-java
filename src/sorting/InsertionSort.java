@@ -37,7 +37,7 @@ public class InsertionSort {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Xian's Insertion Sort Test ***");
+		System.out.println("*** Welcome to @codingbro's Insertion Sort Test ***");
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Input your integer array, leave each number by space: ");
 		String[] strs = sc.nextLine().split(" ");

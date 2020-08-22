@@ -53,7 +53,7 @@ public class MergeSort {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Xian's Merge Sort Test ***");
+		System.out.println("*** Welcome to @codingbro's Merge Sort Test ***");
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Input your integer array, leave each number by space: ");
 		String[] strs = sc.nextLine().split(" ");

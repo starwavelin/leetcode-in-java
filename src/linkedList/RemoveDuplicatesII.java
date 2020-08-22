@@ -10,7 +10,7 @@ import utility.ListNode;
 * Problem Name: Remove Duplicates from Sorted List II
 * Problem URL : https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/description/
 * Date        : Oct 21 2017
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       : 
 * 	Scenario: 
 * 		Given a sorted linked list, delete all nodes that have duplicate numbers, 
@@ -72,7 +72,7 @@ public class RemoveDuplicatesII {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Xian's Remove Duplicates From A Sorted Linked List II Driver ***");
+		System.out.println("*** Welcome to @codingbro's Remove Duplicates From A Sorted Linked List II Driver ***");
 		LinkedList ll = new LinkedList();
 		Scanner sc = new Scanner(System.in);
 		

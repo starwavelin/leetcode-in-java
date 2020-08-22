@@ -46,7 +46,7 @@ public class SearchInsertPosition {
     }
     
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Search Insert Position Test ***");
+		System.out.println("*** Welcome to @codingbro's Search Insert Position Test ***");
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Input your integer sorted array, \n" +

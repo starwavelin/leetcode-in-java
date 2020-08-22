@@ -40,7 +40,7 @@ public class BinarySearchII {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Binary Search II Test ***");
+		System.out.println("*** Welcome to @codingbro's Binary Search II Test ***");
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Input your integer sorted array, \n" +

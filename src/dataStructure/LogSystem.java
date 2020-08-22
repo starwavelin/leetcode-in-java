@@ -10,7 +10,7 @@ import utility.ListUtil;
 * Problem Name: Design Log Storage System
 * Problem URL : https://leetcode.com/problems/design-log-storage-system/description/
 * Date        : Sept 16 2017
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       :
 * 	Scenario:
 * 		Create a system to store logs. Each log contains a unique logId and timestamp.

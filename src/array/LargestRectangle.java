@@ -11,7 +11,7 @@ import java.util.Stack;
 * Problem Name: Largest Rectangle in Histogram
 * Problem URL : https://leetcode.com/problems/largest-rectangle-in-histogram/description/
 * Date        : May 1, 2018
-* Author      : Xian Lin
+* Author      : @codingbro
 * Notes       :
 * 	Scenario:
 *

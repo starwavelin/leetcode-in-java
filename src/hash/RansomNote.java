@@ -8,7 +8,7 @@ import java.util.Map;
 * Problem Name: Ransom Note
 * Problem URL : https://leetcode.com/problems/ransom-note/description/
 * Date        : March 29 2020
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       :
 * 	Scenario:
 * 		判断ransomNote当中的所有字符是否都在magazine中。

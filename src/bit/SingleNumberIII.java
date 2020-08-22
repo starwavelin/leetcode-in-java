@@ -44,7 +44,7 @@ public class SingleNumberIII {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Xian's Single Number III Test ***");
+		System.out.println("*** Welcome to @codingbro's Single Number III Test ***");
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Input your integer array, leave each number by space: ");

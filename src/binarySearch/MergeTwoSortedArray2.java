@@ -46,7 +46,7 @@ public class MergeTwoSortedArray2 {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Merge Two Sorted Array Test ***");
+		System.out.println("*** Welcome to @codingbro's Merge Two Sorted Array Test ***");
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Input your integer sorted array A \n" +

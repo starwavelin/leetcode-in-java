@@ -77,7 +77,7 @@ public class MajorityNumberIII {
 	
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Majority Number III Test ***");
+		System.out.println("*** Welcome to @codingbro's Majority Number III Test ***");
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Input your integer array, \n" +

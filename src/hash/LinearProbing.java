@@ -10,7 +10,7 @@ public class LinearProbing {
 			// size is the initial array size
 			// n is the initial number of items in the array n < size
 		
-		System.out.println("*** Welcome to Ben's HashTable Linear Probing Test ***");
+		System.out.println("*** Welcome to @codingbro's HashTable Linear Probing Test ***");
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter the size of the hash table: ");

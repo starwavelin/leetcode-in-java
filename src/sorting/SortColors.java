@@ -7,7 +7,7 @@ import java.util.HashMap;
 * Problem Name: Sort Colors
 * Problem URL : https://leetcode.com/problems/sort-colors/description/
 * Date        : Oct 24 2017
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       :
 * 	Scenario:
 * 		Given an array with n objects colored red, white or blue, sort them so that objects of the same color are adjacent,

@@ -11,7 +11,7 @@ import java.util.TreeSet;
 * Problem Name: Find all unique substrings of given length
 * Problem URL : 
 * Date        : Jan 2 2018
-* Author      : Xian Lin
+* Author      : @codingbro
 * Notes       : 
 * 	Scenario: 
 * 		Give an input String s, find all the unique substring of length k, and order them. 

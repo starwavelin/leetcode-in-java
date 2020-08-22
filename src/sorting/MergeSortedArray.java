@@ -5,7 +5,7 @@ package sorting;
 * Problem Name: Merge Sorted Array
 * Problem URL : https://leetcode.com/problems/merge-sorted-array/description/
 * Date        : Oct 18 2017
-* Author      : Xian Lin
+* Author      : @codingbro
 * Notes       : 
 * 	Scenario: 
 * 		Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.

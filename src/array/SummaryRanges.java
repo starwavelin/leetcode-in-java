@@ -10,7 +10,7 @@ import utility.ListUtil;
 * Problem Name: Summary Ranges
 * Problem URL : https://leetcode.com/problems/summary-ranges/description/
 * Date        : Oct 31 2017
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       :
 * 	Scenario:
 * 		Given a sorted integer array without duplicates, return the summary of its ranges.

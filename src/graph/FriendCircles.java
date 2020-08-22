@@ -5,7 +5,7 @@ package graph;
 * Problem Name: Friend Circles
 * Problem URL : https://leetcode.com/problems/friend-circles/description/
 * Date        : Dec 30 2017
-* Author      : Xian Lin
+* Author      : @codingbro
 * Notes       : 
 * 	Scenario: 
 * 		Given a matrix M of n*n representing the friendship of n students in a class. 

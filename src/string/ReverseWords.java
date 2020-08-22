@@ -5,7 +5,7 @@ package string;
 * Problem Name: Reverse Words in a String II and I
 * Problem URL : See code below
 * Date        : Oct 17 2017
-* Author	  :	Xian Lin
+* Author	  :	@codingbro
 * 
 * meta        : tag-string, tag-array, tag-two-pointers
 ***************************************************************************/

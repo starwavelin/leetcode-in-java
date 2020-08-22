@@ -10,7 +10,7 @@ import utility.ListNode;
 * Problem Name: Sort List
 * Problem URL : https://leetcode.com/problems/sort-list/description/
 * Date        : May 1, 2018
-* Author      : Xian Lin
+* Author      : @codingbro
 * Notes       :
 * 	Scenario:
 *
@@ -70,7 +70,7 @@ public class SortList {
 	}
 
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Sort List Driver ***");
+		System.out.println("*** Welcome to @codingbro's Sort List Driver ***");
 
 		LinkedList ll = new LinkedList();
 

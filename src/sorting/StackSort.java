@@ -10,7 +10,7 @@ import java.util.Stack;
 * Problem Name: Stack Sort
 * Problem URL : 
 * Date        : Oct 29 2017
-* Author	  :	Xian Lin
+* Author	  :	@codingbro
 * Notes       : 
 * 	Scenario: 
 * 		Sort a given stack in ascending order such that the largest element is on the top

@@ -62,7 +62,7 @@ public class SearchRange {
 		
 	
 	public static void main(String[] args) {
-		System.out.println("*** Welcome to Ben's Search Range Test ***");
+		System.out.println("*** Welcome to @codingbro's Search Range Test ***");
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Input your integer sorted array, \n" +

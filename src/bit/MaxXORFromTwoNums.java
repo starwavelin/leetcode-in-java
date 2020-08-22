@@ -8,7 +8,7 @@ import java.util.Set;
 * Problem Name: Maximum XOR of two numbers in an array
 * Problem URL : https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/description/
 * Date        : Jan 16 2018
-* Author      :	Xian Lin
+* Author      :	@codingbro
 * Notes       :
 * 	Scenario:
 *

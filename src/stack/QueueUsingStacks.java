@@ -8,7 +8,7 @@ import java.util.Deque;
 * Problem Name: Implement Queue Using Stacks
 * Problem URL : https://leetcode.com/problems/implement-queue-using-stacks/description/
 * Date        : Oct 14 2017
-* Author	  :	Xian Lin
+* Author	  :	@codingbro
 * Notes       : 
 * 	Scenario: 
 * 		Design a queue using stacks only, you should implement a queue's push, pop, peek and empty methods 
