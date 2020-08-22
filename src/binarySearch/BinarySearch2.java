@@ -2,7 +2,7 @@ package binarySearch;
 
 import java.util.Scanner;
 
-public class BinarySearchII {
+public class BinarySearch2 {
 	
 	/**
 	 * 
@@ -55,11 +55,9 @@ public class BinarySearchII {
 		int target = sc.nextInt();
 		int result = binarySearch(testArray, target);
 		if (result != -1) {
-			System.out.print("The number " 
-				+ target + " is found at position " + result + " as its Last occurrence.");
+			System.out.print("The number " + target + " is found at position " + result + " as its Last occurrence.");
 		} else {
 			System.out.print("The number " + target + " is NOT found!");
 		}
-	}
-	
+	}	
 }

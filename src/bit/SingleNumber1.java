@@ -15,7 +15,7 @@ import java.util.Scanner;
  * 4. (a ^ b) ^ c = a ^ (b ^ c)
  */
 
-public class SingleNumberI {
+public class SingleNumber1 {
 	
 	/**
 	 * Time Complexity: O(n)

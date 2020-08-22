@@ -17,7 +17,7 @@ import java.util.Scanner;
  * Divide this problem into a 2n+1 problem, and then use the method in Single Number I.
  * 
  */
-public class SingleNumberIII {
+public class SingleNumber3 {
 	
 	public static int[] singleNumber(int[] nums) {
 		if (nums.length == 0) {

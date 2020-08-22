@@ -24,7 +24,7 @@ import java.util.Scanner;
 *
 * meta        : tag-, tag-
 ***************************************************************************/
-public class MajorityNumberI {
+public class MajorityNumber1 {
 
 	public static int majorityNumber(int[] nums) {
 		int candidate = 0;

@@ -6,7 +6,7 @@ import java.util.Scanner;
  * A number occurs more than 1/3 of the array size, find this number.
  */
 
-public class MajorityNumberII {
+public class MajorityNumber2 {
 	
 	public static int majorityNumber(int[] nums) {
 		if (nums.length == 0) {

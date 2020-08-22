@@ -5,7 +5,7 @@ import java.util.Scanner;
  * This is my QuickSort version II using the last element of the input array as
  * the pivot
  */
-public class QuickSortVI {
+public class QuickSort4 {
 	
 	public static void quickSort(int[] nums) {
 		// check for empty or null array

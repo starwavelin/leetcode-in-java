@@ -21,7 +21,7 @@ import java.util.Scanner;
  * a XOR3 0 = a
  * a XOR3 a XOR3 a = 0
  */
-public class SingleNumberII {
+public class SingleNumber2 {
 
 	public static int singleNumber(int[] nums) {
 		if (nums == null || nums.length == 0) {

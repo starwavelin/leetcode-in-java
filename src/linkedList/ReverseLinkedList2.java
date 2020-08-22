@@ -11,7 +11,7 @@ import utility.ListNode;
  *
  */
 
-public class ReverseLinkedListII {
+public class ReverseLinkedList2 {
 	
 	/**
 	 * 

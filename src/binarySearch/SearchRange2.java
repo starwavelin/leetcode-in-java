@@ -8,7 +8,7 @@ import java.util.Scanner;
  * @author Benjamin Lin
  * Same as SearchRange I except using ArrayList as the output data structure...
  */
-public class SearchRangeII {
+public class SearchRange2 {
 	/** 
      *@param A : an integer sorted array
      *@param target :  an integer to be inserted

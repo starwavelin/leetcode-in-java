@@ -12,7 +12,7 @@ import java.util.Set;
  * O(n) time and O(k) extra space.
  *
  */
-public class MajorityNumberIII {
+public class MajorityNumber3 {
 	
 	public static int majorityNumber(int[] nums, int k) {
 		if (nums.length == 0) {

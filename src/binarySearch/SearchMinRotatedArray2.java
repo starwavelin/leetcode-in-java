@@ -9,7 +9,7 @@ import java.util.Scanner;
  * 
  * We can only use O(n) to solve it. Recall a black box test, where we assume we have n-1 2's and only one 1.
  */
-public class SearchMinRotatedArrayII {
+public class SearchMinRotatedArray2 {
 	/**
      * @param num: a rotated sorted array
      * @return: the minimum number in the array

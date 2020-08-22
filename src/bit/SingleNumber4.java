@@ -26,7 +26,7 @@ package bit;
 * 
 * meta        : tag-bit
 ***************************************************************************/
-public class SingleNumberIV {
+public class SingleNumber4 {
 
 	/**
 	 * Method: Cancel out every 4 repetitive numbers

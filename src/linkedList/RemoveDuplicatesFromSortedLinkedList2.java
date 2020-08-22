@@ -30,7 +30,7 @@ import utility.ListNode;
 * 
 * meta        : tag-linked-list
 ***************************************************************************/
-public class RemoveDuplicatesII {
+public class RemoveDuplicatesFromSortedLinkedList2 {
 
 	/**
 	 * Since the head of the resulted linked list is not determined, we use a dummy node to help.

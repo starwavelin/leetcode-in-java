@@ -7,7 +7,7 @@ import java.util.Scanner;
  * The index of pivot (abbreviated as variable "pivot") is defined within the partition function.
  * The pivot is always the rightmost element in a partitioned array.
  */
-public class QuickSortII {
+public class QuickSort2 {
 
 	public static void sort(int[] nums) {
 		if (nums == null || nums.length == 0) {

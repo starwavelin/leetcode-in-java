@@ -9,7 +9,7 @@ import java.util.Scanner;
     * No duplicate integers in each row or column.
  *
  */
-public class SearchMatrixII {
+public class SearchMatrix2 {
 	/**
      * @param matrix: A list of lists of integers
      * @param: A number you want to search in the matrix

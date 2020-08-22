@@ -2,7 +2,7 @@ package binarySearch;
 
 import java.util.Scanner;
 
-public class BinarySearchIII {
+public class BinarySearch3 {
 	
 	/**
 	 * Solution 1: iteration template

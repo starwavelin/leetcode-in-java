@@ -25,7 +25,7 @@ import java.util.Scanner;
 * 
 * meta        : tag-array, tag-two-pointers
 ***************************************************************************/
-public class RemoveDupSortedArrayII {
+public class RemoveDupSortedArray2 {
 	
 	/**
 	 * Similar to the solution of Remove Duplicates from Sorted Array I
