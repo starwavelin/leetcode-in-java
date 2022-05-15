@@ -26,7 +26,7 @@ import java.util.Map;
 * 	Time Complexity: See solutions in the code comments
 * 	Space Complexity: See solutions in the code comments   
 * 
-* meta        : tag-hash, tag-array-map, tag-bloomberg
+* meta        : tag-hash, tag-array-map
 ***************************************************************************/
 public class GroupAnagrams {
 

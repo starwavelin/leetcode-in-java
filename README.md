@@ -29,11 +29,6 @@ Supported list of problem categories for searching,
  * [Math](../../search?utf8=✓&q=tag-math)
  * [Data Structure Design](../../search?utf8=✓&q=tag-data-structure)
 
-Company based categories,
- * [Google](../../search?utf8=✓&q=tag-google)
- * [Facebook](../../search?utf8=✓&q=tag-fb)
- * [Bloomberg](../../search?utf8=✓&q=tag-bloomberg)
-
 ### LeetCode Problem List
 Note: $ means paid-to-view problems; \* means SQL problems; \# means bash problems;
 \! menas the current solution has wrong answers     

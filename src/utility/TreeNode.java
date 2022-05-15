@@ -1,7 +1,7 @@
 package utility;
 
 /**
- * The TreeNode used for binaryTree questions.
+ * The TreeNode used for binary_tree questions.
  */
 public class TreeNode {
 
