@@ -314,7 +314,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 458	| Poor Pigs                                                                                                          | Easy | | |
 | 457	| Circular Array Loop                                                                                                | Medium | | |
 | 456	| 132 Pattern                                                                                                        | Medium | | |
-| 455	| [Assign Cookies]((/src/array/greedy/FindContentChildren.java))                                                     | Easy | | |
+| 455	| [Assign Cookies](src/array/greedy/FindContentChildren.java)                                                        | Easy | | |
 | 454	| 4Sum II                                                                                                            | Medium | | |
 | 453	| Minimum Moves to Equal Array Elements                                                                              | Easy | | |
 | 452	| Minimum Number of Arrows to Burst Balloons                                                                         | Medium | | |
