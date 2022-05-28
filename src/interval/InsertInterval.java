@@ -1,10 +1,7 @@
-package sorting;
+package interval;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import utility.Interval;
-import utility.ListUtil;
 
 /***************************************************************************
 * Problem No. : 57
