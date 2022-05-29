@@ -105,22 +105,55 @@ public class InsertInterval {
 			return res;
 		}
 
-		int insPos = 0;
+		int insPos = 0; // insert position
 		for (int[] interval : intervals) {
+			// newInterval的尾 小于 给定interval的头
 			if (newInterval[1] < interval[0]) {
 				res.add(interval);
-			} else if (newInterval[0] > interval[1]) {
+			}
+			// newInterval的头 大于 给定interval的尾
+			else if (newInterval[0] > interval[1]) {
 				res.add(interval);
 				insPos++;
-			} else {
+			}
+			// newInterval的头或尾 与 给定interval有上述4种情况中的任何一种 overlapping,
+			// 本质就是要将其merge为最大宽度的interval. 头取两者的最小，尾取两者的最大。
+			else {
 				newInterval[0] = Math.min(newInterval[0], interval[0]);
 				newInterval[1] = Math.max(newInterval[1], interval[1]);
 			}
 		}
+
+		// 最后在 insert position处插入 newInterval
 		res.add(insPos, newInterval);
 		return res;
 	}
 
+	public static int[][] insert3(int[][] intervals, int[] newInterval) {
+		List<int[]> res = new ArrayList<>();
+
+		if (intervals.length == 0) {
+			res.add(newInterval);
+			return res.toArray(new int[res.size()][2]);
+		}
+
+		int insertPosition = 0;
+		for (int[] interval : intervals) {
+			if (newInterval[1] < interval[0]) {
+				res.add(interval);
+			}
+			else if (newInterval[0] > interval[1]) {
+				res.add(interval);
+				insertPosition++;
+			}
+			else {
+				newInterval[0] = Math.min(newInterval[0], interval[0]);
+				newInterval[1] = Math.max(newInterval[1], interval[1]);
+			}
+		}
+		res.add(insertPosition, newInterval);
+		return res.toArray(new int[res.size()][2]);
+	}
 
 	public static void main(String[] args) {
 		/* Test Solution 1 Example 1 */
@@ -136,7 +169,7 @@ public class InsertInterval {
 			System.out.print("[" + res.get(i).start + "," + res.get(i).end + "] ");
 		}
 
-		/* Test Solution 2*/
+		/* Test Solution 2 */
 		int[] iv1 = new int[]{1, 3};
 		int[] iv2 = new int[]{6, 9};
 		List<int[]> ivs = new ArrayList<>();
@@ -148,5 +181,14 @@ public class InsertInterval {
 		for (int i = 0; i < res2.size(); i++) {
 			System.out.print("[" + res2.get(i)[0] + "," + res2.get(i)[1] + "] ");
 		} // should give us [[-1,9]]
+
+		/* Test Solution 3 */
+		int[][] intervals3 = new int[][]{{1, 3}, {6, 9}};
+		int[] newInterval3 = new int[]{2, 5};
+		int[][] res3 = insert3(intervals3, newInterval3);
+		System.out.print("\nSolution 3: intervals after insertion becomes: ");
+		for (int i = 0; i < res3.length; i++) {
+			System.out.print("[" + res3[i][0] + "," + res3[i][1] + "] ");
+		} // should output [1, 5], [6, 9]
 	}
 }

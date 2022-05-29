@@ -30,8 +30,7 @@ Supported list of problem categories for searching,
  * [Data Structure Design](../../search?utf8=✓&q=tag-data-structure)
 
 ### LeetCode Problem List
-Note: $ means paid-to-view problems; \* means SQL problems; \# means bash problems;
-\! menas the current solution has wrong answers     
+Note: $ means paid-to-view problems; \* means SQL problems; \# means bash problems
 
 **Problem 751 -**
 
@@ -712,15 +711,15 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 60	  | Permutation Sequence                                                                                         |	Medium | | |
 | 59	  | Spiral Matrix II                                                                                             |	Medium | | |
 | 58	  | Length of Last Word                                                                                          |	Easy | | |
-| 57	  | [Insert Interval](src/array/InsertInterval.java)                                                             |	Hard | | |
-| 56	  | [Merge Intervals](src/array/MergeIntervals.java)                                                             |	Hard | Sort | |
+| 57	  | [Insert Interval](src/interval/InsertInterval.java)                                                          |	Hard | | |
+| 56	  | [Merge Intervals](src/interval/MergeIntervals.java)                                                          |	Hard | Sort | |
 | 55	  | Jump Game                                                                                                    |	Medium | | |
 | 54	  | Spiral Matrix                                                                                                |	Medium | | |
 | 53	  | Maximum Subarray                                                                                             |	Medium | | |
 | 52	  | N-Queens II                                                                                                  |	Hard | | |
 | 51   | N-Queens                                                                                                     |	Hard | | |
 | 50   | Pow(x, n)                                                                                                    |	Medium | | |
-| 49   | [Group Anagrams](src/hash/GroupAnagrams.java)                                                                |	Medium | Hash| [讲解](https://www.youtube.com/watch?v=G0WEebYHJ-E) [JS 解](leetcode-js/049-group-anagrams.js)|
+| 49   | [Group Anagrams](src/hash/GroupAnagrams.java)                                                                |	Medium | Hash| [讲解](https://www.youtube.com/watch?v=G0WEebYHJ-E)|
 | 48   | Rotate Image                                                                                                 |	Medium | | |
 | 47   | Permutations II                                                                                              | Hard | | |
 | 46   | Permutations                                                                                                 |	Medium | | |

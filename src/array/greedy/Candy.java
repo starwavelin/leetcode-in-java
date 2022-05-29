@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
  * Problem Name: Candy
  * Problem URL : https://leetcode.com/problems/candy
  * Date        : May 22, 2022
- * Author      :	@codingbro
+ * Author      : @codingbro
  *
  * meta        : tag-array, tag-greedy
  ***************************************************************************/

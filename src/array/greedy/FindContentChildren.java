@@ -9,7 +9,7 @@ import static org.junit.Assert.assertEquals;
  * Problem Name: Assign Cookies
  * Problem URL : https://leetcode.com/problems/assign-cookies
  * Date        : May 21, 2022
- * Author      :	@codingbro
+ * Author      : @codingbro
  *
  * meta        : tag-array, tag-greedy
  ***************************************************************************/
