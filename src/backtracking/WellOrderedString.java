@@ -1,4 +1,4 @@
-package combinatorics;
+package backtracking;
 
 public class WellOrderedString {
 	

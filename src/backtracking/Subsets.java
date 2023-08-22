@@ -1,4 +1,4 @@
-package combinatorics;
+package backtracking;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -25,7 +25,7 @@ import java.util.List;
 * 	Time Complexity: O() -- See Code Comments
 * 	Space Complexity: O() -- See Code Comments
 *
-* meta        : tag-combinatorics
+* meta        : tag-backtracking
 ***************************************************************************/
 public class Subsets {
 

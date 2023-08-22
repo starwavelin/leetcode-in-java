@@ -23,7 +23,7 @@ Supported list of problem categories for searching,
  * [Divide and Conquer](../../search?utf8=✓&q==tag-divide-and-conquer)
  * [Advanced Tree](../../search?utf8=✓&q==tag-advanced-tree)
  * [Graph](../../search?utf8=✓&q=tag-graph)
- * [Combinatorics](../../search?utf8=✓&q=tag-combinatorics)
+ * [Backtracking](../../search?utf8=✓&q=tag-backtracking)
  * [Dynamic Programming](../../search?utf8=✓&q=tag-dp)
  * [Bit](../../search?utf8=✓&q=tag-bit)
  * [Math](../../search?utf8=✓&q=tag-math)
@@ -690,7 +690,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 81	  | [Search in Rotated Sorted Array II](src/binary_search/SearchRotatedArray2.java)                               |	Medium | | |
 | 80	  | [Remove Duplicates from Sorted Array II](src/binary_search/RemoveDupSortedArrayII.java)                        |	Medium | | |
 | 79	  | Word Search                                                                                                  |	Medium | | |
-| 78	  | [Subsets](src/combinatorics/Subsets.java)                                                                     |	Medium | | |
+| 78	  | [Subsets](src/backtracking/Subsets.java)                                                                     |	Medium | | |
 | 77	  | Combinations                                                                                                 |	Medium | | |
 | 76	  | Minimum Window Substring                                                                                     |	Hard | | |
 | 75	  | [Sort Colors](src/sorting/SortColors.java)                                                                   |	Medium | | |
@@ -760,11 +760,11 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 11   | 	Container With Most Water		                                                                                 | Medium || |
 | 10   | 	Regular Expression Matching		                                                                               | Hard || |
 | 9    | Palindrome Number		                                                                                          | Easy || |
-| 8	| [String to Integer](src/string/AToI.java)	                                                                   | Easy | String, Math | |
-| 7	| Reverse Integer	                                                                                             | Easy || |
-| 6	| ZigZag Conversion	                                                                                           | Easy || |
-| 5	| Longest Palindromic Substring	                                                                               | Medium || |
-| 4	| [Median of Two Sorted Arrays](src/binary_search/MedianSortedArray.java)	                                      | Hard | Sort, Merge Sort, Binary Search | [讲解1](https://youtu.be/raYYmEwyJ0o)|
+| 8	   | [String to Integer](src/string/AToI.java)	                                                                   | Easy | String, Math | |
+| 7	   | Reverse Integer	                                                                                             | Easy || |
+| 6	   | ZigZag Conversion	                                                                                           | Easy || |
+| 5	   | Longest Palindromic Substring	                                                                               | Medium || |
+| 4	   | [Median of Two Sorted Arrays](src/binary_search/MedianSortedArray.java)	                                      | Hard | Sort, Merge Sort, Binary Search | [讲解1](https://youtu.be/raYYmEwyJ0o)|
 | 3    | [Longest Substring Without Repeating Characters](src/string/LongestSubstringWithoutRepeatingCharacters.java) | Medium | String, Hash, Two Pointers | |
 | 2    | Add Two Numbers                                                                                              | Medium |  | |
 | 1    | [Two Sum](src/array/TwoSum.java)                                                                             | Medium |  | |
