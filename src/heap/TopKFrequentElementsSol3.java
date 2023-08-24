@@ -34,42 +34,11 @@ import utility.ListUtil;
 * 
 * meta        : tag-heap, tag-hash, tag-tree-map, tag-sort
 ***************************************************************************/
-public class TopKFrequentElements {
+public class TopKFrequentElementsSol3 {
 
-	/**
-	 * Solution 1: Max Heap
-	 * 	1. Use a HashMap to store frequency:  key - element and value - its frequency  ---O(n)
-	 *  2. Construct a maxHeap using PriorityQueue in Java, with the Map.Entry having the highest frequency at the top of heap
-	 *  		---O(n) heap construction can be O(n)
-	 *  3. Use a List to store the result for the element being polled from PQ, k times -- O(k)
-	 *  
-	 *  Time Complexity: O(n)
-	 *  Space Complexity: O(n) -- HashMap uses O(n) and PQ uses O(n), and List uses O(k)
-	 *  Run Time on LeetCode: 95ms
-	 */
-	public static List<Integer> topKFrequent1(int[] nums, int k) {
-		// count frequency
-		Map<Integer, Integer> map = new HashMap<>();
-		for (int n: nums) {
-			map.put(n, map.getOrDefault(n, 0) + 1);
-		}
-		
-		// construct the maxHeap
-		PriorityQueue<Map.Entry<Integer, Integer>> pq = new PriorityQueue<>((a, b) -> (b.getValue() - a.getValue()));
-		for (Map.Entry<Integer, Integer> entry: map.entrySet()) { //考点：efficiently traverse a HashMap
-			pq.add(entry);
-		}
-		
-		// form the result
-		List<Integer> res = new ArrayList<>();
-		while (res.size() < k) {
-			res.add(pq.poll().getKey()); // we wanna add element to the result
-		}
-		return res;
-	}
 	
 	/**
-	 * Solution 2: TreeMap
+	 * Solution 3: TreeMap
 	 * 	1. Use a HashMap to store frequency:  key - element and value - its frequency  ---O(n)
 	 *  2. Traverse the hashmap formed in Step 1 and use a TreeMap to store
 	 *  	TreeMap key - frequency, value - elements, and have the key ordered in reverse order
@@ -86,6 +55,7 @@ public class TopKFrequentElements {
 		for (int num : nums) {
 			map.put(num, map.getOrDefault(num, 0) + 1);
 		}
+
 		TreeMap<Integer, List<Integer>> tMap = new TreeMap<>();
 		for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
 			if (!tMap.containsKey(entry.getValue())) {
@@ -93,6 +63,7 @@ public class TopKFrequentElements {
 			}
 			tMap.get(entry.getValue()).add(entry.getKey());
 		}
+
 		List<Integer> res = new ArrayList<>();
 		while (res.size() < k) {
 			res.addAll(tMap.pollLastEntry().getValue());
@@ -102,11 +73,8 @@ public class TopKFrequentElements {
 	
 	public static void main(String[] args) {
 		int[] nums = new int[]{1, 1, 2, 3, 1, 2};
-		/* Solution 1 */
-		System.out.print("The top 2 unique elements are: ");
-		ListUtil.display(topKFrequent1(nums, 2));
 		
-		/* Solution 2 */
+		/* Solution 3 */
 		System.out.print("The top 2 unique elements are: ");
 		ListUtil.display(topKFrequent2(nums, 2));
 		
