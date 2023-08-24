@@ -414,7 +414,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 350	| Intersection of Two Arrays II                                                                                      | Easy | | |
 | 349	| Intersection of Two Arrays                                                                                         | Easy  | | |
 | 348	| Design Tic-Tac-Toe $                                                                | Medium | | |
-| 347	| [Top K Frequent Elements, MaxHeap solution](src/heap/TopKFrequentElementsSol1.java),     [Top K Frequent Elements, TreeMap solution](src/heap/TopKFrequentElementsSol3.java) | Medium | Heap | |
+| 347	| [Top K Frequent Elements, MaxHeap solution](src/heap/TopKFrequentElementsSol1.java), [Top K Frequent Elements, MinHeap solution](src/heap/TopKFrequentElementsSol2.java), [Top K Frequent Elements, TreeMap solution](src/heap/TopKFrequentElementsSol3.java) | Medium | Heap | |
 | 346	| Moving Average from Data Stream  $                                                                                 | Easy | | |
 | 345	| Reverse Vowels of a String                                                                                         | Easy | | |
 | 344	| Reverse String                                                                                                     | Easy | | |
