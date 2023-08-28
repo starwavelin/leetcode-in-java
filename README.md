@@ -388,7 +388,7 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 376	| Wiggle Subsequence                                                                                                 | Medium | | |
 | 375	| Guess Number Higher or Lower II                                                                                    | Medium | | |
 | 374	| Guess Number Higher or Lower                                                                                       | Easy | | |
-| 373	| [Find K Pairs with Smallest Sums](src/heap/FindKPairsWithSmallestSumsSol1.java), [Solution 2](src/heap/FindKPairsWithSmallestSumsSol2.java) | Medium | Heap | |
+| 373	| [Find K Pairs with Smallest Sums](src/heap/FindKPairsWithSmallestSumsSol1.java), [Solution 2](src/heap/FindKPairsWithSmallestSumsSol2.java), [Solution 3, similar to Dijkstra](src/heap/FindKPairsWithSmallestSumsSol3.java) | Medium | Heap | |
 | 372	| Super Pow                                                                                                          | Medium | | |
 | 371	| Sum of Two Integers                                                                                                | Easy | | |
 | 370	| Range Addition $                                                                                                   | Medium | | |
