@@ -640,10 +640,8 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 131 | Palindrome Partitioning                                                                                        | Medium     |                                 |                                        |
 | 130 | [Surrounded Regions](src/graph/SurroundedRegions.java)                                                         | Medium     |                                 |                                        |
 | 129 | Sum Root to Leaf Numbers                                                                                       | Medium     |                                 |                                        |
-| 128 | Longest Consecutive Sequence                                                                                   | Hard       |                                 |                                        |
 | 127 | Word Ladder                                                                                                    | Medium     |                                 |                                        |
 | 126 | Word Ladder II                                                                                                 | Hard       |                                 |                                        |
-| 125 | [Valid Palindrome](src/string/ValidPalindrome.java)                                                            | Easy       |                                 |                                        |
 | 124 | Binary Tree Maximum Path Sum                                                                                   | Hard       |                                 |                                        |
 | 123 | [Best Time to Buy and Sell Stock III](src/array/BuySellStock3.java)                                            | Hard       |                                 |                                        |
 | 122 | [Best Time to Buy and Sell Stock II](src/array/BuySellStock2.java)                                             | Medium     |                                 |                                        |
@@ -752,7 +750,6 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 18  | [4Sum](src/array/FourSum.java)                                                                                 | Medium     |                                 |                                        |
 | 17  | Letter Combinations of a Phone Number                                                                          | Medium     |                                 |                                        |
 | 16  | [3Sum Closest](src/array/ThreeSumClosest.java)                                                                 | Medium     |                                 |                                        |
-| 15  | [3Sum](src/array/ThreeSum.java)                                                                                | Medium     |                                 |                                        |
 | 14  | Longest Common Prefix                                                                                          | Easy       |                                 |                                        |
 | 13  | [Roman to Integer](src/math/RomanToInteger.java)                                                               | Easy       |                                 |                                        |
 | 12  | [Integer to Roman](src/math/IntegerToRoman.java)                                                               | Medium     |                                 |                                        |
