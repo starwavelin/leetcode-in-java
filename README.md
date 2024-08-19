@@ -645,7 +645,6 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 124 | Binary Tree Maximum Path Sum                                                                                   | Hard       |                                 |                                        |
 | 123 | [Best Time to Buy and Sell Stock III](src/array/BuySellStock3.java)                                            | Hard       |                                 |                                        |
 | 122 | [Best Time to Buy and Sell Stock II](src/array/BuySellStock2.java)                                             | Medium     |                                 |                                        |
-| 121 | [Best Time to Buy and Sell Stock](src/array/BuySellStock1.java)                                                | Medium     |                                 |                                        |
 | 120 | [Triangle](src/dp/TriangleDC.java)                                                                             | Medium     |                                 |                                        |
 | 119 | Pascal's Triangle II                                                                                           | Easy       |                                 |                                        |
 | 118 | Pascal's Triangle                                                                                              | Easy       |                                 |                                        |
@@ -753,7 +752,6 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 14  | Longest Common Prefix                                                                                          | Easy       |                                 |                                        |
 | 13  | [Roman to Integer](src/math/RomanToInteger.java)                                                               | Easy       |                                 |                                        |
 | 12  | [Integer to Roman](src/math/IntegerToRoman.java)                                                               | Medium     |                                 |                                        |
-| 11  | Container With Most Water                                                                                      | Medium     |                                 |                                        |
 | 10  | Regular Expression Matching                                                                                    | Hard       |                                 |                                        |
 | 9   | Palindrome Number                                                                                              | Easy       |                                 |                                        |
 | 8   | [String to Integer](src/string/AToI.java)                                                                      | Easy       | String, Math                    |                                        |
@@ -761,7 +759,6 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 6   | ZigZag Conversion                                                                                              | Easy       |                                 |                                        |
 | 5   | Longest Palindromic Substring                                                                                  | Medium     |                                 |                                        |
 | 4   | [Median of Two Sorted Arrays](src/binary_search/MedianSortedArray.java)                                        | Hard       | Sort, Merge Sort, Binary Search | [讲解 1](https://youtu.be/raYYmEwyJ0o) |
-| 3   | [Longest Substring Without Repeating Characters](src/string/LongestSubstringWithoutRepeatingCharacters.java)   | Medium     | String, Hash, Two Pointers      |                                        |
 | 2   | Add Two Numbers                                                                                                | Medium     |                                 |                                        |
 
 [[↑] Back to top](#overview)
