@@ -613,8 +613,6 @@ Note: $ means paid-to-view problems; \* means SQL problems; \# means bash proble
 | 157 | Read N Characters Given Read4 $                                                                                | Easy       |                                 |                                        |
 | 156 | Binary Tree Upside Down $                                                                                      | Medium     |                                 |                                        |
 | 155 | [Min Stack](src/stack/MinStack.java)                                                                           | Easy       |                                 |                                        |
-| 154 | [Find Minimum in Rotated Sorted Array II](src/binary_search/SearchMinRotatedArray.java)                        | Hard       |                                 |                                        |
-| 153 | [Find Minimum in Rotated Sorted Array](src/binary_search/SearchMinRotatedArrayII.java)                         | Medium     |                                 |                                        |
 | 152 | Maximum Product Subarray                                                                                       | Medium     |                                 |                                        |
 | 151 | [Reverse Words in a String](src/string/ReverseWords.java)                                                      | Medium     |                                 | [讲解](https://youtu.be/54uU5Zhzorw)   |
 | 150 | Evaluate Reverse Polish Notation                                                                               | Medium     |                                 |                                        |
